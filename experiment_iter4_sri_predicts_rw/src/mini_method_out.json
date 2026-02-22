@@ -1,0 +1,401 @@
+{
+  "metadata": {
+    "method_name": "SRI_predicts_RWSE_vs_LapPE_quality_gap",
+    "description": "Tests whether Spectral Resolution Index (SRI = delta_min * K) predicts the RWSE-vs-LapPE encoding quality gap on fixed-size (n=30) synthetic graphs, independently of graph size.",
+    "parameters": {
+      "n_nodes": 30,
+      "K_rwse": 20,
+      "K_lappe": 8,
+      "alpha_srwe": 0.0001,
+      "num_seeds": 3,
+      "num_folds": 5
+    },
+    "analysis": {
+      "primary_results": {
+        "spearman_sri_vs_gap_classification": {
+          "rho": 0.024112,
+          "p": 0.59064743
+        },
+        "spearman_sri_vs_gap_fd": {
+          "rho": -0.010779,
+          "p": 0.81000114
+        },
+        "spearman_sri_vs_gap_mpd": {
+          "rho": 0.237895,
+          "p": 7e-08
+        },
+        "partial_spearman_classification": {
+          "rho": -0.034833,
+          "p": 0.43705244
+        },
+        "partial_spearman_fd": {
+          "rho": 0.134472,
+          "p": 0.00258628
+        }
+      },
+      "quintile_analysis": {
+        "quintiles": [
+          {
+            "quintile": 1,
+            "sri_range": [
+              0.015519,
+              0.39989
+            ],
+            "mean_sri": 0.250731,
+            "mean_gap_classification": 0.031981,
+            "std_gap_classification": 0.191212,
+            "mean_gap_fd": 0.028874,
+            "mean_acc_rwse": 0.586011,
+            "mean_acc_lappe": 0.617992,
+            "mean_acc_srwe": 0.57598,
+            "count": 100
+          },
+          {
+            "quintile": 2,
+            "sri_range": [
+              0.400789,
+              0.67085
+            ],
+            "mean_sri": 0.543255,
+            "mean_gap_classification": 0.042222,
+            "std_gap_classification": 0.179251,
+            "mean_gap_fd": 0.00977,
+            "mean_acc_rwse": 0.571667,
+            "mean_acc_lappe": 0.613889,
+            "mean_acc_srwe": 0.562778,
+            "count": 100
+          },
+          {
+            "quintile": 3,
+            "sri_range": [
+              0.672016,
+              0.88946
+            ],
+            "mean_sri": 0.778752,
+            "mean_gap_classification": 0.069834,
+            "std_gap_classification": 0.2,
+            "mean_gap_fd": 0.045103,
+            "mean_acc_rwse": 0.499257,
+            "mean_acc_lappe": 0.569091,
+            "mean_acc_srwe": 0.506817,
+            "count": 100
+          },
+          {
+            "quintile": 4,
+            "sri_range": [
+              0.891807,
+              1.241365
+            ],
+            "mean_sri": 1.041135,
+            "mean_gap_classification": 0.123111,
+            "std_gap_classification": 0.151272,
+            "mean_gap_fd": 0.00692,
+            "mean_acc_rwse": 0.483333,
+            "mean_acc_lappe": 0.606444,
+            "mean_acc_srwe": 0.530778,
+            "count": 100
+          },
+          {
+            "quintile": 5,
+            "sri_range": [
+              1.256737,
+              2.876894
+            ],
+            "mean_sri": 1.527057,
+            "mean_gap_classification": 0.013522,
+            "std_gap_classification": 0.159851,
+            "mean_gap_fd": 0.273034,
+            "mean_acc_rwse": 0.432189,
+            "mean_acc_lappe": 0.445711,
+            "mean_acc_srwe": 0.478813,
+            "count": 100
+          }
+        ],
+        "monotonic_decreasing": false
+      },
+      "per_category_results": {
+        "aliased": {
+          "count": 100,
+          "mean_sri": 0.884322,
+          "std_sri": 0.467306,
+          "mean_delta_min": 0.04421612,
+          "mean_gap_classification": -0.014333,
+          "std_gap_classification": 0.147056,
+          "mean_acc_rwse": 0.552889,
+          "mean_acc_lappe": 0.538556,
+          "mean_acc_srwe": 0.58,
+          "spearman_rho": -0.270558,
+          "spearman_p": 0.006478
+        },
+        "clustered_spectrum": {
+          "count": 100,
+          "mean_sri": 0.59815,
+          "std_sri": 0.373897,
+          "mean_delta_min": 0.02990748,
+          "mean_gap_classification": -0.068908,
+          "std_gap_classification": 0.15137,
+          "mean_acc_rwse": 0.597789,
+          "mean_acc_lappe": 0.528881,
+          "mean_acc_srwe": 0.559536,
+          "spearman_rho": 0.233789,
+          "spearman_p": 0.01923
+        },
+        "control_er": {
+          "count": 100,
+          "mean_sri": 1.049935,
+          "std_sri": 0.539123,
+          "mean_delta_min": 0.05249676,
+          "mean_gap_classification": 0.021912,
+          "std_gap_classification": 0.126549,
+          "mean_acc_rwse": 0.43678,
+          "mean_acc_lappe": 0.458691,
+          "mean_acc_srwe": 0.432408,
+          "spearman_rho": -0.023333,
+          "spearman_p": 0.817757
+        },
+        "marginally_resolved": {
+          "count": 100,
+          "mean_sri": 0.816211,
+          "std_sri": 0.375245,
+          "mean_delta_min": 0.04081054,
+          "mean_gap_classification": 0.162111,
+          "std_gap_classification": 0.131657,
+          "mean_acc_rwse": 0.314444,
+          "mean_acc_lappe": 0.476556,
+          "mean_acc_srwe": 0.402889,
+          "spearman_rho": 0.030083,
+          "spearman_p": 0.766381
+        },
+        "well_resolved": {
+          "count": 100,
+          "mean_sri": 0.792311,
+          "std_sri": 0.402093,
+          "mean_delta_min": 0.03961556,
+          "mean_gap_classification": 0.179889,
+          "std_gap_classification": 0.195421,
+          "mean_acc_rwse": 0.670556,
+          "mean_acc_lappe": 0.850444,
+          "mean_acc_srwe": 0.680333,
+          "spearman_rho": -0.090089,
+          "spearman_p": 0.372729
+        }
+      },
+      "srwe_results": {
+        "sri_median_split": 0.795906,
+        "srwe_gap_reduction_low_sri": 0.74192,
+        "srwe_gap_reduction_high_sri": 0.42279,
+        "srwe_gap_reduction_overall": 0.582999,
+        "target_met_50pct_low_sri": true
+      },
+      "k_dependent_analysis": {
+        "K=2": {
+          "mean_gap": 0.118,
+          "mean_sri": 0.088113,
+          "spearman_rho": 0.090452,
+          "spearman_p": 0.532171,
+          "n_graphs": 50
+        },
+        "K=4": {
+          "mean_gap": 0.058,
+          "mean_sri": 0.176227,
+          "spearman_rho": 0.073743,
+          "spearman_p": 0.610792,
+          "n_graphs": 50
+        },
+        "K=8": {
+          "mean_gap": 0.054667,
+          "mean_sri": 0.352454,
+          "spearman_rho": 0.073686,
+          "spearman_p": 0.611068,
+          "n_graphs": 50
+        },
+        "K=12": {
+          "mean_gap": 0.054,
+          "mean_sri": 0.52868,
+          "spearman_rho": 0.067518,
+          "spearman_p": 0.641302,
+          "n_graphs": 50
+        },
+        "K=16": {
+          "mean_gap": 0.058,
+          "mean_sri": 0.704907,
+          "spearman_rho": 0.064678,
+          "spearman_p": 0.655424,
+          "n_graphs": 50
+        },
+        "K=20": {
+          "mean_gap": 0.031333,
+          "mean_sri": 0.881134,
+          "spearman_rho": 0.160584,
+          "spearman_p": 0.265267,
+          "n_graphs": 50
+        }
+      },
+      "additional_correlations": {
+        "log_vandermonde_kappa_vs_gap": {
+          "rho": 0.262544,
+          "p": 0.0
+        },
+        "rw_sri_vs_gap": {
+          "rho": -0.094161,
+          "p": 0.0352986
+        },
+        "delta_min_vs_gap": {
+          "rho": 0.024112,
+          "p": 0.59064743
+        },
+        "density_vs_gap": {
+          "rho": 0.193285,
+          "p": 1.347e-05
+        }
+      },
+      "threshold_analysis": {
+        "threshold": 1.0,
+        "n_low": 343,
+        "n_high": 157,
+        "mean_gap_low_sri": 0.05615,
+        "mean_gap_high_sri": 0.0561,
+        "std_gap_low_sri": 0.190173,
+        "std_gap_high_sri": 0.160306,
+        "mann_whitney_U": 26901.5,
+        "mann_whitney_p": 0.9874947,
+        "effect_size": 4.9e-05
+      },
+      "kruskal_wallis_analysis": {
+        "kruskal_wallis_H": 0.6703,
+        "kruskal_wallis_p": 0.71524328,
+        "tercile_means": [
+          0.042437,
+          0.070717,
+          0.055336
+        ],
+        "tercile_sizes": [
+          167,
+          166,
+          167
+        ]
+      },
+      "logistic_regression_comparison": {
+        "spearman_sri_vs_lr_gap": {
+          "rho": -0.079841,
+          "p": 0.42974128
+        },
+        "n_graphs_lr": 100,
+        "mean_lr_gap": 0.178667
+      },
+      "summary_statistics": {
+        "total_graphs": 500,
+        "n_per_category": {
+          "aliased": 100,
+          "clustered_spectrum": 100,
+          "control_er": 100,
+          "marginally_resolved": 100,
+          "well_resolved": 100
+        },
+        "overall_mean_sri": 0.828186,
+        "overall_std_sri": 0.459997,
+        "overall_mean_gap_classification": 0.056134,
+        "overall_std_gap_classification": 0.181326,
+        "overall_mean_acc_rwse": 0.514491,
+        "overall_mean_acc_lappe": 0.570626,
+        "overall_mean_acc_srwe": 0.531033
+      },
+      "targets_assessment": {
+        "spearman_rho_magnitude": 0.024112,
+        "spearman_p_value": 0.59064743,
+        "target_rho_gt_0.3": false,
+        "target_p_lt_0.01": false,
+        "target_monotonic_quintile": false,
+        "target_srwe_50pct_low_sri": true
+      }
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "synthetic_fixed_n30",
+      "examples": [
+        {
+          "input": "{\"num_nodes\":30,\"n_edges\":166,\"density\":0.381609,\"category\":\"well_resolved\",\"eigenvalues_adj\":[-3.90962303,-3.39753006,-3.28292033,-2.78820644,-2.73066577,-2.41628722,-2.05969702,-1.79757287,-1.69805162,-1.55836774,-1.36909071,-1.23262875,-1.07822585,-1.0,-0.96698939,-0.75026694,-0.40821112,-0.16503719,-0.03854152,0.1738909,0.63713604,0.71246374,0.84700042,1.16918444,1.35847447,1.74642216,2.03738471,2.28327438,10.15850125,11.52418107],\"delta_min\":0.03301061,\"SRI_K20\":0.660212,\"vandermonde_kappa\":1e+16,\"SRI_rw_K20\":0.07945,\"n_communities\":2}",
+          "output": "0.022222",
+          "predict_baseline": "0.0",
+          "predict_our_method": "0.660212",
+          "metadata_category": "well_resolved",
+          "metadata_graph_idx": 0,
+          "metadata_sri_k20": 0.660212,
+          "metadata_sri_rw_k20": 0.07945,
+          "metadata_delta_min": 0.03301061,
+          "metadata_vandermonde_kappa": 1e+16,
+          "metadata_density": 0.381609,
+          "metadata_n_edges": 166,
+          "metadata_n_communities": 2,
+          "metadata_acc_rwse": 0.9,
+          "metadata_acc_lappe": 0.922222,
+          "metadata_acc_srwe": 0.744444,
+          "metadata_gap_classification": 0.022222,
+          "metadata_gap_fd": 0.004598,
+          "metadata_gap_mpd": 0.208524,
+          "metadata_mpd_rwse": 0.032356,
+          "metadata_mpd_lappe": 0.24088,
+          "metadata_mpd_srwe": 0.112428,
+          "metadata_fd_rwse": 0.995402,
+          "metadata_fd_lappe": 1.0,
+          "metadata_fd_srwe": 1.0
+        },
+        {
+          "input": "{\"num_nodes\":30,\"n_edges\":152,\"density\":0.349425,\"category\":\"well_resolved\",\"eigenvalues_adj\":[-4.00068396,-3.65320309,-3.33224024,-3.03846669,-2.85053853,-2.58346962,-2.46359882,-2.17474721,-1.90593998,-1.70383179,-1.4574846,-1.15499594,-0.91031871,-0.86842373,-0.70186906,-0.54409501,-0.23600795,0.07748885,0.23765051,0.37418721,0.84941609,1.0009097,1.18394439,1.36953876,1.59383928,2.06650515,2.62368062,2.76165539,9.09201352,10.34908545],\"delta_min\":0.04189499,\"SRI_K20\":0.8379,\"vandermonde_kappa\":1e+16,\"SRI_rw_K20\":0.176453,\"n_communities\":2}",
+          "output": "0.022222",
+          "predict_baseline": "0.0",
+          "predict_our_method": "0.8379",
+          "metadata_category": "well_resolved",
+          "metadata_graph_idx": 1,
+          "metadata_sri_k20": 0.8379,
+          "metadata_sri_rw_k20": 0.176453,
+          "metadata_delta_min": 0.04189499,
+          "metadata_vandermonde_kappa": 1e+16,
+          "metadata_density": 0.349425,
+          "metadata_n_edges": 152,
+          "metadata_n_communities": 2,
+          "metadata_acc_rwse": 0.766667,
+          "metadata_acc_lappe": 0.788889,
+          "metadata_acc_srwe": 0.622222,
+          "metadata_gap_classification": 0.022222,
+          "metadata_gap_fd": 0.0,
+          "metadata_gap_mpd": 0.149338,
+          "metadata_mpd_rwse": 0.034534,
+          "metadata_mpd_lappe": 0.183872,
+          "metadata_mpd_srwe": 0.121148,
+          "metadata_fd_rwse": 1.0,
+          "metadata_fd_lappe": 1.0,
+          "metadata_fd_srwe": 1.0
+        },
+        {
+          "input": "{\"num_nodes\":30,\"n_edges\":149,\"density\":0.342529,\"category\":\"well_resolved\",\"eigenvalues_adj\":[-4.09996788,-3.45976538,-3.30147273,-2.83051183,-2.75964871,-2.57144949,-2.4156678,-2.05455936,-1.96191605,-1.5800446,-1.39451301,-1.14796242,-0.82925456,-0.74194108,-0.60465668,-0.44530534,-0.26243572,-0.08765042,0.14868461,0.50634224,0.59090364,0.85369778,1.02992239,1.38111746,1.65335766,1.81500541,2.45293604,2.55333782,9.40439092,10.15902709],\"delta_min\":0.07086311,\"SRI_K20\":1.417262,\"vandermonde_kappa\":1e+16,\"SRI_rw_K20\":0.087053,\"n_communities\":2}",
+          "output": "0.511111",
+          "predict_baseline": "0.0",
+          "predict_our_method": "1.417262",
+          "metadata_category": "well_resolved",
+          "metadata_graph_idx": 2,
+          "metadata_sri_k20": 1.417262,
+          "metadata_sri_rw_k20": 0.087053,
+          "metadata_delta_min": 0.07086311,
+          "metadata_vandermonde_kappa": 1e+16,
+          "metadata_density": 0.342529,
+          "metadata_n_edges": 149,
+          "metadata_n_communities": 2,
+          "metadata_acc_rwse": 0.377778,
+          "metadata_acc_lappe": 0.888889,
+          "metadata_acc_srwe": 0.655556,
+          "metadata_gap_classification": 0.511111,
+          "metadata_gap_fd": 0.0,
+          "metadata_gap_mpd": 0.190618,
+          "metadata_mpd_rwse": 0.039964,
+          "metadata_mpd_lappe": 0.230582,
+          "metadata_mpd_srwe": 0.11359,
+          "metadata_fd_rwse": 1.0,
+          "metadata_fd_lappe": 1.0,
+          "metadata_fd_srwe": 1.0
+        }
+      ]
+    }
+  ]
+}

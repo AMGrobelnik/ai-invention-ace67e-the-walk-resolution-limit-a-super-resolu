@@ -1,0 +1,13 @@
+[project]
+name = "depth-vs-encoding-aliasing"
+version = "0.1.0"
+requires-python = ">=3.10,<3.12"
+dependencies = [
+    "torch",
+    "torch-geometric",
+    "numpy",
+    "scipy",
+    "scikit-learn",
+    "loguru",
+    "psutil",
+]

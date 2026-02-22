@@ -1,0 +1,791 @@
+{
+  "metadata": {
+    "evaluation_name": "Grand Synthesis: Walk Resolution Limit Hypothesis Adjudication",
+    "n_experiments_analyzed": 10,
+    "n_iterations_covered": 5,
+    "overall_verdict": "partially_confirmed",
+    "overall_confidence": 0.458,
+    "pooled_correlation": {
+      "rho_pooled": 0.1526091790139954,
+      "ci_low": 0.020404082754321737,
+      "ci_high": 0.27956910397365814,
+      "I2": 99.01850479736706,
+      "Q": 2547.134202279897,
+      "Q_pvalue": 0.0,
+      "tau2": 0.11656662664368427,
+      "k": 26
+    },
+    "subgroup_analyses": {
+      "by_domain": {
+        "molecular": {
+          "rho_pooled": 0.08264168842152694,
+          "ci_low": 0.00443306701747771,
+          "ci_high": 0.1598454658993194,
+          "I2": 93.44414160180867,
+          "Q": 122.02826104674706,
+          "Q_pvalue": 0.0,
+          "tau2": 0.012747012901599216,
+          "k": 9
+        },
+        "protein": {
+          "rho_pooled": 0.17424122741251952,
+          "ci_low": -0.09094996590142478,
+          "ci_high": 0.4163568569567847,
+          "I2": 99.37426110385599,
+          "Q": 1917.7327914162718,
+          "Q_pvalue": 0.0,
+          "tau2": 0.23947707771821566,
+          "k": 13
+        },
+        "synthetic": {
+          "rho_pooled": 0.2734480441047618,
+          "ci_low": -0.302192668713731,
+          "ci_high": 0.7029479539246398,
+          "I2": 96.01673229163387,
+          "Q": 50.21003222553593,
+          "Q_pvalue": 1.2503442725630975e-11,
+          "tau2": 0.2525968553501504,
+          "k": 3
+        }
+      },
+      "by_architecture": {
+        "model": {
+          "rho_pooled": 0.5599630087807198,
+          "ci_low": 0.20746443031349115,
+          "ci_high": 0.7837574491187487,
+          "I2": 99.75195574982946,
+          "Q": 1612.6154898773307,
+          "Q_pvalue": 0.0,
+          "tau2": 0.2290270351657003,
+          "k": 5
+        },
+        "MLP": {
+          "rho_pooled": 0.020671406626577356,
+          "ci_low": -0.07735841614757578,
+          "ci_high": 0.11830536653520132,
+          "I2": 80.95208679877443,
+          "Q": 15.749756775492747,
+          "Q_pvalue": 0.0012761150253842724,
+          "tau2": 0.007854526489773915,
+          "k": 4
+        },
+        "GPS": {
+          "rho_pooled": -0.030157233938546132,
+          "ci_low": -0.12120059722339506,
+          "ci_high": 0.06138929015383099,
+          "I2": 77.32632540075991,
+          "Q": 26.46240676048641,
+          "Q_pvalue": 0.0001825381891334965,
+          "tau2": 0.010631848354801014,
+          "k": 7
+        },
+        "GCN": {
+          "rho_pooled": 0.10033765287836127,
+          "ci_low": 0.07096219247505492,
+          "ci_high": 0.1295392214123872,
+          "I2": 23.413824100440426,
+          "Q": 11.751468061028696,
+          "Q_pvalue": 0.22768573565240768,
+          "tau2": 0.0005324048105705681,
+          "k": 10
+        }
+      },
+      "by_metric_type": {
+        "node_distinguishability": {
+          "rho_pooled": 0.5599630087807198,
+          "ci_low": 0.20746443031349115,
+          "ci_high": 0.7837574491187487,
+          "I2": 99.75195574982946,
+          "Q": 1612.6154898773307,
+          "Q_pvalue": 0.0,
+          "tau2": 0.2290270351657003,
+          "k": 5
+        },
+        "task_performance": {
+          "rho_pooled": 0.047961592410179554,
+          "ci_low": 0.010576631003264227,
+          "ci_high": 0.08521266034036698,
+          "I2": 72.94383048024459,
+          "Q": 73.9202937998919,
+          "Q_pvalue": 4.119836150007217e-08,
+          "tau2": 0.0051923065425827355,
+          "k": 21
+        }
+      }
+    },
+    "moderator_effects": {
+      "dataset_domain": {
+        "H_statistic": 0.3996803504306367,
+        "p_value": 0.8188616170016754,
+        "eta_squared": 0.0,
+        "n_groups": 3,
+        "significant": false
+      },
+      "architecture": {
+        "H_statistic": 16.307040257963653,
+        "p_value": 0.0009809042284732814,
+        "eta_squared": 0.6048654662710752,
+        "n_groups": 4,
+        "significant": true
+      },
+      "metric_type": {
+        "U_statistic": 104.0,
+        "p_value": 0.0009046098727405155,
+        "significant": true
+      }
+    },
+    "scope_of_validity": {
+      "n_conditions_works": 5,
+      "n_conditions_fails": 21,
+      "directional_accuracy": 0.192,
+      "domains_where_works": [
+        "molecular",
+        "protein",
+        "synthetic"
+      ],
+      "domains_where_fails": [
+        "molecular",
+        "other",
+        "protein",
+        "synthetic"
+      ],
+      "works_conditions": [
+        {
+          "dataset": "ZINC-subset",
+          "architecture": "model_free",
+          "rho": 0.24329844001812254,
+          "p_value": 3.1788649506356423e-161
+        },
+        {
+          "dataset": "Peptides-func",
+          "architecture": "model_free",
+          "rho": 0.7507752663341262,
+          "p_value": 0.0
+        },
+        {
+          "dataset": "Peptides-struct",
+          "architecture": "model_free",
+          "rho": 0.7507752663341262,
+          "p_value": 0.0
+        },
+        {
+          "dataset": "Synthetic-aliased-pairs",
+          "architecture": "model_free",
+          "rho": 0.6676193568546526,
+          "p_value": 3.2987119181833506e-14
+        },
+        {
+          "dataset": "Peptides-struct",
+          "architecture": "GPS",
+          "rho": -0.20185875873702855,
+          "p_value": 0.0004348406870267066
+        }
+      ],
+      "fails_conditions": [
+        {
+          "dataset": "ZINC-subset",
+          "architecture": "MLP",
+          "rho": 0.10240103614203495,
+          "p_value": 1.3432584557833304e-05
+        },
+        {
+          "dataset": "Peptides-func",
+          "architecture": "MLP",
+          "rho": -0.1385084518869321,
+          "p_value": 0.01636805973684667
+        },
+        {
+          "dataset": "Peptides-struct",
+          "architecture": "MLP",
+          "rho": 0.06722064417729784,
+          "p_value": 0.2457441953603731
+        },
+        {
+          "dataset": "ZINC-subset",
+          "architecture": "GPS",
+          "rho": 0.07069504217963808,
+          "p_value": 0.025379623748189202
+        },
+        {
+          "dataset": "Peptides-func",
+          "architecture": "GPS",
+          "rho": 0.07992975904030121,
+          "p_value": 0.1673236281058489
+        }
+      ]
+    },
+    "figure_paths": [
+      "/opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/eval_id1_it6__opus/figures/verdict_dashboard.png",
+      "/opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/eval_id1_it6__opus/figures/forest_plot.png",
+      "/opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/eval_id1_it6__opus/figures/srwe_scorecard.png",
+      "/opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/eval_id1_it6__opus/figures/moderator_ranking.png",
+      "/opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/eval_id1_it6__opus/figures/scope_validity.png",
+      "/opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/eval_id1_it6__opus/figures/decision_tree.png",
+      "/opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/eval_id1_it6__opus/figures/encoding_performance.png"
+    ],
+    "criterion_verdicts": {
+      "C1_sri_gap_correlation": {
+        "criterion": "Spearman ρ(SRI, RWSE-LapPE gap) > 0.5",
+        "verdict": "not_confirmed",
+        "confidence": 0.863,
+        "evidence": "Pooled ρ = 0.153, 95% CI [0.020, 0.280], I² = 99.0%"
+      },
+      "C2_aliased_pairs_distinguishability": {
+        "criterion": "SRWE better than RWSE at distinguishing aliased graph pairs",
+        "verdict": "confirmed",
+        "confidence": 0.667,
+        "evidence": "Mean distinguishability: 83.3% across 3 categories"
+      },
+      "C3_srwe_gap_reduction": {
+        "criterion": "SRWE achieves ≥50% gap reduction on low-SRI graphs",
+        "verdict": "partially_confirmed",
+        "confidence": 0.364,
+        "evidence": "Mean gap reduction: 0.264, 36% conditions above 50%"
+      },
+      "D1_weak_correlation": {
+        "criterion": "Spearman ρ(SRI, gap) < 0.2 → theory disconfirmed",
+        "verdict": "disconfirmed",
+        "confidence": 0.237,
+        "evidence": "Pooled ρ = 0.153"
+      },
+      "D2_resolution_mismatch": {
+        "criterion": "SRI correlation disappears when controlling for graph size",
+        "verdict": "not_confirmed",
+        "confidence": 0.5,
+        "evidence": "Mean within-size-bin |ρ| = 0.137"
+      },
+      "D3_no_srwe_improvement": {
+        "criterion": "SRWE shows no systematic improvement over RWSE",
+        "verdict": "partially_confirmed",
+        "confidence": 0.5,
+        "evidence": "SRWE vs RWSE win rate: 40.0% (10W/15L)"
+      }
+    },
+    "overall_assessment": {
+      "overall_verdict": "partially_confirmed",
+      "overall_confidence": 0.458,
+      "overall_score": 0.458,
+      "confirmation_score": 0.224,
+      "disconfirmation_penalty": 0.003
+    }
+  },
+  "metrics_agg": {
+    "rho_pooled": 0.1526091790139954,
+    "rho_ci_low": 0.020404082754321737,
+    "rho_ci_high": 0.27956910397365814,
+    "I2_heterogeneity": 99.01850479736706,
+    "Q_pvalue": 0.0,
+    "n_studies": 26,
+    "overall_score": 0.458,
+    "overall_confidence": 0.458,
+    "confirmation_score": 0.224,
+    "srwe_total_comparisons": 74,
+    "srwe_total_wins": 34,
+    "srwe_total_losses": 32,
+    "scope_directional_accuracy": 0.192,
+    "scope_n_works": 5,
+    "scope_n_fails": 21,
+    "c1_sri_gap_correlation_confidence": 0.863,
+    "c2_aliased_pairs_distinguishability_confidence": 0.667,
+    "c3_srwe_gap_reduction_confidence": 0.364,
+    "d1_weak_correlation_confidence": 0.237,
+    "d2_resolution_mismatch_confidence": 0.5,
+    "d3_no_srwe_improvement_confidence": 0.5,
+    "mean_srwe_gap_reduction": 0.2644593663791243
+  },
+  "datasets": [
+    {
+      "dataset": "SRI_gap_correlations",
+      "examples": [
+        {
+          "input": "{\"experiment\": \"exp_id1_it2\", \"dataset\": \"ZINC-subset\", \"architecture\": \"model_free\", \"metric_type\": \"node_distinguishability\", \"n\": 12000}",
+          "output": "{\"rho\": 0.243298, \"p_value\": 3.1788649506356423e-161}",
+          "predict_meta_analysis": "{\"pooled_rho\": 0.152609, \"study_weight\": 8.5727}",
+          "eval_abs_rho": 0.24329844001812254,
+          "eval_significant": 1.0,
+          "eval_above_c1_threshold": 0.0,
+          "eval_above_d1_threshold": 1.0
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it2\", \"dataset\": \"Peptides-func\", \"architecture\": \"model_free\", \"metric_type\": \"node_distinguishability\", \"n\": 2000}",
+          "output": "{\"rho\": 0.750775, \"p_value\": 0.0}",
+          "predict_meta_analysis": "{\"pooled_rho\": 0.152609, \"study_weight\": 8.5421}",
+          "eval_abs_rho": 0.7507752663341262,
+          "eval_significant": 1.0,
+          "eval_above_c1_threshold": 1.0,
+          "eval_above_d1_threshold": 1.0
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it2\", \"dataset\": \"Peptides-struct\", \"architecture\": \"model_free\", \"metric_type\": \"node_distinguishability\", \"n\": 2000}",
+          "output": "{\"rho\": 0.750775, \"p_value\": 0.0}",
+          "predict_meta_analysis": "{\"pooled_rho\": 0.152609, \"study_weight\": 8.5421}",
+          "eval_abs_rho": 0.7507752663341262,
+          "eval_significant": 1.0,
+          "eval_above_c1_threshold": 1.0,
+          "eval_above_d1_threshold": 1.0
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it2\", \"dataset\": \"Synthetic-aliased-pairs\", \"architecture\": \"model_free\", \"metric_type\": \"node_distinguishability\", \"n\": 100}",
+          "output": "{\"rho\": 0.667619, \"p_value\": 3.2987119181833506e-14}",
+          "predict_meta_analysis": "{\"pooled_rho\": 0.152609, \"study_weight\": 7.8817}",
+          "eval_abs_rho": 0.6676193568546526,
+          "eval_significant": 1.0,
+          "eval_above_c1_threshold": 1.0,
+          "eval_above_d1_threshold": 1.0
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it2\", \"dataset\": \"ZINC-subset\", \"architecture\": \"MLP\", \"metric_type\": \"task_performance\", \"n\": 1800}",
+          "output": "{\"rho\": 0.102401, \"p_value\": 1.3432584557833304e-05}",
+          "predict_meta_analysis": "{\"pooled_rho\": 0.152609, \"study_weight\": 8.538}",
+          "eval_abs_rho": 0.10240103614203495,
+          "eval_significant": 1.0,
+          "eval_above_c1_threshold": 0.0,
+          "eval_above_d1_threshold": 0.0
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it2\", \"dataset\": \"Peptides-func\", \"architecture\": \"MLP\", \"metric_type\": \"task_performance\", \"n\": 300}",
+          "output": "{\"rho\": -0.138508, \"p_value\": 0.01636805973684667}",
+          "predict_meta_analysis": "{\"pooled_rho\": 0.152609, \"study_weight\": 8.3379}",
+          "eval_abs_rho": 0.1385084518869321,
+          "eval_significant": 1.0,
+          "eval_above_c1_threshold": 0.0,
+          "eval_above_d1_threshold": 0.0
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it2\", \"dataset\": \"Peptides-struct\", \"architecture\": \"MLP\", \"metric_type\": \"task_performance\", \"n\": 300}",
+          "output": "{\"rho\": 0.067221, \"p_value\": 0.2457441953603731}",
+          "predict_meta_analysis": "{\"pooled_rho\": 0.152609, \"study_weight\": 8.3379}",
+          "eval_abs_rho": 0.06722064417729784,
+          "eval_significant": 0.0,
+          "eval_above_c1_threshold": 0.0,
+          "eval_above_d1_threshold": 0.0
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it3\", \"dataset\": \"ZINC-subset\", \"architecture\": \"GPS\", \"metric_type\": \"task_performance\", \"n\": 1000}",
+          "output": "{\"rho\": 0.070695, \"p_value\": 0.025379623748189202}",
+          "predict_meta_analysis": "{\"pooled_rho\": 0.152609, \"study_weight\": 8.5056}",
+          "eval_abs_rho": 0.07069504217963808,
+          "eval_significant": 1.0,
+          "eval_above_c1_threshold": 0.0,
+          "eval_above_d1_threshold": 0.0
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it3\", \"dataset\": \"Peptides-func\", \"architecture\": \"GPS\", \"metric_type\": \"task_performance\", \"n\": 300}",
+          "output": "{\"rho\": 0.07993, \"p_value\": 0.1673236281058489}",
+          "predict_meta_analysis": "{\"pooled_rho\": 0.152609, \"study_weight\": 8.3379}",
+          "eval_abs_rho": 0.07992975904030121,
+          "eval_significant": 0.0,
+          "eval_above_c1_threshold": 0.0,
+          "eval_above_d1_threshold": 0.0
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it3\", \"dataset\": \"Peptides-struct\", \"architecture\": \"GPS\", \"metric_type\": \"task_performance\", \"n\": 300}",
+          "output": "{\"rho\": -0.201859, \"p_value\": 0.0004348406870267066}",
+          "predict_meta_analysis": "{\"pooled_rho\": 0.152609, \"study_weight\": 8.3379}",
+          "eval_abs_rho": 0.20185875873702855,
+          "eval_significant": 1.0,
+          "eval_above_c1_threshold": 0.0,
+          "eval_above_d1_threshold": 1.0
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it3\", \"dataset\": \"Synthetic-aliased-pairs\", \"architecture\": \"GPS\", \"metric_type\": \"task_performance\", \"n\": 20}",
+          "output": "{\"rho\": -0.028593, \"p_value\": 0.9047510837073325}",
+          "predict_meta_analysis": "{\"pooled_rho\": 0.152609, \"study_weight\": 5.7016}",
+          "eval_abs_rho": 0.028592935107083106,
+          "eval_significant": 0.0,
+          "eval_above_c1_threshold": 0.0,
+          "eval_above_d1_threshold": 0.0
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it4\", \"dataset\": \"Multi-dataset\", \"architecture\": \"model_free\", \"metric_type\": \"node_distinguishability\", \"n\": 245}",
+          "output": "{\"rho\": 0.158825, \"p_value\": 0.012806225385912487}",
+          "predict_meta_analysis": "{\"pooled_rho\": 0.152609, \"study_weight\": 8.2851}",
+          "eval_abs_rho": 0.15882515260307195,
+          "eval_significant": 1.0,
+          "eval_above_c1_threshold": 0.0,
+          "eval_above_d1_threshold": 0.0
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"dataset\": \"synthetic_fixed_n30\", \"architecture\": \"MLP\", \"metric_type\": \"task_performance\", \"n\": 500}",
+          "output": "{\"rho\": 0.024112, \"p_value\": 0.59064743}",
+          "predict_meta_analysis": "{\"pooled_rho\": 0.152609, \"study_weight\": 8.4332}",
+          "eval_abs_rho": 0.024112,
+          "eval_significant": 0.0,
+          "eval_above_c1_threshold": 0.0,
+          "eval_above_d1_threshold": 0.0
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it5\", \"dataset\": \"zinc\", \"architecture\": \"GPS\", \"metric_type\": \"task_performance\", \"n\": 300}",
+          "output": "{\"rho\": 0.006922, \"p_value\": 0.8269400914493046}",
+          "predict_meta_analysis": "{\"pooled_rho\": 0.152609, \"study_weight\": 8.3379}",
+          "eval_abs_rho": 0.006922189067555039,
+          "eval_significant": 0.0,
+          "eval_above_c1_threshold": 0.0,
+          "eval_above_d1_threshold": 0.0
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it5\", \"dataset\": \"peptides_func\", \"architecture\": \"GPS\", \"metric_type\": \"task_performance\", \"n\": 300}",
+          "output": "{\"rho\": 0.0, \"p_value\": 1.0}",
+          "predict_meta_analysis": "{\"pooled_rho\": 0.152609, \"study_weight\": 8.3379}",
+          "eval_abs_rho": 0.0,
+          "eval_significant": 0.0,
+          "eval_above_c1_threshold": 0.0,
+          "eval_above_d1_threshold": 0.0
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it5\", \"dataset\": \"peptides_struct\", \"architecture\": \"GPS\", \"metric_type\": \"task_performance\", \"n\": 300}",
+          "output": "{\"rho\": -0.153768, \"p_value\": 0.002095630430583484}",
+          "predict_meta_analysis": "{\"pooled_rho\": 0.152609, \"study_weight\": 8.3379}",
+          "eval_abs_rho": 0.15376824526462976,
+          "eval_significant": 1.0,
+          "eval_above_c1_threshold": 0.0,
+          "eval_above_d1_threshold": 0.0
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"dataset\": \"ZINC-subset\", \"architecture\": \"GCN_depth2\", \"metric_type\": \"task_performance\", \"n\": 483}",
+          "output": "{\"rho\": 0.03246, \"p_value\": 0.476635}",
+          "predict_meta_analysis": "{\"pooled_rho\": 0.152609, \"study_weight\": 8.4282}",
+          "eval_abs_rho": 0.03246,
+          "eval_significant": 0.0,
+          "eval_above_c1_threshold": 0.0,
+          "eval_above_d1_threshold": 0.0
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"dataset\": \"ZINC-subset\", \"architecture\": \"GCN_depth3\", \"metric_type\": \"task_performance\", \"n\": 483}",
+          "output": "{\"rho\": 0.058829, \"p_value\": 0.196822}",
+          "predict_meta_analysis": "{\"pooled_rho\": 0.152609, \"study_weight\": 8.4282}",
+          "eval_abs_rho": 0.058829,
+          "eval_significant": 0.0,
+          "eval_above_c1_threshold": 0.0,
+          "eval_above_d1_threshold": 0.0
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"dataset\": \"ZINC-subset\", \"architecture\": \"GCN_depth4\", \"metric_type\": \"task_performance\", \"n\": 483}",
+          "output": "{\"rho\": 0.042869, \"p_value\": 0.347154}",
+          "predict_meta_analysis": "{\"pooled_rho\": 0.152609, \"study_weight\": 8.4282}",
+          "eval_abs_rho": 0.042869,
+          "eval_significant": 0.0,
+          "eval_above_c1_threshold": 0.0,
+          "eval_above_d1_threshold": 0.0
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"dataset\": \"ZINC-subset\", \"architecture\": \"GCN_depth6\", \"metric_type\": \"task_performance\", \"n\": 483}",
+          "output": "{\"rho\": 0.056829, \"p_value\": 0.212503}",
+          "predict_meta_analysis": "{\"pooled_rho\": 0.152609, \"study_weight\": 8.4282}",
+          "eval_abs_rho": 0.056829,
+          "eval_significant": 0.0,
+          "eval_above_c1_threshold": 0.0,
+          "eval_above_d1_threshold": 0.0
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"dataset\": \"ZINC-subset\", \"architecture\": \"GCN_depth8\", \"metric_type\": \"task_performance\", \"n\": 483}",
+          "output": "{\"rho\": 0.092106, \"p_value\": 0.043043}",
+          "predict_meta_analysis": "{\"pooled_rho\": 0.152609, \"study_weight\": 8.4282}",
+          "eval_abs_rho": 0.092106,
+          "eval_significant": 1.0,
+          "eval_above_c1_threshold": 0.0,
+          "eval_above_d1_threshold": 0.0
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"dataset\": \"Peptides-struct\", \"architecture\": \"GCN_depth2\", \"metric_type\": \"task_performance\", \"n\": 675}",
+          "output": "{\"rho\": 0.147344, \"p_value\": 0.000122}",
+          "predict_meta_analysis": "{\"pooled_rho\": 0.152609, \"study_weight\": 8.4706}",
+          "eval_abs_rho": 0.147344,
+          "eval_significant": 1.0,
+          "eval_above_c1_threshold": 0.0,
+          "eval_above_d1_threshold": 0.0
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"dataset\": \"Peptides-struct\", \"architecture\": \"GCN_depth3\", \"metric_type\": \"task_performance\", \"n\": 675}",
+          "output": "{\"rho\": 0.147405, \"p_value\": 0.000121}",
+          "predict_meta_analysis": "{\"pooled_rho\": 0.152609, \"study_weight\": 8.4706}",
+          "eval_abs_rho": 0.147405,
+          "eval_significant": 1.0,
+          "eval_above_c1_threshold": 0.0,
+          "eval_above_d1_threshold": 0.0
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"dataset\": \"Peptides-struct\", \"architecture\": \"GCN_depth4\", \"metric_type\": \"task_performance\", \"n\": 675}",
+          "output": "{\"rho\": 0.166147, \"p_value\": 1.4e-05}",
+          "predict_meta_analysis": "{\"pooled_rho\": 0.152609, \"study_weight\": 8.4706}",
+          "eval_abs_rho": 0.166147,
+          "eval_significant": 1.0,
+          "eval_above_c1_threshold": 0.0,
+          "eval_above_d1_threshold": 0.0
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"dataset\": \"Peptides-struct\", \"architecture\": \"GCN_depth6\", \"metric_type\": \"task_performance\", \"n\": 675}",
+          "output": "{\"rho\": 0.099027, \"p_value\": 0.010043}",
+          "predict_meta_analysis": "{\"pooled_rho\": 0.152609, \"study_weight\": 8.4706}",
+          "eval_abs_rho": 0.099027,
+          "eval_significant": 1.0,
+          "eval_above_c1_threshold": 0.0,
+          "eval_above_d1_threshold": 0.0
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"dataset\": \"Peptides-struct\", \"architecture\": \"GCN_depth8\", \"metric_type\": \"task_performance\", \"n\": 675}",
+          "output": "{\"rho\": 0.108813, \"p_value\": 0.004652}",
+          "predict_meta_analysis": "{\"pooled_rho\": 0.152609, \"study_weight\": 8.4706}",
+          "eval_abs_rho": 0.108813,
+          "eval_significant": 1.0,
+          "eval_above_c1_threshold": 0.0,
+          "eval_above_d1_threshold": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "SRWE_scorecard",
+      "examples": [
+        {
+          "input": "{\"comparison\": \"srwe_mpm_vs_rwse\", \"total\": 5}",
+          "output": "{\"wins\": 2, \"losses\": 3, \"ties\": 0, \"binom_p\": 1.0}",
+          "predict_scorecard": "{\"win_rate\": 0.4, \"significant\": false}",
+          "eval_win_rate": 0.4,
+          "eval_significant": 0.0
+        },
+        {
+          "input": "{\"comparison\": \"srwe_mpm_vs_lappe\", \"total\": 5}",
+          "output": "{\"wins\": 3, \"losses\": 2, \"ties\": 0, \"binom_p\": 1.0}",
+          "predict_scorecard": "{\"win_rate\": 0.6, \"significant\": false}",
+          "eval_win_rate": 0.6,
+          "eval_significant": 0.0
+        },
+        {
+          "input": "{\"comparison\": \"srwe_tikhonov_vs_rwse\", \"total\": 4}",
+          "output": "{\"wins\": 2, \"losses\": 2, \"ties\": 0, \"binom_p\": 1.0}",
+          "predict_scorecard": "{\"win_rate\": 0.5, \"significant\": false}",
+          "eval_win_rate": 0.5,
+          "eval_significant": 0.0
+        },
+        {
+          "input": "{\"comparison\": \"srwe_tikhonov_vs_lappe\", \"total\": 4}",
+          "output": "{\"wins\": 2, \"losses\": 2, \"ties\": 0, \"binom_p\": 1.0}",
+          "predict_scorecard": "{\"win_rate\": 0.5, \"significant\": false}",
+          "eval_win_rate": 0.5,
+          "eval_significant": 0.0
+        },
+        {
+          "input": "{\"comparison\": \"histogram_vs_rwse\", \"total\": 3}",
+          "output": "{\"wins\": 1, \"losses\": 2, \"ties\": 0, \"binom_p\": 1.0}",
+          "predict_scorecard": "{\"win_rate\": 0.3333, \"significant\": false}",
+          "eval_win_rate": 0.3333333333333333,
+          "eval_significant": 0.0
+        },
+        {
+          "input": "{\"comparison\": \"histogram_vs_lappe\", \"total\": 3}",
+          "output": "{\"wins\": 2, \"losses\": 1, \"ties\": 0, \"binom_p\": 1.0}",
+          "predict_scorecard": "{\"win_rate\": 0.6667, \"significant\": false}",
+          "eval_win_rate": 0.6666666666666666,
+          "eval_significant": 0.0
+        },
+        {
+          "input": "{\"comparison\": \"raw_weights_vs_rwse\", \"total\": 3}",
+          "output": "{\"wins\": 1, \"losses\": 2, \"ties\": 0, \"binom_p\": 1.0}",
+          "predict_scorecard": "{\"win_rate\": 0.3333, \"significant\": false}",
+          "eval_win_rate": 0.3333333333333333,
+          "eval_significant": 0.0
+        },
+        {
+          "input": "{\"comparison\": \"raw_weights_vs_lappe\", \"total\": 3}",
+          "output": "{\"wins\": 1, \"losses\": 2, \"ties\": 0, \"binom_p\": 1.0}",
+          "predict_scorecard": "{\"win_rate\": 0.3333, \"significant\": false}",
+          "eval_win_rate": 0.3333333333333333,
+          "eval_significant": 0.0
+        },
+        {
+          "input": "{\"comparison\": \"moment_correction_vs_rwse\", \"total\": 3}",
+          "output": "{\"wins\": 1, \"losses\": 1, \"ties\": 1, \"binom_p\": 1.0}",
+          "predict_scorecard": "{\"win_rate\": 0.3333, \"significant\": false}",
+          "eval_win_rate": 0.3333333333333333,
+          "eval_significant": 0.0
+        },
+        {
+          "input": "{\"comparison\": \"moment_correction_vs_lappe\", \"total\": 3}",
+          "output": "{\"wins\": 2, \"losses\": 1, \"ties\": 0, \"binom_p\": 1.0}",
+          "predict_scorecard": "{\"win_rate\": 0.6667, \"significant\": false}",
+          "eval_win_rate": 0.6666666666666666,
+          "eval_significant": 0.0
+        },
+        {
+          "input": "{\"comparison\": \"spectral_summary_vs_rwse\", \"total\": 3}",
+          "output": "{\"wins\": 1, \"losses\": 1, \"ties\": 1, \"binom_p\": 1.0}",
+          "predict_scorecard": "{\"win_rate\": 0.3333, \"significant\": false}",
+          "eval_win_rate": 0.3333333333333333,
+          "eval_significant": 0.0
+        },
+        {
+          "input": "{\"comparison\": \"spectral_summary_vs_lappe\", \"total\": 3}",
+          "output": "{\"wins\": 3, \"losses\": 0, \"ties\": 0, \"binom_p\": 0.25}",
+          "predict_scorecard": "{\"win_rate\": 1.0, \"significant\": false}",
+          "eval_win_rate": 1.0,
+          "eval_significant": 0.0
+        },
+        {
+          "input": "{\"comparison\": \"srwe_vs_rwse\", \"total\": 10}",
+          "output": "{\"wins\": 0, \"losses\": 8, \"ties\": 2, \"binom_p\": 0.007812}",
+          "predict_scorecard": "{\"win_rate\": 0.0, \"significant\": true}",
+          "eval_win_rate": 0.0,
+          "eval_significant": 1.0
+        },
+        {
+          "input": "{\"comparison\": \"srwe_vs_lappe\", \"total\": 10}",
+          "output": "{\"wins\": 5, \"losses\": 2, \"ties\": 3, \"binom_p\": 0.453125}",
+          "predict_scorecard": "{\"win_rate\": 0.5, \"significant\": false}",
+          "eval_win_rate": 0.5,
+          "eval_significant": 0.0
+        },
+        {
+          "input": "{\"comparison\": \"fixed_srwe_vs_fixed_rwse\", \"total\": 3}",
+          "output": "{\"wins\": 1, \"losses\": 1, \"ties\": 1, \"binom_p\": 1.0}",
+          "predict_scorecard": "{\"win_rate\": 0.3333, \"significant\": false}",
+          "eval_win_rate": 0.3333333333333333,
+          "eval_significant": 0.0
+        },
+        {
+          "input": "{\"comparison\": \"fixed_srwe_vs_fixed_lappe\", \"total\": 3}",
+          "output": "{\"wins\": 2, \"losses\": 1, \"ties\": 0, \"binom_p\": 1.0}",
+          "predict_scorecard": "{\"win_rate\": 0.6667, \"significant\": false}",
+          "eval_win_rate": 0.6666666666666666,
+          "eval_significant": 0.0
+        },
+        {
+          "input": "{\"comparison\": \"concat_rwse_srwe_vs_fixed_rwse\", \"total\": 3}",
+          "output": "{\"wins\": 3, \"losses\": 0, \"ties\": 0, \"binom_p\": 0.25}",
+          "predict_scorecard": "{\"win_rate\": 1.0, \"significant\": false}",
+          "eval_win_rate": 1.0,
+          "eval_significant": 0.0
+        },
+        {
+          "input": "{\"comparison\": \"concat_rwse_srwe_vs_fixed_lappe\", \"total\": 3}",
+          "output": "{\"wins\": 2, \"losses\": 1, \"ties\": 0, \"binom_p\": 1.0}",
+          "predict_scorecard": "{\"win_rate\": 0.6667, \"significant\": false}",
+          "eval_win_rate": 0.6666666666666666,
+          "eval_significant": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "criterion_verdicts",
+      "examples": [
+        {
+          "input": "{\"criterion\": \"C1_sri_gap_correlation\", \"description\": \"Spearman \\u03c1(SRI, RWSE-LapPE gap) > 0.5\"}",
+          "output": "{\"verdict\": \"not_confirmed\", \"confidence\": 0.863}",
+          "predict_verdict": "{\"verdict\": \"not_confirmed\"}",
+          "eval_confidence": 0.863
+        },
+        {
+          "input": "{\"criterion\": \"C2_aliased_pairs_distinguishability\", \"description\": \"SRWE better than RWSE at distinguishing aliased graph pairs\"}",
+          "output": "{\"verdict\": \"confirmed\", \"confidence\": 0.667}",
+          "predict_verdict": "{\"verdict\": \"confirmed\"}",
+          "eval_confidence": 0.667
+        },
+        {
+          "input": "{\"criterion\": \"C3_srwe_gap_reduction\", \"description\": \"SRWE achieves \\u226550% gap reduction on low-SRI graphs\"}",
+          "output": "{\"verdict\": \"partially_confirmed\", \"confidence\": 0.364}",
+          "predict_verdict": "{\"verdict\": \"partially_confirmed\"}",
+          "eval_confidence": 0.364
+        },
+        {
+          "input": "{\"criterion\": \"D1_weak_correlation\", \"description\": \"Spearman \\u03c1(SRI, gap) < 0.2 \\u2192 theory disconfirmed\"}",
+          "output": "{\"verdict\": \"disconfirmed\", \"confidence\": 0.237}",
+          "predict_verdict": "{\"verdict\": \"disconfirmed\"}",
+          "eval_confidence": 0.237
+        },
+        {
+          "input": "{\"criterion\": \"D2_resolution_mismatch\", \"description\": \"SRI correlation disappears when controlling for graph size\"}",
+          "output": "{\"verdict\": \"not_confirmed\", \"confidence\": 0.5}",
+          "predict_verdict": "{\"verdict\": \"not_confirmed\"}",
+          "eval_confidence": 0.5
+        },
+        {
+          "input": "{\"criterion\": \"D3_no_srwe_improvement\", \"description\": \"SRWE shows no systematic improvement over RWSE\"}",
+          "output": "{\"verdict\": \"partially_confirmed\", \"confidence\": 0.5}",
+          "predict_verdict": "{\"verdict\": \"partially_confirmed\"}",
+          "eval_confidence": 0.5
+        }
+      ]
+    },
+    {
+      "dataset": "SRWE_gap_reductions",
+      "examples": [
+        {
+          "input": "{\"condition\": \"exp_id1_it3_ZINC-subset\", \"dataset\": \"ZINC-subset\"}",
+          "output": "0.345168",
+          "predict_gap_reduction": "0.345168",
+          "eval_gap_reduction": 0.34516837104957343,
+          "eval_meets_50pct": 0.0
+        },
+        {
+          "input": "{\"condition\": \"exp_id1_it3_Peptides-func\", \"dataset\": \"Peptides-func\"}",
+          "output": "-2.768346",
+          "predict_gap_reduction": "-2.768346",
+          "eval_gap_reduction": -2.7683461478128217,
+          "eval_meets_50pct": 0.0
+        },
+        {
+          "input": "{\"condition\": \"exp_id1_it3_Peptides-struct\", \"dataset\": \"Peptides-struct\"}",
+          "output": "0.576979",
+          "predict_gap_reduction": "0.576979",
+          "eval_gap_reduction": 0.5769789996441916,
+          "eval_meets_50pct": 1.0
+        },
+        {
+          "input": "{\"condition\": \"exp_id1_it3_Synthetic-aliased-pairs\", \"dataset\": \"Synthetic-aliased-pairs\"}",
+          "output": "1.755332",
+          "predict_gap_reduction": "1.755332",
+          "eval_gap_reduction": 1.7553318072894248,
+          "eval_meets_50pct": 1.0
+        },
+        {
+          "input": "{\"condition\": \"exp_id2_it4_synthetic_low_sri\", \"dataset\": \"synthetic_fixed_n30\"}",
+          "output": "0.74192",
+          "predict_gap_reduction": "0.74192",
+          "eval_gap_reduction": 0.74192,
+          "eval_meets_50pct": 1.0
+        },
+        {
+          "input": "{\"condition\": \"exp_id2_it3_Peptides-func\", \"dataset\": \"Peptides-func\"}",
+          "output": "0.4146",
+          "predict_gap_reduction": "0.4146",
+          "eval_gap_reduction": 0.4146,
+          "eval_meets_50pct": 0.0
+        },
+        {
+          "input": "{\"condition\": \"exp_id2_it3_Peptides-struct\", \"dataset\": \"Peptides-struct\"}",
+          "output": "0.3815",
+          "predict_gap_reduction": "0.3815",
+          "eval_gap_reduction": 0.3815,
+          "eval_meets_50pct": 0.0
+        },
+        {
+          "input": "{\"condition\": \"exp_id2_it3_ZINC-subset\", \"dataset\": \"ZINC-subset\"}",
+          "output": "0.3915",
+          "predict_gap_reduction": "0.3915",
+          "eval_gap_reduction": 0.39149999999999996,
+          "eval_meets_50pct": 0.0
+        },
+        {
+          "input": "{\"condition\": \"exp_id2_it5_Peptides-func\", \"dataset\": \"Peptides-func\"}",
+          "output": "0.0906",
+          "predict_gap_reduction": "0.0906",
+          "eval_gap_reduction": 0.0906,
+          "eval_meets_50pct": 0.0
+        },
+        {
+          "input": "{\"condition\": \"exp_id2_it5_Peptides-struct\", \"dataset\": \"Peptides-struct\"}",
+          "output": "1.0971",
+          "predict_gap_reduction": "1.0971",
+          "eval_gap_reduction": 1.0971,
+          "eval_meets_50pct": 1.0
+        },
+        {
+          "input": "{\"condition\": \"exp_id2_it5_ZINC-subset\", \"dataset\": \"ZINC-subset\"}",
+          "output": "-0.1173",
+          "predict_gap_reduction": "-0.1173",
+          "eval_gap_reduction": -0.1173,
+          "eval_meets_50pct": 0.0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,446 @@
+2026-02-22 06:53:23.283 | INFO     | __main__:main:1380 - ======================================================================
+2026-02-22 06:53:23.283 | INFO     | __main__:main:1381 - Cross-Architecture Meta-Analysis of Walk Resolution Limit Theory
+2026-02-22 06:53:23.283 | INFO     | __main__:main:1382 - ======================================================================
+2026-02-22 06:53:23.283 | INFO     | __main__:main:1385 - Step 1: Loading dependency data...
+2026-02-22 06:53:23.283 | INFO     | __main__:load_json_data:223 - Loading GPS (exp_id1_it3) from /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_3/gen_art/exp_id1_it3__opus/full_method_out.json
+2026-02-22 06:53:23.343 | INFO     | __main__:load_json_data:227 -   GPS (exp_id1_it3): 4 datasets, 1620 total examples
+2026-02-22 06:53:23.343 | INFO     | __main__:load_json_data:223 - Loading GCN (exp_id2_it3) from /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_3/gen_art/exp_id2_it3__opus/full_method_out.json
+2026-02-22 06:53:23.790 | INFO     | __main__:load_json_data:227 -   GCN (exp_id2_it3): 4 datasets, 16100 total examples
+2026-02-22 06:53:23.790 | INFO     | __main__:load_json_data:223 - Loading Model-free/MLP (exp_id1_it2) from /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_2/gen_art/exp_id1_it2__opus/full_method_out.json
+2026-02-22 06:53:23.821 | INFO     | __main__:load_json_data:227 -   Model-free/MLP (exp_id1_it2): 4 datasets, 16100 total examples
+2026-02-22 06:53:23.821 | INFO     | __main__:load_json_data:223 - Loading Diagnostics (exp_id3_it2) from /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_2/gen_art/exp_id3_it2__opus/full_method_out.json
+2026-02-22 06:53:23.852 | INFO     | __main__:load_json_data:227 -   Diagnostics (exp_id3_it2): 4 datasets, 16100 total examples
+2026-02-22 06:53:23.852 | INFO     | __main__:main:1392 - Step 2: Extracting per-graph data...
+2026-02-22 06:53:23.859 | INFO     | __main__:extract_gps_per_graph:250 - GPS per-graph data: 1620 rows, datasets: ['ZINC-subset', 'Peptides-func', 'Peptides-struct', 'Synthetic-aliased-pairs']
+2026-02-22 06:53:26.887 | INFO     | __main__:extract_gcn_per_graph:321 - GCN per-graph data: 16100 rows, datasets: ['ZINC-subset', 'Peptides-func', 'Peptides-struct', 'Synthetic-aliased-pairs']
+2026-02-22 06:53:26.888 | INFO     | __main__:main:1400 - Limiting to 3 examples per dataset
+2026-02-22 06:53:26.897 | INFO     | __main__:main:1409 -   GPS: 12 examples, GCN: 12 examples
+2026-02-22 06:53:26.897 | INFO     | __main__:main:1411 - Per-graph data extracted: GPS=12, GCN=12
+2026-02-22 06:53:26.897 | INFO     | __main__:main:1414 - Step 3: Running meta-analyses...
+2026-02-22 06:53:26.897 | INFO     | __main__:meta_analysis_1_architecture_comparison:398 - === META-ANALYSIS 1: Architecture Comparison ===
+2026-02-22 06:53:26.898 | INFO     | __main__:meta_analysis_1_architecture_comparison:468 -   model_free: Fisher-z mean rho = 0.4070 [0.3940, 0.4198]
+2026-02-22 06:53:26.898 | INFO     | __main__:meta_analysis_1_architecture_comparison:468 -   MLP: Fisher-z mean rho = 0.0682 [0.0282, 0.1079]
+2026-02-22 06:53:26.898 | INFO     | __main__:meta_analysis_1_architecture_comparison:468 -   GCN: Fisher-z mean rho = 0.0000 [0.0000, 0.0000]
+2026-02-22 06:53:26.898 | INFO     | __main__:meta_analysis_1_architecture_comparison:468 -   GPS: Fisher-z mean rho = 0.0000 [0.0000, 0.0000]
+2026-02-22 06:53:26.898 | INFO     | __main__:meta_analysis_1_architecture_comparison:476 -   Overall mean rho across architectures: 0.1188
+2026-02-22 06:53:26.899 | INFO     | __main__:meta_analysis_2_sri_vs_size:489 - === META-ANALYSIS 2: SRI vs Size Head-to-Head ===
+2026-02-22 06:53:26.899 | WARNING  | __main__:meta_analysis_2_sri_vs_size:504 -   GPS/ZINC-subset: too few examples (3), skipping
+2026-02-22 06:53:26.899 | WARNING  | __main__:meta_analysis_2_sri_vs_size:504 -   GPS/Peptides-func: too few examples (3), skipping
+2026-02-22 06:53:26.899 | WARNING  | __main__:meta_analysis_2_sri_vs_size:504 -   GPS/Peptides-struct: too few examples (3), skipping
+2026-02-22 06:53:26.900 | WARNING  | __main__:meta_analysis_2_sri_vs_size:504 -   GCN/ZINC-subset: too few examples (3), skipping
+2026-02-22 06:53:26.900 | WARNING  | __main__:meta_analysis_2_sri_vs_size:504 -   GCN/Peptides-func: too few examples (3), skipping
+2026-02-22 06:53:26.900 | WARNING  | __main__:meta_analysis_2_sri_vs_size:504 -   GCN/Peptides-struct: too few examples (3), skipping
+2026-02-22 06:53:26.900 | INFO     | __main__:meta_analysis_2_sri_vs_size:574 -   Aggregate ΔR²(LR)=0.0000, ΔR²(RF)=0.0000, partial ρ=0.0000
+2026-02-22 06:53:26.900 | INFO     | __main__:meta_analysis_3_task_type:591 - === META-ANALYSIS 3: Task-Type Analysis ===
+2026-02-22 06:53:26.903 | INFO     | __main__:meta_analysis_4_srwe_scorecard:729 - === META-ANALYSIS 4: SRWE Consistency Scorecard ===
+2026-02-22 06:53:26.903 | INFO     | __main__:meta_analysis_4_srwe_scorecard:824 -   GPS/ZINC-subset: SRWE=0.2333, RWSE=0.1991, LapPE=0.2982, gap_reduction=34.5%, wins_rwse=False, wins_lappe=True
+2026-02-22 06:53:26.903 | INFO     | __main__:meta_analysis_4_srwe_scorecard:824 -   GPS/Peptides-func: SRWE=0.2758, RWSE=0.2630, LapPE=0.2584, gap_reduction=-276.8%, wins_rwse=True, wins_lappe=True
+2026-02-22 06:53:26.903 | INFO     | __main__:meta_analysis_4_srwe_scorecard:824 -   GPS/Peptides-struct: SRWE=17.5167, RWSE=18.8603, LapPE=16.5316, gap_reduction=57.7%, wins_rwse=True, wins_lappe=False
+2026-02-22 06:53:26.903 | INFO     | __main__:meta_analysis_4_srwe_scorecard:824 -   GCN/ZINC-subset: SRWE=0.4367, RWSE=0.3798, LapPE=0.5250, gap_reduction=39.1%, wins_rwse=False, wins_lappe=True
+2026-02-22 06:53:26.903 | INFO     | __main__:meta_analysis_4_srwe_scorecard:824 -   GCN/Peptides-func: SRWE=0.4198, RWSE=0.4551, LapPE=0.3699, gap_reduction=41.5%, wins_rwse=False, wins_lappe=True
+2026-02-22 06:53:26.903 | INFO     | __main__:meta_analysis_4_srwe_scorecard:824 -   GCN/Peptides-struct: SRWE=30.3837, RWSE=35.0476, LapPE=22.8211, gap_reduction=38.1%, wins_rwse=True, wins_lappe=False
+2026-02-22 06:53:26.903 | INFO     | __main__:meta_analysis_4_srwe_scorecard:851 -   low_sri_regression: n=2, mean gap reduction=47.9%, win_rate_rwse=1.00
+2026-02-22 06:53:26.903 | INFO     | __main__:meta_analysis_4_srwe_scorecard:851 -   low_sri_classification: n=2, mean gap reduction=-117.7%, win_rate_rwse=0.50
+2026-02-22 06:53:26.903 | INFO     | __main__:meta_analysis_4_srwe_scorecard:851 -   high_sri: n=2, mean gap reduction=36.8%, win_rate_rwse=0.00
+2026-02-22 06:53:26.903 | INFO     | __main__:meta_analysis_4_srwe_scorecard:855 -   Overall win rate vs RWSE: 0.50 (3/6)
+2026-02-22 06:53:26.903 | INFO     | __main__:meta_analysis_4_srwe_scorecard:856 -   Overall win rate vs LapPE: 0.67 (4/6)
+2026-02-22 06:53:26.903 | INFO     | __main__:meta_analysis_5_scope_of_validity:869 - === META-ANALYSIS 5: Scope of Validity Assessment ===
+2026-02-22 06:53:26.903 | INFO     | __main__:meta_analysis_5_scope_of_validity:893 -   Tier A (mathematical): strong (mean |ρ| = 0.654)
+2026-02-22 06:53:26.903 | INFO     | __main__:meta_analysis_5_scope_of_validity:914 -   Tier B (SRI classifier): strong (5 KS-significant pairs)
+2026-02-22 06:53:26.903 | INFO     | __main__:meta_analysis_5_scope_of_validity:945 -   Tier C (predictive): not_supported (ΔR²=0.0000, partial ρ=0.0000)
+2026-02-22 06:53:26.903 | INFO     | __main__:meta_analysis_5_scope_of_validity:973 -   Tier D (SRWE utility): moderate (win rate vs RWSE = 0.50)
+2026-02-22 06:53:26.903 | INFO     | __main__:main:1423 - Step 4: Generating figures...
+2026-02-22 06:53:26.903 | INFO     | __main__:generate_figures:1005 - === Generating Figures ===
+2026-02-22 06:53:26.997 | INFO     | __main__:generate_figures:1041 -   Saved /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_4/gen_art/eval_id3_it4__opus/figures/fig1_correlation_heatmap.png
+2026-02-22 06:53:27.065 | INFO     | __main__:generate_figures:1072 -   Saved /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_4/gen_art/eval_id3_it4__opus/figures/fig2_srwe_gap_reduction.png
+2026-02-22 06:53:27.136 | INFO     | __main__:generate_figures:1114 -   Saved /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_4/gen_art/eval_id3_it4__opus/figures/fig3_sri_vs_size.png
+2026-02-22 06:53:27.205 | INFO     | __main__:generate_figures:1170 -   Saved /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_4/gen_art/eval_id3_it4__opus/figures/fig4_decision_flowchart.png
+2026-02-22 06:53:27.277 | INFO     | __main__:generate_figures:1209 -   Saved /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_4/gen_art/eval_id3_it4__opus/figures/fig5_task_type_effect_size.png
+2026-02-22 06:53:27.277 | INFO     | __main__:generate_figures:1213 -   Generated 5 figures
+2026-02-22 06:53:27.277 | INFO     | __main__:main:1427 - Step 5: Formatting and saving output...
+2026-02-22 06:53:27.277 | INFO     | __main__:format_output:1228 - === Formatting Output ===
+2026-02-22 06:53:27.281 | INFO     | __main__:main:1432 - Output saved to /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_4/gen_art/eval_id3_it4__opus/eval_out.json
+2026-02-22 06:53:27.281 | INFO     | __main__:main:1433 - Output size: 0.0 MB
+2026-02-22 06:53:27.281 | INFO     | __main__:main:1436 - ======================================================================
+2026-02-22 06:53:27.281 | INFO     | __main__:main:1437 - SUMMARY OF KEY FINDINGS:
+2026-02-22 06:53:27.281 | INFO     | __main__:main:1438 -   MA1 - Overall mean SRI-gap ρ: 0.1188
+2026-02-22 06:53:27.281 | INFO     | __main__:main:1439 -   MA2 - Mean ΔR² (LR): 0.0000
+2026-02-22 06:53:27.281 | INFO     | __main__:main:1440 -   MA2 - Mean partial ρ: 0.0000
+2026-02-22 06:53:27.281 | INFO     | __main__:main:1441 -   MA3 - GPS Cohen's d: 0.0000
+2026-02-22 06:53:27.281 | INFO     | __main__:main:1442 -   MA4 - SRWE win rate vs RWSE: 0.50
+2026-02-22 06:53:27.281 | INFO     | __main__:main:1443 -   MA4 - SRWE win rate vs LapPE: 0.67
+2026-02-22 06:53:27.281 | INFO     | __main__:main:1444 -   MA5 - Tier A: strong
+2026-02-22 06:53:27.281 | INFO     | __main__:main:1445 -   MA5 - Tier B: strong
+2026-02-22 06:53:27.281 | INFO     | __main__:main:1446 -   MA5 - Tier C: not_supported
+2026-02-22 06:53:27.281 | INFO     | __main__:main:1447 -   MA5 - Tier D: moderate
+2026-02-22 06:53:27.281 | INFO     | __main__:main:1448 - ======================================================================
+2026-02-22 06:54:08.947 | INFO     | __main__:main:1380 - ======================================================================
+2026-02-22 06:54:08.947 | INFO     | __main__:main:1381 - Cross-Architecture Meta-Analysis of Walk Resolution Limit Theory
+2026-02-22 06:54:08.947 | INFO     | __main__:main:1382 - ======================================================================
+2026-02-22 06:54:08.947 | INFO     | __main__:main:1385 - Step 1: Loading dependency data...
+2026-02-22 06:54:08.947 | INFO     | __main__:load_json_data:223 - Loading GPS (exp_id1_it3) from /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_3/gen_art/exp_id1_it3__opus/full_method_out.json
+2026-02-22 06:54:09.007 | INFO     | __main__:load_json_data:227 -   GPS (exp_id1_it3): 4 datasets, 1620 total examples
+2026-02-22 06:54:09.007 | INFO     | __main__:load_json_data:223 - Loading GCN (exp_id2_it3) from /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_3/gen_art/exp_id2_it3__opus/full_method_out.json
+2026-02-22 06:54:09.452 | INFO     | __main__:load_json_data:227 -   GCN (exp_id2_it3): 4 datasets, 16100 total examples
+2026-02-22 06:54:09.452 | INFO     | __main__:load_json_data:223 - Loading Model-free/MLP (exp_id1_it2) from /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_2/gen_art/exp_id1_it2__opus/full_method_out.json
+2026-02-22 06:54:09.482 | INFO     | __main__:load_json_data:227 -   Model-free/MLP (exp_id1_it2): 4 datasets, 16100 total examples
+2026-02-22 06:54:09.482 | INFO     | __main__:load_json_data:223 - Loading Diagnostics (exp_id3_it2) from /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_2/gen_art/exp_id3_it2__opus/full_method_out.json
+2026-02-22 06:54:09.511 | INFO     | __main__:load_json_data:227 -   Diagnostics (exp_id3_it2): 4 datasets, 16100 total examples
+2026-02-22 06:54:09.511 | INFO     | __main__:main:1392 - Step 2: Extracting per-graph data...
+2026-02-22 06:54:09.514 | INFO     | __main__:extract_gps_per_graph:250 - GPS per-graph data: 1620 rows, datasets: ['ZINC-subset', 'Peptides-func', 'Peptides-struct', 'Synthetic-aliased-pairs']
+2026-02-22 06:54:12.540 | INFO     | __main__:extract_gcn_per_graph:321 - GCN per-graph data: 16100 rows, datasets: ['ZINC-subset', 'Peptides-func', 'Peptides-struct', 'Synthetic-aliased-pairs']
+2026-02-22 06:54:12.541 | INFO     | __main__:main:1400 - Limiting to 10 examples per dataset
+2026-02-22 06:54:12.546 | INFO     | __main__:main:1409 -   GPS: 40 examples, GCN: 40 examples
+2026-02-22 06:54:12.546 | INFO     | __main__:main:1411 - Per-graph data extracted: GPS=40, GCN=40
+2026-02-22 06:54:12.546 | INFO     | __main__:main:1414 - Step 3: Running meta-analyses...
+2026-02-22 06:54:12.546 | INFO     | __main__:meta_analysis_1_architecture_comparison:398 - === META-ANALYSIS 1: Architecture Comparison ===
+2026-02-22 06:54:13.531 | INFO     | __main__:meta_analysis_1_architecture_comparison:468 -   model_free: Fisher-z mean rho = 0.4070 [0.3940, 0.4198]
+2026-02-22 06:54:13.531 | INFO     | __main__:meta_analysis_1_architecture_comparison:468 -   MLP: Fisher-z mean rho = 0.0682 [0.0282, 0.1079]
+2026-02-22 06:54:13.531 | INFO     | __main__:meta_analysis_1_architecture_comparison:468 -   GCN: Fisher-z mean rho = -0.1423 [-0.4728, 0.2233]
+2026-02-22 06:54:13.531 | INFO     | __main__:meta_analysis_1_architecture_comparison:468 -   GPS: Fisher-z mean rho = -0.0697 [-0.4138, 0.2919]
+2026-02-22 06:54:13.531 | INFO     | __main__:meta_analysis_1_architecture_comparison:476 -   Overall mean rho across architectures: 0.0658
+2026-02-22 06:54:13.531 | INFO     | __main__:meta_analysis_2_sri_vs_size:489 - === META-ANALYSIS 2: SRI vs Size Head-to-Head ===
+2026-02-22 06:54:13.532 | WARNING  | __main__:meta_analysis_2_sri_vs_size:504 -   GPS/ZINC-subset: too few examples (10), skipping
+2026-02-22 06:54:13.532 | WARNING  | __main__:meta_analysis_2_sri_vs_size:504 -   GPS/Peptides-func: too few examples (10), skipping
+2026-02-22 06:54:13.533 | WARNING  | __main__:meta_analysis_2_sri_vs_size:504 -   GPS/Peptides-struct: too few examples (10), skipping
+2026-02-22 06:54:13.533 | WARNING  | __main__:meta_analysis_2_sri_vs_size:504 -   GCN/ZINC-subset: too few examples (10), skipping
+2026-02-22 06:54:13.533 | WARNING  | __main__:meta_analysis_2_sri_vs_size:504 -   GCN/Peptides-func: too few examples (10), skipping
+2026-02-22 06:54:13.533 | WARNING  | __main__:meta_analysis_2_sri_vs_size:504 -   GCN/Peptides-struct: too few examples (10), skipping
+2026-02-22 06:54:13.533 | INFO     | __main__:meta_analysis_2_sri_vs_size:574 -   Aggregate ΔR²(LR)=0.0000, ΔR²(RF)=0.0000, partial ρ=0.0000
+2026-02-22 06:54:13.533 | INFO     | __main__:meta_analysis_3_task_type:591 - === META-ANALYSIS 3: Task-Type Analysis ===
+2026-02-22 06:54:13.534 | INFO     | __main__:meta_analysis_3_task_type:670 -   GPS Cohen's d (RWSE-LapPE gap): -0.4206
+2026-02-22 06:54:13.534 | INFO     | __main__:meta_analysis_3_task_type:671 -   GPS Cohen's d (SRWE-LapPE gap): -0.4116
+2026-02-22 06:54:13.535 | INFO     | __main__:meta_analysis_3_task_type:670 -   GCN Cohen's d (RWSE-LapPE gap): 0.2584
+2026-02-22 06:54:13.535 | INFO     | __main__:meta_analysis_3_task_type:671 -   GCN Cohen's d (SRWE-LapPE gap): 0.3843
+2026-02-22 06:54:13.536 | INFO     | __main__:meta_analysis_3_task_type:680 -   GPS/regression: ρ(SRI,gap) = 0.2301 (p=3.2914e-01)
+2026-02-22 06:54:13.536 | INFO     | __main__:meta_analysis_3_task_type:680 -   GCN/regression: ρ(SRI,gap) = -0.2809 (p=1.3272e-01)
+2026-02-22 06:54:13.540 | INFO     | __main__:meta_analysis_3_task_type:706 -   Mann-Whitney U: U=2.00, p=0.3810
+2026-02-22 06:54:13.540 | INFO     | __main__:meta_analysis_4_srwe_scorecard:729 - === META-ANALYSIS 4: SRWE Consistency Scorecard ===
+2026-02-22 06:54:13.540 | INFO     | __main__:meta_analysis_4_srwe_scorecard:824 -   GPS/ZINC-subset: SRWE=0.2333, RWSE=0.1991, LapPE=0.2982, gap_reduction=34.5%, wins_rwse=False, wins_lappe=True
+2026-02-22 06:54:13.540 | INFO     | __main__:meta_analysis_4_srwe_scorecard:824 -   GPS/Peptides-func: SRWE=0.2758, RWSE=0.2630, LapPE=0.2584, gap_reduction=-276.8%, wins_rwse=True, wins_lappe=True
+2026-02-22 06:54:13.540 | INFO     | __main__:meta_analysis_4_srwe_scorecard:824 -   GPS/Peptides-struct: SRWE=17.5167, RWSE=18.8603, LapPE=16.5316, gap_reduction=57.7%, wins_rwse=True, wins_lappe=False
+2026-02-22 06:54:13.540 | INFO     | __main__:meta_analysis_4_srwe_scorecard:824 -   GCN/ZINC-subset: SRWE=0.4367, RWSE=0.3798, LapPE=0.5250, gap_reduction=39.1%, wins_rwse=False, wins_lappe=True
+2026-02-22 06:54:13.540 | INFO     | __main__:meta_analysis_4_srwe_scorecard:824 -   GCN/Peptides-func: SRWE=0.4198, RWSE=0.4551, LapPE=0.3699, gap_reduction=41.5%, wins_rwse=False, wins_lappe=True
+2026-02-22 06:54:13.540 | INFO     | __main__:meta_analysis_4_srwe_scorecard:824 -   GCN/Peptides-struct: SRWE=30.3837, RWSE=35.0476, LapPE=22.8211, gap_reduction=38.1%, wins_rwse=True, wins_lappe=False
+2026-02-22 06:54:13.540 | INFO     | __main__:meta_analysis_4_srwe_scorecard:851 -   low_sri_regression: n=2, mean gap reduction=47.9%, win_rate_rwse=1.00
+2026-02-22 06:54:13.540 | INFO     | __main__:meta_analysis_4_srwe_scorecard:851 -   low_sri_classification: n=2, mean gap reduction=-117.7%, win_rate_rwse=0.50
+2026-02-22 06:54:13.540 | INFO     | __main__:meta_analysis_4_srwe_scorecard:851 -   high_sri: n=2, mean gap reduction=36.8%, win_rate_rwse=0.00
+2026-02-22 06:54:13.540 | INFO     | __main__:meta_analysis_4_srwe_scorecard:855 -   Overall win rate vs RWSE: 0.50 (3/6)
+2026-02-22 06:54:13.540 | INFO     | __main__:meta_analysis_4_srwe_scorecard:856 -   Overall win rate vs LapPE: 0.67 (4/6)
+2026-02-22 06:54:13.540 | INFO     | __main__:meta_analysis_5_scope_of_validity:869 - === META-ANALYSIS 5: Scope of Validity Assessment ===
+2026-02-22 06:54:13.540 | INFO     | __main__:meta_analysis_5_scope_of_validity:893 -   Tier A (mathematical): strong (mean |ρ| = 0.654)
+2026-02-22 06:54:13.540 | INFO     | __main__:meta_analysis_5_scope_of_validity:914 -   Tier B (SRI classifier): strong (5 KS-significant pairs)
+2026-02-22 06:54:13.540 | INFO     | __main__:meta_analysis_5_scope_of_validity:945 -   Tier C (predictive): not_supported (ΔR²=0.0000, partial ρ=0.0000)
+2026-02-22 06:54:13.541 | INFO     | __main__:meta_analysis_5_scope_of_validity:973 -   Tier D (SRWE utility): moderate (win rate vs RWSE = 0.50)
+2026-02-22 06:54:13.541 | INFO     | __main__:main:1423 - Step 4: Generating figures...
+2026-02-22 06:54:13.541 | INFO     | __main__:generate_figures:1005 - === Generating Figures ===
+2026-02-22 06:54:13.630 | INFO     | __main__:generate_figures:1041 -   Saved /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_4/gen_art/eval_id3_it4__opus/figures/fig1_correlation_heatmap.png
+2026-02-22 06:54:13.730 | INFO     | __main__:generate_figures:1072 -   Saved /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_4/gen_art/eval_id3_it4__opus/figures/fig2_srwe_gap_reduction.png
+2026-02-22 06:54:13.802 | INFO     | __main__:generate_figures:1114 -   Saved /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_4/gen_art/eval_id3_it4__opus/figures/fig3_sri_vs_size.png
+2026-02-22 06:54:13.867 | INFO     | __main__:generate_figures:1170 -   Saved /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_4/gen_art/eval_id3_it4__opus/figures/fig4_decision_flowchart.png
+2026-02-22 06:54:13.919 | INFO     | __main__:generate_figures:1209 -   Saved /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_4/gen_art/eval_id3_it4__opus/figures/fig5_task_type_effect_size.png
+2026-02-22 06:54:13.919 | INFO     | __main__:generate_figures:1213 -   Generated 5 figures
+2026-02-22 06:54:13.919 | INFO     | __main__:main:1427 - Step 5: Formatting and saving output...
+2026-02-22 06:54:13.919 | INFO     | __main__:format_output:1228 - === Formatting Output ===
+2026-02-22 06:54:13.925 | INFO     | __main__:main:1432 - Output saved to /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_4/gen_art/eval_id3_it4__opus/eval_out.json
+2026-02-22 06:54:13.925 | INFO     | __main__:main:1433 - Output size: 0.1 MB
+2026-02-22 06:54:13.925 | INFO     | __main__:main:1436 - ======================================================================
+2026-02-22 06:54:13.925 | INFO     | __main__:main:1437 - SUMMARY OF KEY FINDINGS:
+2026-02-22 06:54:13.925 | INFO     | __main__:main:1438 -   MA1 - Overall mean SRI-gap ρ: 0.0658
+2026-02-22 06:54:13.925 | INFO     | __main__:main:1439 -   MA2 - Mean ΔR² (LR): 0.0000
+2026-02-22 06:54:13.925 | INFO     | __main__:main:1440 -   MA2 - Mean partial ρ: 0.0000
+2026-02-22 06:54:13.925 | INFO     | __main__:main:1441 -   MA3 - GPS Cohen's d: -0.4206
+2026-02-22 06:54:13.925 | INFO     | __main__:main:1442 -   MA4 - SRWE win rate vs RWSE: 0.50
+2026-02-22 06:54:13.925 | INFO     | __main__:main:1443 -   MA4 - SRWE win rate vs LapPE: 0.67
+2026-02-22 06:54:13.925 | INFO     | __main__:main:1444 -   MA5 - Tier A: strong
+2026-02-22 06:54:13.925 | INFO     | __main__:main:1445 -   MA5 - Tier B: strong
+2026-02-22 06:54:13.925 | INFO     | __main__:main:1446 -   MA5 - Tier C: not_supported
+2026-02-22 06:54:13.925 | INFO     | __main__:main:1447 -   MA5 - Tier D: moderate
+2026-02-22 06:54:13.925 | INFO     | __main__:main:1448 - ======================================================================
+2026-02-22 06:54:19.544 | INFO     | __main__:main:1380 - ======================================================================
+2026-02-22 06:54:19.544 | INFO     | __main__:main:1381 - Cross-Architecture Meta-Analysis of Walk Resolution Limit Theory
+2026-02-22 06:54:19.544 | INFO     | __main__:main:1382 - ======================================================================
+2026-02-22 06:54:19.544 | INFO     | __main__:main:1385 - Step 1: Loading dependency data...
+2026-02-22 06:54:19.544 | INFO     | __main__:load_json_data:223 - Loading GPS (exp_id1_it3) from /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_3/gen_art/exp_id1_it3__opus/full_method_out.json
+2026-02-22 06:54:19.603 | INFO     | __main__:load_json_data:227 -   GPS (exp_id1_it3): 4 datasets, 1620 total examples
+2026-02-22 06:54:19.603 | INFO     | __main__:load_json_data:223 - Loading GCN (exp_id2_it3) from /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_3/gen_art/exp_id2_it3__opus/full_method_out.json
+2026-02-22 06:54:20.043 | INFO     | __main__:load_json_data:227 -   GCN (exp_id2_it3): 4 datasets, 16100 total examples
+2026-02-22 06:54:20.043 | INFO     | __main__:load_json_data:223 - Loading Model-free/MLP (exp_id1_it2) from /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_2/gen_art/exp_id1_it2__opus/full_method_out.json
+2026-02-22 06:54:20.073 | INFO     | __main__:load_json_data:227 -   Model-free/MLP (exp_id1_it2): 4 datasets, 16100 total examples
+2026-02-22 06:54:20.073 | INFO     | __main__:load_json_data:223 - Loading Diagnostics (exp_id3_it2) from /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_2/gen_art/exp_id3_it2__opus/full_method_out.json
+2026-02-22 06:54:20.103 | INFO     | __main__:load_json_data:227 -   Diagnostics (exp_id3_it2): 4 datasets, 16100 total examples
+2026-02-22 06:54:20.104 | INFO     | __main__:main:1392 - Step 2: Extracting per-graph data...
+2026-02-22 06:54:20.106 | INFO     | __main__:extract_gps_per_graph:250 - GPS per-graph data: 1620 rows, datasets: ['ZINC-subset', 'Peptides-func', 'Peptides-struct', 'Synthetic-aliased-pairs']
+2026-02-22 06:54:23.155 | INFO     | __main__:extract_gcn_per_graph:321 - GCN per-graph data: 16100 rows, datasets: ['ZINC-subset', 'Peptides-func', 'Peptides-struct', 'Synthetic-aliased-pairs']
+2026-02-22 06:54:23.155 | INFO     | __main__:main:1400 - Limiting to 50 examples per dataset
+2026-02-22 06:54:23.161 | INFO     | __main__:main:1409 -   GPS: 170 examples, GCN: 200 examples
+2026-02-22 06:54:23.161 | INFO     | __main__:main:1411 - Per-graph data extracted: GPS=170, GCN=200
+2026-02-22 06:54:23.161 | INFO     | __main__:main:1414 - Step 3: Running meta-analyses...
+2026-02-22 06:54:23.161 | INFO     | __main__:meta_analysis_1_architecture_comparison:398 - === META-ANALYSIS 1: Architecture Comparison ===
+2026-02-22 06:54:24.140 | INFO     | __main__:meta_analysis_1_architecture_comparison:468 -   model_free: Fisher-z mean rho = 0.4070 [0.3940, 0.4198]
+2026-02-22 06:54:24.140 | INFO     | __main__:meta_analysis_1_architecture_comparison:468 -   MLP: Fisher-z mean rho = 0.0682 [0.0282, 0.1079]
+2026-02-22 06:54:24.140 | INFO     | __main__:meta_analysis_1_architecture_comparison:468 -   GCN: Fisher-z mean rho = -0.1405 [-0.2769, 0.0016]
+2026-02-22 06:54:24.140 | INFO     | __main__:meta_analysis_1_architecture_comparison:468 -   GPS: Fisher-z mean rho = -0.1396 [-0.2881, 0.0154]
+2026-02-22 06:54:24.140 | INFO     | __main__:meta_analysis_1_architecture_comparison:476 -   Overall mean rho across architectures: 0.0488
+2026-02-22 06:54:24.140 | INFO     | __main__:meta_analysis_2_sri_vs_size:489 - === META-ANALYSIS 2: SRI vs Size Head-to-Head ===
+2026-02-22 06:54:24.152 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GPS/ZINC-subset/LinearRegression: R²(SRI)=-4.0696, R²(size)=-6.7107, ΔR²=-0.4472
+2026-02-22 06:54:24.493 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GPS/ZINC-subset/RandomForest: R²(SRI)=-11.2259, R²(size)=-3.5814, ΔR²=-0.7404
+2026-02-22 06:54:24.494 | INFO     | __main__:meta_analysis_2_sri_vs_size:546 -   GPS/ZINC-subset: partial ρ(SRI,gap|size) = -0.2301 (p=1.0800e-01)
+2026-02-22 06:54:24.500 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GPS/Peptides-func/LinearRegression: R²(SRI)=-0.4724, R²(size)=-0.2517, ΔR²=-0.2730
+2026-02-22 06:54:24.841 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GPS/Peptides-func/RandomForest: R²(SRI)=-0.5189, R²(size)=-0.9006, ΔR²=0.2030
+2026-02-22 06:54:24.842 | INFO     | __main__:meta_analysis_2_sri_vs_size:546 -   GPS/Peptides-func: partial ρ(SRI,gap|size) = 0.0387 (p=7.8984e-01)
+2026-02-22 06:54:24.848 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GPS/Peptides-struct/LinearRegression: R²(SRI)=-0.2608, R²(size)=-0.2261, ΔR²=-0.0045
+2026-02-22 06:54:25.189 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GPS/Peptides-struct/RandomForest: R²(SRI)=-0.9222, R²(size)=-0.7917, ΔR²=0.5846
+2026-02-22 06:54:25.190 | INFO     | __main__:meta_analysis_2_sri_vs_size:546 -   GPS/Peptides-struct: partial ρ(SRI,gap|size) = 0.0421 (p=7.7153e-01)
+2026-02-22 06:54:25.195 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GCN/ZINC-subset/LinearRegression: R²(SRI)=-0.3957, R²(size)=-0.4190, ΔR²=-0.0033
+2026-02-22 06:54:25.532 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GCN/ZINC-subset/RandomForest: R²(SRI)=-0.5756, R²(size)=-0.6838, ΔR²=0.1825
+2026-02-22 06:54:25.533 | INFO     | __main__:meta_analysis_2_sri_vs_size:546 -   GCN/ZINC-subset: partial ρ(SRI,gap|size) = -0.0064 (p=9.6489e-01)
+2026-02-22 06:54:25.539 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GCN/Peptides-func/LinearRegression: R²(SRI)=-0.2256, R²(size)=-0.0463, ΔR²=-0.4851
+2026-02-22 06:54:25.890 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GCN/Peptides-func/RandomForest: R²(SRI)=-1.2474, R²(size)=-0.2508, ΔR²=-0.1735
+2026-02-22 06:54:25.891 | INFO     | __main__:meta_analysis_2_sri_vs_size:546 -   GCN/Peptides-func: partial ρ(SRI,gap|size) = -0.1113 (p=4.4176e-01)
+2026-02-22 06:54:25.898 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GCN/Peptides-struct/LinearRegression: R²(SRI)=-6.6565, R²(size)=-0.9873, ΔR²=-1.7733
+2026-02-22 06:54:26.288 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GCN/Peptides-struct/RandomForest: R²(SRI)=-3.1736, R²(size)=-5.2254, ΔR²=3.8366
+2026-02-22 06:54:26.289 | INFO     | __main__:meta_analysis_2_sri_vs_size:546 -   GCN/Peptides-struct: partial ρ(SRI,gap|size) = 0.0510 (p=7.2481e-01)
+2026-02-22 06:54:26.290 | INFO     | __main__:meta_analysis_2_sri_vs_size:574 -   Aggregate ΔR²(LR)=-0.4977, ΔR²(RF)=0.6488, partial ρ=-0.0360
+2026-02-22 06:54:26.290 | INFO     | __main__:meta_analysis_3_task_type:591 - === META-ANALYSIS 3: Task-Type Analysis ===
+2026-02-22 06:54:26.291 | INFO     | __main__:meta_analysis_3_task_type:670 -   GPS Cohen's d (RWSE-LapPE gap): 0.2634
+2026-02-22 06:54:26.291 | INFO     | __main__:meta_analysis_3_task_type:671 -   GPS Cohen's d (SRWE-LapPE gap): 0.1005
+2026-02-22 06:54:26.292 | INFO     | __main__:meta_analysis_3_task_type:670 -   GCN Cohen's d (RWSE-LapPE gap): 0.3333
+2026-02-22 06:54:26.292 | INFO     | __main__:meta_analysis_3_task_type:671 -   GCN Cohen's d (SRWE-LapPE gap): 0.4110
+2026-02-22 06:54:26.292 | INFO     | __main__:meta_analysis_3_task_type:680 -   GPS/regression: ρ(SRI,gap) = -0.2638 (p=8.0143e-03)
+2026-02-22 06:54:26.293 | INFO     | __main__:meta_analysis_3_task_type:680 -   GPS/classification: ρ(SRI,gap) = -0.0387 (p=7.8984e-01)
+2026-02-22 06:54:26.293 | INFO     | __main__:meta_analysis_3_task_type:680 -   GCN/regression: ρ(SRI,gap) = -0.4618 (p=2.7112e-09)
+2026-02-22 06:54:26.294 | INFO     | __main__:meta_analysis_3_task_type:680 -   GCN/classification: ρ(SRI,gap) = -0.0033 (p=9.8178e-01)
+2026-02-22 06:54:26.297 | INFO     | __main__:meta_analysis_3_task_type:706 -   Mann-Whitney U: U=2.00, p=0.3810
+2026-02-22 06:54:26.297 | INFO     | __main__:meta_analysis_4_srwe_scorecard:729 - === META-ANALYSIS 4: SRWE Consistency Scorecard ===
+2026-02-22 06:54:26.297 | INFO     | __main__:meta_analysis_4_srwe_scorecard:824 -   GPS/ZINC-subset: SRWE=0.2333, RWSE=0.1991, LapPE=0.2982, gap_reduction=34.5%, wins_rwse=False, wins_lappe=True
+2026-02-22 06:54:26.297 | INFO     | __main__:meta_analysis_4_srwe_scorecard:824 -   GPS/Peptides-func: SRWE=0.2758, RWSE=0.2630, LapPE=0.2584, gap_reduction=-276.8%, wins_rwse=True, wins_lappe=True
+2026-02-22 06:54:26.297 | INFO     | __main__:meta_analysis_4_srwe_scorecard:824 -   GPS/Peptides-struct: SRWE=17.5167, RWSE=18.8603, LapPE=16.5316, gap_reduction=57.7%, wins_rwse=True, wins_lappe=False
+2026-02-22 06:54:26.297 | INFO     | __main__:meta_analysis_4_srwe_scorecard:824 -   GCN/ZINC-subset: SRWE=0.4367, RWSE=0.3798, LapPE=0.5250, gap_reduction=39.1%, wins_rwse=False, wins_lappe=True
+2026-02-22 06:54:26.297 | INFO     | __main__:meta_analysis_4_srwe_scorecard:824 -   GCN/Peptides-func: SRWE=0.4198, RWSE=0.4551, LapPE=0.3699, gap_reduction=41.5%, wins_rwse=False, wins_lappe=True
+2026-02-22 06:54:26.297 | INFO     | __main__:meta_analysis_4_srwe_scorecard:824 -   GCN/Peptides-struct: SRWE=30.3837, RWSE=35.0476, LapPE=22.8211, gap_reduction=38.1%, wins_rwse=True, wins_lappe=False
+2026-02-22 06:54:26.297 | INFO     | __main__:meta_analysis_4_srwe_scorecard:851 -   low_sri_regression: n=2, mean gap reduction=47.9%, win_rate_rwse=1.00
+2026-02-22 06:54:26.297 | INFO     | __main__:meta_analysis_4_srwe_scorecard:851 -   low_sri_classification: n=2, mean gap reduction=-117.7%, win_rate_rwse=0.50
+2026-02-22 06:54:26.298 | INFO     | __main__:meta_analysis_4_srwe_scorecard:851 -   high_sri: n=2, mean gap reduction=36.8%, win_rate_rwse=0.00
+2026-02-22 06:54:26.298 | INFO     | __main__:meta_analysis_4_srwe_scorecard:855 -   Overall win rate vs RWSE: 0.50 (3/6)
+2026-02-22 06:54:26.298 | INFO     | __main__:meta_analysis_4_srwe_scorecard:856 -   Overall win rate vs LapPE: 0.67 (4/6)
+2026-02-22 06:54:26.298 | INFO     | __main__:meta_analysis_5_scope_of_validity:869 - === META-ANALYSIS 5: Scope of Validity Assessment ===
+2026-02-22 06:54:26.298 | INFO     | __main__:meta_analysis_5_scope_of_validity:893 -   Tier A (mathematical): strong (mean |ρ| = 0.654)
+2026-02-22 06:54:26.298 | INFO     | __main__:meta_analysis_5_scope_of_validity:914 -   Tier B (SRI classifier): strong (5 KS-significant pairs)
+2026-02-22 06:54:26.298 | INFO     | __main__:meta_analysis_5_scope_of_validity:945 -   Tier C (predictive): not_supported (ΔR²=-0.4977, partial ρ=-0.0360)
+2026-02-22 06:54:26.298 | INFO     | __main__:meta_analysis_5_scope_of_validity:973 -   Tier D (SRWE utility): moderate (win rate vs RWSE = 0.50)
+2026-02-22 06:54:26.298 | INFO     | __main__:main:1423 - Step 4: Generating figures...
+2026-02-22 06:54:26.298 | INFO     | __main__:generate_figures:1005 - === Generating Figures ===
+2026-02-22 06:54:26.410 | INFO     | __main__:generate_figures:1041 -   Saved /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_4/gen_art/eval_id3_it4__opus/figures/fig1_correlation_heatmap.png
+2026-02-22 06:54:26.477 | INFO     | __main__:generate_figures:1072 -   Saved /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_4/gen_art/eval_id3_it4__opus/figures/fig2_srwe_gap_reduction.png
+2026-02-22 06:54:26.605 | INFO     | __main__:generate_figures:1114 -   Saved /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_4/gen_art/eval_id3_it4__opus/figures/fig3_sri_vs_size.png
+2026-02-22 06:54:26.669 | INFO     | __main__:generate_figures:1170 -   Saved /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_4/gen_art/eval_id3_it4__opus/figures/fig4_decision_flowchart.png
+2026-02-22 06:54:26.724 | INFO     | __main__:generate_figures:1209 -   Saved /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_4/gen_art/eval_id3_it4__opus/figures/fig5_task_type_effect_size.png
+2026-02-22 06:54:26.724 | INFO     | __main__:generate_figures:1213 -   Generated 5 figures
+2026-02-22 06:54:26.724 | INFO     | __main__:main:1427 - Step 5: Formatting and saving output...
+2026-02-22 06:54:26.724 | INFO     | __main__:format_output:1228 - === Formatting Output ===
+2026-02-22 06:54:26.741 | INFO     | __main__:main:1432 - Output saved to /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_4/gen_art/eval_id3_it4__opus/eval_out.json
+2026-02-22 06:54:26.741 | INFO     | __main__:main:1433 - Output size: 0.3 MB
+2026-02-22 06:54:26.741 | INFO     | __main__:main:1436 - ======================================================================
+2026-02-22 06:54:26.741 | INFO     | __main__:main:1437 - SUMMARY OF KEY FINDINGS:
+2026-02-22 06:54:26.741 | INFO     | __main__:main:1438 -   MA1 - Overall mean SRI-gap ρ: 0.0488
+2026-02-22 06:54:26.741 | INFO     | __main__:main:1439 -   MA2 - Mean ΔR² (LR): -0.4977
+2026-02-22 06:54:26.741 | INFO     | __main__:main:1440 -   MA2 - Mean partial ρ: -0.0360
+2026-02-22 06:54:26.741 | INFO     | __main__:main:1441 -   MA3 - GPS Cohen's d: 0.2634
+2026-02-22 06:54:26.741 | INFO     | __main__:main:1442 -   MA4 - SRWE win rate vs RWSE: 0.50
+2026-02-22 06:54:26.741 | INFO     | __main__:main:1443 -   MA4 - SRWE win rate vs LapPE: 0.67
+2026-02-22 06:54:26.741 | INFO     | __main__:main:1444 -   MA5 - Tier A: strong
+2026-02-22 06:54:26.741 | INFO     | __main__:main:1445 -   MA5 - Tier B: strong
+2026-02-22 06:54:26.741 | INFO     | __main__:main:1446 -   MA5 - Tier C: not_supported
+2026-02-22 06:54:26.741 | INFO     | __main__:main:1447 -   MA5 - Tier D: moderate
+2026-02-22 06:54:26.741 | INFO     | __main__:main:1448 - ======================================================================
+2026-02-22 06:54:32.695 | INFO     | __main__:main:1380 - ======================================================================
+2026-02-22 06:54:32.695 | INFO     | __main__:main:1381 - Cross-Architecture Meta-Analysis of Walk Resolution Limit Theory
+2026-02-22 06:54:32.695 | INFO     | __main__:main:1382 - ======================================================================
+2026-02-22 06:54:32.695 | INFO     | __main__:main:1385 - Step 1: Loading dependency data...
+2026-02-22 06:54:32.695 | INFO     | __main__:load_json_data:223 - Loading GPS (exp_id1_it3) from /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_3/gen_art/exp_id1_it3__opus/full_method_out.json
+2026-02-22 06:54:32.754 | INFO     | __main__:load_json_data:227 -   GPS (exp_id1_it3): 4 datasets, 1620 total examples
+2026-02-22 06:54:32.755 | INFO     | __main__:load_json_data:223 - Loading GCN (exp_id2_it3) from /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_3/gen_art/exp_id2_it3__opus/full_method_out.json
+2026-02-22 06:54:33.197 | INFO     | __main__:load_json_data:227 -   GCN (exp_id2_it3): 4 datasets, 16100 total examples
+2026-02-22 06:54:33.197 | INFO     | __main__:load_json_data:223 - Loading Model-free/MLP (exp_id1_it2) from /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_2/gen_art/exp_id1_it2__opus/full_method_out.json
+2026-02-22 06:54:33.226 | INFO     | __main__:load_json_data:227 -   Model-free/MLP (exp_id1_it2): 4 datasets, 16100 total examples
+2026-02-22 06:54:33.226 | INFO     | __main__:load_json_data:223 - Loading Diagnostics (exp_id3_it2) from /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_2/gen_art/exp_id3_it2__opus/full_method_out.json
+2026-02-22 06:54:33.254 | INFO     | __main__:load_json_data:227 -   Diagnostics (exp_id3_it2): 4 datasets, 16100 total examples
+2026-02-22 06:54:33.254 | INFO     | __main__:main:1392 - Step 2: Extracting per-graph data...
+2026-02-22 06:54:33.257 | INFO     | __main__:extract_gps_per_graph:250 - GPS per-graph data: 1620 rows, datasets: ['ZINC-subset', 'Peptides-func', 'Peptides-struct', 'Synthetic-aliased-pairs']
+2026-02-22 06:54:36.224 | INFO     | __main__:extract_gcn_per_graph:321 - GCN per-graph data: 16100 rows, datasets: ['ZINC-subset', 'Peptides-func', 'Peptides-struct', 'Synthetic-aliased-pairs']
+2026-02-22 06:54:36.224 | INFO     | __main__:main:1411 - Per-graph data extracted: GPS=1620, GCN=16100
+2026-02-22 06:54:36.224 | INFO     | __main__:main:1414 - Step 3: Running meta-analyses...
+2026-02-22 06:54:36.224 | INFO     | __main__:meta_analysis_1_architecture_comparison:398 - === META-ANALYSIS 1: Architecture Comparison ===
+2026-02-22 06:54:39.427 | INFO     | __main__:meta_analysis_1_architecture_comparison:468 -   model_free: Fisher-z mean rho = 0.4070 [0.3940, 0.4198]
+2026-02-22 06:54:39.427 | INFO     | __main__:meta_analysis_1_architecture_comparison:468 -   MLP: Fisher-z mean rho = 0.0682 [0.0282, 0.1079]
+2026-02-22 06:54:39.427 | INFO     | __main__:meta_analysis_1_architecture_comparison:468 -   GCN: Fisher-z mean rho = -0.0123 [-0.0277, 0.0032]
+2026-02-22 06:54:39.427 | INFO     | __main__:meta_analysis_1_architecture_comparison:468 -   GPS: Fisher-z mean rho = 0.0206 [-0.0283, 0.0694]
+2026-02-22 06:54:39.427 | INFO     | __main__:meta_analysis_1_architecture_comparison:476 -   Overall mean rho across architectures: 0.1209
+2026-02-22 06:54:39.427 | INFO     | __main__:meta_analysis_2_sri_vs_size:489 - === META-ANALYSIS 2: SRI vs Size Head-to-Head ===
+2026-02-22 06:54:39.434 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GPS/ZINC-subset/LinearRegression: R²(SRI)=-0.0115, R²(size)=-0.0100, ΔR²=-0.0037
+2026-02-22 06:54:39.876 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GPS/ZINC-subset/RandomForest: R²(SRI)=-0.1391, R²(size)=-0.0521, ΔR²=-0.0647
+2026-02-22 06:54:39.877 | INFO     | __main__:meta_analysis_2_sri_vs_size:546 -   GPS/ZINC-subset: partial ρ(SRI,gap|size) = 0.0494 (p=1.1841e-01)
+2026-02-22 06:54:39.883 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GPS/Peptides-func/LinearRegression: R²(SRI)=-0.0304, R²(size)=-0.0346, ΔR²=-0.0052
+2026-02-22 06:54:40.258 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GPS/Peptides-func/RandomForest: R²(SRI)=-0.1814, R²(size)=-0.2765, ΔR²=0.0616
+2026-02-22 06:54:40.259 | INFO     | __main__:meta_analysis_2_sri_vs_size:546 -   GPS/Peptides-func: partial ρ(SRI,gap|size) = 0.0990 (p=8.6962e-02)
+2026-02-22 06:54:40.265 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GPS/Peptides-struct/LinearRegression: R²(SRI)=-0.0627, R²(size)=-0.0929, ΔR²=-0.0054
+2026-02-22 06:54:40.636 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GPS/Peptides-struct/RandomForest: R²(SRI)=-0.2540, R²(size)=-0.9358, ΔR²=0.3567
+2026-02-22 06:54:40.637 | INFO     | __main__:meta_analysis_2_sri_vs_size:546 -   GPS/Peptides-struct: partial ρ(SRI,gap|size) = -0.0672 (p=2.4593e-01)
+2026-02-22 06:54:40.652 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GCN/ZINC-subset/LinearRegression: R²(SRI)=-0.0060, R²(size)=-0.0061, ΔR²=-0.0003
+2026-02-22 06:54:42.571 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GCN/ZINC-subset/RandomForest: R²(SRI)=-0.0167, R²(size)=-0.0140, ΔR²=-0.0041
+2026-02-22 06:54:42.575 | INFO     | __main__:meta_analysis_2_sri_vs_size:546 -   GCN/ZINC-subset: partial ρ(SRI,gap|size) = 0.0124 (p=1.7296e-01)
+2026-02-22 06:54:42.583 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GCN/Peptides-func/LinearRegression: R²(SRI)=0.0011, R²(size)=0.0023, ΔR²=-0.0001
+2026-02-22 06:54:43.213 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GCN/Peptides-func/RandomForest: R²(SRI)=-0.1224, R²(size)=-0.0745, ΔR²=-0.0238
+2026-02-22 06:54:43.214 | INFO     | __main__:meta_analysis_2_sri_vs_size:546 -   GCN/Peptides-func: partial ρ(SRI,gap|size) = 0.0592 (p=8.0987e-03)
+2026-02-22 06:54:43.221 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GCN/Peptides-struct/LinearRegression: R²(SRI)=0.0046, R²(size)=0.0870, ΔR²=0.0024
+2026-02-22 06:54:43.822 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GCN/Peptides-struct/RandomForest: R²(SRI)=-0.0454, R²(size)=-0.0256, ΔR²=0.0712
+2026-02-22 06:54:43.824 | INFO     | __main__:meta_analysis_2_sri_vs_size:546 -   GCN/Peptides-struct: partial ρ(SRI,gap|size) = -0.0138 (p=5.3876e-01)
+2026-02-22 06:54:43.824 | INFO     | __main__:meta_analysis_2_sri_vs_size:574 -   Aggregate ΔR²(LR)=-0.0021, ΔR²(RF)=0.0661, partial ρ=0.0232
+2026-02-22 06:54:43.824 | INFO     | __main__:meta_analysis_3_task_type:591 - === META-ANALYSIS 3: Task-Type Analysis ===
+2026-02-22 06:54:43.826 | INFO     | __main__:meta_analysis_3_task_type:670 -   GPS Cohen's d (RWSE-LapPE gap): 0.0769
+2026-02-22 06:54:43.826 | INFO     | __main__:meta_analysis_3_task_type:671 -   GPS Cohen's d (SRWE-LapPE gap): 0.0286
+2026-02-22 06:54:43.829 | INFO     | __main__:meta_analysis_3_task_type:670 -   GCN Cohen's d (RWSE-LapPE gap): 0.1341
+2026-02-22 06:54:43.829 | INFO     | __main__:meta_analysis_3_task_type:671 -   GCN Cohen's d (SRWE-LapPE gap): 0.1227
+2026-02-22 06:54:43.830 | INFO     | __main__:meta_analysis_3_task_type:680 -   GPS/regression: ρ(SRI,gap) = -0.1194 (p=1.5994e-05)
+2026-02-22 06:54:43.830 | INFO     | __main__:meta_analysis_3_task_type:680 -   GPS/classification: ρ(SRI,gap) = 0.0799 (p=1.6732e-01)
+2026-02-22 06:54:43.833 | INFO     | __main__:meta_analysis_3_task_type:680 -   GCN/regression: ρ(SRI,gap) = -0.1901 (p=8.0968e-115)
+2026-02-22 06:54:43.834 | INFO     | __main__:meta_analysis_3_task_type:680 -   GCN/classification: ρ(SRI,gap) = 0.1352 (p=1.2581e-09)
+2026-02-22 06:54:43.842 | INFO     | __main__:meta_analysis_3_task_type:706 -   Mann-Whitney U: U=0.00, p=0.0952
+2026-02-22 06:54:43.842 | INFO     | __main__:meta_analysis_4_srwe_scorecard:729 - === META-ANALYSIS 4: SRWE Consistency Scorecard ===
+2026-02-22 06:54:43.842 | INFO     | __main__:meta_analysis_4_srwe_scorecard:824 -   GPS/ZINC-subset: SRWE=0.2333, RWSE=0.1991, LapPE=0.2982, gap_reduction=34.5%, wins_rwse=False, wins_lappe=True
+2026-02-22 06:54:43.842 | INFO     | __main__:meta_analysis_4_srwe_scorecard:824 -   GPS/Peptides-func: SRWE=0.2758, RWSE=0.2630, LapPE=0.2584, gap_reduction=-276.8%, wins_rwse=True, wins_lappe=True
+2026-02-22 06:54:43.842 | INFO     | __main__:meta_analysis_4_srwe_scorecard:824 -   GPS/Peptides-struct: SRWE=17.5167, RWSE=18.8603, LapPE=16.5316, gap_reduction=57.7%, wins_rwse=True, wins_lappe=False
+2026-02-22 06:54:43.842 | INFO     | __main__:meta_analysis_4_srwe_scorecard:824 -   GCN/ZINC-subset: SRWE=0.4367, RWSE=0.3798, LapPE=0.5250, gap_reduction=39.1%, wins_rwse=False, wins_lappe=True
+2026-02-22 06:54:43.842 | INFO     | __main__:meta_analysis_4_srwe_scorecard:824 -   GCN/Peptides-func: SRWE=0.4198, RWSE=0.4551, LapPE=0.3699, gap_reduction=41.5%, wins_rwse=False, wins_lappe=True
+2026-02-22 06:54:43.842 | INFO     | __main__:meta_analysis_4_srwe_scorecard:824 -   GCN/Peptides-struct: SRWE=30.3837, RWSE=35.0476, LapPE=22.8211, gap_reduction=38.1%, wins_rwse=True, wins_lappe=False
+2026-02-22 06:54:43.842 | INFO     | __main__:meta_analysis_4_srwe_scorecard:851 -   low_sri_regression: n=2, mean gap reduction=47.9%, win_rate_rwse=1.00
+2026-02-22 06:54:43.842 | INFO     | __main__:meta_analysis_4_srwe_scorecard:851 -   low_sri_classification: n=2, mean gap reduction=-117.7%, win_rate_rwse=0.50
+2026-02-22 06:54:43.842 | INFO     | __main__:meta_analysis_4_srwe_scorecard:851 -   high_sri: n=2, mean gap reduction=36.8%, win_rate_rwse=0.00
+2026-02-22 06:54:43.842 | INFO     | __main__:meta_analysis_4_srwe_scorecard:855 -   Overall win rate vs RWSE: 0.50 (3/6)
+2026-02-22 06:54:43.842 | INFO     | __main__:meta_analysis_4_srwe_scorecard:856 -   Overall win rate vs LapPE: 0.67 (4/6)
+2026-02-22 06:54:43.842 | INFO     | __main__:meta_analysis_5_scope_of_validity:869 - === META-ANALYSIS 5: Scope of Validity Assessment ===
+2026-02-22 06:54:43.842 | INFO     | __main__:meta_analysis_5_scope_of_validity:893 -   Tier A (mathematical): strong (mean |ρ| = 0.654)
+2026-02-22 06:54:43.842 | INFO     | __main__:meta_analysis_5_scope_of_validity:914 -   Tier B (SRI classifier): strong (5 KS-significant pairs)
+2026-02-22 06:54:43.842 | INFO     | __main__:meta_analysis_5_scope_of_validity:945 -   Tier C (predictive): not_supported (ΔR²=-0.0021, partial ρ=0.0232)
+2026-02-22 06:54:43.842 | INFO     | __main__:meta_analysis_5_scope_of_validity:973 -   Tier D (SRWE utility): moderate (win rate vs RWSE = 0.50)
+2026-02-22 06:54:43.842 | INFO     | __main__:main:1423 - Step 4: Generating figures...
+2026-02-22 06:54:43.842 | INFO     | __main__:generate_figures:1005 - === Generating Figures ===
+2026-02-22 06:54:43.924 | INFO     | __main__:generate_figures:1041 -   Saved /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_4/gen_art/eval_id3_it4__opus/figures/fig1_correlation_heatmap.png
+2026-02-22 06:54:44.020 | INFO     | __main__:generate_figures:1072 -   Saved /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_4/gen_art/eval_id3_it4__opus/figures/fig2_srwe_gap_reduction.png
+2026-02-22 06:54:44.149 | INFO     | __main__:generate_figures:1114 -   Saved /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_4/gen_art/eval_id3_it4__opus/figures/fig3_sri_vs_size.png
+2026-02-22 06:54:44.213 | INFO     | __main__:generate_figures:1170 -   Saved /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_4/gen_art/eval_id3_it4__opus/figures/fig4_decision_flowchart.png
+2026-02-22 06:54:44.268 | INFO     | __main__:generate_figures:1209 -   Saved /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_4/gen_art/eval_id3_it4__opus/figures/fig5_task_type_effect_size.png
+2026-02-22 06:54:44.268 | INFO     | __main__:generate_figures:1213 -   Generated 5 figures
+2026-02-22 06:54:44.268 | INFO     | __main__:main:1427 - Step 5: Formatting and saving output...
+2026-02-22 06:54:44.268 | INFO     | __main__:format_output:1228 - === Formatting Output ===
+2026-02-22 06:54:45.014 | INFO     | __main__:main:1432 - Output saved to /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_4/gen_art/eval_id3_it4__opus/eval_out.json
+2026-02-22 06:54:45.014 | INFO     | __main__:main:1433 - Output size: 13.6 MB
+2026-02-22 06:54:45.014 | INFO     | __main__:main:1436 - ======================================================================
+2026-02-22 06:54:45.014 | INFO     | __main__:main:1437 - SUMMARY OF KEY FINDINGS:
+2026-02-22 06:54:45.014 | INFO     | __main__:main:1438 -   MA1 - Overall mean SRI-gap ρ: 0.1209
+2026-02-22 06:54:45.014 | INFO     | __main__:main:1439 -   MA2 - Mean ΔR² (LR): -0.0021
+2026-02-22 06:54:45.015 | INFO     | __main__:main:1440 -   MA2 - Mean partial ρ: 0.0232
+2026-02-22 06:54:45.015 | INFO     | __main__:main:1441 -   MA3 - GPS Cohen's d: 0.0769
+2026-02-22 06:54:45.015 | INFO     | __main__:main:1442 -   MA4 - SRWE win rate vs RWSE: 0.50
+2026-02-22 06:54:45.015 | INFO     | __main__:main:1443 -   MA4 - SRWE win rate vs LapPE: 0.67
+2026-02-22 06:54:45.015 | INFO     | __main__:main:1444 -   MA5 - Tier A: strong
+2026-02-22 06:54:45.015 | INFO     | __main__:main:1445 -   MA5 - Tier B: strong
+2026-02-22 06:54:45.015 | INFO     | __main__:main:1446 -   MA5 - Tier C: not_supported
+2026-02-22 06:54:45.015 | INFO     | __main__:main:1447 -   MA5 - Tier D: moderate
+2026-02-22 06:54:45.015 | INFO     | __main__:main:1448 - ======================================================================
+2026-02-22 06:55:50.456 | INFO     | __main__:main:1380 - ======================================================================
+2026-02-22 06:55:50.456 | INFO     | __main__:main:1381 - Cross-Architecture Meta-Analysis of Walk Resolution Limit Theory
+2026-02-22 06:55:50.456 | INFO     | __main__:main:1382 - ======================================================================
+2026-02-22 06:55:50.456 | INFO     | __main__:main:1385 - Step 1: Loading dependency data...
+2026-02-22 06:55:50.456 | INFO     | __main__:load_json_data:223 - Loading GPS (exp_id1_it3) from /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_3/gen_art/exp_id1_it3__opus/full_method_out.json
+2026-02-22 06:55:50.515 | INFO     | __main__:load_json_data:227 -   GPS (exp_id1_it3): 4 datasets, 1620 total examples
+2026-02-22 06:55:50.516 | INFO     | __main__:load_json_data:223 - Loading GCN (exp_id2_it3) from /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_3/gen_art/exp_id2_it3__opus/full_method_out.json
+2026-02-22 06:55:50.957 | INFO     | __main__:load_json_data:227 -   GCN (exp_id2_it3): 4 datasets, 16100 total examples
+2026-02-22 06:55:50.957 | INFO     | __main__:load_json_data:223 - Loading Model-free/MLP (exp_id1_it2) from /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_2/gen_art/exp_id1_it2__opus/full_method_out.json
+2026-02-22 06:55:50.986 | INFO     | __main__:load_json_data:227 -   Model-free/MLP (exp_id1_it2): 4 datasets, 16100 total examples
+2026-02-22 06:55:50.986 | INFO     | __main__:load_json_data:223 - Loading Diagnostics (exp_id3_it2) from /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_2/gen_art/exp_id3_it2__opus/full_method_out.json
+2026-02-22 06:55:51.015 | INFO     | __main__:load_json_data:227 -   Diagnostics (exp_id3_it2): 4 datasets, 16100 total examples
+2026-02-22 06:55:51.015 | INFO     | __main__:main:1392 - Step 2: Extracting per-graph data...
+2026-02-22 06:55:51.018 | INFO     | __main__:extract_gps_per_graph:250 - GPS per-graph data: 1620 rows, datasets: ['ZINC-subset', 'Peptides-func', 'Peptides-struct', 'Synthetic-aliased-pairs']
+2026-02-22 06:55:53.952 | INFO     | __main__:extract_gcn_per_graph:321 - GCN per-graph data: 16100 rows, datasets: ['ZINC-subset', 'Peptides-func', 'Peptides-struct', 'Synthetic-aliased-pairs']
+2026-02-22 06:55:53.953 | INFO     | __main__:main:1411 - Per-graph data extracted: GPS=1620, GCN=16100
+2026-02-22 06:55:53.953 | INFO     | __main__:main:1414 - Step 3: Running meta-analyses...
+2026-02-22 06:55:53.953 | INFO     | __main__:meta_analysis_1_architecture_comparison:398 - === META-ANALYSIS 1: Architecture Comparison ===
+2026-02-22 06:55:57.107 | INFO     | __main__:meta_analysis_1_architecture_comparison:468 -   model_free: Fisher-z mean rho = 0.4070 [0.3940, 0.4198]
+2026-02-22 06:55:57.107 | INFO     | __main__:meta_analysis_1_architecture_comparison:468 -   MLP: Fisher-z mean rho = 0.0682 [0.0282, 0.1079]
+2026-02-22 06:55:57.107 | INFO     | __main__:meta_analysis_1_architecture_comparison:468 -   GCN: Fisher-z mean rho = -0.0123 [-0.0277, 0.0032]
+2026-02-22 06:55:57.107 | INFO     | __main__:meta_analysis_1_architecture_comparison:468 -   GPS: Fisher-z mean rho = 0.0206 [-0.0283, 0.0694]
+2026-02-22 06:55:57.107 | INFO     | __main__:meta_analysis_1_architecture_comparison:476 -   Overall mean rho across architectures: 0.1209
+2026-02-22 06:55:57.107 | INFO     | __main__:meta_analysis_2_sri_vs_size:489 - === META-ANALYSIS 2: SRI vs Size Head-to-Head ===
+2026-02-22 06:55:57.114 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GPS/ZINC-subset/LinearRegression: R²(SRI)=-0.0115, R²(size)=-0.0100, ΔR²=-0.0037
+2026-02-22 06:55:57.556 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GPS/ZINC-subset/RandomForest: R²(SRI)=-0.1391, R²(size)=-0.0521, ΔR²=-0.0647
+2026-02-22 06:55:57.557 | INFO     | __main__:meta_analysis_2_sri_vs_size:546 -   GPS/ZINC-subset: partial ρ(SRI,gap|size) = 0.0494 (p=1.1841e-01)
+2026-02-22 06:55:57.563 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GPS/Peptides-func/LinearRegression: R²(SRI)=-0.0304, R²(size)=-0.0346, ΔR²=-0.0052
+2026-02-22 06:55:57.937 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GPS/Peptides-func/RandomForest: R²(SRI)=-0.1814, R²(size)=-0.2765, ΔR²=0.0616
+2026-02-22 06:55:57.938 | INFO     | __main__:meta_analysis_2_sri_vs_size:546 -   GPS/Peptides-func: partial ρ(SRI,gap|size) = 0.0990 (p=8.6962e-02)
+2026-02-22 06:55:57.944 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GPS/Peptides-struct/LinearRegression: R²(SRI)=-0.0627, R²(size)=-0.0929, ΔR²=-0.0054
+2026-02-22 06:55:58.316 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GPS/Peptides-struct/RandomForest: R²(SRI)=-0.2540, R²(size)=-0.9358, ΔR²=0.3567
+2026-02-22 06:55:58.317 | INFO     | __main__:meta_analysis_2_sri_vs_size:546 -   GPS/Peptides-struct: partial ρ(SRI,gap|size) = -0.0672 (p=2.4593e-01)
+2026-02-22 06:55:58.329 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GCN/ZINC-subset/LinearRegression: R²(SRI)=-0.0060, R²(size)=-0.0061, ΔR²=-0.0003
+2026-02-22 06:56:00.203 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GCN/ZINC-subset/RandomForest: R²(SRI)=-0.0167, R²(size)=-0.0140, ΔR²=-0.0041
+2026-02-22 06:56:00.208 | INFO     | __main__:meta_analysis_2_sri_vs_size:546 -   GCN/ZINC-subset: partial ρ(SRI,gap|size) = 0.0124 (p=1.7296e-01)
+2026-02-22 06:56:00.216 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GCN/Peptides-func/LinearRegression: R²(SRI)=0.0011, R²(size)=0.0023, ΔR²=-0.0001
+2026-02-22 06:56:00.828 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GCN/Peptides-func/RandomForest: R²(SRI)=-0.1224, R²(size)=-0.0745, ΔR²=-0.0238
+2026-02-22 06:56:00.829 | INFO     | __main__:meta_analysis_2_sri_vs_size:546 -   GCN/Peptides-func: partial ρ(SRI,gap|size) = 0.0592 (p=8.0987e-03)
+2026-02-22 06:56:00.836 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GCN/Peptides-struct/LinearRegression: R²(SRI)=0.0046, R²(size)=0.0870, ΔR²=0.0024
+2026-02-22 06:56:01.439 | INFO     | __main__:meta_analysis_2_sri_vs_size:540 -   GCN/Peptides-struct/RandomForest: R²(SRI)=-0.0454, R²(size)=-0.0256, ΔR²=0.0712
+2026-02-22 06:56:01.441 | INFO     | __main__:meta_analysis_2_sri_vs_size:546 -   GCN/Peptides-struct: partial ρ(SRI,gap|size) = -0.0138 (p=5.3876e-01)
+2026-02-22 06:56:01.441 | INFO     | __main__:meta_analysis_2_sri_vs_size:574 -   Aggregate ΔR²(LR)=-0.0021, ΔR²(RF)=0.0661, partial ρ=0.0232
+2026-02-22 06:56:01.441 | INFO     | __main__:meta_analysis_3_task_type:591 - === META-ANALYSIS 3: Task-Type Analysis ===
+2026-02-22 06:56:01.443 | INFO     | __main__:meta_analysis_3_task_type:670 -   GPS Cohen's d (RWSE-LapPE gap): 0.0769
+2026-02-22 06:56:01.443 | INFO     | __main__:meta_analysis_3_task_type:671 -   GPS Cohen's d (SRWE-LapPE gap): 0.0286
+2026-02-22 06:56:01.446 | INFO     | __main__:meta_analysis_3_task_type:670 -   GCN Cohen's d (RWSE-LapPE gap): 0.1341
+2026-02-22 06:56:01.446 | INFO     | __main__:meta_analysis_3_task_type:671 -   GCN Cohen's d (SRWE-LapPE gap): 0.1227
+2026-02-22 06:56:01.447 | INFO     | __main__:meta_analysis_3_task_type:680 -   GPS/regression: ρ(SRI,gap) = -0.1194 (p=1.5994e-05)
+2026-02-22 06:56:01.447 | INFO     | __main__:meta_analysis_3_task_type:680 -   GPS/classification: ρ(SRI,gap) = 0.0799 (p=1.6732e-01)
+2026-02-22 06:56:01.450 | INFO     | __main__:meta_analysis_3_task_type:680 -   GCN/regression: ρ(SRI,gap) = -0.1901 (p=8.0968e-115)
+2026-02-22 06:56:01.451 | INFO     | __main__:meta_analysis_3_task_type:680 -   GCN/classification: ρ(SRI,gap) = 0.1352 (p=1.2581e-09)
+2026-02-22 06:56:01.459 | INFO     | __main__:meta_analysis_3_task_type:706 -   Mann-Whitney U: U=0.00, p=0.0952
+2026-02-22 06:56:01.459 | INFO     | __main__:meta_analysis_4_srwe_scorecard:729 - === META-ANALYSIS 4: SRWE Consistency Scorecard ===
+2026-02-22 06:56:01.459 | INFO     | __main__:meta_analysis_4_srwe_scorecard:824 -   GPS/ZINC-subset: SRWE=0.2333, RWSE=0.1991, LapPE=0.2982, gap_reduction=34.5%, wins_rwse=False, wins_lappe=True
+2026-02-22 06:56:01.459 | INFO     | __main__:meta_analysis_4_srwe_scorecard:824 -   GPS/Peptides-func: SRWE=0.2758, RWSE=0.2630, LapPE=0.2584, gap_reduction=-276.8%, wins_rwse=True, wins_lappe=True
+2026-02-22 06:56:01.459 | INFO     | __main__:meta_analysis_4_srwe_scorecard:824 -   GPS/Peptides-struct: SRWE=17.5167, RWSE=18.8603, LapPE=16.5316, gap_reduction=57.7%, wins_rwse=True, wins_lappe=False
+2026-02-22 06:56:01.459 | INFO     | __main__:meta_analysis_4_srwe_scorecard:824 -   GCN/ZINC-subset: SRWE=0.4367, RWSE=0.3798, LapPE=0.5250, gap_reduction=39.1%, wins_rwse=False, wins_lappe=True
+2026-02-22 06:56:01.459 | INFO     | __main__:meta_analysis_4_srwe_scorecard:824 -   GCN/Peptides-func: SRWE=0.4198, RWSE=0.4551, LapPE=0.3699, gap_reduction=41.5%, wins_rwse=False, wins_lappe=True
+2026-02-22 06:56:01.459 | INFO     | __main__:meta_analysis_4_srwe_scorecard:824 -   GCN/Peptides-struct: SRWE=30.3837, RWSE=35.0476, LapPE=22.8211, gap_reduction=38.1%, wins_rwse=True, wins_lappe=False
+2026-02-22 06:56:01.459 | INFO     | __main__:meta_analysis_4_srwe_scorecard:851 -   low_sri_regression: n=2, mean gap reduction=47.9%, win_rate_rwse=1.00
+2026-02-22 06:56:01.459 | INFO     | __main__:meta_analysis_4_srwe_scorecard:851 -   low_sri_classification: n=2, mean gap reduction=-117.7%, win_rate_rwse=0.50
+2026-02-22 06:56:01.459 | INFO     | __main__:meta_analysis_4_srwe_scorecard:851 -   high_sri: n=2, mean gap reduction=36.8%, win_rate_rwse=0.00
+2026-02-22 06:56:01.459 | INFO     | __main__:meta_analysis_4_srwe_scorecard:855 -   Overall win rate vs RWSE: 0.50 (3/6)
+2026-02-22 06:56:01.459 | INFO     | __main__:meta_analysis_4_srwe_scorecard:856 -   Overall win rate vs LapPE: 0.67 (4/6)
+2026-02-22 06:56:01.459 | INFO     | __main__:meta_analysis_5_scope_of_validity:869 - === META-ANALYSIS 5: Scope of Validity Assessment ===
+2026-02-22 06:56:01.459 | INFO     | __main__:meta_analysis_5_scope_of_validity:893 -   Tier A (mathematical): strong (mean |ρ| = 0.654)
+2026-02-22 06:56:01.459 | INFO     | __main__:meta_analysis_5_scope_of_validity:914 -   Tier B (SRI classifier): strong (5 KS-significant pairs)
+2026-02-22 06:56:01.459 | INFO     | __main__:meta_analysis_5_scope_of_validity:945 -   Tier C (predictive): not_supported (ΔR²=-0.0021, partial ρ=0.0232)
+2026-02-22 06:56:01.459 | INFO     | __main__:meta_analysis_5_scope_of_validity:973 -   Tier D (SRWE utility): moderate (win rate vs RWSE = 0.50)
+2026-02-22 06:56:01.459 | INFO     | __main__:main:1423 - Step 4: Generating figures...
+2026-02-22 06:56:01.459 | INFO     | __main__:generate_figures:1005 - === Generating Figures ===
+2026-02-22 06:56:01.541 | INFO     | __main__:generate_figures:1041 -   Saved /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_4/gen_art/eval_id3_it4__opus/figures/fig1_correlation_heatmap.png
+2026-02-22 06:56:01.635 | INFO     | __main__:generate_figures:1072 -   Saved /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_4/gen_art/eval_id3_it4__opus/figures/fig2_srwe_gap_reduction.png
+2026-02-22 06:56:01.761 | INFO     | __main__:generate_figures:1114 -   Saved /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_4/gen_art/eval_id3_it4__opus/figures/fig3_sri_vs_size.png
+2026-02-22 06:56:01.825 | INFO     | __main__:generate_figures:1170 -   Saved /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_4/gen_art/eval_id3_it4__opus/figures/fig4_decision_flowchart.png
+2026-02-22 06:56:01.878 | INFO     | __main__:generate_figures:1209 -   Saved /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_4/gen_art/eval_id3_it4__opus/figures/fig5_task_type_effect_size.png
+2026-02-22 06:56:01.879 | INFO     | __main__:generate_figures:1213 -   Generated 5 figures
+2026-02-22 06:56:01.879 | INFO     | __main__:main:1427 - Step 5: Formatting and saving output...
+2026-02-22 06:56:01.879 | INFO     | __main__:format_output:1228 - === Formatting Output ===
+2026-02-22 06:56:02.583 | INFO     | __main__:main:1432 - Output saved to /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_4/gen_art/eval_id3_it4__opus/eval_out.json
+2026-02-22 06:56:02.583 | INFO     | __main__:main:1433 - Output size: 13.6 MB
+2026-02-22 06:56:02.583 | INFO     | __main__:main:1436 - ======================================================================
+2026-02-22 06:56:02.583 | INFO     | __main__:main:1437 - SUMMARY OF KEY FINDINGS:
+2026-02-22 06:56:02.583 | INFO     | __main__:main:1438 -   MA1 - Overall mean SRI-gap ρ: 0.1209
+2026-02-22 06:56:02.583 | INFO     | __main__:main:1439 -   MA2 - Mean ΔR² (LR): -0.0021
+2026-02-22 06:56:02.583 | INFO     | __main__:main:1440 -   MA2 - Mean partial ρ: 0.0232
+2026-02-22 06:56:02.583 | INFO     | __main__:main:1441 -   MA3 - GPS Cohen's d: 0.0769
+2026-02-22 06:56:02.583 | INFO     | __main__:main:1442 -   MA4 - SRWE win rate vs RWSE: 0.50
+2026-02-22 06:56:02.583 | INFO     | __main__:main:1443 -   MA4 - SRWE win rate vs LapPE: 0.67
+2026-02-22 06:56:02.583 | INFO     | __main__:main:1444 -   MA5 - Tier A: strong
+2026-02-22 06:56:02.583 | INFO     | __main__:main:1445 -   MA5 - Tier B: strong
+2026-02-22 06:56:02.583 | INFO     | __main__:main:1446 -   MA5 - Tier C: not_supported
+2026-02-22 06:56:02.583 | INFO     | __main__:main:1447 -   MA5 - Tier D: moderate
+2026-02-22 06:56:02.583 | INFO     | __main__:main:1448 - ======================================================================

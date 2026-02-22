@@ -1,0 +1,381 @@
+2026-02-22 01:33:44.701 | INFO     | data:load_edge_index_dataset:216 - Loading ZINC from full_graphs-datasets_ZINC_train.json (fold=train)
+2026-02-22 01:33:50.586 | INFO     | data:load_edge_index_dataset:220 -   Loaded 10 graphs from full_graphs-datasets_ZINC_train.json
+2026-02-22 01:33:50.603 | INFO     | data:load_edge_index_dataset:272 -   → 10 examples from ZINC (train)
+2026-02-22 01:35:25.972 | INFO     | data:load_edge_index_dataset:216 - Loading ZINC from mini_graphs-datasets_ZINC_train.json (fold=0)
+2026-02-22 01:35:25.973 | INFO     | data:load_edge_index_dataset:220 -   Loaded 3 graphs from mini_graphs-datasets_ZINC_train.json
+2026-02-22 01:35:25.992 | INFO     | data:load_edge_index_dataset:272 -   → 3 examples from ZINC (0)
+2026-02-22 01:35:25.992 | INFO     | data:load_peptides_smiles:284 - Loading Peptides-func from mini_scikit-fingerprints_LRGB_Peptides-func_train.json (SMILES → graph)
+2026-02-22 01:35:25.992 | INFO     | data:load_peptides_smiles:288 -   Loaded 3 peptides
+2026-02-22 01:35:28.348 | INFO     | data:load_peptides_smiles:383 -   → 3 examples from Peptides-func
+2026-02-22 01:35:28.348 | INFO     | data:load_peptides_smiles:284 - Loading Peptides-struct from mini_scikit-fingerprints_LRGB_Peptides-struct_train.json (SMILES → graph)
+2026-02-22 01:35:28.348 | INFO     | data:load_peptides_smiles:288 -   Loaded 3 peptides
+2026-02-22 01:35:30.557 | INFO     | data:load_peptides_smiles:383 -   → 3 examples from Peptides-struct
+2026-02-22 01:35:30.557 | INFO     | data:load_edge_index_dataset:216 - Loading MUTAG from mini_graphs-datasets_MUTAG_train.json (fold=0)
+2026-02-22 01:35:30.557 | INFO     | data:load_edge_index_dataset:220 -   Loaded 3 graphs from mini_graphs-datasets_MUTAG_train.json
+2026-02-22 01:35:30.564 | INFO     | data:load_edge_index_dataset:272 -   → 3 examples from MUTAG (0)
+2026-02-22 01:35:30.564 | INFO     | data:load_edge_index_dataset:216 - Loading PROTEINS from mini_graphs-datasets_PROTEINS_train.json (fold=0)
+2026-02-22 01:35:30.564 | INFO     | data:load_edge_index_dataset:220 -   Loaded 3 graphs from mini_graphs-datasets_PROTEINS_train.json
+2026-02-22 01:35:30.598 | INFO     | data:load_edge_index_dataset:272 -   → 3 examples from PROTEINS (0)
+2026-02-22 01:35:30.598 | INFO     | data:load_edge_index_dataset:216 - Loading OGB-molhiv from mini_OGB_ogbg-molhiv_train.json (fold=0)
+2026-02-22 01:35:30.598 | INFO     | data:load_edge_index_dataset:220 -   Loaded 3 graphs from mini_OGB_ogbg-molhiv_train.json
+2026-02-22 01:35:30.643 | INFO     | data:load_edge_index_dataset:272 -   → 3 examples from OGB-molhiv (0)
+2026-02-22 01:35:30.644 | INFO     | data:generate_exactly_cospectral_pairs:438 - Generating exactly cospectral pairs
+2026-02-22 01:35:30.672 | INFO     | data:generate_exactly_cospectral_pairs:596 -   → 30 exactly cospectral graphs (15 pairs)
+2026-02-22 01:35:30.672 | INFO     | data:generate_near_cospectral_pairs:635 - Generating near-cospectral pairs
+2026-02-22 01:35:30.689 | INFO     | data:generate_near_cospectral_pairs:694 -   → 40 near-cospectral graphs (20 pairs)
+2026-02-22 01:35:30.689 | INFO     | data:generate_control_pairs:700 - Generating control pairs
+2026-02-22 01:35:30.701 | INFO     | data:generate_control_pairs:782 -   → 30 control graphs (15 pairs)
+2026-02-22 01:36:19.879 | INFO     | data:load_peptides_smiles:284 - Loading Peptides-func from mini_scikit-fingerprints_LRGB_Peptides-func_train.json (SMILES → graph)
+2026-02-22 01:36:19.879 | INFO     | data:load_peptides_smiles:288 -   Loaded 1 peptides
+2026-02-22 01:36:20.142 | INFO     | data:load_peptides_smiles:383 -   → 1 examples from Peptides-func
+2026-02-22 01:36:31.368 | INFO     | data:load_edge_index_dataset:216 - Loading ZINC from full_graphs-datasets_ZINC_train.json (fold=0)
+2026-02-22 01:36:37.636 | INFO     | data:load_edge_index_dataset:220 -   Loaded 50 graphs from full_graphs-datasets_ZINC_train.json
+2026-02-22 01:36:37.695 | INFO     | data:load_edge_index_dataset:272 -   → 50 examples from ZINC (0)
+2026-02-22 01:36:37.695 | INFO     | data:load_peptides_smiles:284 - Loading Peptides-func from full_scikit-fingerprints_LRGB_Peptides-func_train.json (SMILES → graph)
+2026-02-22 01:36:37.781 | INFO     | data:load_peptides_smiles:288 -   Loaded 10 peptides
+2026-02-22 01:36:38.103 | INFO     | data:load_peptides_smiles:383 -   → 10 examples from Peptides-func
+2026-02-22 01:36:57.149 | INFO     | __main__:main:792 - ============================================================
+2026-02-22 01:36:57.150 | INFO     | __main__:main:793 - Spectrally-Annotated Graph Benchmarks — data.py
+2026-02-22 01:36:57.150 | INFO     | __main__:main:794 - ============================================================
+2026-02-22 01:36:57.150 | INFO     | __main__:main:799 - ─── Dataset 1: ZINC-subset ───
+2026-02-22 01:36:57.150 | INFO     | __main__:load_edge_index_dataset:216 - Loading ZINC from full_graphs-datasets_ZINC_train.json (fold=0)
+2026-02-22 01:37:03.199 | INFO     | __main__:load_edge_index_dataset:220 -   Loaded 10000 graphs from full_graphs-datasets_ZINC_train.json
+2026-02-22 01:37:05.903 | INFO     | __main__:load_edge_index_dataset:270 -   Processed 500/10000 graphs in ZINC
+2026-02-22 01:37:09.061 | INFO     | __main__:load_edge_index_dataset:270 -   Processed 1000/10000 graphs in ZINC
+2026-02-22 01:37:12.200 | INFO     | __main__:load_edge_index_dataset:270 -   Processed 1500/10000 graphs in ZINC
+2026-02-22 01:37:14.760 | INFO     | __main__:load_edge_index_dataset:270 -   Processed 2000/10000 graphs in ZINC
+2026-02-22 01:37:16.967 | INFO     | __main__:load_edge_index_dataset:270 -   Processed 2500/10000 graphs in ZINC
+2026-02-22 01:37:19.547 | INFO     | __main__:load_edge_index_dataset:270 -   Processed 3000/10000 graphs in ZINC
+2026-02-22 01:37:22.475 | INFO     | __main__:load_edge_index_dataset:270 -   Processed 3500/10000 graphs in ZINC
+2026-02-22 01:37:25.091 | INFO     | __main__:load_edge_index_dataset:270 -   Processed 4000/10000 graphs in ZINC
+2026-02-22 01:37:27.571 | INFO     | __main__:load_edge_index_dataset:270 -   Processed 4500/10000 graphs in ZINC
+2026-02-22 01:37:30.489 | INFO     | __main__:load_edge_index_dataset:270 -   Processed 5000/10000 graphs in ZINC
+2026-02-22 01:37:33.044 | INFO     | __main__:load_edge_index_dataset:270 -   Processed 5500/10000 graphs in ZINC
+2026-02-22 01:37:35.561 | INFO     | __main__:load_edge_index_dataset:270 -   Processed 6000/10000 graphs in ZINC
+2026-02-22 01:37:39.680 | INFO     | __main__:load_edge_index_dataset:270 -   Processed 6500/10000 graphs in ZINC
+2026-02-22 01:37:43.050 | INFO     | __main__:load_edge_index_dataset:270 -   Processed 7000/10000 graphs in ZINC
+2026-02-22 01:37:45.759 | INFO     | __main__:load_edge_index_dataset:270 -   Processed 7500/10000 graphs in ZINC
+2026-02-22 01:37:50.053 | INFO     | __main__:load_edge_index_dataset:270 -   Processed 8000/10000 graphs in ZINC
+2026-02-22 01:37:52.565 | INFO     | __main__:load_edge_index_dataset:270 -   Processed 8500/10000 graphs in ZINC
+2026-02-22 01:37:54.969 | INFO     | __main__:load_edge_index_dataset:270 -   Processed 9000/10000 graphs in ZINC
+2026-02-22 01:37:57.261 | INFO     | __main__:load_edge_index_dataset:270 -   Processed 9500/10000 graphs in ZINC
+2026-02-22 01:38:00.375 | INFO     | __main__:load_edge_index_dataset:270 -   Processed 10000/10000 graphs in ZINC
+2026-02-22 01:38:00.375 | INFO     | __main__:load_edge_index_dataset:272 -   → 10000 examples from ZINC (0)
+2026-02-22 01:38:00.391 | INFO     | __main__:load_edge_index_dataset:216 - Loading ZINC from full_graphs-datasets_ZINC_validation.json (fold=1)
+2026-02-22 01:38:00.731 | INFO     | __main__:load_edge_index_dataset:220 -   Loaded 1000 graphs from full_graphs-datasets_ZINC_validation.json
+2026-02-22 01:38:02.843 | INFO     | __main__:load_edge_index_dataset:270 -   Processed 500/1000 graphs in ZINC
+2026-02-22 01:38:05.295 | INFO     | __main__:load_edge_index_dataset:270 -   Processed 1000/1000 graphs in ZINC
+2026-02-22 01:38:05.295 | INFO     | __main__:load_edge_index_dataset:272 -   → 1000 examples from ZINC (1)
+2026-02-22 01:38:05.297 | INFO     | __main__:load_edge_index_dataset:216 - Loading ZINC from full_graphs-datasets_ZINC_test.json (fold=2)
+2026-02-22 01:38:05.395 | INFO     | __main__:load_edge_index_dataset:220 -   Loaded 1000 graphs from full_graphs-datasets_ZINC_test.json
+2026-02-22 01:38:07.497 | INFO     | __main__:load_edge_index_dataset:270 -   Processed 500/1000 graphs in ZINC
+2026-02-22 01:38:09.764 | INFO     | __main__:load_edge_index_dataset:270 -   Processed 1000/1000 graphs in ZINC
+2026-02-22 01:38:09.764 | INFO     | __main__:load_edge_index_dataset:272 -   → 1000 examples from ZINC (2)
+2026-02-22 01:38:09.766 | INFO     | __main__:main:813 - ZINC total: 12000 graphs
+2026-02-22 01:38:09.766 | INFO     | __main__:main:817 - ─── Dataset 2: Peptides-func ───
+2026-02-22 01:38:09.766 | INFO     | __main__:load_peptides_smiles:284 - Loading Peptides-func from full_scikit-fingerprints_LRGB_Peptides-func_train.json (SMILES → graph)
+2026-02-22 01:38:09.803 | INFO     | __main__:load_peptides_smiles:288 -   Loaded 2000 peptides
+2026-02-22 01:39:11.496 | INFO     | __main__:load_peptides_smiles:381 -   Processed 200/2000 peptides in Peptides-func
+2026-02-22 01:40:13.896 | INFO     | __main__:load_peptides_smiles:381 -   Processed 400/2000 peptides in Peptides-func
+2026-02-22 01:41:12.673 | INFO     | __main__:load_peptides_smiles:381 -   Processed 600/2000 peptides in Peptides-func
+2026-02-22 01:43:07.369 | INFO     | __main__:main:799 - ============================================================
+2026-02-22 01:43:07.369 | INFO     | __main__:main:800 - Spectrally-Annotated Graph Benchmarks — data.py
+2026-02-22 01:43:07.369 | INFO     | __main__:main:801 - ============================================================
+2026-02-22 01:43:07.369 | INFO     | __main__:main:806 - ─── Dataset 1: ZINC-subset ───
+2026-02-22 01:43:07.369 | INFO     | __main__:load_edge_index_dataset:223 - Loading ZINC from full_graphs-datasets_ZINC_train.json (fold=0)
+2026-02-22 01:43:13.364 | INFO     | __main__:load_edge_index_dataset:227 -   Loaded 10000 graphs from full_graphs-datasets_ZINC_train.json
+2026-02-22 01:43:13.728 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 500/10000 graphs in ZINC
+2026-02-22 01:43:14.088 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 1000/10000 graphs in ZINC
+2026-02-22 01:43:14.448 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 1500/10000 graphs in ZINC
+2026-02-22 01:43:14.812 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 2000/10000 graphs in ZINC
+2026-02-22 01:43:15.173 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 2500/10000 graphs in ZINC
+2026-02-22 01:43:15.530 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 3000/10000 graphs in ZINC
+2026-02-22 01:43:15.889 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 3500/10000 graphs in ZINC
+2026-02-22 01:43:16.250 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 4000/10000 graphs in ZINC
+2026-02-22 01:43:16.611 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 4500/10000 graphs in ZINC
+2026-02-22 01:43:16.971 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 5000/10000 graphs in ZINC
+2026-02-22 01:43:17.334 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 5500/10000 graphs in ZINC
+2026-02-22 01:43:17.689 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 6000/10000 graphs in ZINC
+2026-02-22 01:43:18.051 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 6500/10000 graphs in ZINC
+2026-02-22 01:43:18.413 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 7000/10000 graphs in ZINC
+2026-02-22 01:43:18.772 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 7500/10000 graphs in ZINC
+2026-02-22 01:43:19.130 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 8000/10000 graphs in ZINC
+2026-02-22 01:43:19.493 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 8500/10000 graphs in ZINC
+2026-02-22 01:43:19.853 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 9000/10000 graphs in ZINC
+2026-02-22 01:43:20.214 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 9500/10000 graphs in ZINC
+2026-02-22 01:43:20.573 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 10000/10000 graphs in ZINC
+2026-02-22 01:43:20.573 | INFO     | __main__:load_edge_index_dataset:279 -   → 10000 examples from ZINC (0)
+2026-02-22 01:43:20.586 | INFO     | __main__:load_edge_index_dataset:223 - Loading ZINC from full_graphs-datasets_ZINC_validation.json (fold=1)
+2026-02-22 01:43:20.871 | INFO     | __main__:load_edge_index_dataset:227 -   Loaded 1000 graphs from full_graphs-datasets_ZINC_validation.json
+2026-02-22 01:43:21.229 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 500/1000 graphs in ZINC
+2026-02-22 01:43:21.593 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 1000/1000 graphs in ZINC
+2026-02-22 01:43:21.593 | INFO     | __main__:load_edge_index_dataset:279 -   → 1000 examples from ZINC (1)
+2026-02-22 01:43:21.594 | INFO     | __main__:load_edge_index_dataset:223 - Loading ZINC from full_graphs-datasets_ZINC_test.json (fold=2)
+2026-02-22 01:43:21.648 | INFO     | __main__:load_edge_index_dataset:227 -   Loaded 1000 graphs from full_graphs-datasets_ZINC_test.json
+2026-02-22 01:43:22.007 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 500/1000 graphs in ZINC
+2026-02-22 01:43:22.364 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 1000/1000 graphs in ZINC
+2026-02-22 01:43:22.364 | INFO     | __main__:load_edge_index_dataset:279 -   → 1000 examples from ZINC (2)
+2026-02-22 01:43:22.365 | INFO     | __main__:main:820 - ZINC total: 12000 graphs
+2026-02-22 01:43:22.365 | INFO     | __main__:main:824 - ─── Dataset 2: Peptides-func ───
+2026-02-22 01:43:22.365 | INFO     | __main__:load_peptides_smiles:291 - Loading Peptides-func from full_scikit-fingerprints_LRGB_Peptides-func_train.json (SMILES → graph)
+2026-02-22 01:43:22.387 | INFO     | __main__:load_peptides_smiles:295 -   Loaded 2000 peptides
+2026-02-22 01:43:23.860 | INFO     | __main__:load_peptides_smiles:388 -   Processed 200/2000 peptides in Peptides-func
+2026-02-22 01:43:25.215 | INFO     | __main__:load_peptides_smiles:388 -   Processed 400/2000 peptides in Peptides-func
+2026-02-22 01:43:26.659 | INFO     | __main__:load_peptides_smiles:388 -   Processed 600/2000 peptides in Peptides-func
+2026-02-22 01:43:28.058 | INFO     | __main__:load_peptides_smiles:388 -   Processed 800/2000 peptides in Peptides-func
+2026-02-22 01:43:29.453 | INFO     | __main__:load_peptides_smiles:388 -   Processed 1000/2000 peptides in Peptides-func
+2026-02-22 01:43:30.826 | INFO     | __main__:load_peptides_smiles:388 -   Processed 1200/2000 peptides in Peptides-func
+2026-02-22 01:43:32.254 | INFO     | __main__:load_peptides_smiles:388 -   Processed 1400/2000 peptides in Peptides-func
+2026-02-22 01:43:33.724 | INFO     | __main__:load_peptides_smiles:388 -   Processed 1600/2000 peptides in Peptides-func
+2026-02-22 01:43:35.285 | INFO     | __main__:load_peptides_smiles:388 -   Processed 1800/2000 peptides in Peptides-func
+2026-02-22 01:43:36.645 | INFO     | __main__:load_peptides_smiles:388 -   Processed 2000/2000 peptides in Peptides-func
+2026-02-22 01:43:36.645 | INFO     | __main__:load_peptides_smiles:390 -   → 2000 examples from Peptides-func
+2026-02-22 01:43:36.645 | INFO     | __main__:main:830 - Peptides-func total: 2000 graphs
+2026-02-22 01:43:36.645 | INFO     | __main__:main:834 - ─── Dataset 3: Peptides-struct ───
+2026-02-22 01:43:36.645 | INFO     | __main__:load_peptides_smiles:291 - Loading Peptides-struct from full_scikit-fingerprints_LRGB_Peptides-struct_train.json (SMILES → graph)
+2026-02-22 01:43:36.693 | INFO     | __main__:load_peptides_smiles:295 -   Loaded 2000 peptides
+2026-02-22 01:43:38.160 | INFO     | __main__:load_peptides_smiles:388 -   Processed 200/2000 peptides in Peptides-struct
+2026-02-22 01:43:39.524 | INFO     | __main__:load_peptides_smiles:388 -   Processed 400/2000 peptides in Peptides-struct
+2026-02-22 01:43:40.977 | INFO     | __main__:load_peptides_smiles:388 -   Processed 600/2000 peptides in Peptides-struct
+2026-02-22 01:43:42.388 | INFO     | __main__:load_peptides_smiles:388 -   Processed 800/2000 peptides in Peptides-struct
+2026-02-22 01:43:43.798 | INFO     | __main__:load_peptides_smiles:388 -   Processed 1000/2000 peptides in Peptides-struct
+2026-02-22 01:43:45.184 | INFO     | __main__:load_peptides_smiles:388 -   Processed 1200/2000 peptides in Peptides-struct
+2026-02-22 01:43:46.626 | INFO     | __main__:load_peptides_smiles:388 -   Processed 1400/2000 peptides in Peptides-struct
+2026-02-22 01:43:48.118 | INFO     | __main__:load_peptides_smiles:388 -   Processed 1600/2000 peptides in Peptides-struct
+2026-02-22 01:43:49.702 | INFO     | __main__:load_peptides_smiles:388 -   Processed 1800/2000 peptides in Peptides-struct
+2026-02-22 01:43:51.078 | INFO     | __main__:load_peptides_smiles:388 -   Processed 2000/2000 peptides in Peptides-struct
+2026-02-22 01:43:51.078 | INFO     | __main__:load_peptides_smiles:390 -   → 2000 examples from Peptides-struct
+2026-02-22 01:43:51.078 | INFO     | __main__:main:839 - Peptides-struct total: 2000 graphs
+2026-02-22 01:43:51.078 | INFO     | __main__:main:843 - ─── Dataset 4: MUTAG ───
+2026-02-22 01:43:51.078 | INFO     | __main__:load_edge_index_dataset:223 - Loading MUTAG from full_graphs-datasets_MUTAG_train.json (fold=0)
+2026-02-22 01:43:51.082 | INFO     | __main__:load_edge_index_dataset:227 -   Loaded 188 graphs from full_graphs-datasets_MUTAG_train.json
+2026-02-22 01:43:51.193 | INFO     | __main__:load_edge_index_dataset:279 -   → 188 examples from MUTAG (0)
+2026-02-22 01:43:51.194 | INFO     | __main__:main:848 - MUTAG total: 188 graphs
+2026-02-22 01:43:51.194 | INFO     | __main__:main:852 - ─── Dataset 5: PROTEINS ───
+2026-02-22 01:43:51.194 | INFO     | __main__:load_edge_index_dataset:223 - Loading PROTEINS from full_graphs-datasets_PROTEINS_train.json (fold=0)
+2026-02-22 01:43:51.211 | INFO     | __main__:load_edge_index_dataset:227 -   Loaded 1113 graphs from full_graphs-datasets_PROTEINS_train.json
+2026-02-22 01:43:52.279 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 500/1113 graphs in PROTEINS
+2026-02-22 01:43:52.755 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 1000/1113 graphs in PROTEINS
+2026-02-22 01:43:52.832 | INFO     | __main__:load_edge_index_dataset:279 -   → 1113 examples from PROTEINS (0)
+2026-02-22 01:43:52.834 | INFO     | __main__:main:857 - PROTEINS total: 1113 graphs
+2026-02-22 01:43:52.834 | INFO     | __main__:main:861 - ─── Dataset 6: OGB-molhiv ───
+2026-02-22 01:43:52.834 | INFO     | __main__:load_edge_index_dataset:223 - Loading OGB-molhiv from full_OGB_ogbg-molhiv_train.json (fold=0)
+2026-02-22 01:43:54.105 | INFO     | __main__:load_edge_index_dataset:227 -   Loaded 5000 graphs from full_OGB_ogbg-molhiv_train.json
+2026-02-22 01:43:54.419 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 500/5000 graphs in OGB-molhiv
+2026-02-22 01:43:54.742 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 1000/5000 graphs in OGB-molhiv
+2026-02-22 01:43:55.074 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 1500/5000 graphs in OGB-molhiv
+2026-02-22 01:43:55.435 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 2000/5000 graphs in OGB-molhiv
+2026-02-22 01:43:55.761 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 2500/5000 graphs in OGB-molhiv
+2026-02-22 01:43:56.097 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 3000/5000 graphs in OGB-molhiv
+2026-02-22 01:43:56.467 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 3500/5000 graphs in OGB-molhiv
+2026-02-22 01:43:56.831 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 4000/5000 graphs in OGB-molhiv
+2026-02-22 01:43:57.221 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 4500/5000 graphs in OGB-molhiv
+2026-02-22 01:43:57.568 | INFO     | __main__:load_edge_index_dataset:277 -   Processed 5000/5000 graphs in OGB-molhiv
+2026-02-22 01:43:57.569 | INFO     | __main__:load_edge_index_dataset:279 -   → 5000 examples from OGB-molhiv (0)
+2026-02-22 01:43:57.579 | INFO     | __main__:main:866 - OGB-molhiv total: 5000 graphs
+2026-02-22 01:43:57.579 | INFO     | __main__:main:870 - ─── Dataset 7: Synthetic cospectral pairs ───
+2026-02-22 01:43:57.579 | INFO     | __main__:generate_exactly_cospectral_pairs:445 - Generating exactly cospectral pairs
+2026-02-22 01:43:57.674 | INFO     | __main__:generate_exactly_cospectral_pairs:603 -   → 30 exactly cospectral graphs (15 pairs)
+2026-02-22 01:43:57.674 | INFO     | __main__:main:875 - ─── Dataset 8: Synthetic near-cospectral + control pairs ───
+2026-02-22 01:43:57.674 | INFO     | __main__:generate_near_cospectral_pairs:642 - Generating near-cospectral pairs
+2026-02-22 01:43:57.691 | INFO     | __main__:generate_near_cospectral_pairs:701 -   → 40 near-cospectral graphs (20 pairs)
+2026-02-22 01:43:57.691 | INFO     | __main__:generate_control_pairs:707 - Generating control pairs
+2026-02-22 01:43:57.703 | INFO     | __main__:generate_control_pairs:789 -   → 30 control graphs (15 pairs)
+2026-02-22 01:43:57.703 | INFO     | __main__:main:883 - ============================================================
+2026-02-22 01:43:57.703 | INFO     | __main__:main:884 - TOTAL: 22401 examples across 8 datasets
+2026-02-22 01:43:57.703 | INFO     | __main__:main:886 -   ZINC-subset: 12000 examples
+2026-02-22 01:43:57.703 | INFO     | __main__:main:886 -   Peptides-func: 2000 examples
+2026-02-22 01:43:57.703 | INFO     | __main__:main:886 -   Peptides-struct: 2000 examples
+2026-02-22 01:43:57.703 | INFO     | __main__:main:886 -   MUTAG: 188 examples
+2026-02-22 01:43:57.703 | INFO     | __main__:main:886 -   PROTEINS: 1113 examples
+2026-02-22 01:43:57.703 | INFO     | __main__:main:886 -   OGB-molhiv: 5000 examples
+2026-02-22 01:43:57.703 | INFO     | __main__:main:886 -   Synthetic-cospectral: 30 examples
+2026-02-22 01:43:57.703 | INFO     | __main__:main:886 -   Synthetic-near-cospectral-and-control: 70 examples
+2026-02-22 01:43:57.703 | INFO     | __main__:main:890 - Saving to /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/full_data_out.json
+2026-02-22 01:43:58.553 | INFO     | __main__:main:893 - Saved full_data_out.json (363.7 MB)
+2026-02-22 01:43:58.553 | INFO     | __main__:main:894 - Done!
+2026-02-22 03:05:50.938 | INFO     | __main__:main:837 - ============================================================
+2026-02-22 03:05:50.938 | INFO     | __main__:main:838 - Spectrally-Annotated Graph Benchmarks — data.py
+2026-02-22 03:05:50.938 | INFO     | __main__:main:839 - ============================================================
+2026-02-22 03:05:50.938 | INFO     | __main__:main:844 - ─── Dataset 1/4: ZINC-subset ───
+2026-02-22 03:05:50.938 | INFO     | __main__:load_edge_index_dataset:229 - Loading ZINC from full_graphs-datasets_ZINC_train.json (fold=0)
+2026-02-22 03:05:56.660 | INFO     | __main__:load_edge_index_dataset:233 -   Loaded 10000 graphs from full_graphs-datasets_ZINC_train.json
+2026-02-22 03:05:57.014 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 500/10000 graphs in ZINC
+2026-02-22 03:05:57.371 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 1000/10000 graphs in ZINC
+2026-02-22 03:05:57.728 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 1500/10000 graphs in ZINC
+2026-02-22 03:05:58.089 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 2000/10000 graphs in ZINC
+2026-02-22 03:05:58.448 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 2500/10000 graphs in ZINC
+2026-02-22 03:05:58.802 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 3000/10000 graphs in ZINC
+2026-02-22 03:05:59.162 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 3500/10000 graphs in ZINC
+2026-02-22 03:05:59.523 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 4000/10000 graphs in ZINC
+2026-02-22 03:05:59.882 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 4500/10000 graphs in ZINC
+2026-02-22 03:06:00.242 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 5000/10000 graphs in ZINC
+2026-02-22 03:06:00.605 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 5500/10000 graphs in ZINC
+2026-02-22 03:06:00.959 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 6000/10000 graphs in ZINC
+2026-02-22 03:06:01.322 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 6500/10000 graphs in ZINC
+2026-02-22 03:06:01.680 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 7000/10000 graphs in ZINC
+2026-02-22 03:06:02.040 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 7500/10000 graphs in ZINC
+2026-02-22 03:06:02.398 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 8000/10000 graphs in ZINC
+2026-02-22 03:06:02.760 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 8500/10000 graphs in ZINC
+2026-02-22 03:06:03.119 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 9000/10000 graphs in ZINC
+2026-02-22 03:06:03.480 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 9500/10000 graphs in ZINC
+2026-02-22 03:06:03.839 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 10000/10000 graphs in ZINC
+2026-02-22 03:06:03.839 | INFO     | __main__:load_edge_index_dataset:285 -   → 10000 examples from ZINC (0)
+2026-02-22 03:06:03.856 | INFO     | __main__:load_edge_index_dataset:229 - Loading ZINC from full_graphs-datasets_ZINC_validation.json (fold=1)
+2026-02-22 03:06:04.135 | INFO     | __main__:load_edge_index_dataset:233 -   Loaded 1000 graphs from full_graphs-datasets_ZINC_validation.json
+2026-02-22 03:06:04.492 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 500/1000 graphs in ZINC
+2026-02-22 03:06:04.854 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 1000/1000 graphs in ZINC
+2026-02-22 03:06:04.854 | INFO     | __main__:load_edge_index_dataset:285 -   → 1000 examples from ZINC (1)
+2026-02-22 03:06:04.856 | INFO     | __main__:load_edge_index_dataset:229 - Loading ZINC from full_graphs-datasets_ZINC_test.json (fold=2)
+2026-02-22 03:06:04.910 | INFO     | __main__:load_edge_index_dataset:233 -   Loaded 1000 graphs from full_graphs-datasets_ZINC_test.json
+2026-02-22 03:06:05.268 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 500/1000 graphs in ZINC
+2026-02-22 03:06:05.625 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 1000/1000 graphs in ZINC
+2026-02-22 03:06:05.625 | INFO     | __main__:load_edge_index_dataset:285 -   → 1000 examples from ZINC (2)
+2026-02-22 03:06:05.626 | INFO     | __main__:main:858 - ZINC total: 12000 graphs
+2026-02-22 03:06:05.626 | INFO     | __main__:main:862 - ─── Dataset 2/4: Peptides-func ───
+2026-02-22 03:06:05.626 | INFO     | __main__:load_peptides_smiles:297 - Loading Peptides-func from full_scikit-fingerprints_LRGB_Peptides-func_train.json (SMILES → graph)
+2026-02-22 03:06:05.648 | INFO     | __main__:load_peptides_smiles:301 -   Loaded 2000 peptides
+2026-02-22 03:06:07.120 | INFO     | __main__:load_peptides_smiles:394 -   Processed 200/2000 peptides in Peptides-func
+2026-02-22 03:06:08.469 | INFO     | __main__:load_peptides_smiles:394 -   Processed 400/2000 peptides in Peptides-func
+2026-02-22 03:06:09.909 | INFO     | __main__:load_peptides_smiles:394 -   Processed 600/2000 peptides in Peptides-func
+2026-02-22 03:06:11.308 | INFO     | __main__:load_peptides_smiles:394 -   Processed 800/2000 peptides in Peptides-func
+2026-02-22 03:06:12.704 | INFO     | __main__:load_peptides_smiles:394 -   Processed 1000/2000 peptides in Peptides-func
+2026-02-22 03:06:14.092 | INFO     | __main__:load_peptides_smiles:394 -   Processed 1200/2000 peptides in Peptides-func
+2026-02-22 03:06:15.535 | INFO     | __main__:load_peptides_smiles:394 -   Processed 1400/2000 peptides in Peptides-func
+2026-02-22 03:06:17.013 | INFO     | __main__:load_peptides_smiles:394 -   Processed 1600/2000 peptides in Peptides-func
+2026-02-22 03:06:18.581 | INFO     | __main__:load_peptides_smiles:394 -   Processed 1800/2000 peptides in Peptides-func
+2026-02-22 03:06:19.944 | INFO     | __main__:load_peptides_smiles:394 -   Processed 2000/2000 peptides in Peptides-func
+2026-02-22 03:06:19.944 | INFO     | __main__:load_peptides_smiles:396 -   → 2000 examples from Peptides-func
+2026-02-22 03:06:19.945 | INFO     | __main__:main:868 - Peptides-func total: 2000 graphs
+2026-02-22 03:06:19.945 | INFO     | __main__:main:872 - ─── Dataset 3/4: Peptides-struct ───
+2026-02-22 03:06:19.945 | INFO     | __main__:load_peptides_smiles:297 - Loading Peptides-struct from full_scikit-fingerprints_LRGB_Peptides-struct_train.json (SMILES → graph)
+2026-02-22 03:06:19.992 | INFO     | __main__:load_peptides_smiles:301 -   Loaded 2000 peptides
+2026-02-22 03:06:21.461 | INFO     | __main__:load_peptides_smiles:394 -   Processed 200/2000 peptides in Peptides-struct
+2026-02-22 03:06:22.831 | INFO     | __main__:load_peptides_smiles:394 -   Processed 400/2000 peptides in Peptides-struct
+2026-02-22 03:06:24.288 | INFO     | __main__:load_peptides_smiles:394 -   Processed 600/2000 peptides in Peptides-struct
+2026-02-22 03:06:25.702 | INFO     | __main__:load_peptides_smiles:394 -   Processed 800/2000 peptides in Peptides-struct
+2026-02-22 03:06:27.114 | INFO     | __main__:load_peptides_smiles:394 -   Processed 1000/2000 peptides in Peptides-struct
+2026-02-22 03:06:28.501 | INFO     | __main__:load_peptides_smiles:394 -   Processed 1200/2000 peptides in Peptides-struct
+2026-02-22 03:06:29.941 | INFO     | __main__:load_peptides_smiles:394 -   Processed 1400/2000 peptides in Peptides-struct
+2026-02-22 03:06:31.430 | INFO     | __main__:load_peptides_smiles:394 -   Processed 1600/2000 peptides in Peptides-struct
+2026-02-22 03:06:33.008 | INFO     | __main__:load_peptides_smiles:394 -   Processed 1800/2000 peptides in Peptides-struct
+2026-02-22 03:06:34.376 | INFO     | __main__:load_peptides_smiles:394 -   Processed 2000/2000 peptides in Peptides-struct
+2026-02-22 03:06:34.376 | INFO     | __main__:load_peptides_smiles:396 -   → 2000 examples from Peptides-struct
+2026-02-22 03:06:34.377 | INFO     | __main__:main:877 - Peptides-struct total: 2000 graphs
+2026-02-22 03:06:34.377 | INFO     | __main__:main:881 - ─── Dataset 4/4: Synthetic-aliased-pairs ───
+2026-02-22 03:06:34.377 | INFO     | __main__:generate_exactly_cospectral_pairs:451 - Generating exactly cospectral pairs
+2026-02-22 03:06:34.389 | INFO     | __main__:generate_exactly_cospectral_pairs:609 -   → 30 exactly cospectral graphs (15 pairs)
+2026-02-22 03:06:34.389 | INFO     | __main__:generate_near_cospectral_pairs:648 - Generating near-cospectral pairs
+2026-02-22 03:06:34.406 | INFO     | __main__:generate_near_cospectral_pairs:707 -   → 40 near-cospectral graphs (20 pairs)
+2026-02-22 03:06:34.406 | INFO     | __main__:generate_control_pairs:713 - Generating control pairs
+2026-02-22 03:06:34.418 | INFO     | __main__:generate_control_pairs:795 -   → 30 control graphs (15 pairs)
+2026-02-22 03:06:34.418 | INFO     | __main__:main:886 - Synthetic-aliased-pairs total: 100 graphs (30 cospectral + 40 near + 30 control)
+2026-02-22 03:06:34.418 | INFO     | __main__:main:892 - ============================================================
+2026-02-22 03:06:34.418 | INFO     | __main__:main:893 - TOTAL: 16100 examples across 4 datasets
+2026-02-22 03:06:34.418 | INFO     | __main__:main:895 -   ZINC-subset: 12000 examples
+2026-02-22 03:06:34.418 | INFO     | __main__:main:895 -   Peptides-func: 2000 examples
+2026-02-22 03:06:34.418 | INFO     | __main__:main:895 -   Peptides-struct: 2000 examples
+2026-02-22 03:06:34.418 | INFO     | __main__:main:895 -   Synthetic-aliased-pairs: 100 examples
+2026-02-22 03:06:34.418 | INFO     | __main__:main:899 - Saving full output to /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/full_data_out.json
+2026-02-22 03:06:35.114 | INFO     | __main__:main:902 - Saved full_data_out.json (298.6 MB)
+2026-02-22 03:06:35.114 | INFO     | __main__:main:905 - Generating mini and preview files...
+2026-02-22 03:06:35.115 | INFO     | __main__:generate_mini_preview:828 - Saved mini_data_out.json (396.0 KB)
+2026-02-22 03:06:35.115 | INFO     | __main__:generate_mini_preview:832 - Saved preview_data_out.json (8.0 KB)
+2026-02-22 03:06:35.115 | INFO     | __main__:main:908 - ============================================================
+2026-02-22 03:06:35.115 | INFO     | __main__:main:909 - Done!
+2026-02-22 03:09:53.663 | INFO     | __main__:main:837 - ============================================================
+2026-02-22 03:09:53.664 | INFO     | __main__:main:838 - Spectrally-Annotated Graph Benchmarks — data.py
+2026-02-22 03:09:53.664 | INFO     | __main__:main:839 - ============================================================
+2026-02-22 03:09:53.664 | INFO     | __main__:main:844 - ─── Dataset 1/4: ZINC-subset ───
+2026-02-22 03:09:53.664 | INFO     | __main__:load_edge_index_dataset:229 - Loading ZINC from full_graphs-datasets_ZINC_train_part1.json (fold=0)
+2026-02-22 03:09:56.568 | INFO     | __main__:load_edge_index_dataset:233 -   Loaded 10000 graphs from full_graphs-datasets_ZINC_train_part1.json
+2026-02-22 03:09:56.926 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 500/10000 graphs in ZINC
+2026-02-22 03:09:57.285 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 1000/10000 graphs in ZINC
+2026-02-22 03:09:57.645 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 1500/10000 graphs in ZINC
+2026-02-22 03:09:58.010 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 2000/10000 graphs in ZINC
+2026-02-22 03:09:58.371 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 2500/10000 graphs in ZINC
+2026-02-22 03:09:58.729 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 3000/10000 graphs in ZINC
+2026-02-22 03:09:59.089 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 3500/10000 graphs in ZINC
+2026-02-22 03:09:59.452 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 4000/10000 graphs in ZINC
+2026-02-22 03:09:59.813 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 4500/10000 graphs in ZINC
+2026-02-22 03:10:00.177 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 5000/10000 graphs in ZINC
+2026-02-22 03:10:00.542 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 5500/10000 graphs in ZINC
+2026-02-22 03:10:00.899 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 6000/10000 graphs in ZINC
+2026-02-22 03:10:01.262 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 6500/10000 graphs in ZINC
+2026-02-22 03:10:01.620 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 7000/10000 graphs in ZINC
+2026-02-22 03:10:01.982 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 7500/10000 graphs in ZINC
+2026-02-22 03:10:02.340 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 8000/10000 graphs in ZINC
+2026-02-22 03:10:02.704 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 8500/10000 graphs in ZINC
+2026-02-22 03:10:03.065 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 9000/10000 graphs in ZINC
+2026-02-22 03:10:03.428 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 9500/10000 graphs in ZINC
+2026-02-22 03:10:03.789 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 10000/10000 graphs in ZINC
+2026-02-22 03:10:03.789 | INFO     | __main__:load_edge_index_dataset:285 -   → 10000 examples from ZINC (0)
+2026-02-22 03:10:03.807 | INFO     | __main__:load_edge_index_dataset:229 - Loading ZINC from full_graphs-datasets_ZINC_validation.json (fold=1)
+2026-02-22 03:10:04.156 | INFO     | __main__:load_edge_index_dataset:233 -   Loaded 1000 graphs from full_graphs-datasets_ZINC_validation.json
+2026-02-22 03:10:04.514 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 500/1000 graphs in ZINC
+2026-02-22 03:10:04.876 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 1000/1000 graphs in ZINC
+2026-02-22 03:10:04.876 | INFO     | __main__:load_edge_index_dataset:285 -   → 1000 examples from ZINC (1)
+2026-02-22 03:10:04.878 | INFO     | __main__:load_edge_index_dataset:229 - Loading ZINC from full_graphs-datasets_ZINC_test.json (fold=2)
+2026-02-22 03:10:04.970 | INFO     | __main__:load_edge_index_dataset:233 -   Loaded 1000 graphs from full_graphs-datasets_ZINC_test.json
+2026-02-22 03:10:05.329 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 500/1000 graphs in ZINC
+2026-02-22 03:10:05.686 | INFO     | __main__:load_edge_index_dataset:283 -   Processed 1000/1000 graphs in ZINC
+2026-02-22 03:10:05.686 | INFO     | __main__:load_edge_index_dataset:285 -   → 1000 examples from ZINC (2)
+2026-02-22 03:10:05.688 | INFO     | __main__:main:864 - ZINC total: 12000 graphs
+2026-02-22 03:10:05.688 | INFO     | __main__:main:868 - ─── Dataset 2/4: Peptides-func ───
+2026-02-22 03:10:05.688 | INFO     | __main__:load_peptides_smiles:297 - Loading Peptides-func from full_scikit-fingerprints_LRGB_Peptides-func_train.json (SMILES → graph)
+2026-02-22 03:10:05.710 | INFO     | __main__:load_peptides_smiles:301 -   Loaded 2000 peptides
+2026-02-22 03:10:07.191 | INFO     | __main__:load_peptides_smiles:394 -   Processed 200/2000 peptides in Peptides-func
+2026-02-22 03:10:08.558 | INFO     | __main__:load_peptides_smiles:394 -   Processed 400/2000 peptides in Peptides-func
+2026-02-22 03:10:10.016 | INFO     | __main__:load_peptides_smiles:394 -   Processed 600/2000 peptides in Peptides-func
+2026-02-22 03:10:11.431 | INFO     | __main__:load_peptides_smiles:394 -   Processed 800/2000 peptides in Peptides-func
+2026-02-22 03:10:12.841 | INFO     | __main__:load_peptides_smiles:394 -   Processed 1000/2000 peptides in Peptides-func
+2026-02-22 03:10:14.242 | INFO     | __main__:load_peptides_smiles:394 -   Processed 1200/2000 peptides in Peptides-func
+2026-02-22 03:10:15.687 | INFO     | __main__:load_peptides_smiles:394 -   Processed 1400/2000 peptides in Peptides-func
+2026-02-22 03:10:17.166 | INFO     | __main__:load_peptides_smiles:394 -   Processed 1600/2000 peptides in Peptides-func
+2026-02-22 03:10:18.741 | INFO     | __main__:load_peptides_smiles:394 -   Processed 1800/2000 peptides in Peptides-func
+2026-02-22 03:10:20.103 | INFO     | __main__:load_peptides_smiles:394 -   Processed 2000/2000 peptides in Peptides-func
+2026-02-22 03:10:20.103 | INFO     | __main__:load_peptides_smiles:396 -   → 2000 examples from Peptides-func
+2026-02-22 03:10:20.104 | INFO     | __main__:main:874 - Peptides-func total: 2000 graphs
+2026-02-22 03:10:20.104 | INFO     | __main__:main:878 - ─── Dataset 3/4: Peptides-struct ───
+2026-02-22 03:10:20.104 | INFO     | __main__:load_peptides_smiles:297 - Loading Peptides-struct from full_scikit-fingerprints_LRGB_Peptides-struct_train.json (SMILES → graph)
+2026-02-22 03:10:20.151 | INFO     | __main__:load_peptides_smiles:301 -   Loaded 2000 peptides
+2026-02-22 03:10:21.619 | INFO     | __main__:load_peptides_smiles:394 -   Processed 200/2000 peptides in Peptides-struct
+2026-02-22 03:10:22.987 | INFO     | __main__:load_peptides_smiles:394 -   Processed 400/2000 peptides in Peptides-struct
+2026-02-22 03:10:24.444 | INFO     | __main__:load_peptides_smiles:394 -   Processed 600/2000 peptides in Peptides-struct
+2026-02-22 03:10:25.858 | INFO     | __main__:load_peptides_smiles:394 -   Processed 800/2000 peptides in Peptides-struct
+2026-02-22 03:10:27.271 | INFO     | __main__:load_peptides_smiles:394 -   Processed 1000/2000 peptides in Peptides-struct
+2026-02-22 03:10:28.660 | INFO     | __main__:load_peptides_smiles:394 -   Processed 1200/2000 peptides in Peptides-struct
+2026-02-22 03:10:30.102 | INFO     | __main__:load_peptides_smiles:394 -   Processed 1400/2000 peptides in Peptides-struct
+2026-02-22 03:10:31.587 | INFO     | __main__:load_peptides_smiles:394 -   Processed 1600/2000 peptides in Peptides-struct
+2026-02-22 03:10:33.160 | INFO     | __main__:load_peptides_smiles:394 -   Processed 1800/2000 peptides in Peptides-struct
+2026-02-22 03:10:34.526 | INFO     | __main__:load_peptides_smiles:394 -   Processed 2000/2000 peptides in Peptides-struct
+2026-02-22 03:10:34.526 | INFO     | __main__:load_peptides_smiles:396 -   → 2000 examples from Peptides-struct
+2026-02-22 03:10:34.527 | INFO     | __main__:main:883 - Peptides-struct total: 2000 graphs
+2026-02-22 03:10:34.527 | INFO     | __main__:main:887 - ─── Dataset 4/4: Synthetic-aliased-pairs ───
+2026-02-22 03:10:34.527 | INFO     | __main__:generate_exactly_cospectral_pairs:451 - Generating exactly cospectral pairs
+2026-02-22 03:10:34.539 | INFO     | __main__:generate_exactly_cospectral_pairs:609 -   → 30 exactly cospectral graphs (15 pairs)
+2026-02-22 03:10:34.539 | INFO     | __main__:generate_near_cospectral_pairs:648 - Generating near-cospectral pairs
+2026-02-22 03:10:34.556 | INFO     | __main__:generate_near_cospectral_pairs:707 -   → 40 near-cospectral graphs (20 pairs)
+2026-02-22 03:10:34.556 | INFO     | __main__:generate_control_pairs:713 - Generating control pairs
+2026-02-22 03:10:34.568 | INFO     | __main__:generate_control_pairs:795 -   → 30 control graphs (15 pairs)
+2026-02-22 03:10:34.568 | INFO     | __main__:main:892 - Synthetic-aliased-pairs total: 100 graphs (30 cospectral + 40 near + 30 control)
+2026-02-22 03:10:34.568 | INFO     | __main__:main:898 - ============================================================
+2026-02-22 03:10:34.568 | INFO     | __main__:main:899 - TOTAL: 16100 examples across 4 datasets
+2026-02-22 03:10:34.568 | INFO     | __main__:main:901 -   ZINC-subset: 12000 examples
+2026-02-22 03:10:34.568 | INFO     | __main__:main:901 -   Peptides-func: 2000 examples
+2026-02-22 03:10:34.568 | INFO     | __main__:main:901 -   Peptides-struct: 2000 examples
+2026-02-22 03:10:34.568 | INFO     | __main__:main:901 -   Synthetic-aliased-pairs: 100 examples
+2026-02-22 03:10:34.568 | INFO     | __main__:main:905 - Saving full output to /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/full_data_out.json
+2026-02-22 03:10:35.262 | INFO     | __main__:main:908 - Saved full_data_out.json (298.6 MB)
+2026-02-22 03:10:35.262 | INFO     | __main__:main:911 - Generating mini and preview files...
+2026-02-22 03:10:35.263 | INFO     | __main__:generate_mini_preview:828 - Saved mini_data_out.json (396.0 KB)
+2026-02-22 03:10:35.263 | INFO     | __main__:generate_mini_preview:832 - Saved preview_data_out.json (8.0 KB)
+2026-02-22 03:10:35.263 | INFO     | __main__:main:917 - full_data_out.json (298.6 MB) exceeds 100 MB limit → splitting
+2026-02-22 03:10:35.969 | INFO     | __main__:main:940 -   Part 1: ZINC-subset (9594 ex) → 89.9 MB
+2026-02-22 03:10:36.007 | INFO     | __main__:main:940 -   Part 2: ZINC-subset (2406 ex) → 22.6 MB
+2026-02-22 03:10:36.200 | INFO     | __main__:main:940 -   Part 3: Peptides-func (2000 ex) → 92.7 MB
+2026-02-22 03:10:36.392 | INFO     | __main__:main:940 -   Part 4: Peptides-struct (2000 ex) → 92.9 MB
+2026-02-22 03:10:36.393 | INFO     | __main__:main:940 -   Part 5: Synthetic-aliased-pairs (100 ex) → 0.4 MB
+2026-02-22 03:10:36.394 | INFO     | __main__:main:944 - Deleted oversized full_data_out.json; 5 parts in data_out/
+2026-02-22 03:10:36.394 | INFO     | __main__:main:948 - ============================================================
+2026-02-22 03:10:36.394 | INFO     | __main__:main:949 - Done!

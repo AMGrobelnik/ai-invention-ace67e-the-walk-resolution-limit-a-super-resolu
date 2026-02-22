@@ -1,0 +1,163 @@
+\begin{thebibliography}{20}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Airale et~al.(2025)Airale, Longa, Rigon, Passerini, and
+  Passerone]{Airale2025}
+Louis Airale, Antonio Longa, Mattia Rigon, Andrea Passerini, and Roberto
+  Passerone.
+\newblock Simple path structural encoding for graph transformers.
+\newblock In \emph{Proceedings of the 42nd International Conference on Machine
+  Learning, {ICML} 2025}, volume 267 of \emph{Proceedings of Machine Learning
+  Research}. {PMLR}, 2025.
+
+\bibitem[Bao et~al.(2025)Bao, Jin, Bronstein, Ceylan, and Lanzinger]{Bao2025}
+Linus Bao, Emily Jin, Michael~M. Bronstein, Ismail~Ilkan Ceylan, and Matthias
+  Lanzinger.
+\newblock Homomorphism counts as structural encodings for graph learning.
+\newblock In \emph{13th International Conference on Learning Representations,
+  {ICLR} 2025}, 2025.
+
+\bibitem[Batenkov et~al.(2021)Batenkov, Goldman, and Yomdin]{Batenkov2021}
+Dmitry Batenkov, Gil Goldman, and Yosef Yomdin.
+\newblock The spectral properties of {V}andermonde matrices with clustered
+  nodes.
+\newblock \emph{Linear Algebra and its Applications}, 609:\penalty0 37--72,
+  2021.
+
+\bibitem[Belkin and Niyogi(2003)]{Belkin2003}
+Mikhail Belkin and Partha Niyogi.
+\newblock Laplacian eigenmaps for dimensionality reduction and data
+  representation.
+\newblock \emph{Neural Computation}, 15\penalty0 (6):\penalty0 1373--1396,
+  2003.
+\newblock \doi{10.1162/089976603321780317}.
+
+\bibitem[Cohen{-}Steiner et~al.(2018)Cohen{-}Steiner, Kong, Sohler, and
+  Valiant]{CohenSteiner2018}
+David Cohen{-}Steiner, Weihao Kong, Christian Sohler, and Gregory Valiant.
+\newblock Approximating the spectrum of a graph.
+\newblock In \emph{Proceedings of the 24th {ACM} {SIGKDD} International
+  Conference on Knowledge Discovery and Data Mining}, 2018.
+\newblock \doi{10.1145/3219819.3220119}.
+
+\bibitem[Defferrard et~al.(2016)Defferrard, Bresson, and
+  Vandergheynst]{Defferrard2016}
+Micha{\"{e}}l Defferrard, Xavier Bresson, and Pierre Vandergheynst.
+\newblock Convolutional neural networks on graphs with fast localized spectral
+  filtering.
+\newblock In \emph{Advances in Neural Information Processing Systems 29, {NIPS}
+  2016}, 2016.
+
+\bibitem[Dwivedi et~al.(2022)Dwivedi, Ramp{\'{a}}{\v{s}}ek, Galkin, Parviz,
+  Wolf, Luu, and Beaini]{Dwivedi2022}
+Vijay~Prakash Dwivedi, Ladislav Ramp{\'{a}}{\v{s}}ek, Michael Galkin, Ali
+  Parviz, Guy Wolf, Anh~Tuan Luu, and Dominique Beaini.
+\newblock Long range graph benchmark.
+\newblock In \emph{Advances in Neural Information Processing Systems 35,
+  {NeurIPS} 2022}, 2022.
+
+\bibitem[Dwivedi et~al.(2023)Dwivedi, Joshi, Luu, Laurent, Bengio, and
+  Bresson]{Dwivedi2023}
+Vijay~Prakash Dwivedi, Chaitanya~K. Joshi, Anh~Tuan Luu, Thomas Laurent, Yoshua
+  Bengio, and Xavier Bresson.
+\newblock Benchmarking graph neural networks.
+\newblock \emph{Journal of Machine Learning Research}, 24\penalty0
+  (43):\penalty0 1--48, 2023.
+
+\bibitem[Gautschi(1962)]{Gautschi1962}
+Walter Gautschi.
+\newblock On inverses of {V}andermonde and confluent {V}andermonde matrices.
+\newblock \emph{Numerische Mathematik}, 4:\penalty0 117--123, 1962.
+
+\bibitem[Gr{\"{o}}tschla et~al.(2024)Gr{\"{o}}tschla, Xie, and
+  Wattenhofer]{Grotschla2024}
+Florian Gr{\"{o}}tschla, Jiaqing Xie, and Roger Wattenhofer.
+\newblock Benchmarking positional encodings for {GNNs} and graph transformers.
+\newblock \emph{CoRR}, abs/2411.12732, 2024.
+\newblock \doi{10.48550/ARXIV.2411.12732}.
+
+\bibitem[Kipf and Welling(2017)]{Kipf2017}
+Thomas~N. Kipf and Max Welling.
+\newblock Semi-supervised classification with graph convolutional networks.
+\newblock In \emph{5th International Conference on Learning Representations,
+  {ICLR} 2017, Toulon, France, April 24-26, 2017, Conference Track
+  Proceedings}. OpenReview.net, 2017.
+\newblock URL \url{https://openreview.net/forum?id=SJU4ayYgl}.
+
+\bibitem[Kreuzer et~al.(2021)Kreuzer, Beaini, Hamilton, L{\'{e}}tourneau, and
+  Tossou]{Kreuzer2021}
+Devin Kreuzer, Dominique Beaini, William~L. Hamilton, Vincent L{\'{e}}tourneau,
+  and Prudencio Tossou.
+\newblock Rethinking graph transformers with spectral attention.
+\newblock In \emph{Advances in Neural Information Processing Systems 34,
+  {NeurIPS} 2021}, 2021.
+
+\bibitem[Li et~al.(2023)Li, Lin, and Lu]{Li2023}
+Yingzhou Li, Han Lin, and Jianfeng Lu.
+\newblock Moments, random walks, and limits for spectrum approximation.
+\newblock In \emph{Proceedings of the 36th Annual Conference on Learning
+  Theory, {COLT} 2023}, 2023.
+
+\bibitem[Lim et~al.(2023)Lim, Robinson, Zhao, Smidt, Sra, Maron, and
+  Jegelka]{Lim2023}
+Derek Lim, Joshua~David Robinson, Lingxiao Zhao, Tess~E. Smidt, Suvrit Sra,
+  Haggai Maron, and Stefanie Jegelka.
+\newblock Sign and basis invariant networks for spectral graph representation
+  learning.
+\newblock In \emph{11th International Conference on Learning Representations,
+  {ICLR} 2023}, 2023.
+
+\bibitem[Moitra(2015)]{Moitra2015}
+Ankur Moitra.
+\newblock Super-resolution, extremal functions and the condition number of
+  vandermonde matrices.
+\newblock In \emph{Proceedings of the 47th Annual {ACM} Symposium on Theory of
+  Computing, {STOC} 2015}, pages 821--830. {ACM}, 2015.
+\newblock \doi{10.1145/2746539.2746561}.
+
+\bibitem[Morris et~al.(2019)Morris, Ritzert, Fey, Hamilton, Lenssen, Rattan,
+  and Grohe]{Morris2019}
+Christopher Morris, Martin Ritzert, Matthias Fey, William~L. Hamilton, Jan~Eric
+  Lenssen, Gaurav Rattan, and Martin Grohe.
+\newblock Weisfeiler and leman go neural: Higher-order graph neural networks.
+\newblock In \emph{Proceedings of the 33rd {AAAI} Conference on Artificial
+  Intelligence}, pages 4602--4609. {AAAI} Press, 2019.
+\newblock \doi{10.1609/aaai.v33i01.33014602}.
+
+\bibitem[Ramp{\'{a}}{\v{s}}ek et~al.(2022)Ramp{\'{a}}{\v{s}}ek, Galkin,
+  Dwivedi, Luu, Wolf, and Beaini]{Rampasek2022}
+Ladislav Ramp{\'{a}}{\v{s}}ek, Michael Galkin, Vijay~Prakash Dwivedi, Anh~Tuan
+  Luu, Guy Wolf, and Dominique Beaini.
+\newblock Recipe for a general, powerful, scalable graph transformer.
+\newblock In \emph{Advances in Neural Information Processing Systems 35,
+  {NeurIPS} 2022}, 2022.
+
+\bibitem[Velickovic et~al.(2018)Velickovic, Cucurull, Casanova, Romero,
+  Li{\`{o}}, and Bengio]{Velickovic2018}
+Petar Velickovic, Guillem Cucurull, Arantxa Casanova, Adriana Romero, Pietro
+  Li{\`{o}}, and Yoshua Bengio.
+\newblock Graph attention networks.
+\newblock In \emph{6th International Conference on Learning Representations,
+  {ICLR} 2018, Vancouver, BC, Canada, April 30 - May 3, 2018, Conference Track
+  Proceedings}. OpenReview.net, 2018.
+\newblock URL \url{https://openreview.net/forum?id=rJXMpikCZ}.
+
+\bibitem[Xu et~al.(2019)Xu, Hu, Leskovec, and Jegelka]{Xu2019}
+Keyulu Xu, Weihua Hu, Jure Leskovec, and Stefanie Jegelka.
+\newblock How powerful are graph neural networks?
+\newblock In \emph{7th International Conference on Learning Representations,
+  {ICLR} 2019, New Orleans, LA, USA, May 6-9, 2019}. OpenReview.net, 2019.
+\newblock URL \url{https://openreview.net/forum?id=ryGs6iA5Km}.
+
+\bibitem[Zhang et~al.(2024)Zhang, Zhao, and Maron]{Zhang2024}
+Bohang Zhang, Lingxiao Zhao, and Haggai Maron.
+\newblock On the expressive power of spectral invariant graph neural networks.
+\newblock In \emph{Proceedings of the 41st International Conference on Machine
+  Learning, {ICML} 2024}, volume 235 of \emph{Proceedings of Machine Learning
+  Research}, pages 60496--60526. {PMLR}, 2024.
+
+\end{thebibliography}

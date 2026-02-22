@@ -1,0 +1,693 @@
+2026-02-22 10:20:10.242 | INFO     | __main__:main:1138 - ======================================================================
+2026-02-22 10:20:10.242 | INFO     | __main__:main:1139 - Starting Cross-Experiment Mechanistic Analysis
+2026-02-22 10:20:10.242 | INFO     | __main__:main:1140 - ======================================================================
+2026-02-22 10:20:10.242 | INFO     | __main__:main:1143 - Limiting to 3 examples per dataset
+2026-02-22 10:20:10.242 | INFO     | __main__:main:1146 - Loading experiment data...
+2026-02-22 10:20:10.242 | INFO     | __main__:load_json:61 - Loading /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_5/gen_art/exp_id1_it5__opus/full_method_out.json
+2026-02-22 10:20:10.243 | INFO     | __main__:load_json:61 - Loading /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_5/gen_art/exp_id2_it5__opus/full_method_out.json
+2026-02-22 10:20:10.602 | INFO     | __main__:load_json:61 - Loading /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_5/gen_art/exp_id3_it5__opus/full_method_out.json
+2026-02-22 10:20:10.670 | INFO     | __main__:main:1151 - Exp1: 4 datasets
+2026-02-22 10:20:10.670 | INFO     | __main__:main:1152 - Exp2: 4 datasets
+2026-02-22 10:20:10.670 | INFO     | __main__:main:1153 - Exp3: 4 datasets
+2026-02-22 10:20:10.670 | INFO     | __main__:analysis1_depth_compensation:116 - === Analysis 1: Depth Compensation Mechanism ===
+2026-02-22 10:20:10.670 | INFO     | __main__:analysis1_depth_compensation:138 -   ZINC-subset depth=2: RWSE MAE=0.4540, LapPE MAE=0.6891, gap=0.2351
+2026-02-22 10:20:10.670 | INFO     | __main__:analysis1_depth_compensation:138 -   ZINC-subset depth=3: RWSE MAE=0.4441, LapPE MAE=0.6947, gap=0.2506
+2026-02-22 10:20:10.670 | INFO     | __main__:analysis1_depth_compensation:138 -   ZINC-subset depth=4: RWSE MAE=0.4521, LapPE MAE=0.6552, gap=0.2030
+2026-02-22 10:20:10.670 | INFO     | __main__:analysis1_depth_compensation:138 -   ZINC-subset depth=6: RWSE MAE=0.5227, LapPE MAE=0.7069, gap=0.1842
+2026-02-22 10:20:10.670 | INFO     | __main__:analysis1_depth_compensation:138 -   ZINC-subset depth=8: RWSE MAE=0.4683, LapPE MAE=0.6818, gap=0.2136
+2026-02-22 10:20:10.675 | INFO     | __main__:analysis1_depth_compensation:152 -   ZINC-subset gap slope: -0.031473 (p=0.2248)
+2026-02-22 10:20:10.675 | INFO     | __main__:analysis1_depth_compensation:138 -   Peptides-struct depth=2: RWSE MAE=22.8413, LapPE MAE=24.3721, gap=1.5308
+2026-02-22 10:20:10.675 | INFO     | __main__:analysis1_depth_compensation:138 -   Peptides-struct depth=3: RWSE MAE=23.1149, LapPE MAE=22.0579, gap=-1.0570
+2026-02-22 10:20:10.675 | INFO     | __main__:analysis1_depth_compensation:138 -   Peptides-struct depth=4: RWSE MAE=21.5758, LapPE MAE=23.1430, gap=1.5672
+2026-02-22 10:20:10.675 | INFO     | __main__:analysis1_depth_compensation:138 -   Peptides-struct depth=6: RWSE MAE=22.7902, LapPE MAE=22.3094, gap=-0.4808
+2026-02-22 10:20:10.675 | INFO     | __main__:analysis1_depth_compensation:138 -   Peptides-struct depth=8: RWSE MAE=22.6470, LapPE MAE=22.7039, gap=0.0569
+2026-02-22 10:20:10.675 | INFO     | __main__:analysis1_depth_compensation:152 -   Peptides-struct gap slope: -0.788682 (p=0.5458)
+2026-02-22 10:20:10.675 | INFO     | __main__:analysis1_depth_compensation:161 -   Peptides-struct estimated D*: 6.17
+2026-02-22 10:20:10.676 | INFO     | __main__:analysis1_depth_compensation:174 -   ZINC-subset SRI-gap rho at depth 2: 0.0325
+2026-02-22 10:20:10.676 | INFO     | __main__:analysis1_depth_compensation:174 -   ZINC-subset SRI-gap rho at depth 8: 0.0921
+2026-02-22 10:20:10.676 | INFO     | __main__:analysis1_depth_compensation:174 -   Peptides-struct SRI-gap rho at depth 2: 0.1473
+2026-02-22 10:20:10.676 | INFO     | __main__:analysis1_depth_compensation:174 -   Peptides-struct SRI-gap rho at depth 8: 0.1088
+2026-02-22 10:20:10.676 | INFO     | __main__:analysis1_per_graph:183 -   Computing per-graph metrics for ZINC-subset (Analysis 1)
+2026-02-22 10:20:10.676 | INFO     | __main__:analysis1_per_graph:242 -   Computed per-graph metrics for 3 examples
+2026-02-22 10:20:10.676 | INFO     | __main__:analysis1_per_graph:183 -   Computing per-graph metrics for Peptides-struct (Analysis 1)
+2026-02-22 10:20:10.676 | INFO     | __main__:analysis1_per_graph:242 -   Computed per-graph metrics for 3 examples
+2026-02-22 10:20:10.676 | INFO     | __main__:analysis2_srwe_diagnosis:254 - === Analysis 2: SRWE Classification Diagnosis ===
+2026-02-22 10:20:10.676 | INFO     | __main__:analysis2_srwe_diagnosis:283 -   Peptides-func: RWSE AP=0.4182, Best SRWE (moment_correction) AP=0.4224
+2026-02-22 10:20:10.676 | INFO     | __main__:analysis2_srwe_diagnosis:284 -   Peptides-func gap closed: -9.06%
+2026-02-22 10:20:10.676 | INFO     | __main__:analysis2_srwe_diagnosis:305 -   Peptides-struct: RWSE MAE=36.3738, Best SRWE (eigenvalue_pairs) MAE=20.5106
+2026-02-22 10:20:10.676 | INFO     | __main__:analysis2_srwe_diagnosis:306 -   Peptides-struct gap closed: 109.71%
+2026-02-22 10:20:10.676 | INFO     | __main__:analysis2_srwe_diagnosis:326 -   Peptides-func: RWSE MI=0.011988, Best SRWE MI=0.010936
+2026-02-22 10:20:10.676 | INFO     | __main__:analysis2_srwe_diagnosis:327 -   Peptides-struct: RWSE MI=0.386958, Best SRWE MI=0.713535
+2026-02-22 10:20:10.676 | INFO     | __main__:analysis2_per_graph:334 -   Computing per-graph metrics for Peptides-func (Analysis 2)
+2026-02-22 10:20:10.676 | INFO     | __main__:analysis2_per_graph:399 -   Computed per-graph metrics for 3 examples
+2026-02-22 10:20:10.676 | INFO     | __main__:analysis3_adaptive_selection:411 - === Analysis 3: Adaptive Selection Value ===
+2026-02-22 10:20:10.676 | INFO     | __main__:analysis3_adaptive_selection:437 -   ZINC: best_fixed=0.1980, best_adaptive=0.2035, oracle=0.1104
+2026-02-22 10:20:10.676 | INFO     | __main__:analysis3_adaptive_selection:438 -   ZINC oracle headroom: 44.26%
+2026-02-22 10:20:10.676 | INFO     | __main__:analysis3_adaptive_selection:453 -   Peptides-func: best_fixed AP=0.4360, best_adaptive AP=0.4469, oracle AP=0.1680
+2026-02-22 10:20:10.676 | INFO     | __main__:analysis3_adaptive_selection:472 -   Peptides-struct: best_fixed=20.4312, best_adaptive=21.9525, oracle=15.4323
+2026-02-22 10:20:10.677 | INFO     | __main__:analysis3_adaptive_selection:473 -   Peptides-struct oracle headroom: 24.47%
+2026-02-22 10:20:10.677 | INFO     | __main__:analysis3_per_graph:480 -   Computing per-graph metrics for ZINC-subset (Analysis 3)
+2026-02-22 10:20:10.677 | INFO     | __main__:analysis3_per_graph:544 -   Computed per-graph metrics for 3 examples
+2026-02-22 10:20:10.677 | INFO     | __main__:analysis3_per_graph:480 -   Computing per-graph metrics for Peptides-struct (Analysis 3)
+2026-02-22 10:20:10.677 | INFO     | __main__:analysis3_per_graph:544 -   Computed per-graph metrics for 3 examples
+2026-02-22 10:20:10.677 | INFO     | __main__:analysis4_consistency:563 - === Analysis 4: Cross-Experiment Consistency ===
+2026-02-22 10:20:10.677 | INFO     | __main__:analysis4_consistency:577 -   ZINC rho consistency: |0.0588 - 0.0069| = 0.0519
+2026-02-22 10:20:10.677 | INFO     | __main__:analysis4_consistency:585 -   Peptides-struct rho consistency: |0.1474 - -0.1538| = 0.3012
+2026-02-22 10:20:10.677 | INFO     | __main__:analysis4_consistency:629 -   SRI component: 0.1854 (avg |rho|=0.0927)
+2026-02-22 10:20:10.677 | INFO     | __main__:analysis4_consistency:630 -   SRWE component: 1.0000 (gap closed=109.71%)
+2026-02-22 10:20:10.677 | INFO     | __main__:analysis4_consistency:631 -   Depth component: 0.3943 (slope=-0.7887, p=0.5458)
+2026-02-22 10:20:10.677 | INFO     | __main__:analysis4_consistency:632 -   Hypothesis support score: 0.4925
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1185 - Total aggregate metrics: 37
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp1_pep_compensation_depth_Dstar: 6.17144924493215
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp1_pep_gap_depth2: 1.5308029999999988
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp1_pep_gap_depth8: 0.05689299999999875
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp1_pep_gap_slope: -0.7886818392138504
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp1_pep_gap_slope_pvalue: 0.5458318481846669
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp1_pep_sri_rho_depth2: 0.147344
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp1_pep_sri_rho_depth8: 0.108813
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp1_zinc_gap_depth2: 0.23514999999999997
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp1_zinc_gap_depth8: 0.213567
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp1_zinc_gap_slope: -0.03147262249612647
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp1_zinc_gap_slope_pvalue: 0.22476124914097098
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp1_zinc_sri_rho_depth2: 0.03246
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp1_zinc_sri_rho_depth8: 0.092106
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp2_func_best_srwe_ap: 0.42243176738939425
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp2_func_best_srwe_mi: 0.010936366910042072
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp2_func_gap_closed_pct: -9.056313640143863
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp2_func_rwse_ap: 0.41822085925177194
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp2_func_rwse_mi: 0.011988275531049374
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp2_struct_best_srwe_mae: 20.510568618774414
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp2_struct_best_srwe_mi: 0.713534508743888
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp2_struct_gap_closed_pct: 109.71293496990073
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp2_struct_rwse_mae: 36.373756408691406
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp2_struct_rwse_mi: 0.3869582951503621
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp3_func_best_adaptive_ap: 0.4468987834320397
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp3_func_best_fixed_ap: 0.43603700243146337
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp3_func_oracle_ap: 0.16800000000000004
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp3_struct_best_adaptive_mae: 21.95248031616211
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp3_struct_best_fixed_mae: 20.431153297424316
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp3_struct_oracle_headroom_pct: 24.46658396972019
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp3_struct_oracle_mae: 15.43234801992774
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp3_zinc_best_adaptive_mae: 0.2034589648246765
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp3_zinc_best_fixed_mae: 0.19798621535301208
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp3_zinc_oracle_headroom_pct: 44.257782072560914
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   exp3_zinc_oracle_mae: 0.11036190762836486
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   hypothesis_support_score: 0.49247023817088986
+2026-02-22 10:20:10.677 | INFO     | __main__:main:1187 -   sri_rho_consistency_pepstruct: 0.30117324526462974
+2026-02-22 10:20:10.678 | INFO     | __main__:main:1187 -   sri_rho_consistency_zinc: 0.05190681093244496
+2026-02-22 10:20:10.678 | INFO     | __main__:create_figures:650 - === Generating Figures ===
+2026-02-22 10:20:10.678 | INFO     | __main__:_fig1_gap_vs_depth:685 -   Generating Figure 1: Gap vs Depth
+2026-02-22 10:20:10.823 | INFO     | __main__:_fig1_gap_vs_depth:729 -   Figure 1 saved
+2026-02-22 10:20:10.823 | INFO     | __main__:_fig2_sri_correlation_heatmap:734 -   Generating Figure 2: SRI Correlation Heatmap
+2026-02-22 10:20:10.899 | INFO     | __main__:_fig2_sri_correlation_heatmap:773 -   Figure 2 saved
+2026-02-22 10:20:10.900 | INFO     | __main__:_fig3_srwe_class_vs_reg:778 -   Generating Figure 3: SRWE Classification vs Regression
+2026-02-22 10:20:11.112 | INFO     | __main__:_fig3_srwe_class_vs_reg:834 -   Figure 3 saved
+2026-02-22 10:20:11.112 | INFO     | __main__:_fig4_adaptive_strategy_comparison:839 -   Generating Figure 4: Adaptive Strategy Comparison
+2026-02-22 10:20:11.275 | INFO     | __main__:_fig4_adaptive_strategy_comparison:893 -   Figure 4 saved
+2026-02-22 10:20:11.275 | INFO     | __main__:_fig5_oracle_headroom:898 -   Generating Figure 5: Oracle Headroom
+2026-02-22 10:20:11.388 | INFO     | __main__:_fig5_oracle_headroom:947 -   Figure 5 saved
+2026-02-22 10:20:11.388 | INFO     | __main__:_fig6_synthesis:954 -   Generating Figure 6: Cross-Experiment Synthesis
+2026-02-22 10:20:11.574 | INFO     | __main__:_fig6_synthesis:1043 -   Figure 6 saved
+2026-02-22 10:20:11.574 | INFO     | __main__:create_figures:680 - All figures generated successfully
+2026-02-22 10:20:11.574 | INFO     | __main__:build_eval_output:1058 - Building eval_out.json
+2026-02-22 10:20:11.575 | INFO     | __main__:main:1207 - Saved eval_out.json (410.1 KB)
+2026-02-22 10:20:11.575 | INFO     | __main__:main:1209 - ======================================================================
+2026-02-22 10:20:11.575 | INFO     | __main__:main:1210 - Evaluation complete!
+2026-02-22 10:20:11.575 | INFO     | __main__:main:1211 - ======================================================================
+2026-02-22 10:20:43.445 | INFO     | __main__:main:1138 - ======================================================================
+2026-02-22 10:20:43.445 | INFO     | __main__:main:1139 - Starting Cross-Experiment Mechanistic Analysis
+2026-02-22 10:20:43.446 | INFO     | __main__:main:1140 - ======================================================================
+2026-02-22 10:20:43.446 | INFO     | __main__:main:1143 - Limiting to 10 examples per dataset
+2026-02-22 10:20:43.446 | INFO     | __main__:main:1146 - Loading experiment data...
+2026-02-22 10:20:43.446 | INFO     | __main__:load_json:61 - Loading /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_5/gen_art/exp_id1_it5__opus/full_method_out.json
+2026-02-22 10:20:43.448 | INFO     | __main__:load_json:61 - Loading /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_5/gen_art/exp_id2_it5__opus/full_method_out.json
+2026-02-22 10:20:43.807 | INFO     | __main__:load_json:61 - Loading /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_5/gen_art/exp_id3_it5__opus/full_method_out.json
+2026-02-22 10:20:43.873 | INFO     | __main__:main:1151 - Exp1: 4 datasets
+2026-02-22 10:20:43.873 | INFO     | __main__:main:1152 - Exp2: 4 datasets
+2026-02-22 10:20:43.873 | INFO     | __main__:main:1153 - Exp3: 4 datasets
+2026-02-22 10:20:43.873 | INFO     | __main__:analysis1_depth_compensation:116 - === Analysis 1: Depth Compensation Mechanism ===
+2026-02-22 10:20:43.873 | INFO     | __main__:analysis1_depth_compensation:138 -   ZINC-subset depth=2: RWSE MAE=0.4540, LapPE MAE=0.6891, gap=0.2351
+2026-02-22 10:20:43.873 | INFO     | __main__:analysis1_depth_compensation:138 -   ZINC-subset depth=3: RWSE MAE=0.4441, LapPE MAE=0.6947, gap=0.2506
+2026-02-22 10:20:43.873 | INFO     | __main__:analysis1_depth_compensation:138 -   ZINC-subset depth=4: RWSE MAE=0.4521, LapPE MAE=0.6552, gap=0.2030
+2026-02-22 10:20:43.873 | INFO     | __main__:analysis1_depth_compensation:138 -   ZINC-subset depth=6: RWSE MAE=0.5227, LapPE MAE=0.7069, gap=0.1842
+2026-02-22 10:20:43.873 | INFO     | __main__:analysis1_depth_compensation:138 -   ZINC-subset depth=8: RWSE MAE=0.4683, LapPE MAE=0.6818, gap=0.2136
+2026-02-22 10:20:43.874 | INFO     | __main__:analysis1_depth_compensation:152 -   ZINC-subset gap slope: -0.031473 (p=0.2248)
+2026-02-22 10:20:43.874 | INFO     | __main__:analysis1_depth_compensation:138 -   Peptides-struct depth=2: RWSE MAE=22.8413, LapPE MAE=24.3721, gap=1.5308
+2026-02-22 10:20:43.874 | INFO     | __main__:analysis1_depth_compensation:138 -   Peptides-struct depth=3: RWSE MAE=23.1149, LapPE MAE=22.0579, gap=-1.0570
+2026-02-22 10:20:43.874 | INFO     | __main__:analysis1_depth_compensation:138 -   Peptides-struct depth=4: RWSE MAE=21.5758, LapPE MAE=23.1430, gap=1.5672
+2026-02-22 10:20:43.874 | INFO     | __main__:analysis1_depth_compensation:138 -   Peptides-struct depth=6: RWSE MAE=22.7902, LapPE MAE=22.3094, gap=-0.4808
+2026-02-22 10:20:43.874 | INFO     | __main__:analysis1_depth_compensation:138 -   Peptides-struct depth=8: RWSE MAE=22.6470, LapPE MAE=22.7039, gap=0.0569
+2026-02-22 10:20:43.874 | INFO     | __main__:analysis1_depth_compensation:152 -   Peptides-struct gap slope: -0.788682 (p=0.5458)
+2026-02-22 10:20:43.874 | INFO     | __main__:analysis1_depth_compensation:161 -   Peptides-struct estimated D*: 6.17
+2026-02-22 10:20:43.874 | INFO     | __main__:analysis1_depth_compensation:174 -   ZINC-subset SRI-gap rho at depth 2: 0.0325
+2026-02-22 10:20:43.874 | INFO     | __main__:analysis1_depth_compensation:174 -   ZINC-subset SRI-gap rho at depth 8: 0.0921
+2026-02-22 10:20:43.874 | INFO     | __main__:analysis1_depth_compensation:174 -   Peptides-struct SRI-gap rho at depth 2: 0.1473
+2026-02-22 10:20:43.875 | INFO     | __main__:analysis1_depth_compensation:174 -   Peptides-struct SRI-gap rho at depth 8: 0.1088
+2026-02-22 10:20:43.875 | INFO     | __main__:analysis1_per_graph:183 -   Computing per-graph metrics for ZINC-subset (Analysis 1)
+2026-02-22 10:20:43.875 | INFO     | __main__:analysis1_per_graph:242 -   Computed per-graph metrics for 10 examples
+2026-02-22 10:20:43.875 | INFO     | __main__:analysis1_per_graph:183 -   Computing per-graph metrics for Peptides-struct (Analysis 1)
+2026-02-22 10:20:43.876 | INFO     | __main__:analysis1_per_graph:242 -   Computed per-graph metrics for 10 examples
+2026-02-22 10:20:43.876 | INFO     | __main__:analysis2_srwe_diagnosis:254 - === Analysis 2: SRWE Classification Diagnosis ===
+2026-02-22 10:20:43.876 | INFO     | __main__:analysis2_srwe_diagnosis:283 -   Peptides-func: RWSE AP=0.4182, Best SRWE (moment_correction) AP=0.4224
+2026-02-22 10:20:43.876 | INFO     | __main__:analysis2_srwe_diagnosis:284 -   Peptides-func gap closed: -9.06%
+2026-02-22 10:20:43.876 | INFO     | __main__:analysis2_srwe_diagnosis:305 -   Peptides-struct: RWSE MAE=36.3738, Best SRWE (eigenvalue_pairs) MAE=20.5106
+2026-02-22 10:20:43.876 | INFO     | __main__:analysis2_srwe_diagnosis:306 -   Peptides-struct gap closed: 109.71%
+2026-02-22 10:20:43.876 | INFO     | __main__:analysis2_srwe_diagnosis:326 -   Peptides-func: RWSE MI=0.011988, Best SRWE MI=0.010936
+2026-02-22 10:20:43.876 | INFO     | __main__:analysis2_srwe_diagnosis:327 -   Peptides-struct: RWSE MI=0.386958, Best SRWE MI=0.713535
+2026-02-22 10:20:43.876 | INFO     | __main__:analysis2_per_graph:334 -   Computing per-graph metrics for Peptides-func (Analysis 2)
+2026-02-22 10:20:43.876 | INFO     | __main__:analysis2_per_graph:399 -   Computed per-graph metrics for 10 examples
+2026-02-22 10:20:43.876 | INFO     | __main__:analysis3_adaptive_selection:411 - === Analysis 3: Adaptive Selection Value ===
+2026-02-22 10:20:43.876 | INFO     | __main__:analysis3_adaptive_selection:437 -   ZINC: best_fixed=0.1980, best_adaptive=0.2035, oracle=0.1104
+2026-02-22 10:20:43.876 | INFO     | __main__:analysis3_adaptive_selection:438 -   ZINC oracle headroom: 44.26%
+2026-02-22 10:20:43.876 | INFO     | __main__:analysis3_adaptive_selection:453 -   Peptides-func: best_fixed AP=0.4360, best_adaptive AP=0.4469, oracle AP=0.1680
+2026-02-22 10:20:43.876 | INFO     | __main__:analysis3_adaptive_selection:472 -   Peptides-struct: best_fixed=20.4312, best_adaptive=21.9525, oracle=15.4323
+2026-02-22 10:20:43.876 | INFO     | __main__:analysis3_adaptive_selection:473 -   Peptides-struct oracle headroom: 24.47%
+2026-02-22 10:20:43.876 | INFO     | __main__:analysis3_per_graph:480 -   Computing per-graph metrics for ZINC-subset (Analysis 3)
+2026-02-22 10:20:43.877 | INFO     | __main__:analysis3_per_graph:544 -   Computed per-graph metrics for 10 examples
+2026-02-22 10:20:43.877 | INFO     | __main__:analysis3_per_graph:480 -   Computing per-graph metrics for Peptides-struct (Analysis 3)
+2026-02-22 10:20:43.877 | INFO     | __main__:analysis3_per_graph:544 -   Computed per-graph metrics for 10 examples
+2026-02-22 10:20:43.877 | INFO     | __main__:analysis4_consistency:563 - === Analysis 4: Cross-Experiment Consistency ===
+2026-02-22 10:20:43.877 | INFO     | __main__:analysis4_consistency:577 -   ZINC rho consistency: |0.0588 - 0.0069| = 0.0519
+2026-02-22 10:20:43.877 | INFO     | __main__:analysis4_consistency:585 -   Peptides-struct rho consistency: |0.1474 - -0.1538| = 0.3012
+2026-02-22 10:20:43.877 | INFO     | __main__:analysis4_consistency:629 -   SRI component: 0.1854 (avg |rho|=0.0927)
+2026-02-22 10:20:43.877 | INFO     | __main__:analysis4_consistency:630 -   SRWE component: 1.0000 (gap closed=109.71%)
+2026-02-22 10:20:43.877 | INFO     | __main__:analysis4_consistency:631 -   Depth component: 0.3943 (slope=-0.7887, p=0.5458)
+2026-02-22 10:20:43.877 | INFO     | __main__:analysis4_consistency:632 -   Hypothesis support score: 0.4925
+2026-02-22 10:20:43.877 | INFO     | __main__:main:1185 - Total aggregate metrics: 37
+2026-02-22 10:20:43.877 | INFO     | __main__:main:1187 -   exp1_pep_compensation_depth_Dstar: 6.17144924493215
+2026-02-22 10:20:43.877 | INFO     | __main__:main:1187 -   exp1_pep_gap_depth2: 1.5308029999999988
+2026-02-22 10:20:43.877 | INFO     | __main__:main:1187 -   exp1_pep_gap_depth8: 0.05689299999999875
+2026-02-22 10:20:43.877 | INFO     | __main__:main:1187 -   exp1_pep_gap_slope: -0.7886818392138504
+2026-02-22 10:20:43.877 | INFO     | __main__:main:1187 -   exp1_pep_gap_slope_pvalue: 0.5458318481846669
+2026-02-22 10:20:43.877 | INFO     | __main__:main:1187 -   exp1_pep_sri_rho_depth2: 0.147344
+2026-02-22 10:20:43.877 | INFO     | __main__:main:1187 -   exp1_pep_sri_rho_depth8: 0.108813
+2026-02-22 10:20:43.877 | INFO     | __main__:main:1187 -   exp1_zinc_gap_depth2: 0.23514999999999997
+2026-02-22 10:20:43.877 | INFO     | __main__:main:1187 -   exp1_zinc_gap_depth8: 0.213567
+2026-02-22 10:20:43.877 | INFO     | __main__:main:1187 -   exp1_zinc_gap_slope: -0.03147262249612647
+2026-02-22 10:20:43.877 | INFO     | __main__:main:1187 -   exp1_zinc_gap_slope_pvalue: 0.22476124914097098
+2026-02-22 10:20:43.877 | INFO     | __main__:main:1187 -   exp1_zinc_sri_rho_depth2: 0.03246
+2026-02-22 10:20:43.877 | INFO     | __main__:main:1187 -   exp1_zinc_sri_rho_depth8: 0.092106
+2026-02-22 10:20:43.877 | INFO     | __main__:main:1187 -   exp2_func_best_srwe_ap: 0.42243176738939425
+2026-02-22 10:20:43.877 | INFO     | __main__:main:1187 -   exp2_func_best_srwe_mi: 0.010936366910042072
+2026-02-22 10:20:43.877 | INFO     | __main__:main:1187 -   exp2_func_gap_closed_pct: -9.056313640143863
+2026-02-22 10:20:43.877 | INFO     | __main__:main:1187 -   exp2_func_rwse_ap: 0.41822085925177194
+2026-02-22 10:20:43.877 | INFO     | __main__:main:1187 -   exp2_func_rwse_mi: 0.011988275531049374
+2026-02-22 10:20:43.877 | INFO     | __main__:main:1187 -   exp2_struct_best_srwe_mae: 20.510568618774414
+2026-02-22 10:20:43.878 | INFO     | __main__:main:1187 -   exp2_struct_best_srwe_mi: 0.713534508743888
+2026-02-22 10:20:43.878 | INFO     | __main__:main:1187 -   exp2_struct_gap_closed_pct: 109.71293496990073
+2026-02-22 10:20:43.878 | INFO     | __main__:main:1187 -   exp2_struct_rwse_mae: 36.373756408691406
+2026-02-22 10:20:43.878 | INFO     | __main__:main:1187 -   exp2_struct_rwse_mi: 0.3869582951503621
+2026-02-22 10:20:43.878 | INFO     | __main__:main:1187 -   exp3_func_best_adaptive_ap: 0.4468987834320397
+2026-02-22 10:20:43.878 | INFO     | __main__:main:1187 -   exp3_func_best_fixed_ap: 0.43603700243146337
+2026-02-22 10:20:43.878 | INFO     | __main__:main:1187 -   exp3_func_oracle_ap: 0.16800000000000004
+2026-02-22 10:20:43.878 | INFO     | __main__:main:1187 -   exp3_struct_best_adaptive_mae: 21.95248031616211
+2026-02-22 10:20:43.878 | INFO     | __main__:main:1187 -   exp3_struct_best_fixed_mae: 20.431153297424316
+2026-02-22 10:20:43.878 | INFO     | __main__:main:1187 -   exp3_struct_oracle_headroom_pct: 24.46658396972019
+2026-02-22 10:20:43.878 | INFO     | __main__:main:1187 -   exp3_struct_oracle_mae: 15.43234801992774
+2026-02-22 10:20:43.878 | INFO     | __main__:main:1187 -   exp3_zinc_best_adaptive_mae: 0.2034589648246765
+2026-02-22 10:20:43.878 | INFO     | __main__:main:1187 -   exp3_zinc_best_fixed_mae: 0.19798621535301208
+2026-02-22 10:20:43.878 | INFO     | __main__:main:1187 -   exp3_zinc_oracle_headroom_pct: 44.257782072560914
+2026-02-22 10:20:43.878 | INFO     | __main__:main:1187 -   exp3_zinc_oracle_mae: 0.11036190762836486
+2026-02-22 10:20:43.878 | INFO     | __main__:main:1187 -   hypothesis_support_score: 0.49247023817088986
+2026-02-22 10:20:43.878 | INFO     | __main__:main:1187 -   sri_rho_consistency_pepstruct: 0.30117324526462974
+2026-02-22 10:20:43.878 | INFO     | __main__:main:1187 -   sri_rho_consistency_zinc: 0.05190681093244496
+2026-02-22 10:20:43.878 | INFO     | __main__:create_figures:650 - === Generating Figures ===
+2026-02-22 10:20:43.878 | INFO     | __main__:_fig1_gap_vs_depth:685 -   Generating Figure 1: Gap vs Depth
+2026-02-22 10:20:44.003 | INFO     | __main__:_fig1_gap_vs_depth:729 -   Figure 1 saved
+2026-02-22 10:20:44.003 | INFO     | __main__:_fig2_sri_correlation_heatmap:734 -   Generating Figure 2: SRI Correlation Heatmap
+2026-02-22 10:20:44.073 | INFO     | __main__:_fig2_sri_correlation_heatmap:773 -   Figure 2 saved
+2026-02-22 10:20:44.073 | INFO     | __main__:_fig3_srwe_class_vs_reg:778 -   Generating Figure 3: SRWE Classification vs Regression
+2026-02-22 10:20:44.280 | INFO     | __main__:_fig3_srwe_class_vs_reg:834 -   Figure 3 saved
+2026-02-22 10:20:44.280 | INFO     | __main__:_fig4_adaptive_strategy_comparison:839 -   Generating Figure 4: Adaptive Strategy Comparison
+2026-02-22 10:20:44.415 | INFO     | __main__:_fig4_adaptive_strategy_comparison:893 -   Figure 4 saved
+2026-02-22 10:20:44.415 | INFO     | __main__:_fig5_oracle_headroom:898 -   Generating Figure 5: Oracle Headroom
+2026-02-22 10:20:44.525 | INFO     | __main__:_fig5_oracle_headroom:947 -   Figure 5 saved
+2026-02-22 10:20:44.526 | INFO     | __main__:_fig6_synthesis:954 -   Generating Figure 6: Cross-Experiment Synthesis
+2026-02-22 10:20:44.736 | INFO     | __main__:_fig6_synthesis:1043 -   Figure 6 saved
+2026-02-22 10:20:44.736 | INFO     | __main__:create_figures:680 - All figures generated successfully
+2026-02-22 10:20:44.736 | INFO     | __main__:build_eval_output:1058 - Building eval_out.json
+2026-02-22 10:20:44.738 | INFO     | __main__:main:1207 - Saved eval_out.json (1146.5 KB)
+2026-02-22 10:20:44.738 | INFO     | __main__:main:1209 - ======================================================================
+2026-02-22 10:20:44.738 | INFO     | __main__:main:1210 - Evaluation complete!
+2026-02-22 10:20:44.738 | INFO     | __main__:main:1211 - ======================================================================
+2026-02-22 10:20:52.579 | INFO     | __main__:main:1138 - ======================================================================
+2026-02-22 10:20:52.579 | INFO     | __main__:main:1139 - Starting Cross-Experiment Mechanistic Analysis
+2026-02-22 10:20:52.579 | INFO     | __main__:main:1140 - ======================================================================
+2026-02-22 10:20:52.579 | INFO     | __main__:main:1143 - Limiting to 50 examples per dataset
+2026-02-22 10:20:52.579 | INFO     | __main__:main:1146 - Loading experiment data...
+2026-02-22 10:20:52.579 | INFO     | __main__:load_json:61 - Loading /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_5/gen_art/exp_id1_it5__opus/full_method_out.json
+2026-02-22 10:20:52.581 | INFO     | __main__:load_json:61 - Loading /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_5/gen_art/exp_id2_it5__opus/full_method_out.json
+2026-02-22 10:20:52.925 | INFO     | __main__:load_json:61 - Loading /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_5/gen_art/exp_id3_it5__opus/full_method_out.json
+2026-02-22 10:20:52.994 | INFO     | __main__:main:1151 - Exp1: 4 datasets
+2026-02-22 10:20:52.994 | INFO     | __main__:main:1152 - Exp2: 4 datasets
+2026-02-22 10:20:52.994 | INFO     | __main__:main:1153 - Exp3: 4 datasets
+2026-02-22 10:20:52.994 | INFO     | __main__:analysis1_depth_compensation:116 - === Analysis 1: Depth Compensation Mechanism ===
+2026-02-22 10:20:52.994 | INFO     | __main__:analysis1_depth_compensation:138 -   ZINC-subset depth=2: RWSE MAE=0.4540, LapPE MAE=0.6891, gap=0.2351
+2026-02-22 10:20:52.994 | INFO     | __main__:analysis1_depth_compensation:138 -   ZINC-subset depth=3: RWSE MAE=0.4441, LapPE MAE=0.6947, gap=0.2506
+2026-02-22 10:20:52.994 | INFO     | __main__:analysis1_depth_compensation:138 -   ZINC-subset depth=4: RWSE MAE=0.4521, LapPE MAE=0.6552, gap=0.2030
+2026-02-22 10:20:52.994 | INFO     | __main__:analysis1_depth_compensation:138 -   ZINC-subset depth=6: RWSE MAE=0.5227, LapPE MAE=0.7069, gap=0.1842
+2026-02-22 10:20:52.994 | INFO     | __main__:analysis1_depth_compensation:138 -   ZINC-subset depth=8: RWSE MAE=0.4683, LapPE MAE=0.6818, gap=0.2136
+2026-02-22 10:20:52.994 | INFO     | __main__:analysis1_depth_compensation:152 -   ZINC-subset gap slope: -0.031473 (p=0.2248)
+2026-02-22 10:20:52.995 | INFO     | __main__:analysis1_depth_compensation:138 -   Peptides-struct depth=2: RWSE MAE=22.8413, LapPE MAE=24.3721, gap=1.5308
+2026-02-22 10:20:52.995 | INFO     | __main__:analysis1_depth_compensation:138 -   Peptides-struct depth=3: RWSE MAE=23.1149, LapPE MAE=22.0579, gap=-1.0570
+2026-02-22 10:20:52.995 | INFO     | __main__:analysis1_depth_compensation:138 -   Peptides-struct depth=4: RWSE MAE=21.5758, LapPE MAE=23.1430, gap=1.5672
+2026-02-22 10:20:52.995 | INFO     | __main__:analysis1_depth_compensation:138 -   Peptides-struct depth=6: RWSE MAE=22.7902, LapPE MAE=22.3094, gap=-0.4808
+2026-02-22 10:20:52.995 | INFO     | __main__:analysis1_depth_compensation:138 -   Peptides-struct depth=8: RWSE MAE=22.6470, LapPE MAE=22.7039, gap=0.0569
+2026-02-22 10:20:52.995 | INFO     | __main__:analysis1_depth_compensation:152 -   Peptides-struct gap slope: -0.788682 (p=0.5458)
+2026-02-22 10:20:52.995 | INFO     | __main__:analysis1_depth_compensation:161 -   Peptides-struct estimated D*: 6.17
+2026-02-22 10:20:52.995 | INFO     | __main__:analysis1_depth_compensation:174 -   ZINC-subset SRI-gap rho at depth 2: 0.0325
+2026-02-22 10:20:52.995 | INFO     | __main__:analysis1_depth_compensation:174 -   ZINC-subset SRI-gap rho at depth 8: 0.0921
+2026-02-22 10:20:52.995 | INFO     | __main__:analysis1_depth_compensation:174 -   Peptides-struct SRI-gap rho at depth 2: 0.1473
+2026-02-22 10:20:52.995 | INFO     | __main__:analysis1_depth_compensation:174 -   Peptides-struct SRI-gap rho at depth 8: 0.1088
+2026-02-22 10:20:52.995 | INFO     | __main__:analysis1_per_graph:183 -   Computing per-graph metrics for ZINC-subset (Analysis 1)
+2026-02-22 10:20:52.997 | INFO     | __main__:analysis1_per_graph:242 -   Computed per-graph metrics for 50 examples
+2026-02-22 10:20:52.997 | INFO     | __main__:analysis1_per_graph:183 -   Computing per-graph metrics for Peptides-struct (Analysis 1)
+2026-02-22 10:20:52.999 | INFO     | __main__:analysis1_per_graph:242 -   Computed per-graph metrics for 50 examples
+2026-02-22 10:20:52.999 | INFO     | __main__:analysis2_srwe_diagnosis:254 - === Analysis 2: SRWE Classification Diagnosis ===
+2026-02-22 10:20:52.999 | INFO     | __main__:analysis2_srwe_diagnosis:283 -   Peptides-func: RWSE AP=0.4182, Best SRWE (moment_correction) AP=0.4224
+2026-02-22 10:20:52.999 | INFO     | __main__:analysis2_srwe_diagnosis:284 -   Peptides-func gap closed: -9.06%
+2026-02-22 10:20:52.999 | INFO     | __main__:analysis2_srwe_diagnosis:305 -   Peptides-struct: RWSE MAE=36.3738, Best SRWE (eigenvalue_pairs) MAE=20.5106
+2026-02-22 10:20:52.999 | INFO     | __main__:analysis2_srwe_diagnosis:306 -   Peptides-struct gap closed: 109.71%
+2026-02-22 10:20:52.999 | INFO     | __main__:analysis2_srwe_diagnosis:326 -   Peptides-func: RWSE MI=0.011988, Best SRWE MI=0.010936
+2026-02-22 10:20:52.999 | INFO     | __main__:analysis2_srwe_diagnosis:327 -   Peptides-struct: RWSE MI=0.386958, Best SRWE MI=0.713535
+2026-02-22 10:20:53.000 | INFO     | __main__:analysis2_per_graph:334 -   Computing per-graph metrics for Peptides-func (Analysis 2)
+2026-02-22 10:20:53.002 | INFO     | __main__:analysis2_per_graph:399 -   Computed per-graph metrics for 50 examples
+2026-02-22 10:20:53.002 | INFO     | __main__:analysis3_adaptive_selection:411 - === Analysis 3: Adaptive Selection Value ===
+2026-02-22 10:20:53.002 | INFO     | __main__:analysis3_adaptive_selection:437 -   ZINC: best_fixed=0.1980, best_adaptive=0.2035, oracle=0.1104
+2026-02-22 10:20:53.002 | INFO     | __main__:analysis3_adaptive_selection:438 -   ZINC oracle headroom: 44.26%
+2026-02-22 10:20:53.002 | INFO     | __main__:analysis3_adaptive_selection:453 -   Peptides-func: best_fixed AP=0.4360, best_adaptive AP=0.4469, oracle AP=0.1680
+2026-02-22 10:20:53.002 | INFO     | __main__:analysis3_adaptive_selection:472 -   Peptides-struct: best_fixed=20.4312, best_adaptive=21.9525, oracle=15.4323
+2026-02-22 10:20:53.002 | INFO     | __main__:analysis3_adaptive_selection:473 -   Peptides-struct oracle headroom: 24.47%
+2026-02-22 10:20:53.002 | INFO     | __main__:analysis3_per_graph:480 -   Computing per-graph metrics for ZINC-subset (Analysis 3)
+2026-02-22 10:20:53.003 | INFO     | __main__:analysis3_per_graph:544 -   Computed per-graph metrics for 50 examples
+2026-02-22 10:20:53.003 | INFO     | __main__:analysis3_per_graph:480 -   Computing per-graph metrics for Peptides-struct (Analysis 3)
+2026-02-22 10:20:53.005 | INFO     | __main__:analysis3_per_graph:544 -   Computed per-graph metrics for 50 examples
+2026-02-22 10:20:53.005 | INFO     | __main__:analysis4_consistency:563 - === Analysis 4: Cross-Experiment Consistency ===
+2026-02-22 10:20:53.005 | INFO     | __main__:analysis4_consistency:577 -   ZINC rho consistency: |0.0588 - 0.0069| = 0.0519
+2026-02-22 10:20:53.005 | INFO     | __main__:analysis4_consistency:585 -   Peptides-struct rho consistency: |0.1474 - -0.1538| = 0.3012
+2026-02-22 10:20:53.005 | INFO     | __main__:analysis4_consistency:629 -   SRI component: 0.1854 (avg |rho|=0.0927)
+2026-02-22 10:20:53.005 | INFO     | __main__:analysis4_consistency:630 -   SRWE component: 1.0000 (gap closed=109.71%)
+2026-02-22 10:20:53.005 | INFO     | __main__:analysis4_consistency:631 -   Depth component: 0.3943 (slope=-0.7887, p=0.5458)
+2026-02-22 10:20:53.005 | INFO     | __main__:analysis4_consistency:632 -   Hypothesis support score: 0.4925
+2026-02-22 10:20:53.005 | INFO     | __main__:main:1185 - Total aggregate metrics: 37
+2026-02-22 10:20:53.005 | INFO     | __main__:main:1187 -   exp1_pep_compensation_depth_Dstar: 6.17144924493215
+2026-02-22 10:20:53.005 | INFO     | __main__:main:1187 -   exp1_pep_gap_depth2: 1.5308029999999988
+2026-02-22 10:20:53.005 | INFO     | __main__:main:1187 -   exp1_pep_gap_depth8: 0.05689299999999875
+2026-02-22 10:20:53.005 | INFO     | __main__:main:1187 -   exp1_pep_gap_slope: -0.7886818392138504
+2026-02-22 10:20:53.005 | INFO     | __main__:main:1187 -   exp1_pep_gap_slope_pvalue: 0.5458318481846669
+2026-02-22 10:20:53.005 | INFO     | __main__:main:1187 -   exp1_pep_sri_rho_depth2: 0.147344
+2026-02-22 10:20:53.005 | INFO     | __main__:main:1187 -   exp1_pep_sri_rho_depth8: 0.108813
+2026-02-22 10:20:53.005 | INFO     | __main__:main:1187 -   exp1_zinc_gap_depth2: 0.23514999999999997
+2026-02-22 10:20:53.005 | INFO     | __main__:main:1187 -   exp1_zinc_gap_depth8: 0.213567
+2026-02-22 10:20:53.005 | INFO     | __main__:main:1187 -   exp1_zinc_gap_slope: -0.03147262249612647
+2026-02-22 10:20:53.005 | INFO     | __main__:main:1187 -   exp1_zinc_gap_slope_pvalue: 0.22476124914097098
+2026-02-22 10:20:53.005 | INFO     | __main__:main:1187 -   exp1_zinc_sri_rho_depth2: 0.03246
+2026-02-22 10:20:53.005 | INFO     | __main__:main:1187 -   exp1_zinc_sri_rho_depth8: 0.092106
+2026-02-22 10:20:53.005 | INFO     | __main__:main:1187 -   exp2_func_best_srwe_ap: 0.42243176738939425
+2026-02-22 10:20:53.005 | INFO     | __main__:main:1187 -   exp2_func_best_srwe_mi: 0.010936366910042072
+2026-02-22 10:20:53.005 | INFO     | __main__:main:1187 -   exp2_func_gap_closed_pct: -9.056313640143863
+2026-02-22 10:20:53.005 | INFO     | __main__:main:1187 -   exp2_func_rwse_ap: 0.41822085925177194
+2026-02-22 10:20:53.005 | INFO     | __main__:main:1187 -   exp2_func_rwse_mi: 0.011988275531049374
+2026-02-22 10:20:53.005 | INFO     | __main__:main:1187 -   exp2_struct_best_srwe_mae: 20.510568618774414
+2026-02-22 10:20:53.006 | INFO     | __main__:main:1187 -   exp2_struct_best_srwe_mi: 0.713534508743888
+2026-02-22 10:20:53.006 | INFO     | __main__:main:1187 -   exp2_struct_gap_closed_pct: 109.71293496990073
+2026-02-22 10:20:53.006 | INFO     | __main__:main:1187 -   exp2_struct_rwse_mae: 36.373756408691406
+2026-02-22 10:20:53.006 | INFO     | __main__:main:1187 -   exp2_struct_rwse_mi: 0.3869582951503621
+2026-02-22 10:20:53.006 | INFO     | __main__:main:1187 -   exp3_func_best_adaptive_ap: 0.4468987834320397
+2026-02-22 10:20:53.006 | INFO     | __main__:main:1187 -   exp3_func_best_fixed_ap: 0.43603700243146337
+2026-02-22 10:20:53.006 | INFO     | __main__:main:1187 -   exp3_func_oracle_ap: 0.16800000000000004
+2026-02-22 10:20:53.006 | INFO     | __main__:main:1187 -   exp3_struct_best_adaptive_mae: 21.95248031616211
+2026-02-22 10:20:53.006 | INFO     | __main__:main:1187 -   exp3_struct_best_fixed_mae: 20.431153297424316
+2026-02-22 10:20:53.006 | INFO     | __main__:main:1187 -   exp3_struct_oracle_headroom_pct: 24.46658396972019
+2026-02-22 10:20:53.006 | INFO     | __main__:main:1187 -   exp3_struct_oracle_mae: 15.43234801992774
+2026-02-22 10:20:53.006 | INFO     | __main__:main:1187 -   exp3_zinc_best_adaptive_mae: 0.2034589648246765
+2026-02-22 10:20:53.006 | INFO     | __main__:main:1187 -   exp3_zinc_best_fixed_mae: 0.19798621535301208
+2026-02-22 10:20:53.006 | INFO     | __main__:main:1187 -   exp3_zinc_oracle_headroom_pct: 44.257782072560914
+2026-02-22 10:20:53.006 | INFO     | __main__:main:1187 -   exp3_zinc_oracle_mae: 0.11036190762836486
+2026-02-22 10:20:53.006 | INFO     | __main__:main:1187 -   hypothesis_support_score: 0.49247023817088986
+2026-02-22 10:20:53.006 | INFO     | __main__:main:1187 -   sri_rho_consistency_pepstruct: 0.30117324526462974
+2026-02-22 10:20:53.006 | INFO     | __main__:main:1187 -   sri_rho_consistency_zinc: 0.05190681093244496
+2026-02-22 10:20:53.006 | INFO     | __main__:create_figures:650 - === Generating Figures ===
+2026-02-22 10:20:53.006 | INFO     | __main__:_fig1_gap_vs_depth:685 -   Generating Figure 1: Gap vs Depth
+2026-02-22 10:20:53.130 | INFO     | __main__:_fig1_gap_vs_depth:729 -   Figure 1 saved
+2026-02-22 10:20:53.130 | INFO     | __main__:_fig2_sri_correlation_heatmap:734 -   Generating Figure 2: SRI Correlation Heatmap
+2026-02-22 10:20:53.203 | INFO     | __main__:_fig2_sri_correlation_heatmap:773 -   Figure 2 saved
+2026-02-22 10:20:53.204 | INFO     | __main__:_fig3_srwe_class_vs_reg:778 -   Generating Figure 3: SRWE Classification vs Regression
+2026-02-22 10:20:53.410 | INFO     | __main__:_fig3_srwe_class_vs_reg:834 -   Figure 3 saved
+2026-02-22 10:20:53.410 | INFO     | __main__:_fig4_adaptive_strategy_comparison:839 -   Generating Figure 4: Adaptive Strategy Comparison
+2026-02-22 10:20:53.545 | INFO     | __main__:_fig4_adaptive_strategy_comparison:893 -   Figure 4 saved
+2026-02-22 10:20:53.545 | INFO     | __main__:_fig5_oracle_headroom:898 -   Generating Figure 5: Oracle Headroom
+2026-02-22 10:20:53.657 | INFO     | __main__:_fig5_oracle_headroom:947 -   Figure 5 saved
+2026-02-22 10:20:53.657 | INFO     | __main__:_fig6_synthesis:954 -   Generating Figure 6: Cross-Experiment Synthesis
+2026-02-22 10:20:53.863 | INFO     | __main__:_fig6_synthesis:1043 -   Figure 6 saved
+2026-02-22 10:20:53.863 | INFO     | __main__:create_figures:680 - All figures generated successfully
+2026-02-22 10:20:53.863 | INFO     | __main__:build_eval_output:1058 - Building eval_out.json
+2026-02-22 10:20:53.873 | INFO     | __main__:main:1207 - Saved eval_out.json (5496.5 KB)
+2026-02-22 10:20:53.873 | INFO     | __main__:main:1209 - ======================================================================
+2026-02-22 10:20:53.873 | INFO     | __main__:main:1210 - Evaluation complete!
+2026-02-22 10:20:53.873 | INFO     | __main__:main:1211 - ======================================================================
+2026-02-22 10:20:57.986 | INFO     | __main__:main:1138 - ======================================================================
+2026-02-22 10:20:57.987 | INFO     | __main__:main:1139 - Starting Cross-Experiment Mechanistic Analysis
+2026-02-22 10:20:57.987 | INFO     | __main__:main:1140 - ======================================================================
+2026-02-22 10:20:57.987 | INFO     | __main__:main:1146 - Loading experiment data...
+2026-02-22 10:20:57.987 | INFO     | __main__:load_json:61 - Loading /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_5/gen_art/exp_id1_it5__opus/full_method_out.json
+2026-02-22 10:20:57.988 | INFO     | __main__:load_json:61 - Loading /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_5/gen_art/exp_id2_it5__opus/full_method_out.json
+2026-02-22 10:20:58.339 | INFO     | __main__:load_json:61 - Loading /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_5/gen_art/exp_id3_it5__opus/full_method_out.json
+2026-02-22 10:20:58.405 | INFO     | __main__:main:1151 - Exp1: 4 datasets
+2026-02-22 10:20:58.405 | INFO     | __main__:main:1152 - Exp2: 4 datasets
+2026-02-22 10:20:58.405 | INFO     | __main__:main:1153 - Exp3: 4 datasets
+2026-02-22 10:20:58.405 | INFO     | __main__:analysis1_depth_compensation:116 - === Analysis 1: Depth Compensation Mechanism ===
+2026-02-22 10:20:58.406 | INFO     | __main__:analysis1_depth_compensation:138 -   ZINC-subset depth=2: RWSE MAE=0.4540, LapPE MAE=0.6891, gap=0.2351
+2026-02-22 10:20:58.406 | INFO     | __main__:analysis1_depth_compensation:138 -   ZINC-subset depth=3: RWSE MAE=0.4441, LapPE MAE=0.6947, gap=0.2506
+2026-02-22 10:20:58.406 | INFO     | __main__:analysis1_depth_compensation:138 -   ZINC-subset depth=4: RWSE MAE=0.4521, LapPE MAE=0.6552, gap=0.2030
+2026-02-22 10:20:58.406 | INFO     | __main__:analysis1_depth_compensation:138 -   ZINC-subset depth=6: RWSE MAE=0.5227, LapPE MAE=0.7069, gap=0.1842
+2026-02-22 10:20:58.406 | INFO     | __main__:analysis1_depth_compensation:138 -   ZINC-subset depth=8: RWSE MAE=0.4683, LapPE MAE=0.6818, gap=0.2136
+2026-02-22 10:20:58.406 | INFO     | __main__:analysis1_depth_compensation:152 -   ZINC-subset gap slope: -0.031473 (p=0.2248)
+2026-02-22 10:20:58.406 | INFO     | __main__:analysis1_depth_compensation:138 -   Peptides-struct depth=2: RWSE MAE=22.8413, LapPE MAE=24.3721, gap=1.5308
+2026-02-22 10:20:58.406 | INFO     | __main__:analysis1_depth_compensation:138 -   Peptides-struct depth=3: RWSE MAE=23.1149, LapPE MAE=22.0579, gap=-1.0570
+2026-02-22 10:20:58.406 | INFO     | __main__:analysis1_depth_compensation:138 -   Peptides-struct depth=4: RWSE MAE=21.5758, LapPE MAE=23.1430, gap=1.5672
+2026-02-22 10:20:58.406 | INFO     | __main__:analysis1_depth_compensation:138 -   Peptides-struct depth=6: RWSE MAE=22.7902, LapPE MAE=22.3094, gap=-0.4808
+2026-02-22 10:20:58.406 | INFO     | __main__:analysis1_depth_compensation:138 -   Peptides-struct depth=8: RWSE MAE=22.6470, LapPE MAE=22.7039, gap=0.0569
+2026-02-22 10:20:58.406 | INFO     | __main__:analysis1_depth_compensation:152 -   Peptides-struct gap slope: -0.788682 (p=0.5458)
+2026-02-22 10:20:58.407 | INFO     | __main__:analysis1_depth_compensation:161 -   Peptides-struct estimated D*: 6.17
+2026-02-22 10:20:58.407 | INFO     | __main__:analysis1_depth_compensation:174 -   ZINC-subset SRI-gap rho at depth 2: 0.0325
+2026-02-22 10:20:58.407 | INFO     | __main__:analysis1_depth_compensation:174 -   ZINC-subset SRI-gap rho at depth 8: 0.0921
+2026-02-22 10:20:58.407 | INFO     | __main__:analysis1_depth_compensation:174 -   Peptides-struct SRI-gap rho at depth 2: 0.1473
+2026-02-22 10:20:58.407 | INFO     | __main__:analysis1_depth_compensation:174 -   Peptides-struct SRI-gap rho at depth 8: 0.1088
+2026-02-22 10:20:58.407 | INFO     | __main__:analysis1_per_graph:183 -   Computing per-graph metrics for ZINC-subset (Analysis 1)
+2026-02-22 10:20:58.412 | INFO     | __main__:analysis1_per_graph:242 -   Computed per-graph metrics for 161 examples
+2026-02-22 10:20:58.412 | INFO     | __main__:analysis1_per_graph:183 -   Computing per-graph metrics for Peptides-struct (Analysis 1)
+2026-02-22 10:20:58.423 | INFO     | __main__:analysis1_per_graph:242 -   Computed per-graph metrics for 225 examples
+2026-02-22 10:20:58.423 | INFO     | __main__:analysis2_srwe_diagnosis:254 - === Analysis 2: SRWE Classification Diagnosis ===
+2026-02-22 10:20:58.423 | INFO     | __main__:analysis2_srwe_diagnosis:283 -   Peptides-func: RWSE AP=0.4182, Best SRWE (moment_correction) AP=0.4224
+2026-02-22 10:20:58.423 | INFO     | __main__:analysis2_srwe_diagnosis:284 -   Peptides-func gap closed: -9.06%
+2026-02-22 10:20:58.423 | INFO     | __main__:analysis2_srwe_diagnosis:305 -   Peptides-struct: RWSE MAE=36.3738, Best SRWE (eigenvalue_pairs) MAE=20.5106
+2026-02-22 10:20:58.423 | INFO     | __main__:analysis2_srwe_diagnosis:306 -   Peptides-struct gap closed: 109.71%
+2026-02-22 10:20:58.423 | INFO     | __main__:analysis2_srwe_diagnosis:326 -   Peptides-func: RWSE MI=0.011988, Best SRWE MI=0.010936
+2026-02-22 10:20:58.424 | INFO     | __main__:analysis2_srwe_diagnosis:327 -   Peptides-struct: RWSE MI=0.386958, Best SRWE MI=0.713535
+2026-02-22 10:20:58.424 | INFO     | __main__:analysis2_per_graph:334 -   Computing per-graph metrics for Peptides-func (Analysis 2)
+2026-02-22 10:20:58.526 | INFO     | __main__:analysis2_per_graph:399 -   Computed per-graph metrics for 2000 examples
+2026-02-22 10:20:58.526 | INFO     | __main__:analysis3_adaptive_selection:411 - === Analysis 3: Adaptive Selection Value ===
+2026-02-22 10:20:58.526 | INFO     | __main__:analysis3_adaptive_selection:437 -   ZINC: best_fixed=0.1980, best_adaptive=0.2035, oracle=0.1104
+2026-02-22 10:20:58.526 | INFO     | __main__:analysis3_adaptive_selection:438 -   ZINC oracle headroom: 44.26%
+2026-02-22 10:20:58.526 | INFO     | __main__:analysis3_adaptive_selection:453 -   Peptides-func: best_fixed AP=0.4360, best_adaptive AP=0.4469, oracle AP=0.1680
+2026-02-22 10:20:58.526 | INFO     | __main__:analysis3_adaptive_selection:472 -   Peptides-struct: best_fixed=20.4312, best_adaptive=21.9525, oracle=15.4323
+2026-02-22 10:20:58.526 | INFO     | __main__:analysis3_adaptive_selection:473 -   Peptides-struct oracle headroom: 24.47%
+2026-02-22 10:20:58.526 | INFO     | __main__:analysis3_per_graph:480 -   Computing per-graph metrics for ZINC-subset (Analysis 3)
+2026-02-22 10:20:58.546 | INFO     | __main__:analysis3_per_graph:544 -   Computed per-graph metrics for 1000 examples
+2026-02-22 10:20:58.546 | INFO     | __main__:analysis3_per_graph:480 -   Computing per-graph metrics for Peptides-struct (Analysis 3)
+2026-02-22 10:20:58.558 | INFO     | __main__:analysis3_per_graph:544 -   Computed per-graph metrics for 400 examples
+2026-02-22 10:20:58.558 | INFO     | __main__:analysis4_consistency:563 - === Analysis 4: Cross-Experiment Consistency ===
+2026-02-22 10:20:58.558 | INFO     | __main__:analysis4_consistency:577 -   ZINC rho consistency: |0.0588 - 0.0069| = 0.0519
+2026-02-22 10:20:58.558 | INFO     | __main__:analysis4_consistency:585 -   Peptides-struct rho consistency: |0.1474 - -0.1538| = 0.3012
+2026-02-22 10:20:58.559 | INFO     | __main__:analysis4_consistency:629 -   SRI component: 0.1854 (avg |rho|=0.0927)
+2026-02-22 10:20:58.559 | INFO     | __main__:analysis4_consistency:630 -   SRWE component: 1.0000 (gap closed=109.71%)
+2026-02-22 10:20:58.559 | INFO     | __main__:analysis4_consistency:631 -   Depth component: 0.3943 (slope=-0.7887, p=0.5458)
+2026-02-22 10:20:58.559 | INFO     | __main__:analysis4_consistency:632 -   Hypothesis support score: 0.4925
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1185 - Total aggregate metrics: 37
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp1_pep_compensation_depth_Dstar: 6.17144924493215
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp1_pep_gap_depth2: 1.5308029999999988
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp1_pep_gap_depth8: 0.05689299999999875
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp1_pep_gap_slope: -0.7886818392138504
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp1_pep_gap_slope_pvalue: 0.5458318481846669
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp1_pep_sri_rho_depth2: 0.147344
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp1_pep_sri_rho_depth8: 0.108813
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp1_zinc_gap_depth2: 0.23514999999999997
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp1_zinc_gap_depth8: 0.213567
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp1_zinc_gap_slope: -0.03147262249612647
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp1_zinc_gap_slope_pvalue: 0.22476124914097098
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp1_zinc_sri_rho_depth2: 0.03246
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp1_zinc_sri_rho_depth8: 0.092106
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp2_func_best_srwe_ap: 0.42243176738939425
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp2_func_best_srwe_mi: 0.010936366910042072
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp2_func_gap_closed_pct: -9.056313640143863
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp2_func_rwse_ap: 0.41822085925177194
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp2_func_rwse_mi: 0.011988275531049374
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp2_struct_best_srwe_mae: 20.510568618774414
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp2_struct_best_srwe_mi: 0.713534508743888
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp2_struct_gap_closed_pct: 109.71293496990073
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp2_struct_rwse_mae: 36.373756408691406
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp2_struct_rwse_mi: 0.3869582951503621
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp3_func_best_adaptive_ap: 0.4468987834320397
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp3_func_best_fixed_ap: 0.43603700243146337
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp3_func_oracle_ap: 0.16800000000000004
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp3_struct_best_adaptive_mae: 21.95248031616211
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp3_struct_best_fixed_mae: 20.431153297424316
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp3_struct_oracle_headroom_pct: 24.46658396972019
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp3_struct_oracle_mae: 15.43234801992774
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp3_zinc_best_adaptive_mae: 0.2034589648246765
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp3_zinc_best_fixed_mae: 0.19798621535301208
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp3_zinc_oracle_headroom_pct: 44.257782072560914
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   exp3_zinc_oracle_mae: 0.11036190762836486
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   hypothesis_support_score: 0.49247023817088986
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   sri_rho_consistency_pepstruct: 0.30117324526462974
+2026-02-22 10:20:58.559 | INFO     | __main__:main:1187 -   sri_rho_consistency_zinc: 0.05190681093244496
+2026-02-22 10:20:58.559 | INFO     | __main__:create_figures:650 - === Generating Figures ===
+2026-02-22 10:20:58.559 | INFO     | __main__:_fig1_gap_vs_depth:685 -   Generating Figure 1: Gap vs Depth
+2026-02-22 10:20:58.688 | INFO     | __main__:_fig1_gap_vs_depth:729 -   Figure 1 saved
+2026-02-22 10:20:58.688 | INFO     | __main__:_fig2_sri_correlation_heatmap:734 -   Generating Figure 2: SRI Correlation Heatmap
+2026-02-22 10:20:58.761 | INFO     | __main__:_fig2_sri_correlation_heatmap:773 -   Figure 2 saved
+2026-02-22 10:20:58.761 | INFO     | __main__:_fig3_srwe_class_vs_reg:778 -   Generating Figure 3: SRWE Classification vs Regression
+2026-02-22 10:20:58.970 | INFO     | __main__:_fig3_srwe_class_vs_reg:834 -   Figure 3 saved
+2026-02-22 10:20:58.970 | INFO     | __main__:_fig4_adaptive_strategy_comparison:839 -   Generating Figure 4: Adaptive Strategy Comparison
+2026-02-22 10:20:59.108 | INFO     | __main__:_fig4_adaptive_strategy_comparison:893 -   Figure 4 saved
+2026-02-22 10:20:59.108 | INFO     | __main__:_fig5_oracle_headroom:898 -   Generating Figure 5: Oracle Headroom
+2026-02-22 10:20:59.220 | INFO     | __main__:_fig5_oracle_headroom:947 -   Figure 5 saved
+2026-02-22 10:20:59.220 | INFO     | __main__:_fig6_synthesis:954 -   Generating Figure 6: Cross-Experiment Synthesis
+2026-02-22 10:20:59.429 | INFO     | __main__:_fig6_synthesis:1043 -   Figure 6 saved
+2026-02-22 10:20:59.429 | INFO     | __main__:create_figures:680 - All figures generated successfully
+2026-02-22 10:20:59.429 | INFO     | __main__:build_eval_output:1058 - Building eval_out.json
+2026-02-22 10:20:59.750 | INFO     | __main__:main:1207 - Saved eval_out.json (124998.0 KB)
+2026-02-22 10:20:59.750 | INFO     | __main__:main:1209 - ======================================================================
+2026-02-22 10:20:59.750 | INFO     | __main__:main:1210 - Evaluation complete!
+2026-02-22 10:20:59.750 | INFO     | __main__:main:1211 - ======================================================================
+2026-02-22 10:21:35.789 | INFO     | __main__:main:1144 - ======================================================================
+2026-02-22 10:21:35.789 | INFO     | __main__:main:1145 - Starting Cross-Experiment Mechanistic Analysis
+2026-02-22 10:21:35.789 | INFO     | __main__:main:1146 - ======================================================================
+2026-02-22 10:21:35.789 | INFO     | __main__:main:1152 - Loading experiment data...
+2026-02-22 10:21:35.789 | INFO     | __main__:load_json:61 - Loading /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_5/gen_art/exp_id1_it5__opus/full_method_out.json
+2026-02-22 10:21:35.791 | INFO     | __main__:load_json:61 - Loading /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_5/gen_art/exp_id2_it5__opus/full_method_out.json
+2026-02-22 10:21:36.143 | INFO     | __main__:load_json:61 - Loading /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_5/gen_art/exp_id3_it5__opus/full_method_out.json
+2026-02-22 10:21:36.209 | INFO     | __main__:main:1157 - Exp1: 4 datasets
+2026-02-22 10:21:36.209 | INFO     | __main__:main:1158 - Exp2: 4 datasets
+2026-02-22 10:21:36.209 | INFO     | __main__:main:1159 - Exp3: 4 datasets
+2026-02-22 10:21:36.209 | INFO     | __main__:analysis1_depth_compensation:116 - === Analysis 1: Depth Compensation Mechanism ===
+2026-02-22 10:21:36.209 | INFO     | __main__:analysis1_depth_compensation:138 -   ZINC-subset depth=2: RWSE MAE=0.4540, LapPE MAE=0.6891, gap=0.2351
+2026-02-22 10:21:36.209 | INFO     | __main__:analysis1_depth_compensation:138 -   ZINC-subset depth=3: RWSE MAE=0.4441, LapPE MAE=0.6947, gap=0.2506
+2026-02-22 10:21:36.209 | INFO     | __main__:analysis1_depth_compensation:138 -   ZINC-subset depth=4: RWSE MAE=0.4521, LapPE MAE=0.6552, gap=0.2030
+2026-02-22 10:21:36.209 | INFO     | __main__:analysis1_depth_compensation:138 -   ZINC-subset depth=6: RWSE MAE=0.5227, LapPE MAE=0.7069, gap=0.1842
+2026-02-22 10:21:36.209 | INFO     | __main__:analysis1_depth_compensation:138 -   ZINC-subset depth=8: RWSE MAE=0.4683, LapPE MAE=0.6818, gap=0.2136
+2026-02-22 10:21:36.210 | INFO     | __main__:analysis1_depth_compensation:152 -   ZINC-subset gap slope: -0.031473 (p=0.2248)
+2026-02-22 10:21:36.210 | INFO     | __main__:analysis1_depth_compensation:138 -   Peptides-struct depth=2: RWSE MAE=22.8413, LapPE MAE=24.3721, gap=1.5308
+2026-02-22 10:21:36.210 | INFO     | __main__:analysis1_depth_compensation:138 -   Peptides-struct depth=3: RWSE MAE=23.1149, LapPE MAE=22.0579, gap=-1.0570
+2026-02-22 10:21:36.210 | INFO     | __main__:analysis1_depth_compensation:138 -   Peptides-struct depth=4: RWSE MAE=21.5758, LapPE MAE=23.1430, gap=1.5672
+2026-02-22 10:21:36.210 | INFO     | __main__:analysis1_depth_compensation:138 -   Peptides-struct depth=6: RWSE MAE=22.7902, LapPE MAE=22.3094, gap=-0.4808
+2026-02-22 10:21:36.210 | INFO     | __main__:analysis1_depth_compensation:138 -   Peptides-struct depth=8: RWSE MAE=22.6470, LapPE MAE=22.7039, gap=0.0569
+2026-02-22 10:21:36.210 | INFO     | __main__:analysis1_depth_compensation:152 -   Peptides-struct gap slope: -0.788682 (p=0.5458)
+2026-02-22 10:21:36.210 | INFO     | __main__:analysis1_depth_compensation:161 -   Peptides-struct estimated D*: 6.17
+2026-02-22 10:21:36.210 | INFO     | __main__:analysis1_depth_compensation:174 -   ZINC-subset SRI-gap rho at depth 2: 0.0325
+2026-02-22 10:21:36.210 | INFO     | __main__:analysis1_depth_compensation:174 -   ZINC-subset SRI-gap rho at depth 8: 0.0921
+2026-02-22 10:21:36.210 | INFO     | __main__:analysis1_depth_compensation:174 -   Peptides-struct SRI-gap rho at depth 2: 0.1473
+2026-02-22 10:21:36.210 | INFO     | __main__:analysis1_depth_compensation:174 -   Peptides-struct SRI-gap rho at depth 8: 0.1088
+2026-02-22 10:21:36.210 | INFO     | __main__:analysis1_per_graph:183 -   Computing per-graph metrics for ZINC-subset (Analysis 1)
+2026-02-22 10:21:36.216 | INFO     | __main__:analysis1_per_graph:242 -   Computed per-graph metrics for 161 examples
+2026-02-22 10:21:36.216 | INFO     | __main__:analysis1_per_graph:183 -   Computing per-graph metrics for Peptides-struct (Analysis 1)
+2026-02-22 10:21:36.227 | INFO     | __main__:analysis1_per_graph:242 -   Computed per-graph metrics for 225 examples
+2026-02-22 10:21:36.227 | INFO     | __main__:analysis2_srwe_diagnosis:254 - === Analysis 2: SRWE Classification Diagnosis ===
+2026-02-22 10:21:36.227 | INFO     | __main__:analysis2_srwe_diagnosis:283 -   Peptides-func: RWSE AP=0.4182, Best SRWE (moment_correction) AP=0.4224
+2026-02-22 10:21:36.227 | INFO     | __main__:analysis2_srwe_diagnosis:284 -   Peptides-func gap closed: -9.06%
+2026-02-22 10:21:36.227 | INFO     | __main__:analysis2_srwe_diagnosis:305 -   Peptides-struct: RWSE MAE=36.3738, Best SRWE (eigenvalue_pairs) MAE=20.5106
+2026-02-22 10:21:36.228 | INFO     | __main__:analysis2_srwe_diagnosis:306 -   Peptides-struct gap closed: 109.71%
+2026-02-22 10:21:36.228 | INFO     | __main__:analysis2_srwe_diagnosis:326 -   Peptides-func: RWSE MI=0.011988, Best SRWE MI=0.010936
+2026-02-22 10:21:36.228 | INFO     | __main__:analysis2_srwe_diagnosis:327 -   Peptides-struct: RWSE MI=0.386958, Best SRWE MI=0.713535
+2026-02-22 10:21:36.228 | INFO     | __main__:analysis2_per_graph:334 -   Computing per-graph metrics for Peptides-func (Analysis 2)
+2026-02-22 10:21:36.331 | INFO     | __main__:analysis2_per_graph:399 -   Computed per-graph metrics for 2000 examples
+2026-02-22 10:21:36.331 | INFO     | __main__:analysis3_adaptive_selection:411 - === Analysis 3: Adaptive Selection Value ===
+2026-02-22 10:21:36.331 | INFO     | __main__:analysis3_adaptive_selection:437 -   ZINC: best_fixed=0.1980, best_adaptive=0.2035, oracle=0.1104
+2026-02-22 10:21:36.331 | INFO     | __main__:analysis3_adaptive_selection:438 -   ZINC oracle headroom: 44.26%
+2026-02-22 10:21:36.331 | INFO     | __main__:analysis3_adaptive_selection:453 -   Peptides-func: best_fixed AP=0.4360, best_adaptive AP=0.4469, oracle AP=0.1680
+2026-02-22 10:21:36.332 | INFO     | __main__:analysis3_adaptive_selection:472 -   Peptides-struct: best_fixed=20.4312, best_adaptive=21.9525, oracle=15.4323
+2026-02-22 10:21:36.332 | INFO     | __main__:analysis3_adaptive_selection:473 -   Peptides-struct oracle headroom: 24.47%
+2026-02-22 10:21:36.332 | INFO     | __main__:analysis3_per_graph:480 -   Computing per-graph metrics for ZINC-subset (Analysis 3)
+2026-02-22 10:21:36.353 | INFO     | __main__:analysis3_per_graph:544 -   Computed per-graph metrics for 1000 examples
+2026-02-22 10:21:36.353 | INFO     | __main__:analysis3_per_graph:480 -   Computing per-graph metrics for Peptides-struct (Analysis 3)
+2026-02-22 10:21:36.365 | INFO     | __main__:analysis3_per_graph:544 -   Computed per-graph metrics for 400 examples
+2026-02-22 10:21:36.365 | INFO     | __main__:analysis4_consistency:563 - === Analysis 4: Cross-Experiment Consistency ===
+2026-02-22 10:21:36.365 | INFO     | __main__:analysis4_consistency:577 -   ZINC rho consistency: |0.0588 - 0.0069| = 0.0519
+2026-02-22 10:21:36.365 | INFO     | __main__:analysis4_consistency:585 -   Peptides-struct rho consistency: |0.1474 - -0.1538| = 0.3012
+2026-02-22 10:21:36.365 | INFO     | __main__:analysis4_consistency:629 -   SRI component: 0.1854 (avg |rho|=0.0927)
+2026-02-22 10:21:36.365 | INFO     | __main__:analysis4_consistency:630 -   SRWE component: 1.0000 (gap closed=109.71%)
+2026-02-22 10:21:36.365 | INFO     | __main__:analysis4_consistency:631 -   Depth component: 0.3943 (slope=-0.7887, p=0.5458)
+2026-02-22 10:21:36.365 | INFO     | __main__:analysis4_consistency:632 -   Hypothesis support score: 0.4925
+2026-02-22 10:21:36.365 | INFO     | __main__:main:1191 - Total aggregate metrics: 37
+2026-02-22 10:21:36.365 | INFO     | __main__:main:1193 -   exp1_pep_compensation_depth_Dstar: 6.17144924493215
+2026-02-22 10:21:36.365 | INFO     | __main__:main:1193 -   exp1_pep_gap_depth2: 1.5308029999999988
+2026-02-22 10:21:36.365 | INFO     | __main__:main:1193 -   exp1_pep_gap_depth8: 0.05689299999999875
+2026-02-22 10:21:36.365 | INFO     | __main__:main:1193 -   exp1_pep_gap_slope: -0.7886818392138504
+2026-02-22 10:21:36.365 | INFO     | __main__:main:1193 -   exp1_pep_gap_slope_pvalue: 0.5458318481846669
+2026-02-22 10:21:36.365 | INFO     | __main__:main:1193 -   exp1_pep_sri_rho_depth2: 0.147344
+2026-02-22 10:21:36.365 | INFO     | __main__:main:1193 -   exp1_pep_sri_rho_depth8: 0.108813
+2026-02-22 10:21:36.365 | INFO     | __main__:main:1193 -   exp1_zinc_gap_depth2: 0.23514999999999997
+2026-02-22 10:21:36.365 | INFO     | __main__:main:1193 -   exp1_zinc_gap_depth8: 0.213567
+2026-02-22 10:21:36.365 | INFO     | __main__:main:1193 -   exp1_zinc_gap_slope: -0.03147262249612647
+2026-02-22 10:21:36.365 | INFO     | __main__:main:1193 -   exp1_zinc_gap_slope_pvalue: 0.22476124914097098
+2026-02-22 10:21:36.365 | INFO     | __main__:main:1193 -   exp1_zinc_sri_rho_depth2: 0.03246
+2026-02-22 10:21:36.365 | INFO     | __main__:main:1193 -   exp1_zinc_sri_rho_depth8: 0.092106
+2026-02-22 10:21:36.365 | INFO     | __main__:main:1193 -   exp2_func_best_srwe_ap: 0.42243176738939425
+2026-02-22 10:21:36.365 | INFO     | __main__:main:1193 -   exp2_func_best_srwe_mi: 0.010936366910042072
+2026-02-22 10:21:36.365 | INFO     | __main__:main:1193 -   exp2_func_gap_closed_pct: -9.056313640143863
+2026-02-22 10:21:36.365 | INFO     | __main__:main:1193 -   exp2_func_rwse_ap: 0.41822085925177194
+2026-02-22 10:21:36.365 | INFO     | __main__:main:1193 -   exp2_func_rwse_mi: 0.011988275531049374
+2026-02-22 10:21:36.365 | INFO     | __main__:main:1193 -   exp2_struct_best_srwe_mae: 20.510568618774414
+2026-02-22 10:21:36.365 | INFO     | __main__:main:1193 -   exp2_struct_best_srwe_mi: 0.713534508743888
+2026-02-22 10:21:36.365 | INFO     | __main__:main:1193 -   exp2_struct_gap_closed_pct: 109.71293496990073
+2026-02-22 10:21:36.365 | INFO     | __main__:main:1193 -   exp2_struct_rwse_mae: 36.373756408691406
+2026-02-22 10:21:36.366 | INFO     | __main__:main:1193 -   exp2_struct_rwse_mi: 0.3869582951503621
+2026-02-22 10:21:36.366 | INFO     | __main__:main:1193 -   exp3_func_best_adaptive_ap: 0.4468987834320397
+2026-02-22 10:21:36.366 | INFO     | __main__:main:1193 -   exp3_func_best_fixed_ap: 0.43603700243146337
+2026-02-22 10:21:36.366 | INFO     | __main__:main:1193 -   exp3_func_oracle_ap: 0.16800000000000004
+2026-02-22 10:21:36.366 | INFO     | __main__:main:1193 -   exp3_struct_best_adaptive_mae: 21.95248031616211
+2026-02-22 10:21:36.366 | INFO     | __main__:main:1193 -   exp3_struct_best_fixed_mae: 20.431153297424316
+2026-02-22 10:21:36.366 | INFO     | __main__:main:1193 -   exp3_struct_oracle_headroom_pct: 24.46658396972019
+2026-02-22 10:21:36.366 | INFO     | __main__:main:1193 -   exp3_struct_oracle_mae: 15.43234801992774
+2026-02-22 10:21:36.366 | INFO     | __main__:main:1193 -   exp3_zinc_best_adaptive_mae: 0.2034589648246765
+2026-02-22 10:21:36.366 | INFO     | __main__:main:1193 -   exp3_zinc_best_fixed_mae: 0.19798621535301208
+2026-02-22 10:21:36.366 | INFO     | __main__:main:1193 -   exp3_zinc_oracle_headroom_pct: 44.257782072560914
+2026-02-22 10:21:36.366 | INFO     | __main__:main:1193 -   exp3_zinc_oracle_mae: 0.11036190762836486
+2026-02-22 10:21:36.366 | INFO     | __main__:main:1193 -   hypothesis_support_score: 0.49247023817088986
+2026-02-22 10:21:36.366 | INFO     | __main__:main:1193 -   sri_rho_consistency_pepstruct: 0.30117324526462974
+2026-02-22 10:21:36.366 | INFO     | __main__:main:1193 -   sri_rho_consistency_zinc: 0.05190681093244496
+2026-02-22 10:21:36.366 | INFO     | __main__:create_figures:650 - === Generating Figures ===
+2026-02-22 10:21:36.366 | INFO     | __main__:_fig1_gap_vs_depth:685 -   Generating Figure 1: Gap vs Depth
+2026-02-22 10:21:36.494 | INFO     | __main__:_fig1_gap_vs_depth:729 -   Figure 1 saved
+2026-02-22 10:21:36.494 | INFO     | __main__:_fig2_sri_correlation_heatmap:734 -   Generating Figure 2: SRI Correlation Heatmap
+2026-02-22 10:21:36.568 | INFO     | __main__:_fig2_sri_correlation_heatmap:773 -   Figure 2 saved
+2026-02-22 10:21:36.568 | INFO     | __main__:_fig3_srwe_class_vs_reg:778 -   Generating Figure 3: SRWE Classification vs Regression
+2026-02-22 10:21:36.781 | INFO     | __main__:_fig3_srwe_class_vs_reg:834 -   Figure 3 saved
+2026-02-22 10:21:36.781 | INFO     | __main__:_fig4_adaptive_strategy_comparison:839 -   Generating Figure 4: Adaptive Strategy Comparison
+2026-02-22 10:21:36.921 | INFO     | __main__:_fig4_adaptive_strategy_comparison:893 -   Figure 4 saved
+2026-02-22 10:21:36.921 | INFO     | __main__:_fig5_oracle_headroom:898 -   Generating Figure 5: Oracle Headroom
+2026-02-22 10:21:37.035 | INFO     | __main__:_fig5_oracle_headroom:947 -   Figure 5 saved
+2026-02-22 10:21:37.035 | INFO     | __main__:_fig6_synthesis:954 -   Generating Figure 6: Cross-Experiment Synthesis
+2026-02-22 10:21:37.245 | INFO     | __main__:_fig6_synthesis:1043 -   Figure 6 saved
+2026-02-22 10:21:37.245 | INFO     | __main__:create_figures:680 - All figures generated successfully
+2026-02-22 10:21:37.245 | INFO     | __main__:build_eval_output:1058 - Building eval_out.json
+2026-02-22 10:21:37.289 | INFO     | __main__:main:1213 - Saved eval_out.json (3018.5 KB)
+2026-02-22 10:21:37.290 | INFO     | __main__:main:1215 - ======================================================================
+2026-02-22 10:21:37.290 | INFO     | __main__:main:1216 - Evaluation complete!
+2026-02-22 10:21:37.290 | INFO     | __main__:main:1217 - ======================================================================
+2026-02-22 10:22:11.150 | INFO     | __main__:main:1144 - ======================================================================
+2026-02-22 10:22:11.151 | INFO     | __main__:main:1145 - Starting Cross-Experiment Mechanistic Analysis
+2026-02-22 10:22:11.151 | INFO     | __main__:main:1146 - ======================================================================
+2026-02-22 10:22:11.151 | INFO     | __main__:main:1152 - Loading experiment data...
+2026-02-22 10:22:11.151 | INFO     | __main__:load_json:61 - Loading /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_5/gen_art/exp_id1_it5__opus/full_method_out.json
+2026-02-22 10:22:11.152 | INFO     | __main__:load_json:61 - Loading /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_5/gen_art/exp_id2_it5__opus/full_method_out.json
+2026-02-22 10:22:11.507 | INFO     | __main__:load_json:61 - Loading /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_5/gen_art/exp_id3_it5__opus/full_method_out.json
+2026-02-22 10:22:11.574 | INFO     | __main__:main:1157 - Exp1: 4 datasets
+2026-02-22 10:22:11.574 | INFO     | __main__:main:1158 - Exp2: 4 datasets
+2026-02-22 10:22:11.574 | INFO     | __main__:main:1159 - Exp3: 4 datasets
+2026-02-22 10:22:11.574 | INFO     | __main__:analysis1_depth_compensation:116 - === Analysis 1: Depth Compensation Mechanism ===
+2026-02-22 10:22:11.574 | INFO     | __main__:analysis1_depth_compensation:138 -   ZINC-subset depth=2: RWSE MAE=0.4540, LapPE MAE=0.6891, gap=0.2351
+2026-02-22 10:22:11.574 | INFO     | __main__:analysis1_depth_compensation:138 -   ZINC-subset depth=3: RWSE MAE=0.4441, LapPE MAE=0.6947, gap=0.2506
+2026-02-22 10:22:11.574 | INFO     | __main__:analysis1_depth_compensation:138 -   ZINC-subset depth=4: RWSE MAE=0.4521, LapPE MAE=0.6552, gap=0.2030
+2026-02-22 10:22:11.574 | INFO     | __main__:analysis1_depth_compensation:138 -   ZINC-subset depth=6: RWSE MAE=0.5227, LapPE MAE=0.7069, gap=0.1842
+2026-02-22 10:22:11.574 | INFO     | __main__:analysis1_depth_compensation:138 -   ZINC-subset depth=8: RWSE MAE=0.4683, LapPE MAE=0.6818, gap=0.2136
+2026-02-22 10:22:11.575 | INFO     | __main__:analysis1_depth_compensation:152 -   ZINC-subset gap slope: -0.031473 (p=0.2248)
+2026-02-22 10:22:11.575 | INFO     | __main__:analysis1_depth_compensation:138 -   Peptides-struct depth=2: RWSE MAE=22.8413, LapPE MAE=24.3721, gap=1.5308
+2026-02-22 10:22:11.575 | INFO     | __main__:analysis1_depth_compensation:138 -   Peptides-struct depth=3: RWSE MAE=23.1149, LapPE MAE=22.0579, gap=-1.0570
+2026-02-22 10:22:11.575 | INFO     | __main__:analysis1_depth_compensation:138 -   Peptides-struct depth=4: RWSE MAE=21.5758, LapPE MAE=23.1430, gap=1.5672
+2026-02-22 10:22:11.575 | INFO     | __main__:analysis1_depth_compensation:138 -   Peptides-struct depth=6: RWSE MAE=22.7902, LapPE MAE=22.3094, gap=-0.4808
+2026-02-22 10:22:11.575 | INFO     | __main__:analysis1_depth_compensation:138 -   Peptides-struct depth=8: RWSE MAE=22.6470, LapPE MAE=22.7039, gap=0.0569
+2026-02-22 10:22:11.575 | INFO     | __main__:analysis1_depth_compensation:152 -   Peptides-struct gap slope: -0.788682 (p=0.5458)
+2026-02-22 10:22:11.575 | INFO     | __main__:analysis1_depth_compensation:161 -   Peptides-struct estimated D*: 6.17
+2026-02-22 10:22:11.575 | INFO     | __main__:analysis1_depth_compensation:174 -   ZINC-subset SRI-gap rho at depth 2: 0.0325
+2026-02-22 10:22:11.575 | INFO     | __main__:analysis1_depth_compensation:174 -   ZINC-subset SRI-gap rho at depth 8: 0.0921
+2026-02-22 10:22:11.575 | INFO     | __main__:analysis1_depth_compensation:174 -   Peptides-struct SRI-gap rho at depth 2: 0.1473
+2026-02-22 10:22:11.575 | INFO     | __main__:analysis1_depth_compensation:174 -   Peptides-struct SRI-gap rho at depth 8: 0.1088
+2026-02-22 10:22:11.575 | INFO     | __main__:analysis1_per_graph:183 -   Computing per-graph metrics for ZINC-subset (Analysis 1)
+2026-02-22 10:22:11.581 | INFO     | __main__:analysis1_per_graph:242 -   Computed per-graph metrics for 161 examples
+2026-02-22 10:22:11.581 | INFO     | __main__:analysis1_per_graph:183 -   Computing per-graph metrics for Peptides-struct (Analysis 1)
+2026-02-22 10:22:11.592 | INFO     | __main__:analysis1_per_graph:242 -   Computed per-graph metrics for 225 examples
+2026-02-22 10:22:11.592 | INFO     | __main__:analysis2_srwe_diagnosis:254 - === Analysis 2: SRWE Classification Diagnosis ===
+2026-02-22 10:22:11.592 | INFO     | __main__:analysis2_srwe_diagnosis:283 -   Peptides-func: RWSE AP=0.4182, Best SRWE (moment_correction) AP=0.4224
+2026-02-22 10:22:11.592 | INFO     | __main__:analysis2_srwe_diagnosis:284 -   Peptides-func gap closed: -9.06%
+2026-02-22 10:22:11.592 | INFO     | __main__:analysis2_srwe_diagnosis:305 -   Peptides-struct: RWSE MAE=36.3738, Best SRWE (eigenvalue_pairs) MAE=20.5106
+2026-02-22 10:22:11.592 | INFO     | __main__:analysis2_srwe_diagnosis:306 -   Peptides-struct gap closed: 109.71%
+2026-02-22 10:22:11.592 | INFO     | __main__:analysis2_srwe_diagnosis:326 -   Peptides-func: RWSE MI=0.011988, Best SRWE MI=0.010936
+2026-02-22 10:22:11.592 | INFO     | __main__:analysis2_srwe_diagnosis:327 -   Peptides-struct: RWSE MI=0.386958, Best SRWE MI=0.713535
+2026-02-22 10:22:11.592 | INFO     | __main__:analysis2_per_graph:334 -   Computing per-graph metrics for Peptides-func (Analysis 2)
+2026-02-22 10:22:11.697 | INFO     | __main__:analysis2_per_graph:399 -   Computed per-graph metrics for 2000 examples
+2026-02-22 10:22:11.697 | INFO     | __main__:analysis3_adaptive_selection:411 - === Analysis 3: Adaptive Selection Value ===
+2026-02-22 10:22:11.697 | INFO     | __main__:analysis3_adaptive_selection:437 -   ZINC: best_fixed=0.1980, best_adaptive=0.2035, oracle=0.1104
+2026-02-22 10:22:11.697 | INFO     | __main__:analysis3_adaptive_selection:438 -   ZINC oracle headroom: 44.26%
+2026-02-22 10:22:11.697 | INFO     | __main__:analysis3_adaptive_selection:453 -   Peptides-func: best_fixed AP=0.4360, best_adaptive AP=0.4469, oracle AP=0.1680
+2026-02-22 10:22:11.697 | INFO     | __main__:analysis3_adaptive_selection:472 -   Peptides-struct: best_fixed=20.4312, best_adaptive=21.9525, oracle=15.4323
+2026-02-22 10:22:11.697 | INFO     | __main__:analysis3_adaptive_selection:473 -   Peptides-struct oracle headroom: 24.47%
+2026-02-22 10:22:11.697 | INFO     | __main__:analysis3_per_graph:480 -   Computing per-graph metrics for ZINC-subset (Analysis 3)
+2026-02-22 10:22:11.718 | INFO     | __main__:analysis3_per_graph:544 -   Computed per-graph metrics for 1000 examples
+2026-02-22 10:22:11.718 | INFO     | __main__:analysis3_per_graph:480 -   Computing per-graph metrics for Peptides-struct (Analysis 3)
+2026-02-22 10:22:11.730 | INFO     | __main__:analysis3_per_graph:544 -   Computed per-graph metrics for 400 examples
+2026-02-22 10:22:11.730 | INFO     | __main__:analysis4_consistency:563 - === Analysis 4: Cross-Experiment Consistency ===
+2026-02-22 10:22:11.730 | INFO     | __main__:analysis4_consistency:577 -   ZINC rho consistency: |0.0588 - 0.0069| = 0.0519
+2026-02-22 10:22:11.730 | INFO     | __main__:analysis4_consistency:585 -   Peptides-struct rho consistency: |0.1474 - -0.1538| = 0.3012
+2026-02-22 10:22:11.730 | INFO     | __main__:analysis4_consistency:629 -   SRI component: 0.1854 (avg |rho|=0.0927)
+2026-02-22 10:22:11.730 | INFO     | __main__:analysis4_consistency:630 -   SRWE component: 1.0000 (gap closed=109.71%)
+2026-02-22 10:22:11.730 | INFO     | __main__:analysis4_consistency:631 -   Depth component: 0.3943 (slope=-0.7887, p=0.5458)
+2026-02-22 10:22:11.730 | INFO     | __main__:analysis4_consistency:632 -   Hypothesis support score: 0.4925
+2026-02-22 10:22:11.730 | INFO     | __main__:main:1191 - Total aggregate metrics: 37
+2026-02-22 10:22:11.730 | INFO     | __main__:main:1193 -   exp1_pep_compensation_depth_Dstar: 6.17144924493215
+2026-02-22 10:22:11.730 | INFO     | __main__:main:1193 -   exp1_pep_gap_depth2: 1.5308029999999988
+2026-02-22 10:22:11.730 | INFO     | __main__:main:1193 -   exp1_pep_gap_depth8: 0.05689299999999875
+2026-02-22 10:22:11.730 | INFO     | __main__:main:1193 -   exp1_pep_gap_slope: -0.7886818392138504
+2026-02-22 10:22:11.730 | INFO     | __main__:main:1193 -   exp1_pep_gap_slope_pvalue: 0.5458318481846669
+2026-02-22 10:22:11.730 | INFO     | __main__:main:1193 -   exp1_pep_sri_rho_depth2: 0.147344
+2026-02-22 10:22:11.730 | INFO     | __main__:main:1193 -   exp1_pep_sri_rho_depth8: 0.108813
+2026-02-22 10:22:11.730 | INFO     | __main__:main:1193 -   exp1_zinc_gap_depth2: 0.23514999999999997
+2026-02-22 10:22:11.730 | INFO     | __main__:main:1193 -   exp1_zinc_gap_depth8: 0.213567
+2026-02-22 10:22:11.730 | INFO     | __main__:main:1193 -   exp1_zinc_gap_slope: -0.03147262249612647
+2026-02-22 10:22:11.730 | INFO     | __main__:main:1193 -   exp1_zinc_gap_slope_pvalue: 0.22476124914097098
+2026-02-22 10:22:11.730 | INFO     | __main__:main:1193 -   exp1_zinc_sri_rho_depth2: 0.03246
+2026-02-22 10:22:11.730 | INFO     | __main__:main:1193 -   exp1_zinc_sri_rho_depth8: 0.092106
+2026-02-22 10:22:11.730 | INFO     | __main__:main:1193 -   exp2_func_best_srwe_ap: 0.42243176738939425
+2026-02-22 10:22:11.730 | INFO     | __main__:main:1193 -   exp2_func_best_srwe_mi: 0.010936366910042072
+2026-02-22 10:22:11.730 | INFO     | __main__:main:1193 -   exp2_func_gap_closed_pct: -9.056313640143863
+2026-02-22 10:22:11.730 | INFO     | __main__:main:1193 -   exp2_func_rwse_ap: 0.41822085925177194
+2026-02-22 10:22:11.730 | INFO     | __main__:main:1193 -   exp2_func_rwse_mi: 0.011988275531049374
+2026-02-22 10:22:11.730 | INFO     | __main__:main:1193 -   exp2_struct_best_srwe_mae: 20.510568618774414
+2026-02-22 10:22:11.730 | INFO     | __main__:main:1193 -   exp2_struct_best_srwe_mi: 0.713534508743888
+2026-02-22 10:22:11.730 | INFO     | __main__:main:1193 -   exp2_struct_gap_closed_pct: 109.71293496990073
+2026-02-22 10:22:11.730 | INFO     | __main__:main:1193 -   exp2_struct_rwse_mae: 36.373756408691406
+2026-02-22 10:22:11.730 | INFO     | __main__:main:1193 -   exp2_struct_rwse_mi: 0.3869582951503621
+2026-02-22 10:22:11.730 | INFO     | __main__:main:1193 -   exp3_func_best_adaptive_ap: 0.4468987834320397
+2026-02-22 10:22:11.730 | INFO     | __main__:main:1193 -   exp3_func_best_fixed_ap: 0.43603700243146337
+2026-02-22 10:22:11.730 | INFO     | __main__:main:1193 -   exp3_func_oracle_ap: 0.16800000000000004
+2026-02-22 10:22:11.730 | INFO     | __main__:main:1193 -   exp3_struct_best_adaptive_mae: 21.95248031616211
+2026-02-22 10:22:11.730 | INFO     | __main__:main:1193 -   exp3_struct_best_fixed_mae: 20.431153297424316
+2026-02-22 10:22:11.730 | INFO     | __main__:main:1193 -   exp3_struct_oracle_headroom_pct: 24.46658396972019
+2026-02-22 10:22:11.730 | INFO     | __main__:main:1193 -   exp3_struct_oracle_mae: 15.43234801992774
+2026-02-22 10:22:11.731 | INFO     | __main__:main:1193 -   exp3_zinc_best_adaptive_mae: 0.2034589648246765
+2026-02-22 10:22:11.731 | INFO     | __main__:main:1193 -   exp3_zinc_best_fixed_mae: 0.19798621535301208
+2026-02-22 10:22:11.731 | INFO     | __main__:main:1193 -   exp3_zinc_oracle_headroom_pct: 44.257782072560914
+2026-02-22 10:22:11.731 | INFO     | __main__:main:1193 -   exp3_zinc_oracle_mae: 0.11036190762836486
+2026-02-22 10:22:11.731 | INFO     | __main__:main:1193 -   hypothesis_support_score: 0.49247023817088986
+2026-02-22 10:22:11.731 | INFO     | __main__:main:1193 -   sri_rho_consistency_pepstruct: 0.30117324526462974
+2026-02-22 10:22:11.731 | INFO     | __main__:main:1193 -   sri_rho_consistency_zinc: 0.05190681093244496
+2026-02-22 10:22:11.731 | INFO     | __main__:create_figures:650 - === Generating Figures ===
+2026-02-22 10:22:11.731 | INFO     | __main__:_fig1_gap_vs_depth:685 -   Generating Figure 1: Gap vs Depth
+2026-02-22 10:22:11.858 | INFO     | __main__:_fig1_gap_vs_depth:729 -   Figure 1 saved
+2026-02-22 10:22:11.858 | INFO     | __main__:_fig2_sri_correlation_heatmap:734 -   Generating Figure 2: SRI Correlation Heatmap
+2026-02-22 10:22:11.930 | INFO     | __main__:_fig2_sri_correlation_heatmap:773 -   Figure 2 saved
+2026-02-22 10:22:11.930 | INFO     | __main__:_fig3_srwe_class_vs_reg:778 -   Generating Figure 3: SRWE Classification vs Regression
+2026-02-22 10:22:12.136 | INFO     | __main__:_fig3_srwe_class_vs_reg:834 -   Figure 3 saved
+2026-02-22 10:22:12.137 | INFO     | __main__:_fig4_adaptive_strategy_comparison:839 -   Generating Figure 4: Adaptive Strategy Comparison
+2026-02-22 10:22:12.272 | INFO     | __main__:_fig4_adaptive_strategy_comparison:893 -   Figure 4 saved
+2026-02-22 10:22:12.272 | INFO     | __main__:_fig5_oracle_headroom:898 -   Generating Figure 5: Oracle Headroom
+2026-02-22 10:22:12.384 | INFO     | __main__:_fig5_oracle_headroom:947 -   Figure 5 saved
+2026-02-22 10:22:12.384 | INFO     | __main__:_fig6_synthesis:954 -   Generating Figure 6: Cross-Experiment Synthesis
+2026-02-22 10:22:12.595 | INFO     | __main__:_fig6_synthesis:1043 -   Figure 6 saved
+2026-02-22 10:22:12.595 | INFO     | __main__:create_figures:680 - All figures generated successfully
+2026-02-22 10:22:12.595 | INFO     | __main__:build_eval_output:1058 - Building eval_out.json
+2026-02-22 10:22:12.639 | INFO     | __main__:main:1213 - Saved eval_out.json (3018.5 KB)
+2026-02-22 10:22:12.639 | INFO     | __main__:main:1215 - ======================================================================
+2026-02-22 10:22:12.639 | INFO     | __main__:main:1216 - Evaluation complete!
+2026-02-22 10:22:12.639 | INFO     | __main__:main:1217 - ======================================================================

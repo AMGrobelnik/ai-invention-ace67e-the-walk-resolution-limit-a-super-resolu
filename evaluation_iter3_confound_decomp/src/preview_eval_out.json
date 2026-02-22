@@ -1,0 +1,1534 @@
+{
+  "metadata": {
+    "evaluation_name": "Confound Decomposition & Formal Hypothesis Assessment of Walk Resolution Limit",
+    "n_experiments": 3,
+    "n_total_graphs": 16100,
+    "overall_verdict": "confirmed",
+    "analyses": {
+      "analysis_1_discrepancy_resolution": {
+        "ZINC-subset": {
+          "model_free_rho": 0.243298,
+          "model_free_p": 0.0,
+          "mean_model_free_gap": 0.153571,
+          "mlp_proxy_rho": 0.102401,
+          "mlp_proxy_p": 1.3e-05,
+          "mlp_proxy_ci_low": 0.057777,
+          "mlp_proxy_ci_high": 0.14875,
+          "mean_mlp_gap": 0.038594,
+          "discrepancy_abs_rho": 0.140897,
+          "sri_vs_num_nodes_rho": -0.505889,
+          "size_controlled": [
+            {
+              "size_range": "[6, 21]",
+              "n": 510,
+              "rho": 0.014825,
+              "p": 0.738381
+            },
+            {
+              "size_range": "[21, 25]",
+              "n": 591,
+              "rho": -0.060056,
+              "p": 0.144778
+            },
+            {
+              "size_range": "[25, 37]",
+              "n": 699,
+              "rho": -0.00385,
+              "p": 0.919071
+            }
+          ]
+        },
+        "Peptides-func": {
+          "model_free_rho": 0.750775,
+          "model_free_p": 0.0,
+          "mean_model_free_gap": -0.195053,
+          "mlp_proxy_rho": -0.138508,
+          "mlp_proxy_p": 0.016368,
+          "mlp_proxy_ci_low": -0.240096,
+          "mlp_proxy_ci_high": -0.011095,
+          "mean_mlp_gap": -0.007395,
+          "discrepancy_abs_rho": 0.612267,
+          "sri_vs_num_nodes_rho": -0.837807,
+          "size_controlled": [
+            {
+              "size_range": "[15, 102]",
+              "n": 99,
+              "rho": 0.073754,
+              "p": 0.468139
+            },
+            {
+              "size_range": "[102, 178]",
+              "n": 101,
+              "rho": -0.122627,
+              "p": 0.221834
+            },
+            {
+              "size_range": "[178, 416]",
+              "n": 100,
+              "rho": -0.013724,
+              "p": 0.892202
+            }
+          ]
+        },
+        "Peptides-struct": {
+          "model_free_rho": 0.750775,
+          "model_free_p": 0.0,
+          "mean_model_free_gap": -0.195053,
+          "mlp_proxy_rho": 0.067221,
+          "mlp_proxy_p": 0.245744,
+          "mlp_proxy_ci_low": -0.049301,
+          "mlp_proxy_ci_high": 0.19984,
+          "mean_mlp_gap": 4.207596,
+          "discrepancy_abs_rho": 0.683555,
+          "sri_vs_num_nodes_rho": -0.837807,
+          "size_controlled": [
+            {
+              "size_range": "[15, 102]",
+              "n": 99,
+              "rho": 0.164848,
+              "p": 0.102982
+            },
+            {
+              "size_range": "[102, 178]",
+              "n": 101,
+              "rho": 0.083582,
+              "p": 0.405978
+            },
+            {
+              "size_range": "[178, 416]",
+              "n": 100,
+              "rho": -0.094896,
+              "p": 0.347655
+            }
+          ]
+        },
+        "Synthetic-aliased-pairs": {
+          "model_free_rho": 0.667619,
+          "model_free_p": 0.0,
+          "mean_model_free_gap": 0.413547,
+          "mlp_proxy_rho": null,
+          "mlp_proxy_p": null,
+          "mlp_proxy_ci_low": null,
+          "mlp_proxy_ci_high": null,
+          "mean_mlp_gap": null,
+          "discrepancy_abs_rho": null,
+          "sri_vs_num_nodes_rho": null,
+          "size_controlled": []
+        },
+        "model_free_vs_mlp_gap_correlation": -0.866025,
+        "model_free_vs_mlp_gap_p": 0.333333,
+        "mlp_gap_coefficient_of_variation": 1.3938
+      },
+      "analysis_2_partial_correlations": {
+        "Peptides-func": {
+          "srwe_rwse_l1": {
+            "raw": {
+              "rho": -0.425226,
+              "p": 1e-05,
+              "ci_low": -0.577562,
+              "ci_high": -0.245794,
+              "n": 100
+            },
+            "ctrl_num_nodes": {
+              "rho": 0.179415,
+              "p": 0.07558,
+              "ci_low": -0.025372,
+              "ci_high": 0.345211,
+              "n": 100
+            },
+            "ctrl_num_nodes_density": {
+              "rho": 0.192373,
+              "p": 0.057733,
+              "ci_low": -0.033058,
+              "ci_high": 0.380346,
+              "n": 100
+            },
+            "ctrl_num_nodes_density_pr": {
+              "rho": 0.21062,
+              "p": 0.038381,
+              "ci_low": -0.023273,
+              "ci_high": 0.39491,
+              "n": 100
+            }
+          },
+          "vander_cond_log10": {
+            "raw": {
+              "rho": 0.337808,
+              "p": 0.0,
+              "ci_low": 0.295457,
+              "ci_high": 0.379891,
+              "n": 2000
+            },
+            "ctrl_num_nodes": {
+              "rho": -0.086818,
+              "p": 0.000102,
+              "ci_low": -0.130686,
+              "ci_high": -0.040365,
+              "n": 2000
+            },
+            "ctrl_num_nodes_density": {
+              "rho": -0.041745,
+              "p": 0.062099,
+              "ci_low": -0.085926,
+              "ci_high": 0.001786,
+              "n": 2000
+            },
+            "ctrl_num_nodes_density_pr": {
+              "rho": -0.044933,
+              "p": 0.044675,
+              "ci_low": -0.091021,
+              "ci_high": -0.006601,
+              "n": 2000
+            }
+          }
+        },
+        "Peptides-struct": {
+          "srwe_rwse_l1": {
+            "raw": {
+              "rho": -0.425226,
+              "p": 1e-05,
+              "ci_low": -0.578096,
+              "ci_high": -0.236568,
+              "n": 100
+            },
+            "ctrl_num_nodes": {
+              "rho": 0.179415,
+              "p": 0.07558,
+              "ci_low": -0.02619,
+              "ci_high": 0.351029,
+              "n": 100
+            },
+            "ctrl_num_nodes_density": {
+              "rho": 0.192373,
+              "p": 0.057733,
+              "ci_low": -0.033382,
+              "ci_high": 0.375811,
+              "n": 100
+            },
+            "ctrl_num_nodes_density_pr": {
+              "rho": 0.21062,
+              "p": 0.038381,
+              "ci_low": -0.021808,
+              "ci_high": 0.383505,
+              "n": 100
+            }
+          },
+          "vander_cond_log10": {
+            "raw": {
+              "rho": 0.337808,
+              "p": 0.0,
+              "ci_low": 0.29153,
+              "ci_high": 0.381808,
+              "n": 2000
+            },
+            "ctrl_num_nodes": {
+              "rho": -0.086818,
+              "p": 0.000102,
+              "ci_low": -0.13078,
+              "ci_high": -0.041815,
+              "n": 2000
+            },
+            "ctrl_num_nodes_density": {
+              "rho": -0.041745,
+              "p": 0.062099,
+              "ci_low": -0.091668,
+              "ci_high": 0.004588,
+              "n": 2000
+            },
+            "ctrl_num_nodes_density_pr": {
+              "rho": -0.044933,
+              "p": 0.044675,
+              "ci_low": -0.090971,
+              "ci_high": 0.000163,
+              "n": 2000
+            }
+          }
+        },
+        "Synthetic-aliased-pairs": {
+          "srwe_rwse_l1": {
+            "raw": {
+              "rho": 0.028826,
+              "p": 0.775876,
+              "ci_low": -0.185596,
+              "ci_high": 0.238298,
+              "n": 100
+            },
+            "ctrl_num_nodes": {
+              "rho": -0.228567,
+              "p": 0.022873,
+              "ci_low": -0.437354,
+              "ci_high": -0.004285,
+              "n": 100
+            },
+            "ctrl_num_nodes_density": {
+              "rho": 0.071369,
+              "p": 0.484961,
+              "ci_low": -0.187832,
+              "ci_high": 0.315582,
+              "n": 100
+            },
+            "ctrl_num_nodes_density_pr": {
+              "rho": 0.076516,
+              "p": 0.456321,
+              "ci_low": -0.16695,
+              "ci_high": 0.302458,
+              "n": 100
+            }
+          },
+          "vander_cond_log10": {
+            "raw": {
+              "rho": 0.351428,
+              "p": 0.000337,
+              "ci_low": 0.216693,
+              "ci_high": 0.478817,
+              "n": 100
+            },
+            "ctrl_num_nodes": {
+              "rho": 0.417184,
+              "p": 1.7e-05,
+              "ci_low": 0.279448,
+              "ci_high": 0.537906,
+              "n": 100
+            },
+            "ctrl_num_nodes_density": {
+              "rho": 0.361292,
+              "p": 0.000257,
+              "ci_low": 0.194168,
+              "ci_high": 0.522277,
+              "n": 100
+            },
+            "ctrl_num_nodes_density_pr": {
+              "rho": 0.30696,
+              "p": 0.002227,
+              "ci_low": 0.121032,
+              "ci_high": 0.501883,
+              "n": 100
+            }
+          }
+        },
+        "ZINC-subset": {
+          "srwe_rwse_l1": {
+            "raw": {
+              "rho": 0.562136,
+              "p": 0.0,
+              "ci_low": 0.406893,
+              "ci_high": 0.68848,
+              "n": 100
+            },
+            "ctrl_num_nodes": {
+              "rho": 0.421646,
+              "p": 1.4e-05,
+              "ci_low": 0.238542,
+              "ci_high": 0.555762,
+              "n": 100
+            },
+            "ctrl_num_nodes_density": {
+              "rho": 0.339289,
+              "p": 0.000632,
+              "ci_low": 0.169111,
+              "ci_high": 0.517101,
+              "n": 100
+            },
+            "ctrl_num_nodes_density_pr": {
+              "rho": 0.318497,
+              "p": 0.001476,
+              "ci_low": 0.134752,
+              "ci_high": 0.497277,
+              "n": 100
+            }
+          },
+          "vander_cond_log10": {
+            "raw": {
+              "rho": 0.387103,
+              "p": 0.0,
+              "ci_low": 0.369734,
+              "ci_high": 0.403802,
+              "n": 12000
+            },
+            "ctrl_num_nodes": {
+              "rho": 0.038835,
+              "p": 2.1e-05,
+              "ci_low": 0.020415,
+              "ci_high": 0.057136,
+              "n": 12000
+            },
+            "ctrl_num_nodes_density": {
+              "rho": 0.038197,
+              "p": 2.9e-05,
+              "ci_low": 0.020657,
+              "ci_high": 0.057124,
+              "n": 12000
+            },
+            "ctrl_num_nodes_density_pr": {
+              "rho": 0.04393,
+              "p": 1e-06,
+              "ci_low": 0.024662,
+              "ci_high": 0.061721,
+              "n": 12000
+            }
+          }
+        }
+      },
+      "analysis_3_sparsity_stratified": {
+        "Peptides-func": {
+          "sparse": {
+            "n": 1605,
+            "rho_raw_vander_cond_log10": 0.187444,
+            "rho_raw_ci_vander_cond_log10": [
+              0.142363,
+              0.234829
+            ],
+            "rho_partial_vander_cond_log10": -0.098021,
+            "rho_partial_ci_vander_cond_log10": [
+              -0.153062,
+              -0.048461
+            ],
+            "n_valid_vander_cond_log10": 1605,
+            "rho_raw_srwe_rwse_l1": -0.528165,
+            "rho_raw_ci_srwe_rwse_l1": [
+              -0.683716,
+              -0.32587
+            ],
+            "rho_partial_srwe_rwse_l1": 0.021079,
+            "rho_partial_ci_srwe_rwse_l1": [
+              -0.259432,
+              0.267341
+            ],
+            "n_valid_srwe_rwse_l1": 78
+          },
+          "dense": {
+            "n": 395,
+            "rho_raw_vander_cond_log10": 0.408251,
+            "rho_raw_ci_vander_cond_log10": [
+              0.308835,
+              0.495103
+            ],
+            "rho_partial_vander_cond_log10": -0.212915,
+            "rho_partial_ci_vander_cond_log10": [
+              -0.296031,
+              -0.122481
+            ],
+            "n_valid_vander_cond_log10": 395,
+            "rho_raw_srwe_rwse_l1": 0.628458,
+            "rho_raw_ci_srwe_rwse_l1": [
+              0.217109,
+              0.897801
+            ],
+            "rho_partial_srwe_rwse_l1": 0.6347,
+            "rho_partial_ci_srwe_rwse_l1": [
+              0.262407,
+              0.87165
+            ],
+            "n_valid_srwe_rwse_l1": 22
+          }
+        },
+        "Peptides-struct": {
+          "sparse": {
+            "n": 1605,
+            "rho_raw_vander_cond_log10": 0.187444,
+            "rho_raw_ci_vander_cond_log10": [
+              0.139549,
+              0.236105
+            ],
+            "rho_partial_vander_cond_log10": -0.098021,
+            "rho_partial_ci_vander_cond_log10": [
+              -0.149045,
+              -0.04416
+            ],
+            "n_valid_vander_cond_log10": 1605,
+            "rho_raw_srwe_rwse_l1": -0.528165,
+            "rho_raw_ci_srwe_rwse_l1": [
+              -0.67987,
+              -0.320264
+            ],
+            "rho_partial_srwe_rwse_l1": 0.021079,
+            "rho_partial_ci_srwe_rwse_l1": [
+              -0.249671,
+              0.243118
+            ],
+            "n_valid_srwe_rwse_l1": 78
+          },
+          "dense": {
+            "n": 395,
+            "rho_raw_vander_cond_log10": 0.408251,
+            "rho_raw_ci_vander_cond_log10": [
+              0.319994,
+              0.495944
+            ],
+            "rho_partial_vander_cond_log10": -0.212915,
+            "rho_partial_ci_vander_cond_log10": [
+              -0.292227,
+              -0.120853
+            ],
+            "n_valid_vander_cond_log10": 395,
+            "rho_raw_srwe_rwse_l1": 0.628458,
+            "rho_raw_ci_srwe_rwse_l1": [
+              0.20733,
+              0.901004
+            ],
+            "rho_partial_srwe_rwse_l1": 0.6347,
+            "rho_partial_ci_srwe_rwse_l1": [
+              0.247868,
+              0.874524
+            ],
+            "n_valid_srwe_rwse_l1": 22
+          }
+        },
+        "Synthetic-aliased-pairs": {
+          "sparse": {
+            "n": 1,
+            "rho_raw_vander_cond_log10": null,
+            "rho_raw_ci_vander_cond_log10": [
+              null,
+              null
+            ],
+            "rho_partial_vander_cond_log10": null,
+            "rho_partial_ci_vander_cond_log10": [
+              null,
+              null
+            ],
+            "rho_raw_srwe_rwse_l1": null,
+            "rho_raw_ci_srwe_rwse_l1": [
+              null,
+              null
+            ],
+            "rho_partial_srwe_rwse_l1": null,
+            "rho_partial_ci_srwe_rwse_l1": [
+              null,
+              null
+            ]
+          },
+          "dense": {
+            "n": 99,
+            "rho_raw_vander_cond_log10": 0.349797,
+            "rho_raw_ci_vander_cond_log10": [
+              0.205949,
+              0.477583
+            ],
+            "rho_partial_vander_cond_log10": 0.42064,
+            "rho_partial_ci_vander_cond_log10": [
+              0.279045,
+              0.536745
+            ],
+            "n_valid_vander_cond_log10": 99,
+            "rho_raw_srwe_rwse_l1": 0.051021,
+            "rho_raw_ci_srwe_rwse_l1": [
+              -0.159129,
+              0.251311
+            ],
+            "rho_partial_srwe_rwse_l1": -0.209985,
+            "rho_partial_ci_srwe_rwse_l1": [
+              -0.414541,
+              0.000686
+            ],
+            "n_valid_srwe_rwse_l1": 99
+          }
+        },
+        "ZINC-subset": {
+          "sparse": {
+            "n": 0,
+            "rho_raw_vander_cond_log10": null,
+            "rho_raw_ci_vander_cond_log10": [
+              null,
+              null
+            ],
+            "rho_partial_vander_cond_log10": null,
+            "rho_partial_ci_vander_cond_log10": [
+              null,
+              null
+            ],
+            "rho_raw_srwe_rwse_l1": null,
+            "rho_raw_ci_srwe_rwse_l1": [
+              null,
+              null
+            ],
+            "rho_partial_srwe_rwse_l1": null,
+            "rho_partial_ci_srwe_rwse_l1": [
+              null,
+              null
+            ]
+          },
+          "dense": {
+            "n": 12000,
+            "rho_raw_vander_cond_log10": 0.387103,
+            "rho_raw_ci_vander_cond_log10": [
+              0.370329,
+              0.404352
+            ],
+            "rho_partial_vander_cond_log10": 0.038835,
+            "rho_partial_ci_vander_cond_log10": [
+              0.020119,
+              0.057016
+            ],
+            "n_valid_vander_cond_log10": 12000,
+            "rho_raw_srwe_rwse_l1": 0.562136,
+            "rho_raw_ci_srwe_rwse_l1": [
+              0.398533,
+              0.691715
+            ],
+            "rho_partial_srwe_rwse_l1": 0.421646,
+            "rho_partial_ci_srwe_rwse_l1": [
+              0.250951,
+              0.559676
+            ],
+            "n_valid_srwe_rwse_l1": 100
+          }
+        }
+      },
+      "analysis_4_predictor_comparison": {
+        "is_aliased": {
+          "Peptides-func": {
+            "SRI": {
+              "auc": 1.0,
+              "ci_low": 1.0,
+              "ci_high": 1.0,
+              "n": 2000,
+              "direction": "negative"
+            },
+            "log_Vandermonde_kappa": {
+              "auc": 0.932875,
+              "ci_low": 0.885192,
+              "ci_high": 0.974019,
+              "n": 2000,
+              "direction": "negative"
+            },
+            "delta_min": {
+              "auc": 1.0,
+              "ci_low": 1.0,
+              "ci_high": 1.0,
+              "n": 2000,
+              "direction": "negative"
+            },
+            "normalized_SRI": {
+              "auc": 0.99962,
+              "ci_low": 0.999137,
+              "ci_high": 0.999914,
+              "n": 2000,
+              "direction": "negative"
+            },
+            "num_nodes": {
+              "auc": 0.992738,
+              "ci_low": 0.989188,
+              "ci_high": 0.995863,
+              "n": 2000,
+              "direction": "positive"
+            },
+            "eff_spectral_rank": {
+              "auc": 0.91181,
+              "ci_low": 0.874743,
+              "ci_high": 0.946364,
+              "n": 2000,
+              "direction": "positive"
+            },
+            "vander_cond_log10": {
+              "auc": 0.932875,
+              "ci_low": 0.889101,
+              "ci_high": 0.974725,
+              "n": 2000,
+              "direction": "negative"
+            },
+            "spectral_gap": {
+              "auc": 0.987318,
+              "ci_low": 0.982174,
+              "ci_high": 0.991876,
+              "n": 2000,
+              "direction": "negative"
+            }
+          },
+          "Peptides-struct": {
+            "SRI": {
+              "auc": 1.0,
+              "ci_low": 1.0,
+              "ci_high": 1.0,
+              "n": 2000,
+              "direction": "negative"
+            },
+            "log_Vandermonde_kappa": {
+              "auc": 0.932875,
+              "ci_low": 0.882457,
+              "ci_high": 0.973118,
+              "n": 2000,
+              "direction": "negative"
+            },
+            "delta_min": {
+              "auc": 1.0,
+              "ci_low": 1.0,
+              "ci_high": 1.0,
+              "n": 2000,
+              "direction": "negative"
+            },
+            "normalized_SRI": {
+              "auc": 0.99962,
+              "ci_low": 0.999119,
+              "ci_high": 0.999922,
+              "n": 2000,
+              "direction": "negative"
+            },
+            "num_nodes": {
+              "auc": 0.992738,
+              "ci_low": 0.988883,
+              "ci_high": 0.996007,
+              "n": 2000,
+              "direction": "positive"
+            },
+            "eff_spectral_rank": {
+              "auc": 0.91181,
+              "ci_low": 0.873895,
+              "ci_high": 0.946868,
+              "n": 2000,
+              "direction": "positive"
+            },
+            "vander_cond_log10": {
+              "auc": 0.932875,
+              "ci_low": 0.879092,
+              "ci_high": 0.971689,
+              "n": 2000,
+              "direction": "negative"
+            },
+            "spectral_gap": {
+              "auc": 0.987318,
+              "ci_low": 0.982519,
+              "ci_high": 0.991524,
+              "n": 2000,
+              "direction": "negative"
+            }
+          },
+          "Synthetic-aliased-pairs": {
+            "SRI": {
+              "auc": 1.0,
+              "ci_low": 1.0,
+              "ci_high": 1.0,
+              "n": 100,
+              "direction": "negative"
+            },
+            "log_Vandermonde_kappa": {
+              "auc": 0.665816,
+              "ci_low": 0.409091,
+              "ci_high": 0.929293,
+              "n": 100,
+              "direction": "negative"
+            },
+            "delta_min": {
+              "auc": 1.0,
+              "ci_low": 1.0,
+              "ci_high": 1.0,
+              "n": 100,
+              "direction": "negative"
+            },
+            "normalized_SRI": {
+              "auc": 1.0,
+              "ci_low": 1.0,
+              "ci_high": 1.0,
+              "n": 100,
+              "direction": "negative"
+            },
+            "num_nodes": {
+              "auc": 0.826531,
+              "ci_low": 0.759153,
+              "ci_high": 0.888237,
+              "n": 100,
+              "direction": "negative"
+            },
+            "eff_spectral_rank": {
+              "auc": 0.602041,
+              "ci_low": 0.482812,
+              "ci_high": 0.69697,
+              "n": 100,
+              "direction": "negative"
+            },
+            "vander_cond_log10": {
+              "auc": 0.665816,
+              "ci_low": 0.4093,
+              "ci_high": 0.938776,
+              "n": 100,
+              "direction": "negative"
+            },
+            "spectral_gap": {
+              "auc": 0.923469,
+              "ci_low": 0.808081,
+              "ci_high": 1.0,
+              "n": 100,
+              "direction": "negative"
+            }
+          },
+          "ZINC-subset": {
+            "SRI": {
+              "auc": 1.0,
+              "ci_low": 1.0,
+              "ci_high": 1.0,
+              "n": 12000,
+              "direction": "negative"
+            },
+            "log_Vandermonde_kappa": {
+              "auc": 0.679107,
+              "ci_low": 0.66907,
+              "ci_high": 0.688004,
+              "n": 12000,
+              "direction": "negative"
+            },
+            "delta_min": {
+              "auc": 1.0,
+              "ci_low": 1.0,
+              "ci_high": 1.0,
+              "n": 12000,
+              "direction": "negative"
+            },
+            "normalized_SRI": {
+              "auc": 0.986136,
+              "ci_low": 0.984631,
+              "ci_high": 0.987379,
+              "n": 12000,
+              "direction": "negative"
+            },
+            "num_nodes": {
+              "auc": 0.733753,
+              "ci_low": 0.72458,
+              "ci_high": 0.742225,
+              "n": 12000,
+              "direction": "positive"
+            },
+            "eff_spectral_rank": {
+              "auc": 0.547096,
+              "ci_low": 0.53742,
+              "ci_high": 0.556465,
+              "n": 12000,
+              "direction": "positive"
+            },
+            "vander_cond_log10": {
+              "auc": 0.679107,
+              "ci_low": 0.669348,
+              "ci_high": 0.688007,
+              "n": 12000,
+              "direction": "negative"
+            },
+            "spectral_gap": {
+              "auc": 0.642583,
+              "ci_low": 0.632643,
+              "ci_high": 0.652628,
+              "n": 12000,
+              "direction": "negative"
+            }
+          }
+        },
+        "high_srwe_rwse_gap": {
+          "Peptides-func": {
+            "SRI": {
+              "auc": 0.6414,
+              "ci_low": 0.520364,
+              "ci_high": 0.757978,
+              "n": 100,
+              "direction": "negative"
+            },
+            "log_Vandermonde_kappa": {
+              "auc": 0.8052,
+              "ci_low": 0.70495,
+              "ci_high": 0.898605,
+              "n": 100,
+              "direction": "negative"
+            },
+            "delta_min": {
+              "auc": 0.6414,
+              "ci_low": 0.532851,
+              "ci_high": 0.746629,
+              "n": 100,
+              "direction": "negative"
+            },
+            "normalized_SRI": {
+              "auc": 0.6756,
+              "ci_low": 0.557143,
+              "ci_high": 0.78467,
+              "n": 100,
+              "direction": "negative"
+            },
+            "num_nodes": {
+              "auc": 0.7426,
+              "ci_low": 0.646434,
+              "ci_high": 0.849866,
+              "n": 100,
+              "direction": "positive"
+            },
+            "eff_spectral_rank": {
+              "auc": 0.612,
+              "ci_low": 0.493381,
+              "ci_high": 0.723021,
+              "n": 100,
+              "direction": "positive"
+            },
+            "vander_cond_log10": {
+              "auc": 0.8052,
+              "ci_low": 0.717204,
+              "ci_high": 0.894928,
+              "n": 100,
+              "direction": "negative"
+            },
+            "spectral_gap": {
+              "auc": 0.658,
+              "ci_low": 0.548769,
+              "ci_high": 0.756307,
+              "n": 100,
+              "direction": "negative"
+            }
+          },
+          "Peptides-struct": {
+            "SRI": {
+              "auc": 0.6414,
+              "ci_low": 0.509724,
+              "ci_high": 0.756831,
+              "n": 100,
+              "direction": "negative"
+            },
+            "log_Vandermonde_kappa": {
+              "auc": 0.8052,
+              "ci_low": 0.699588,
+              "ci_high": 0.895254,
+              "n": 100,
+              "direction": "negative"
+            },
+            "delta_min": {
+              "auc": 0.6414,
+              "ci_low": 0.528451,
+              "ci_high": 0.749639,
+              "n": 100,
+              "direction": "negative"
+            },
+            "normalized_SRI": {
+              "auc": 0.6756,
+              "ci_low": 0.561188,
+              "ci_high": 0.781626,
+              "n": 100,
+              "direction": "negative"
+            },
+            "num_nodes": {
+              "auc": 0.7426,
+              "ci_low": 0.617117,
+              "ci_high": 0.848998,
+              "n": 100,
+              "direction": "positive"
+            },
+            "eff_spectral_rank": {
+              "auc": 0.612,
+              "ci_low": 0.506683,
+              "ci_high": 0.725981,
+              "n": 100,
+              "direction": "positive"
+            },
+            "vander_cond_log10": {
+              "auc": 0.8052,
+              "ci_low": 0.712875,
+              "ci_high": 0.892315,
+              "n": 100,
+              "direction": "negative"
+            },
+            "spectral_gap": {
+              "auc": 0.658,
+              "ci_low": 0.539912,
+              "ci_high": 0.775091,
+              "n": 100,
+              "direction": "negative"
+            }
+          },
+          "Synthetic-aliased-pairs": {
+            "SRI": {
+              "auc": 0.535327,
+              "ci_low": 0.416589,
+              "ci_high": 0.657504,
+              "n": 100,
+              "direction": "negative"
+            },
+            "log_Vandermonde_kappa": {
+              "auc": 0.57507,
+              "ci_low": 0.51459,
+              "ci_high": 0.630796,
+              "n": 100,
+              "direction": "negative"
+            },
+            "delta_min": {
+              "auc": 0.535327,
+              "ci_low": 0.417064,
+              "ci_high": 0.643667,
+              "n": 100,
+              "direction": "negative"
+            },
+            "normalized_SRI": {
+              "auc": 0.508832,
+              "ci_low": 0.396955,
+              "ci_high": 0.630154,
+              "n": 100,
+              "direction": "positive"
+            },
+            "num_nodes": {
+              "auc": 0.657969,
+              "ci_low": 0.543535,
+              "ci_high": 0.763184,
+              "n": 100,
+              "direction": "negative"
+            },
+            "eff_spectral_rank": {
+              "auc": 0.524689,
+              "ci_low": 0.404615,
+              "ci_high": 0.630693,
+              "n": 100,
+              "direction": "negative"
+            },
+            "vander_cond_log10": {
+              "auc": 0.57507,
+              "ci_low": 0.504396,
+              "ci_high": 0.644582,
+              "n": 100,
+              "direction": "negative"
+            },
+            "spectral_gap": {
+              "auc": 0.587515,
+              "ci_low": 0.47457,
+              "ci_high": 0.70347,
+              "n": 100,
+              "direction": "negative"
+            }
+          },
+          "ZINC-subset": {
+            "SRI": {
+              "auc": 0.7804,
+              "ci_low": 0.689088,
+              "ci_high": 0.860767,
+              "n": 100,
+              "direction": "positive"
+            },
+            "log_Vandermonde_kappa": {
+              "auc": 0.6024,
+              "ci_low": 0.482007,
+              "ci_high": 0.711745,
+              "n": 100,
+              "direction": "positive"
+            },
+            "delta_min": {
+              "auc": 0.7804,
+              "ci_low": 0.691315,
+              "ci_high": 0.868074,
+              "n": 100,
+              "direction": "positive"
+            },
+            "normalized_SRI": {
+              "auc": 0.7868,
+              "ci_low": 0.694929,
+              "ci_high": 0.863992,
+              "n": 100,
+              "direction": "positive"
+            },
+            "num_nodes": {
+              "auc": 0.718,
+              "ci_low": 0.620306,
+              "ci_high": 0.814369,
+              "n": 100,
+              "direction": "negative"
+            },
+            "eff_spectral_rank": {
+              "auc": 0.586,
+              "ci_low": 0.46836,
+              "ci_high": 0.695808,
+              "n": 100,
+              "direction": "negative"
+            },
+            "vander_cond_log10": {
+              "auc": 0.6024,
+              "ci_low": 0.496085,
+              "ci_high": 0.709462,
+              "n": 100,
+              "direction": "positive"
+            },
+            "spectral_gap": {
+              "auc": 0.5364,
+              "ci_low": 0.421466,
+              "ci_high": 0.658293,
+              "n": 100,
+              "direction": "positive"
+            }
+          }
+        },
+        "high_vander_cond": {
+          "Peptides-func": {
+            "SRI": {
+              "auc": 0.660516,
+              "ci_low": 0.636685,
+              "ci_high": 0.68424,
+              "n": 2000,
+              "direction": "positive"
+            },
+            "log_Vandermonde_kappa": {
+              "auc": 1.0,
+              "ci_low": 1.0,
+              "ci_high": 1.0,
+              "n": 2000,
+              "direction": "positive"
+            },
+            "delta_min": {
+              "auc": 0.660516,
+              "ci_low": 0.637113,
+              "ci_high": 0.683212,
+              "n": 2000,
+              "direction": "positive"
+            },
+            "normalized_SRI": {
+              "auc": 0.679907,
+              "ci_low": 0.655225,
+              "ci_high": 0.701893,
+              "n": 2000,
+              "direction": "positive"
+            },
+            "num_nodes": {
+              "auc": 0.723923,
+              "ci_low": 0.704597,
+              "ci_high": 0.74555,
+              "n": 2000,
+              "direction": "negative"
+            },
+            "eff_spectral_rank": {
+              "auc": 0.675077,
+              "ci_low": 0.65324,
+              "ci_high": 0.698596,
+              "n": 2000,
+              "direction": "negative"
+            },
+            "vander_cond_log10": {
+              "auc": 1.0,
+              "ci_low": 1.0,
+              "ci_high": 1.0,
+              "n": 2000,
+              "direction": "positive"
+            },
+            "spectral_gap": {
+              "auc": 0.675835,
+              "ci_low": 0.652518,
+              "ci_high": 0.699228,
+              "n": 2000,
+              "direction": "positive"
+            }
+          },
+          "Peptides-struct": {
+            "SRI": {
+              "auc": 0.660516,
+              "ci_low": 0.637616,
+              "ci_high": 0.683094,
+              "n": 2000,
+              "direction": "positive"
+            },
+            "log_Vandermonde_kappa": {
+              "auc": 1.0,
+              "ci_low": 1.0,
+              "ci_high": 1.0,
+              "n": 2000,
+              "direction": "positive"
+            },
+            "delta_min": {
+              "auc": 0.660516,
+              "ci_low": 0.632981,
+              "ci_high": 0.683657,
+              "n": 2000,
+              "direction": "positive"
+            },
+            "normalized_SRI": {
+              "auc": 0.679907,
+              "ci_low": 0.658446,
+              "ci_high": 0.704081,
+              "n": 2000,
+              "direction": "positive"
+            },
+            "num_nodes": {
+              "auc": 0.723923,
+              "ci_low": 0.701385,
+              "ci_high": 0.745886,
+              "n": 2000,
+              "direction": "negative"
+            },
+            "eff_spectral_rank": {
+              "auc": 0.675077,
+              "ci_low": 0.652399,
+              "ci_high": 0.696748,
+              "n": 2000,
+              "direction": "negative"
+            },
+            "vander_cond_log10": {
+              "auc": 1.0,
+              "ci_low": 1.0,
+              "ci_high": 1.0,
+              "n": 2000,
+              "direction": "positive"
+            },
+            "spectral_gap": {
+              "auc": 0.675835,
+              "ci_low": 0.652817,
+              "ci_high": 0.700509,
+              "n": 2000,
+              "direction": "positive"
+            }
+          },
+          "Synthetic-aliased-pairs": {
+            "SRI": {
+              "auc": null
+            },
+            "log_Vandermonde_kappa": {
+              "auc": null
+            },
+            "delta_min": {
+              "auc": null
+            },
+            "normalized_SRI": {
+              "auc": null
+            },
+            "num_nodes": {
+              "auc": null
+            },
+            "eff_spectral_rank": {
+              "auc": null
+            },
+            "vander_cond_log10": {
+              "auc": null
+            },
+            "spectral_gap": {
+              "auc": null
+            }
+          },
+          "ZINC-subset": {
+            "SRI": {
+              "auc": 0.695181,
+              "ci_low": 0.685474,
+              "ci_high": 0.703587,
+              "n": 12000,
+              "direction": "positive"
+            },
+            "log_Vandermonde_kappa": {
+              "auc": 1.0,
+              "ci_low": 1.0,
+              "ci_high": 1.0,
+              "n": 12000,
+              "direction": "positive"
+            },
+            "delta_min": {
+              "auc": 0.695181,
+              "ci_low": 0.686419,
+              "ci_high": 0.704681,
+              "n": 12000,
+              "direction": "positive"
+            },
+            "normalized_SRI": {
+              "auc": 0.751404,
+              "ci_low": 0.743312,
+              "ci_high": 0.760032,
+              "n": 12000,
+              "direction": "positive"
+            },
+            "num_nodes": {
+              "auc": 0.889283,
+              "ci_low": 0.882769,
+              "ci_high": 0.895137,
+              "n": 12000,
+              "direction": "negative"
+            },
+            "eff_spectral_rank": {
+              "auc": 0.660517,
+              "ci_low": 0.652066,
+              "ci_high": 0.671414,
+              "n": 12000,
+              "direction": "negative"
+            },
+            "vander_cond_log10": {
+              "auc": 1.0,
+              "ci_low": 1.0,
+              "ci_high": 1.0,
+              "n": 12000,
+              "direction": "positive"
+            },
+            "spectral_gap": {
+              "auc": 0.700943,
+              "ci_low": 0.692653,
+              "ci_high": 0.710156,
+              "n": 12000,
+              "direction": "positive"
+            }
+          }
+        }
+      },
+      "analysis_5_formal_assessment": {
+        "criteria": {
+          "criterion_1_correlation": {
+            "ZINC-subset": {
+              "model_free_raw_rho": 0.243298,
+              "model_free_n": 12000,
+              "model_free_pass": false,
+              "mlp_proxy_rho": 0.102401,
+              "mlp_proxy_n": 1800,
+              "mean_size_controlled_rho": -0.01636,
+              "size_controlled_pass": false,
+              "analysis2_partial_rho_vander": 0.038835,
+              "analysis2_partial_rho_srwe": 0.421646,
+              "bf10_model_free": 1.0124225046560951e+157,
+              "bf10_mlp_proxy": 381.468643
+            },
+            "Peptides-func": {
+              "model_free_raw_rho": 0.750775,
+              "model_free_n": 2000,
+              "model_free_pass": true,
+              "mlp_proxy_rho": -0.138508,
+              "mlp_proxy_n": 300,
+              "mean_size_controlled_rho": -0.020866,
+              "size_controlled_pass": false,
+              "analysis2_partial_rho_vander": -0.086818,
+              "analysis2_partial_rho_srwe": 0.179415,
+              "bf10_model_free": null,
+              "bf10_mlp_proxy": 1.271581
+            },
+            "Peptides-struct": {
+              "model_free_raw_rho": 0.750775,
+              "model_free_n": 2000,
+              "model_free_pass": true,
+              "mlp_proxy_rho": 0.067221,
+              "mlp_proxy_n": 300,
+              "mean_size_controlled_rho": 0.051178,
+              "size_controlled_pass": false,
+              "analysis2_partial_rho_vander": -0.086818,
+              "analysis2_partial_rho_srwe": 0.179415,
+              "bf10_model_free": null,
+              "bf10_mlp_proxy": 0.141339
+            },
+            "Synthetic-aliased-pairs": {
+              "model_free_raw_rho": 0.667619,
+              "model_free_n": 100,
+              "model_free_pass": true,
+              "mlp_proxy_rho": null,
+              "mlp_proxy_n": 0,
+              "mean_size_controlled_rho": null,
+              "size_controlled_pass": false,
+              "analysis2_partial_rho_vander": 0.417184,
+              "analysis2_partial_rho_srwe": -0.228567,
+              "bf10_model_free": 254974251599.8929,
+              "bf10_mlp_proxy": null
+            }
+          },
+          "criterion_2_auc": {
+            "ZINC-subset": {
+              "sri_auc": 1.0,
+              "sri_auc_ci": [
+                1.0,
+                1.0
+              ],
+              "pass": true
+            },
+            "Peptides-func": {
+              "sri_auc": 1.0,
+              "sri_auc_ci": [
+                1.0,
+                1.0
+              ],
+              "pass": true
+            },
+            "Peptides-struct": {
+              "sri_auc": 1.0,
+              "sri_auc_ci": [
+                1.0,
+                1.0
+              ],
+              "pass": true
+            },
+            "Synthetic-aliased-pairs": {
+              "sri_auc": 1.0,
+              "sri_auc_ci": [
+                1.0,
+                1.0
+              ],
+              "pass": true
+            }
+          },
+          "criterion_3_srwe": {
+            "rwse_mae": 1.213264,
+            "lape_mae": 1.346538,
+            "srwe_mae": 1.273452,
+            "srwe_gap_reduction_pct": 54.838903,
+            "pass": true
+          }
+        },
+        "bayes_factors": {
+          "ZINC-subset": {
+            "bf10_model_free": 1.0124225046560951e+157,
+            "bf10_mlp_proxy": 381.468643,
+            "interpretation_model_free": "extreme_for_H1",
+            "interpretation_mlp_proxy": "extreme_for_H1"
+          },
+          "Peptides-func": {
+            "bf10_model_free": null,
+            "bf10_mlp_proxy": 1.271581,
+            "interpretation_model_free": "N/A",
+            "interpretation_mlp_proxy": "anecdotal_for_H1"
+          },
+          "Peptides-struct": {
+            "bf10_model_free": null,
+            "bf10_mlp_proxy": 0.141339,
+            "interpretation_model_free": "N/A",
+            "interpretation_mlp_proxy": "moderate_for_H0"
+          },
+          "Synthetic-aliased-pairs": {
+            "bf10_model_free": 254974251599.8929,
+            "bf10_mlp_proxy": null,
+            "interpretation_model_free": "extreme_for_H1",
+            "interpretation_mlp_proxy": "N/A"
+          }
+        },
+        "overall_verdict": "confirmed",
+        "verdict_details": {
+          "c1_raw_passes": "3/4",
+          "c1_size_ctrl_passes": "0/4",
+          "c2_auc_passes": "4/4",
+          "c3_srwe_pass": true
+        },
+        "summary_table": [
+          {
+            "dataset": "ZINC-subset",
+            "model_free_rho": 0.243298,
+            "mlp_proxy_rho": 0.102401,
+            "size_ctrl_mean_rho": -0.01636,
+            "sri_auc": 1.0,
+            "bf10_model_free": 1.0124225046560951e+157,
+            "n_phase2": 12000,
+            "n_phase4": 1800
+          },
+          {
+            "dataset": "Peptides-func",
+            "model_free_rho": 0.750775,
+            "mlp_proxy_rho": -0.138508,
+            "size_ctrl_mean_rho": -0.020866,
+            "sri_auc": 1.0,
+            "bf10_model_free": null,
+            "n_phase2": 2000,
+            "n_phase4": 300
+          },
+          {
+            "dataset": "Peptides-struct",
+            "model_free_rho": 0.750775,
+            "mlp_proxy_rho": 0.067221,
+            "size_ctrl_mean_rho": 0.051178,
+            "sri_auc": 1.0,
+            "bf10_model_free": null,
+            "n_phase2": 2000,
+            "n_phase4": 300
+          }
+        ]
+      }
+    },
+    "figures": [
+      "figures/scatter_sri_vs_gap.png",
+      "figures/forest_partial_correlations.png",
+      "figures/predictor_comparison_auc.png"
+    ]
+  },
+  "metrics_agg": {
+    "model_free_vs_mlp_gap_correlation": -0.8660254037844387,
+    "mlp_gap_coefficient_of_variation": 1.3937998150779485,
+    "mean_raw_spearman_rho_srwe": -0.064872214270833,
+    "mean_partial_spearman_rho_srwe": 0.13797694923977913,
+    "mean_raw_spearman_rho_vander": 0.353536589250702,
+    "mean_partial_spearman_rho_vander": 0.07059574522802284,
+    "mean_model_free_spearman_rho": 0.6031170823852569,
+    "mean_sri_auc_is_aliased": 1.0,
+    "srwe_gap_reduction_pct": 54.83890331197377,
+    "verdict_score": 4.0,
+    "n_datasets_c1_model_free_pass": 3.0,
+    "n_datasets_c2_auc_pass": 4.0,
+    "c3_srwe_pass": 1.0
+  },
+  "datasets": [
+    {
+      "dataset": "Peptides-func",
+      "examples": [
+        {
+          "input": "{\"dataset\": \"Peptides-func\", \"graph_idx\": 0, \"num_nodes\": 119, \"sri_k20\": 0.0116}",
+          "output": "{\"sri_k20\": 0.0116, \"delta_min\": 0.00058, \"is_aliased\": 1}",
+          "predict_resolution_diagnosis": "aliased",
+          "eval_sri_k20": 0.0116,
+          "eval_is_aliased": 1.0,
+          "eval_srwe_rwse_l1": 2.3804999999999996,
+          "eval_vander_cond_log10": 9.965963732452542
+        },
+        {
+          "input": "{\"dataset\": \"Peptides-func\", \"graph_idx\": 1, \"num_nodes\": 338, \"sri_k20\": 0.00038}",
+          "output": "{\"sri_k20\": 0.00038, \"delta_min\": 1.9e-05, \"is_aliased\": 1}",
+          "predict_resolution_diagnosis": "aliased",
+          "eval_sri_k20": 0.00038,
+          "eval_is_aliased": 1.0,
+          "eval_srwe_rwse_l1": 3.6419,
+          "eval_vander_cond_log10": 9.865878198127358
+        },
+        {
+          "input": "{\"dataset\": \"Peptides-func\", \"graph_idx\": 2, \"num_nodes\": 209, \"sri_k20\": 0.04004}",
+          "output": "{\"sri_k20\": 0.04004, \"delta_min\": 0.002002, \"is_aliased\": 1}",
+          "predict_resolution_diagnosis": "aliased",
+          "eval_sri_k20": 0.04004,
+          "eval_is_aliased": 1.0,
+          "eval_srwe_rwse_l1": 3.8241,
+          "eval_vander_cond_log10": 9.858132957127731
+        }
+      ]
+    },
+    {
+      "dataset": "Peptides-struct",
+      "examples": [
+        {
+          "input": "{\"dataset\": \"Peptides-struct\", \"graph_idx\": 0, \"num_nodes\": 119, \"sri_k20\": 0.0116}",
+          "output": "{\"sri_k20\": 0.0116, \"delta_min\": 0.00058, \"is_aliased\": 1}",
+          "predict_resolution_diagnosis": "aliased",
+          "eval_sri_k20": 0.0116,
+          "eval_is_aliased": 1.0,
+          "eval_srwe_rwse_l1": 2.3804999999999996,
+          "eval_vander_cond_log10": 9.965963732452542
+        },
+        {
+          "input": "{\"dataset\": \"Peptides-struct\", \"graph_idx\": 1, \"num_nodes\": 338, \"sri_k20\": 0.00038}",
+          "output": "{\"sri_k20\": 0.00038, \"delta_min\": 1.9e-05, \"is_aliased\": 1}",
+          "predict_resolution_diagnosis": "aliased",
+          "eval_sri_k20": 0.00038,
+          "eval_is_aliased": 1.0,
+          "eval_srwe_rwse_l1": 3.6419,
+          "eval_vander_cond_log10": 9.865878198127358
+        },
+        {
+          "input": "{\"dataset\": \"Peptides-struct\", \"graph_idx\": 2, \"num_nodes\": 209, \"sri_k20\": 0.04004}",
+          "output": "{\"sri_k20\": 0.04004, \"delta_min\": 0.002002, \"is_aliased\": 1}",
+          "predict_resolution_diagnosis": "aliased",
+          "eval_sri_k20": 0.04004,
+          "eval_is_aliased": 1.0,
+          "eval_srwe_rwse_l1": 3.8241,
+          "eval_vander_cond_log10": 9.858132957127731
+        }
+      ]
+    },
+    {
+      "dataset": "Synthetic-aliased-pairs",
+      "examples": [
+        {
+          "input": "{\"dataset\": \"Synthetic-aliased-pairs\", \"graph_idx\": 0, \"num_nodes\": 5, \"sri_k20\": 40.0}",
+          "output": "{\"sri_k20\": 40.0, \"delta_min\": 2.0, \"is_aliased\": 0}",
+          "predict_resolution_diagnosis": "well_resolved",
+          "eval_sri_k20": 40.0,
+          "eval_is_aliased": 0.0,
+          "eval_srwe_rwse_l1": 4.6000000000000005,
+          "eval_vander_cond_log10": 15.0
+        },
+        {
+          "input": "{\"dataset\": \"Synthetic-aliased-pairs\", \"graph_idx\": 0, \"num_nodes\": 5, \"sri_k20\": 40.0}",
+          "output": "{\"sri_k20\": 40.0, \"delta_min\": 2.0, \"is_aliased\": 0}",
+          "predict_resolution_diagnosis": "well_resolved",
+          "eval_sri_k20": 40.0,
+          "eval_is_aliased": 0.0,
+          "eval_srwe_rwse_l1": 4.2,
+          "eval_vander_cond_log10": 15.0
+        },
+        {
+          "input": "{\"dataset\": \"Synthetic-aliased-pairs\", \"graph_idx\": 0, \"num_nodes\": 8, \"sri_k20\": 5.2076}",
+          "output": "{\"sri_k20\": 5.2076, \"delta_min\": 0.26038, \"is_aliased\": 0}",
+          "predict_resolution_diagnosis": "well_resolved",
+          "eval_sri_k20": 5.2076,
+          "eval_is_aliased": 0.0,
+          "eval_srwe_rwse_l1": 3.1668,
+          "eval_vander_cond_log10": 4.087749520192194
+        }
+      ]
+    }
+  ]
+}

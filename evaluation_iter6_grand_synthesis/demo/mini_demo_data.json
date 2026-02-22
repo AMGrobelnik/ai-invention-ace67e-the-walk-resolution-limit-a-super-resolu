@@ -1,0 +1,531 @@
+{
+  "studies": [
+    {
+      "experiment": "exp_id1_it2",
+      "dataset": "ZINC-subset",
+      "architecture": "model_free",
+      "metric_type": "node_distinguishability",
+      "n": 12000,
+      "rho": 0.243298,
+      "p_value": 3.1788649506356423e-161
+    },
+    {
+      "experiment": "exp_id1_it2",
+      "dataset": "Peptides-func",
+      "architecture": "model_free",
+      "metric_type": "node_distinguishability",
+      "n": 2000,
+      "rho": 0.750775,
+      "p_value": 0.0
+    },
+    {
+      "experiment": "exp_id1_it2",
+      "dataset": "Peptides-struct",
+      "architecture": "model_free",
+      "metric_type": "node_distinguishability",
+      "n": 2000,
+      "rho": 0.750775,
+      "p_value": 0.0
+    },
+    {
+      "experiment": "exp_id1_it2",
+      "dataset": "Synthetic-aliased-pairs",
+      "architecture": "model_free",
+      "metric_type": "node_distinguishability",
+      "n": 100,
+      "rho": 0.667619,
+      "p_value": 3.2987119181833506e-14
+    },
+    {
+      "experiment": "exp_id1_it2",
+      "dataset": "ZINC-subset",
+      "architecture": "MLP",
+      "metric_type": "task_performance",
+      "n": 1800,
+      "rho": 0.102401,
+      "p_value": 1.3432584557833304e-05
+    },
+    {
+      "experiment": "exp_id1_it2",
+      "dataset": "Peptides-func",
+      "architecture": "MLP",
+      "metric_type": "task_performance",
+      "n": 300,
+      "rho": -0.138508,
+      "p_value": 0.01636805973684667
+    },
+    {
+      "experiment": "exp_id1_it2",
+      "dataset": "Peptides-struct",
+      "architecture": "MLP",
+      "metric_type": "task_performance",
+      "n": 300,
+      "rho": 0.067221,
+      "p_value": 0.2457441953603731
+    },
+    {
+      "experiment": "exp_id1_it3",
+      "dataset": "ZINC-subset",
+      "architecture": "GPS",
+      "metric_type": "task_performance",
+      "n": 1000,
+      "rho": 0.070695,
+      "p_value": 0.025379623748189202
+    },
+    {
+      "experiment": "exp_id1_it3",
+      "dataset": "Peptides-func",
+      "architecture": "GPS",
+      "metric_type": "task_performance",
+      "n": 300,
+      "rho": 0.07993,
+      "p_value": 0.1673236281058489
+    },
+    {
+      "experiment": "exp_id1_it3",
+      "dataset": "Peptides-struct",
+      "architecture": "GPS",
+      "metric_type": "task_performance",
+      "n": 300,
+      "rho": -0.201859,
+      "p_value": 0.0004348406870267066
+    },
+    {
+      "experiment": "exp_id1_it3",
+      "dataset": "Synthetic-aliased-pairs",
+      "architecture": "GPS",
+      "metric_type": "task_performance",
+      "n": 20,
+      "rho": -0.028593,
+      "p_value": 0.9047510837073325
+    },
+    {
+      "experiment": "exp_id1_it4",
+      "dataset": "Multi-dataset",
+      "architecture": "model_free",
+      "metric_type": "node_distinguishability",
+      "n": 245,
+      "rho": 0.158825,
+      "p_value": 0.012806225385912487
+    },
+    {
+      "experiment": "exp_id2_it4",
+      "dataset": "synthetic_fixed_n30",
+      "architecture": "MLP",
+      "metric_type": "task_performance",
+      "n": 500,
+      "rho": 0.024112,
+      "p_value": 0.59064743
+    },
+    {
+      "experiment": "exp_id3_it5",
+      "dataset": "zinc",
+      "architecture": "GPS",
+      "metric_type": "task_performance",
+      "n": 300,
+      "rho": 0.006922,
+      "p_value": 0.8269400914493046
+    },
+    {
+      "experiment": "exp_id3_it5",
+      "dataset": "peptides_func",
+      "architecture": "GPS",
+      "metric_type": "task_performance",
+      "n": 300,
+      "rho": 0.0,
+      "p_value": 1.0
+    },
+    {
+      "experiment": "exp_id3_it5",
+      "dataset": "peptides_struct",
+      "architecture": "GPS",
+      "metric_type": "task_performance",
+      "n": 300,
+      "rho": -0.153768,
+      "p_value": 0.002095630430583484
+    },
+    {
+      "experiment": "exp_id1_it5",
+      "dataset": "ZINC-subset",
+      "architecture": "GCN_depth2",
+      "metric_type": "task_performance",
+      "n": 483,
+      "rho": 0.03246,
+      "p_value": 0.476635
+    },
+    {
+      "experiment": "exp_id1_it5",
+      "dataset": "ZINC-subset",
+      "architecture": "GCN_depth3",
+      "metric_type": "task_performance",
+      "n": 483,
+      "rho": 0.058829,
+      "p_value": 0.196822
+    },
+    {
+      "experiment": "exp_id1_it5",
+      "dataset": "ZINC-subset",
+      "architecture": "GCN_depth4",
+      "metric_type": "task_performance",
+      "n": 483,
+      "rho": 0.042869,
+      "p_value": 0.347154
+    },
+    {
+      "experiment": "exp_id1_it5",
+      "dataset": "ZINC-subset",
+      "architecture": "GCN_depth6",
+      "metric_type": "task_performance",
+      "n": 483,
+      "rho": 0.056829,
+      "p_value": 0.212503
+    },
+    {
+      "experiment": "exp_id1_it5",
+      "dataset": "ZINC-subset",
+      "architecture": "GCN_depth8",
+      "metric_type": "task_performance",
+      "n": 483,
+      "rho": 0.092106,
+      "p_value": 0.043043
+    },
+    {
+      "experiment": "exp_id1_it5",
+      "dataset": "Peptides-struct",
+      "architecture": "GCN_depth2",
+      "metric_type": "task_performance",
+      "n": 675,
+      "rho": 0.147344,
+      "p_value": 0.000122
+    },
+    {
+      "experiment": "exp_id1_it5",
+      "dataset": "Peptides-struct",
+      "architecture": "GCN_depth3",
+      "metric_type": "task_performance",
+      "n": 675,
+      "rho": 0.147405,
+      "p_value": 0.000121
+    },
+    {
+      "experiment": "exp_id1_it5",
+      "dataset": "Peptides-struct",
+      "architecture": "GCN_depth4",
+      "metric_type": "task_performance",
+      "n": 675,
+      "rho": 0.166147,
+      "p_value": 1.4e-05
+    },
+    {
+      "experiment": "exp_id1_it5",
+      "dataset": "Peptides-struct",
+      "architecture": "GCN_depth6",
+      "metric_type": "task_performance",
+      "n": 675,
+      "rho": 0.099027,
+      "p_value": 0.010043
+    },
+    {
+      "experiment": "exp_id1_it5",
+      "dataset": "Peptides-struct",
+      "architecture": "GCN_depth8",
+      "metric_type": "task_performance",
+      "n": 675,
+      "rho": 0.108813,
+      "p_value": 0.004652
+    }
+  ],
+  "scorecard": {
+    "srwe_mpm_vs_rwse": {
+      "wins": 2,
+      "losses": 3,
+      "ties": 0,
+      "total": 5,
+      "binom_p": 1.0,
+      "conditions": []
+    },
+    "srwe_mpm_vs_lappe": {
+      "wins": 3,
+      "losses": 2,
+      "ties": 0,
+      "total": 5,
+      "binom_p": 1.0,
+      "conditions": []
+    },
+    "srwe_tikhonov_vs_rwse": {
+      "wins": 2,
+      "losses": 2,
+      "ties": 0,
+      "total": 4,
+      "binom_p": 1.0,
+      "conditions": []
+    },
+    "srwe_tikhonov_vs_lappe": {
+      "wins": 2,
+      "losses": 2,
+      "ties": 0,
+      "total": 4,
+      "binom_p": 1.0,
+      "conditions": []
+    },
+    "histogram_vs_rwse": {
+      "wins": 1,
+      "losses": 2,
+      "ties": 0,
+      "total": 3,
+      "binom_p": 1.0,
+      "conditions": []
+    },
+    "histogram_vs_lappe": {
+      "wins": 2,
+      "losses": 1,
+      "ties": 0,
+      "total": 3,
+      "binom_p": 1.0,
+      "conditions": []
+    },
+    "raw_weights_vs_rwse": {
+      "wins": 1,
+      "losses": 2,
+      "ties": 0,
+      "total": 3,
+      "binom_p": 1.0,
+      "conditions": []
+    },
+    "raw_weights_vs_lappe": {
+      "wins": 1,
+      "losses": 2,
+      "ties": 0,
+      "total": 3,
+      "binom_p": 1.0,
+      "conditions": []
+    },
+    "moment_correction_vs_rwse": {
+      "wins": 1,
+      "losses": 1,
+      "ties": 1,
+      "total": 3,
+      "binom_p": 1.0,
+      "conditions": []
+    },
+    "moment_correction_vs_lappe": {
+      "wins": 2,
+      "losses": 1,
+      "ties": 0,
+      "total": 3,
+      "binom_p": 1.0,
+      "conditions": []
+    },
+    "spectral_summary_vs_rwse": {
+      "wins": 1,
+      "losses": 1,
+      "ties": 1,
+      "total": 3,
+      "binom_p": 1.0,
+      "conditions": []
+    },
+    "spectral_summary_vs_lappe": {
+      "wins": 3,
+      "losses": 0,
+      "ties": 0,
+      "total": 3,
+      "binom_p": 0.25,
+      "conditions": []
+    },
+    "srwe_vs_rwse": {
+      "wins": 0,
+      "losses": 8,
+      "ties": 2,
+      "total": 10,
+      "binom_p": 0.007812,
+      "conditions": []
+    },
+    "srwe_vs_lappe": {
+      "wins": 5,
+      "losses": 2,
+      "ties": 3,
+      "total": 10,
+      "binom_p": 0.453125,
+      "conditions": []
+    },
+    "fixed_srwe_vs_fixed_rwse": {
+      "wins": 1,
+      "losses": 1,
+      "ties": 1,
+      "total": 3,
+      "binom_p": 1.0,
+      "conditions": []
+    },
+    "fixed_srwe_vs_fixed_lappe": {
+      "wins": 2,
+      "losses": 1,
+      "ties": 0,
+      "total": 3,
+      "binom_p": 1.0,
+      "conditions": []
+    },
+    "concat_rwse_srwe_vs_fixed_rwse": {
+      "wins": 3,
+      "losses": 0,
+      "ties": 0,
+      "total": 3,
+      "binom_p": 0.25,
+      "conditions": []
+    },
+    "concat_rwse_srwe_vs_fixed_lappe": {
+      "wins": 2,
+      "losses": 1,
+      "ties": 0,
+      "total": 3,
+      "binom_p": 1.0,
+      "conditions": []
+    }
+  },
+  "gap_reductions": {
+    "exp_id1_it3_ZINC-subset": {
+      "gap_reduction_fraction": 0.345168,
+      "dataset": "ZINC-subset"
+    },
+    "exp_id1_it3_Peptides-func": {
+      "gap_reduction_fraction": -2.768346,
+      "dataset": "Peptides-func"
+    },
+    "exp_id1_it3_Peptides-struct": {
+      "gap_reduction_fraction": 0.576979,
+      "dataset": "Peptides-struct"
+    },
+    "exp_id1_it3_Synthetic-aliased-pairs": {
+      "gap_reduction_fraction": 1.755332,
+      "dataset": "Synthetic-aliased-pairs"
+    },
+    "exp_id2_it4_synthetic_low_sri": {
+      "gap_reduction_fraction": 0.74192,
+      "dataset": "synthetic_fixed_n30"
+    },
+    "exp_id2_it3_Peptides-func": {
+      "gap_reduction_fraction": 0.4146,
+      "dataset": "Peptides-func"
+    },
+    "exp_id2_it3_Peptides-struct": {
+      "gap_reduction_fraction": 0.3815,
+      "dataset": "Peptides-struct"
+    },
+    "exp_id2_it3_ZINC-subset": {
+      "gap_reduction_fraction": 0.3915,
+      "dataset": "ZINC-subset"
+    },
+    "exp_id2_it5_Peptides-func": {
+      "gap_reduction_fraction": 0.0906,
+      "dataset": "Peptides-func"
+    },
+    "exp_id2_it5_Peptides-struct": {
+      "gap_reduction_fraction": 1.0971,
+      "dataset": "Peptides-struct"
+    },
+    "exp_id2_it5_ZINC-subset": {
+      "gap_reduction_fraction": -0.1173,
+      "dataset": "ZINC-subset"
+    }
+  },
+  "srwe_results": {
+    "exp_id2_it2_ZINC_GCN": {
+      "rwse": 0.312,
+      "lappe": 0.345,
+      "srwe_mpm": 0.328,
+      "metric": "MAE",
+      "lower_better": true,
+      "dataset": "ZINC-subset",
+      "architecture": "GCN"
+    },
+    "exp_id1_it3_ZINC-subset_GPS": {
+      "rwse": 0.298,
+      "lappe": 0.335,
+      "srwe_mpm": 0.308,
+      "metric": "MAE",
+      "lower_better": true,
+      "dataset": "ZINC-subset",
+      "architecture": "GPS"
+    },
+    "exp_id1_it3_Peptides-func_GPS": {
+      "rwse": 0.592,
+      "lappe": 0.635,
+      "srwe_mpm": 0.618,
+      "metric": "AP",
+      "lower_better": false,
+      "dataset": "Peptides-func",
+      "architecture": "GPS"
+    },
+    "exp_id1_it3_Peptides-struct_GPS": {
+      "rwse": 0.268,
+      "lappe": 0.255,
+      "srwe_mpm": 0.257,
+      "metric": "MAE",
+      "lower_better": true,
+      "dataset": "Peptides-struct",
+      "architecture": "GPS"
+    },
+    "exp_id2_it3_ZINC-subset_GCN": {
+      "rwse": 0.315,
+      "lappe": 0.35,
+      "srwe_tikhonov": 0.322,
+      "metric": "MAE",
+      "lower_better": true,
+      "dataset": "ZINC-subset",
+      "architecture": "GCN_GlobalAttn"
+    },
+    "exp_id2_it3_Peptides-func_GCN": {
+      "rwse": 0.585,
+      "lappe": 0.62,
+      "srwe_tikhonov": 0.598,
+      "metric": "AP",
+      "lower_better": false,
+      "dataset": "Peptides-func",
+      "architecture": "GCN_GlobalAttn"
+    },
+    "exp_id2_it3_Peptides-struct_GCN": {
+      "rwse": 0.272,
+      "lappe": 0.26,
+      "srwe_tikhonov": 0.262,
+      "metric": "MAE",
+      "lower_better": true,
+      "dataset": "Peptides-struct",
+      "architecture": "GCN_GlobalAttn"
+    },
+    "exp_id2_it4_synthetic_MLP": {
+      "rwse": 0.782,
+      "lappe": 0.745,
+      "srwe_tikhonov": 0.768,
+      "metric": "Accuracy",
+      "lower_better": false,
+      "dataset": "synthetic_fixed_n30",
+      "architecture": "MLP"
+    },
+    "exp_id1_it3_Synthetic-aliased-pairs_GPS": {
+      "rwse": 0.305,
+      "lappe": 0.38,
+      "srwe_mpm": 0.325,
+      "metric": "MAE",
+      "lower_better": true,
+      "dataset": "Synthetic-aliased-pairs",
+      "architecture": "GPS"
+    }
+  },
+  "c2_evidence": [
+    83.3,
+    85.0,
+    82.0
+  ],
+  "within_corrs": [
+    0.137,
+    0.12,
+    0.15
+  ],
+  "weights": {
+    "C1_WEIGHT": 0.35,
+    "C2_WEIGHT": 0.2,
+    "C3_WEIGHT": 0.25,
+    "D1_WEIGHT": 0.1,
+    "D2_WEIGHT": 0.05,
+    "D3_WEIGHT": 0.05
+  }
+}

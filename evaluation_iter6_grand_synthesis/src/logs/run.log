@@ -1,0 +1,159 @@
+2026-02-22 10:22:37.583 | INFO     | __main__:main:1519 - ======================================================================
+2026-02-22 10:22:37.583 | INFO     | __main__:main:1520 - Grand Synthesis: Walk Resolution Limit Hypothesis Adjudication
+2026-02-22 10:22:37.583 | INFO     | __main__:main:1521 - ======================================================================
+2026-02-22 10:22:37.583 | INFO     | __main__:main:1524 - Step 1: Collecting SRI-gap correlations from all experiments
+2026-02-22 10:22:37.584 | INFO     | __main__:collect_sri_gap_correlations:234 - Collected 26 SRI-gap correlation studies
+2026-02-22 10:22:37.584 | INFO     | __main__:main:1528 - Step 2: Fisher z random-effects meta-analysis
+2026-02-22 10:22:37.585 | INFO     | __main__:main:1530 -   Pooled ρ = 0.1526 [0.0204, 0.2796]
+2026-02-22 10:22:37.585 | INFO     | __main__:main:1531 -   I² = 99.0%, Q p-value = 0.0000
+2026-02-22 10:22:37.585 | INFO     | __main__:main:1534 - Step 3: Subgroup meta-analyses
+2026-02-22 10:22:37.585 | INFO     | __main__:main:1538 - Step 4: Collecting SRWE results and computing scorecard
+2026-02-22 10:22:37.586 | INFO     | __main__:collect_srwe_results:497 - Collected 25 SRWE comparison conditions
+2026-02-22 10:22:37.587 | INFO     | __main__:main:1543 - Step 5: Collecting SRWE gap reduction data
+2026-02-22 10:22:37.587 | INFO     | __main__:main:1547 - Step 6: Moderator analysis
+2026-02-22 10:22:37.589 | INFO     | __main__:main:1551 - Step 7: Formally adjudicating hypothesis criteria
+2026-02-22 10:22:37.589 | INFO     | __main__:main:1554 -   Overall verdict: partially_confirmed (score=0.458)
+2026-02-22 10:22:37.589 | INFO     | __main__:main:1557 - Step 8: Scope-of-validity analysis
+2026-02-22 10:22:37.589 | INFO     | __main__:main:1559 -   Theory directional accuracy: 19.2%
+2026-02-22 10:22:37.589 | INFO     | __main__:main:1562 - Step 9: Generating figures
+2026-02-22 10:22:37.804 | INFO     | __main__:main:1566 -   ✓ Verdict dashboard
+2026-02-22 10:22:37.985 | INFO     | __main__:main:1572 -   ✓ Forest plot
+2026-02-22 10:22:38.107 | INFO     | __main__:main:1578 -   ✓ SRWE scorecard
+2026-02-22 10:22:38.171 | INFO     | __main__:main:1584 -   ✓ Moderator ranking
+2026-02-22 10:22:38.276 | INFO     | __main__:main:1590 -   ✓ Scope-of-validity
+2026-02-22 10:22:38.344 | INFO     | __main__:main:1596 -   ✓ Decision tree
+2026-02-22 10:22:38.503 | INFO     | __main__:main:1602 -   ✓ Encoding performance bars
+2026-02-22 10:22:38.503 | INFO     | __main__:main:1607 - Step 10: Building output
+2026-02-22 10:22:38.503 | ERROR    | __main__:<module>:1638 - An error has been caught in function '<module>', process 'MainProcess' (115160), thread 'MainThread' (139129052317504):
+Traceback (most recent call last):
+
+> File "/opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/eval_id1_it6__opus/eval.py", line 1638, in <module>
+    main()
+    └ <function main at 0x7e890f552840>
+
+  File "/opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/eval_id1_it6__opus/eval.py", line 1618, in main
+    output_path.write_text(json.dumps(output, indent=2))
+    │           │          │    │     └ {'metadata': {'evaluation_name': 'Grand Synthesis: Walk Resolution Limit Hypothesis Adjudication', 'n_experiments_analyzed': ...
+    │           │          │    └ <function dumps at 0x7e89817dd300>
+    │           │          └ <module 'json' from '/opt/conda/lib/python3.11/json/__init__.py'>
+    │           └ <function Path.write_text at 0x7e89818ab600>
+    └ PosixPath('/opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/eval_id1_it6__opus/eval_ou...
+
+  File "/opt/conda/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+      │          └ {'metadata': {'evaluation_name': 'Grand Synthesis: Walk Resolution Limit Hypothesis Adjudication', 'n_experiments_analyzed': ...
+      └ {}
+  File "/opt/conda/lib/python3.11/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+                  └ <generator object _make_iterencode.<locals>._iterencode at 0x7e890eebc040>
+  File "/opt/conda/lib/python3.11/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+               │                │  └ 0
+               │                └ {'metadata': {'evaluation_name': 'Grand Synthesis: Walk Resolution Limit Hypothesis Adjudication', 'n_experiments_analyzed': ...
+               └ <function _make_iterencode.<locals>._iterencode_dict at 0x7e890f023ec0>
+  File "/opt/conda/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+               └ <generator object _make_iterencode.<locals>._iterencode_dict at 0x7e890f667a40>
+  File "/opt/conda/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+               └ <generator object _make_iterencode.<locals>._iterencode_dict at 0x7e890f667c10>
+  File "/opt/conda/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+               └ <generator object _make_iterencode.<locals>._iterencode_dict at 0x7e890f667de0>
+  [Previous line repeated 1 more time]
+  File "/opt/conda/lib/python3.11/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        │        └ np.False_
+        └ <bound method JSONEncoder.default of <json.encoder.JSONEncoder object at 0x7e890e463010>>
+  File "/opt/conda/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+
+TypeError: Object of type bool is not JSON serializable
+2026-02-22 10:22:59.206 | INFO     | __main__:main:1532 - ======================================================================
+2026-02-22 10:22:59.206 | INFO     | __main__:main:1533 - Grand Synthesis: Walk Resolution Limit Hypothesis Adjudication
+2026-02-22 10:22:59.206 | INFO     | __main__:main:1534 - ======================================================================
+2026-02-22 10:22:59.206 | INFO     | __main__:main:1537 - Step 1: Collecting SRI-gap correlations from all experiments
+2026-02-22 10:22:59.207 | INFO     | __main__:collect_sri_gap_correlations:234 - Collected 26 SRI-gap correlation studies
+2026-02-22 10:22:59.207 | INFO     | __main__:main:1541 - Step 2: Fisher z random-effects meta-analysis
+2026-02-22 10:22:59.207 | INFO     | __main__:main:1543 -   Pooled ρ = 0.1526 [0.0204, 0.2796]
+2026-02-22 10:22:59.207 | INFO     | __main__:main:1544 -   I² = 99.0%, Q p-value = 0.0000
+2026-02-22 10:22:59.207 | INFO     | __main__:main:1547 - Step 3: Subgroup meta-analyses
+2026-02-22 10:22:59.208 | INFO     | __main__:main:1551 - Step 4: Collecting SRWE results and computing scorecard
+2026-02-22 10:22:59.208 | INFO     | __main__:collect_srwe_results:497 - Collected 25 SRWE comparison conditions
+2026-02-22 10:22:59.211 | INFO     | __main__:main:1556 - Step 5: Collecting SRWE gap reduction data
+2026-02-22 10:22:59.211 | INFO     | __main__:main:1560 - Step 6: Moderator analysis
+2026-02-22 10:22:59.212 | INFO     | __main__:main:1564 - Step 7: Formally adjudicating hypothesis criteria
+2026-02-22 10:22:59.213 | INFO     | __main__:main:1567 -   Overall verdict: partially_confirmed (score=0.458)
+2026-02-22 10:22:59.213 | INFO     | __main__:main:1570 - Step 8: Scope-of-validity analysis
+2026-02-22 10:22:59.213 | INFO     | __main__:main:1572 -   Theory directional accuracy: 19.2%
+2026-02-22 10:22:59.213 | INFO     | __main__:main:1575 - Step 9: Generating figures
+2026-02-22 10:22:59.381 | INFO     | __main__:main:1579 -   ✓ Verdict dashboard
+2026-02-22 10:22:59.585 | INFO     | __main__:main:1585 -   ✓ Forest plot
+2026-02-22 10:22:59.703 | INFO     | __main__:main:1591 -   ✓ SRWE scorecard
+2026-02-22 10:22:59.751 | INFO     | __main__:main:1597 -   ✓ Moderator ranking
+2026-02-22 10:22:59.851 | INFO     | __main__:main:1603 -   ✓ Scope-of-validity
+2026-02-22 10:22:59.917 | INFO     | __main__:main:1609 -   ✓ Decision tree
+2026-02-22 10:23:00.070 | INFO     | __main__:main:1615 -   ✓ Encoding performance bars
+2026-02-22 10:23:00.070 | INFO     | __main__:main:1620 - Step 10: Building output
+2026-02-22 10:23:00.071 | INFO     | __main__:main:1632 - Saved output to /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/eval_id1_it6__opus/eval_out.json
+2026-02-22 10:23:00.071 | INFO     | __main__:main:1635 - ======================================================================
+2026-02-22 10:23:00.071 | INFO     | __main__:main:1636 - SUMMARY
+2026-02-22 10:23:00.071 | INFO     | __main__:main:1637 - ======================================================================
+2026-02-22 10:23:00.071 | INFO     | __main__:main:1638 -   Overall Verdict: partially_confirmed
+2026-02-22 10:23:00.071 | INFO     | __main__:main:1639 -   Overall Score: 0.458
+2026-02-22 10:23:00.071 | INFO     | __main__:main:1640 -   Pooled ρ: 0.1526 [0.0204, 0.2796]
+2026-02-22 10:23:00.071 | INFO     | __main__:main:1641 -   I² Heterogeneity: 99.0%
+2026-02-22 10:23:00.072 | INFO     | __main__:main:1642 -   Number of studies: 26
+2026-02-22 10:23:00.072 | INFO     | __main__:main:1644 -   C1_sri_gap_correlation: not_confirmed (conf=0.86)
+2026-02-22 10:23:00.072 | INFO     | __main__:main:1644 -   C2_aliased_pairs_distinguishability: confirmed (conf=0.67)
+2026-02-22 10:23:00.072 | INFO     | __main__:main:1644 -   C3_srwe_gap_reduction: partially_confirmed (conf=0.36)
+2026-02-22 10:23:00.072 | INFO     | __main__:main:1644 -   D1_weak_correlation: disconfirmed (conf=0.24)
+2026-02-22 10:23:00.072 | INFO     | __main__:main:1644 -   D2_resolution_mismatch: not_confirmed (conf=0.50)
+2026-02-22 10:23:00.072 | INFO     | __main__:main:1644 -   D3_no_srwe_improvement: partially_confirmed (conf=0.50)
+2026-02-22 10:23:00.072 | INFO     | __main__:main:1645 -   SRWE scorecard entries: 18
+2026-02-22 10:23:00.072 | INFO     | __main__:main:1646 -   Figures generated: 7
+2026-02-22 10:23:00.072 | INFO     | __main__:main:1647 - ======================================================================
+2026-02-22 10:25:23.698 | INFO     | __main__:main:1532 - ======================================================================
+2026-02-22 10:25:23.698 | INFO     | __main__:main:1533 - Grand Synthesis: Walk Resolution Limit Hypothesis Adjudication
+2026-02-22 10:25:23.698 | INFO     | __main__:main:1534 - ======================================================================
+2026-02-22 10:25:23.698 | INFO     | __main__:main:1537 - Step 1: Collecting SRI-gap correlations from all experiments
+2026-02-22 10:25:23.698 | INFO     | __main__:collect_sri_gap_correlations:234 - Collected 26 SRI-gap correlation studies
+2026-02-22 10:25:23.698 | INFO     | __main__:main:1541 - Step 2: Fisher z random-effects meta-analysis
+2026-02-22 10:25:23.699 | INFO     | __main__:main:1543 -   Pooled ρ = 0.1526 [0.0204, 0.2796]
+2026-02-22 10:25:23.699 | INFO     | __main__:main:1544 -   I² = 99.0%, Q p-value = 0.0000
+2026-02-22 10:25:23.699 | INFO     | __main__:main:1547 - Step 3: Subgroup meta-analyses
+2026-02-22 10:25:23.699 | INFO     | __main__:main:1551 - Step 4: Collecting SRWE results and computing scorecard
+2026-02-22 10:25:23.700 | INFO     | __main__:collect_srwe_results:497 - Collected 25 SRWE comparison conditions
+2026-02-22 10:25:23.702 | INFO     | __main__:main:1556 - Step 5: Collecting SRWE gap reduction data
+2026-02-22 10:25:23.703 | INFO     | __main__:main:1560 - Step 6: Moderator analysis
+2026-02-22 10:25:23.704 | INFO     | __main__:main:1564 - Step 7: Formally adjudicating hypothesis criteria
+2026-02-22 10:25:23.704 | INFO     | __main__:main:1567 -   Overall verdict: partially_confirmed (score=0.458)
+2026-02-22 10:25:23.704 | INFO     | __main__:main:1570 - Step 8: Scope-of-validity analysis
+2026-02-22 10:25:23.704 | INFO     | __main__:main:1572 -   Theory directional accuracy: 19.2%
+2026-02-22 10:25:23.704 | INFO     | __main__:main:1575 - Step 9: Generating figures
+2026-02-22 10:25:23.872 | INFO     | __main__:main:1579 -   ✓ Verdict dashboard
+2026-02-22 10:25:24.071 | INFO     | __main__:main:1585 -   ✓ Forest plot
+2026-02-22 10:25:24.188 | INFO     | __main__:main:1591 -   ✓ SRWE scorecard
+2026-02-22 10:25:24.236 | INFO     | __main__:main:1597 -   ✓ Moderator ranking
+2026-02-22 10:25:24.337 | INFO     | __main__:main:1603 -   ✓ Scope-of-validity
+2026-02-22 10:25:24.403 | INFO     | __main__:main:1609 -   ✓ Decision tree
+2026-02-22 10:25:24.558 | INFO     | __main__:main:1615 -   ✓ Encoding performance bars
+2026-02-22 10:25:24.558 | INFO     | __main__:main:1620 - Step 10: Building output
+2026-02-22 10:25:24.560 | INFO     | __main__:main:1632 - Saved output to /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/eval_id1_it6__opus/eval_out.json
+2026-02-22 10:25:24.560 | INFO     | __main__:main:1635 - ======================================================================
+2026-02-22 10:25:24.560 | INFO     | __main__:main:1636 - SUMMARY
+2026-02-22 10:25:24.560 | INFO     | __main__:main:1637 - ======================================================================
+2026-02-22 10:25:24.560 | INFO     | __main__:main:1638 -   Overall Verdict: partially_confirmed
+2026-02-22 10:25:24.560 | INFO     | __main__:main:1639 -   Overall Score: 0.458
+2026-02-22 10:25:24.560 | INFO     | __main__:main:1640 -   Pooled ρ: 0.1526 [0.0204, 0.2796]
+2026-02-22 10:25:24.560 | INFO     | __main__:main:1641 -   I² Heterogeneity: 99.0%
+2026-02-22 10:25:24.560 | INFO     | __main__:main:1642 -   Number of studies: 26
+2026-02-22 10:25:24.560 | INFO     | __main__:main:1644 -   C1_sri_gap_correlation: not_confirmed (conf=0.86)
+2026-02-22 10:25:24.560 | INFO     | __main__:main:1644 -   C2_aliased_pairs_distinguishability: confirmed (conf=0.67)
+2026-02-22 10:25:24.560 | INFO     | __main__:main:1644 -   C3_srwe_gap_reduction: partially_confirmed (conf=0.36)
+2026-02-22 10:25:24.560 | INFO     | __main__:main:1644 -   D1_weak_correlation: disconfirmed (conf=0.24)
+2026-02-22 10:25:24.560 | INFO     | __main__:main:1644 -   D2_resolution_mismatch: not_confirmed (conf=0.50)
+2026-02-22 10:25:24.560 | INFO     | __main__:main:1644 -   D3_no_srwe_improvement: partially_confirmed (conf=0.50)
+2026-02-22 10:25:24.560 | INFO     | __main__:main:1645 -   SRWE scorecard entries: 18
+2026-02-22 10:25:24.560 | INFO     | __main__:main:1646 -   Figures generated: 7
+2026-02-22 10:25:24.560 | INFO     | __main__:main:1647 - ======================================================================

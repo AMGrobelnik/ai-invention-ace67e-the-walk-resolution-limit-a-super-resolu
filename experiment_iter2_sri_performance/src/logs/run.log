@@ -1,0 +1,133 @@
+2026-02-22 03:51:12.850 | INFO     | __main__:main:969 - ============================================================
+2026-02-22 03:51:12.850 | INFO     | __main__:main:970 - SRI-Performance Gap Correlation Experiment
+2026-02-22 03:51:12.850 | INFO     | __main__:main:971 - ============================================================
+2026-02-22 03:51:12.850 | INFO     | __main__:main:972 - RAM: 134.7 GB total, 68.1 GB available
+2026-02-22 03:51:12.850 | INFO     | __main__:main:973 - CPU count: 20
+2026-02-22 03:51:12.850 | INFO     | __main__:main:974 - MAX_EXAMPLES: None
+2026-02-22 03:51:12.850 | INFO     | __main__:load_all_data:79 - Found 5 data files
+2026-02-22 03:51:12.850 | INFO     | __main__:load_all_data:83 - Loading full_data_out_1.json ...
+2026-02-22 03:51:13.683 | INFO     | __main__:load_all_data:83 - Loading full_data_out_2.json ...
+2026-02-22 03:51:13.883 | INFO     | __main__:load_all_data:83 - Loading full_data_out_3.json ...
+2026-02-22 03:51:14.875 | INFO     | __main__:load_all_data:83 - Loading full_data_out_4.json ...
+2026-02-22 03:51:15.909 | INFO     | __main__:load_all_data:83 - Loading full_data_out_5.json ...
+2026-02-22 03:51:15.914 | INFO     | __main__:load_all_data:101 -   ZINC-subset: 12000 records
+2026-02-22 03:51:15.914 | INFO     | __main__:load_all_data:101 -   Peptides-func: 2000 records
+2026-02-22 03:51:15.914 | INFO     | __main__:load_all_data:101 -   Peptides-struct: 2000 records
+2026-02-22 03:51:15.914 | INFO     | __main__:load_all_data:101 -   Synthetic-aliased-pairs: 100 records
+2026-02-22 03:51:15.914 | INFO     | __main__:main:979 - Data loading took 3.1s
+2026-02-22 03:51:15.914 | INFO     | __main__:phase1_sri_distributions:246 - === PHASE 1: SRI Distribution Analysis ===
+2026-02-22 03:51:15.927 | INFO     | __main__:phase1_sri_distributions:271 -   ZINC-subset: mean SRI=1.2226, median=1.0187, frac<1=0.4898
+2026-02-22 03:51:15.938 | INFO     | __main__:phase1_sri_distributions:271 -   Peptides-func: mean SRI=0.1389, median=0.0186, frac<1=0.9695
+2026-02-22 03:51:15.950 | INFO     | __main__:phase1_sri_distributions:271 -   Peptides-struct: mean SRI=0.1389, median=0.0186, frac<1=0.9695
+2026-02-22 03:51:15.960 | INFO     | __main__:phase1_sri_distributions:271 -   Synthetic-aliased-pairs: mean SRI=29.0933, median=6.8242, frac<1=0.0200
+2026-02-22 03:51:16.155 | INFO     | __main__:phase1_sri_distributions:285 -   Saved sri_distributions.png
+2026-02-22 03:51:16.155 | INFO     | __main__:main:984 - Phase 1 took 0.2s
+2026-02-22 03:51:16.155 | INFO     | __main__:phase2_model_free:307 - === PHASE 2: Model-Free Encoding Quality ===
+2026-02-22 03:51:16.155 | INFO     | __main__:phase2_model_free:311 -   Phase2 processing ZINC-subset (12000 graphs) ...
+2026-02-22 03:51:16.274 | INFO     | __main__:phase2_model_free:320 -     Phase2 ZINC-subset: 1000/12000 processed
+2026-02-22 03:51:16.393 | INFO     | __main__:phase2_model_free:320 -     Phase2 ZINC-subset: 2000/12000 processed
+2026-02-22 03:51:16.511 | INFO     | __main__:phase2_model_free:320 -     Phase2 ZINC-subset: 3000/12000 processed
+2026-02-22 03:51:16.630 | INFO     | __main__:phase2_model_free:320 -     Phase2 ZINC-subset: 4000/12000 processed
+2026-02-22 03:51:16.748 | INFO     | __main__:phase2_model_free:320 -     Phase2 ZINC-subset: 5000/12000 processed
+2026-02-22 03:51:16.865 | INFO     | __main__:phase2_model_free:320 -     Phase2 ZINC-subset: 6000/12000 processed
+2026-02-22 03:51:16.983 | INFO     | __main__:phase2_model_free:320 -     Phase2 ZINC-subset: 7000/12000 processed
+2026-02-22 03:51:17.102 | INFO     | __main__:phase2_model_free:320 -     Phase2 ZINC-subset: 8000/12000 processed
+2026-02-22 03:51:17.220 | INFO     | __main__:phase2_model_free:320 -     Phase2 ZINC-subset: 9000/12000 processed
+2026-02-22 03:51:17.339 | INFO     | __main__:phase2_model_free:320 -     Phase2 ZINC-subset: 10000/12000 processed
+2026-02-22 03:51:17.458 | INFO     | __main__:phase2_model_free:320 -     Phase2 ZINC-subset: 11000/12000 processed
+2026-02-22 03:51:17.577 | INFO     | __main__:phase2_model_free:320 -     Phase2 ZINC-subset: 12000/12000 processed
+2026-02-22 03:51:17.583 | INFO     | __main__:phase2_model_free:389 -   ZINC-subset: n=12000, rho(SRI,gap)=0.2433 (p=3.1789e-161), rho(delta_min,gap)=0.2433, rho(log_vander,gap)=0.4025
+2026-02-22 03:51:17.583 | INFO     | __main__:phase2_model_free:311 -   Phase2 processing Peptides-func (2000 graphs) ...
+2026-02-22 03:51:20.581 | INFO     | __main__:phase2_model_free:320 -     Phase2 Peptides-func: 1000/2000 processed
+2026-02-22 03:51:23.694 | INFO     | __main__:phase2_model_free:320 -     Phase2 Peptides-func: 2000/2000 processed
+2026-02-22 03:51:23.704 | INFO     | __main__:phase2_model_free:389 -   Peptides-func: n=2000, rho(SRI,gap)=0.7508 (p=0.0000e+00), rho(delta_min,gap)=0.7508, rho(log_vander,gap)=0.5179
+2026-02-22 03:51:23.704 | INFO     | __main__:phase2_model_free:311 -   Phase2 processing Peptides-struct (2000 graphs) ...
+2026-02-22 03:51:26.675 | INFO     | __main__:phase2_model_free:320 -     Phase2 Peptides-struct: 1000/2000 processed
+2026-02-22 03:51:29.796 | INFO     | __main__:phase2_model_free:320 -     Phase2 Peptides-struct: 2000/2000 processed
+2026-02-22 03:51:29.806 | INFO     | __main__:phase2_model_free:389 -   Peptides-struct: n=2000, rho(SRI,gap)=0.7508 (p=0.0000e+00), rho(delta_min,gap)=0.7508, rho(log_vander,gap)=0.5179
+2026-02-22 03:51:29.806 | INFO     | __main__:phase2_model_free:311 -   Phase2 processing Synthetic-aliased-pairs (100 graphs) ...
+2026-02-22 03:51:29.817 | INFO     | __main__:phase2_model_free:389 -   Synthetic-aliased-pairs: n=100, rho(SRI,gap)=0.6676 (p=3.2987e-14), rho(delta_min,gap)=0.6676, rho(log_vander,gap)=0.4545
+2026-02-22 03:51:29.817 | INFO     | __main__:main:989 - Phase 2 took 13.7s
+2026-02-22 03:51:29.817 | INFO     | __main__:phase3_mlp_proxy:410 - === PHASE 3: MLP Proxy Training ===
+2026-02-22 03:51:29.817 | INFO     | __main__:phase3_mlp_proxy:420 -   ZINC-subset: building features for 12000 graphs ...
+2026-02-22 03:51:29.956 | INFO     | __main__:phase3_mlp_proxy:435 -     Phase3 ZINC-subset: features for 1000/12000 graphs
+2026-02-22 03:51:30.095 | INFO     | __main__:phase3_mlp_proxy:435 -     Phase3 ZINC-subset: features for 2000/12000 graphs
+2026-02-22 03:51:30.234 | INFO     | __main__:phase3_mlp_proxy:435 -     Phase3 ZINC-subset: features for 3000/12000 graphs
+2026-02-22 03:51:30.374 | INFO     | __main__:phase3_mlp_proxy:435 -     Phase3 ZINC-subset: features for 4000/12000 graphs
+2026-02-22 03:51:30.514 | INFO     | __main__:phase3_mlp_proxy:435 -     Phase3 ZINC-subset: features for 5000/12000 graphs
+2026-02-22 03:51:30.652 | INFO     | __main__:phase3_mlp_proxy:435 -     Phase3 ZINC-subset: features for 6000/12000 graphs
+2026-02-22 03:51:30.791 | INFO     | __main__:phase3_mlp_proxy:435 -     Phase3 ZINC-subset: features for 7000/12000 graphs
+2026-02-22 03:51:30.929 | INFO     | __main__:phase3_mlp_proxy:435 -     Phase3 ZINC-subset: features for 8000/12000 graphs
+2026-02-22 03:51:31.068 | INFO     | __main__:phase3_mlp_proxy:435 -     Phase3 ZINC-subset: features for 9000/12000 graphs
+2026-02-22 03:51:31.207 | INFO     | __main__:phase3_mlp_proxy:435 -     Phase3 ZINC-subset: features for 10000/12000 graphs
+2026-02-22 03:51:31.349 | INFO     | __main__:phase3_mlp_proxy:435 -     Phase3 ZINC-subset: features for 11000/12000 graphs
+2026-02-22 03:51:31.486 | INFO     | __main__:phase3_mlp_proxy:435 -     Phase3 ZINC-subset: features for 12000/12000 graphs
+2026-02-22 03:51:31.486 | INFO     | __main__:phase3_mlp_proxy:467 -     12000/12000 valid feature vectors
+2026-02-22 03:51:31.498 | INFO     | __main__:phase3_mlp_proxy:490 -     Split: train=8400, val=1800, test=1800
+2026-02-22 03:51:31.498 | INFO     | __main__:phase3_mlp_proxy:497 -     Training MLP (seed=42) ...
+2026-02-22 03:51:32.009 | INFO     | __main__:phase3_mlp_proxy:532 -       RWSE MLP: test MAE = 1.6740
+2026-02-22 03:51:32.376 | INFO     | __main__:phase3_mlp_proxy:552 -       LapPE MLP: test MAE = 1.6389
+2026-02-22 03:51:32.376 | INFO     | __main__:phase3_mlp_proxy:497 -     Training MLP (seed=123) ...
+2026-02-22 03:51:32.891 | INFO     | __main__:phase3_mlp_proxy:532 -       RWSE MLP: test MAE = 1.7347
+2026-02-22 03:51:33.284 | INFO     | __main__:phase3_mlp_proxy:552 -       LapPE MLP: test MAE = 1.6502
+2026-02-22 03:51:33.284 | INFO     | __main__:phase3_mlp_proxy:497 -     Training MLP (seed=456) ...
+2026-02-22 03:51:33.766 | INFO     | __main__:phase3_mlp_proxy:532 -       RWSE MLP: test MAE = 1.6752
+2026-02-22 03:51:34.145 | INFO     | __main__:phase3_mlp_proxy:552 -       LapPE MLP: test MAE = 1.6789
+2026-02-22 03:51:34.145 | INFO     | __main__:phase3_mlp_proxy:580 -     Mean MAE: RWSE=1.6946, LapPE=1.6560, gap=0.0386
+2026-02-22 03:51:34.145 | INFO     | __main__:phase3_mlp_proxy:420 -   Peptides-func: building features for 2000 graphs ...
+2026-02-22 03:51:36.246 | INFO     | __main__:phase3_mlp_proxy:435 -     Phase3 Peptides-func: features for 1000/2000 graphs
+2026-02-22 03:51:38.379 | INFO     | __main__:phase3_mlp_proxy:435 -     Phase3 Peptides-func: features for 2000/2000 graphs
+2026-02-22 03:51:38.381 | INFO     | __main__:phase3_mlp_proxy:467 -     2000/2000 valid feature vectors
+2026-02-22 03:51:38.383 | INFO     | __main__:phase3_mlp_proxy:490 -     Split: train=1400, val=300, test=300
+2026-02-22 03:51:38.383 | INFO     | __main__:phase3_mlp_proxy:497 -     Training MLP (seed=42) ...
+2026-02-22 03:51:38.632 | INFO     | __main__:phase3_mlp_proxy:532 -       RWSE MLP: test MAE = 0.2190
+2026-02-22 03:51:38.840 | INFO     | __main__:phase3_mlp_proxy:552 -       LapPE MLP: test MAE = 0.2194
+2026-02-22 03:51:38.841 | INFO     | __main__:phase3_mlp_proxy:497 -     Training MLP (seed=123) ...
+2026-02-22 03:51:39.087 | INFO     | __main__:phase3_mlp_proxy:532 -       RWSE MLP: test MAE = 0.2138
+2026-02-22 03:51:39.217 | INFO     | __main__:phase3_mlp_proxy:552 -       LapPE MLP: test MAE = 0.2282
+2026-02-22 03:51:39.217 | INFO     | __main__:phase3_mlp_proxy:497 -     Training MLP (seed=456) ...
+2026-02-22 03:51:39.438 | INFO     | __main__:phase3_mlp_proxy:532 -       RWSE MLP: test MAE = 0.2177
+2026-02-22 03:51:39.691 | INFO     | __main__:phase3_mlp_proxy:552 -       LapPE MLP: test MAE = 0.2252
+2026-02-22 03:51:39.692 | INFO     | __main__:phase3_mlp_proxy:580 -     Mean MAE: RWSE=0.2168, LapPE=0.2242, gap=-0.0074
+2026-02-22 03:51:39.692 | INFO     | __main__:phase3_mlp_proxy:420 -   Peptides-struct: building features for 2000 graphs ...
+2026-02-22 03:51:41.811 | INFO     | __main__:phase3_mlp_proxy:435 -     Phase3 Peptides-struct: features for 1000/2000 graphs
+2026-02-22 03:51:43.963 | INFO     | __main__:phase3_mlp_proxy:435 -     Phase3 Peptides-struct: features for 2000/2000 graphs
+2026-02-22 03:51:43.966 | INFO     | __main__:phase3_mlp_proxy:467 -     2000/2000 valid feature vectors
+2026-02-22 03:51:43.967 | INFO     | __main__:phase3_mlp_proxy:490 -     Split: train=1400, val=300, test=300
+2026-02-22 03:51:43.967 | INFO     | __main__:phase3_mlp_proxy:497 -     Training MLP (seed=42) ...
+2026-02-22 03:51:44.124 | INFO     | __main__:phase3_mlp_proxy:532 -       RWSE MLP: test MAE = 35.0770
+2026-02-22 03:51:44.293 | INFO     | __main__:phase3_mlp_proxy:552 -       LapPE MLP: test MAE = 30.6112
+2026-02-22 03:51:44.293 | INFO     | __main__:phase3_mlp_proxy:497 -     Training MLP (seed=123) ...
+2026-02-22 03:51:44.409 | INFO     | __main__:phase3_mlp_proxy:532 -       RWSE MLP: test MAE = 35.4395
+2026-02-22 03:51:44.518 | INFO     | __main__:phase3_mlp_proxy:552 -       LapPE MLP: test MAE = 31.8664
+2026-02-22 03:51:44.518 | INFO     | __main__:phase3_mlp_proxy:497 -     Training MLP (seed=456) ...
+2026-02-22 03:51:44.685 | INFO     | __main__:phase3_mlp_proxy:532 -       RWSE MLP: test MAE = 34.8525
+2026-02-22 03:51:44.868 | INFO     | __main__:phase3_mlp_proxy:552 -       LapPE MLP: test MAE = 30.2687
+2026-02-22 03:51:44.868 | INFO     | __main__:phase3_mlp_proxy:580 -     Mean MAE: RWSE=35.1230, LapPE=30.9154, gap=4.2076
+2026-02-22 03:51:44.869 | INFO     | __main__:main:994 - Phase 3 took 15.1s
+2026-02-22 03:51:44.869 | INFO     | __main__:phase4_correlation:612 - === PHASE 4: Correlation Analysis ===
+2026-02-22 03:51:45.880 | INFO     | __main__:phase4_correlation:707 -   ZINC-subset: rho(SRI,gap)=0.1024 [0.0578, 0.1488], p=1.3433e-05
+2026-02-22 03:51:45.880 | INFO     | __main__:phase4_correlation:709 -     Quintile trend (Kendall tau): 0.6000 (p=2.3333e-01)
+2026-02-22 03:51:45.880 | INFO     | __main__:phase4_correlation:710 -     SRI vs num_nodes: rho=-0.5059
+2026-02-22 03:51:46.392 | INFO     | __main__:phase4_correlation:707 -   Peptides-func: rho(SRI,gap)=-0.1385 [-0.2401, -0.0111], p=1.6368e-02
+2026-02-22 03:51:46.392 | INFO     | __main__:phase4_correlation:709 -     Quintile trend (Kendall tau): -0.2000 (p=8.1667e-01)
+2026-02-22 03:51:46.392 | INFO     | __main__:phase4_correlation:710 -     SRI vs num_nodes: rho=-0.8378
+2026-02-22 03:51:46.905 | INFO     | __main__:phase4_correlation:707 -   Peptides-struct: rho(SRI,gap)=0.0672 [-0.0493, 0.1998], p=2.4574e-01
+2026-02-22 03:51:46.905 | INFO     | __main__:phase4_correlation:709 -     Quintile trend (Kendall tau): -0.2000 (p=8.1667e-01)
+2026-02-22 03:51:46.905 | INFO     | __main__:phase4_correlation:710 -     SRI vs num_nodes: rho=-0.8378
+2026-02-22 03:51:46.905 | INFO     | __main__:main:999 - Phase 4 took 2.0s
+2026-02-22 03:51:46.905 | INFO     | __main__:validate_synthetic:807 - === Synthetic Pair Validation ===
+2026-02-22 03:51:46.914 | INFO     | __main__:validate_synthetic:860 -   control: 15 pairs, mean RWSE dist=1.303027, mean LapPE dist=1.263052
+2026-02-22 03:51:46.914 | INFO     | __main__:validate_synthetic:860 -   near_cospectral: 20 pairs, mean RWSE dist=0.311276, mean LapPE dist=0.556244
+2026-02-22 03:51:46.914 | INFO     | __main__:validate_synthetic:860 -   exactly_cospectral: 15 pairs, mean RWSE dist=0.363622, mean LapPE dist=0.410707
+2026-02-22 03:51:46.914 | INFO     | __main__:main:1004 - Synthetic validation took 0.0s
+2026-02-22 03:51:46.914 | INFO     | __main__:phase5_visualization:721 - === PHASE 5: Visualization ===
+2026-02-22 03:51:47.062 | INFO     | __main__:phase5_visualization:748 -   Saved sri_vs_gap_scatter.png
+2026-02-22 03:51:47.203 | INFO     | __main__:phase5_visualization:774 -   Saved vander_vs_gap_scatter.png
+2026-02-22 03:51:47.371 | INFO     | __main__:phase5_visualization:796 -   Saved quintile_bar_chart.png
+2026-02-22 03:51:47.371 | INFO     | __main__:phase5_visualization:798 -   Visualization complete
+2026-02-22 03:51:47.371 | INFO     | __main__:main:1009 - Phase 5 took 0.5s
+2026-02-22 03:51:47.371 | INFO     | __main__:assemble_output:880 - === Assembling Output ===
+2026-02-22 03:51:47.547 | INFO     | __main__:main:1017 - Saved output to /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_2/gen_art/exp_id1_it2__opus/method_out.json
+2026-02-22 03:51:47.547 | INFO     | __main__:main:1020 - Total time: 34.7s
+2026-02-22 03:51:47.547 | INFO     | __main__:main:1021 - DONE

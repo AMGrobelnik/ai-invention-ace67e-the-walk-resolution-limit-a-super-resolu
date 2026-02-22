@@ -1,0 +1,481 @@
+{
+  "metadata": {
+    "method_name": "Node-Level SRI vs Graph-Level SRI Analysis",
+    "description": "Testing whether node-level SRI improves SRI-performance correlation over graph-level SRI",
+    "parameters": {
+      "K": 20,
+      "threshold_factors": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "n_bootstrap": 5000,
+      "epsilon": 0.0001,
+      "max_sample_per_ds": 500,
+      "seed": 42
+    },
+    "total_runtime_seconds": 64.21262788772583,
+    "figure_paths": [
+      "/opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig1_correlation_comparison.png",
+      "/opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig2_sri_scatter.png",
+      "/opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig3_within_graph_rhos.png",
+      "/opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig4_node_sri_heatmaps.png",
+      "/opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig5_srwe_benefit.png"
+    ]
+  },
+  "phase1_node_sri": {
+    "ZINC-subset": {
+      "n_graphs": 12000,
+      "mean_graph_sri": 1.2225811033333334,
+      "mean_node_sri_avg": 5.68307128167114,
+      "std_within_graph": 4.4336674585849485
+    },
+    "Peptides-func": {
+      "n_graphs": 2000,
+      "mean_graph_sri": 0.13888279,
+      "mean_node_sri_avg": 2.198049691077009,
+      "std_within_graph": 2.767617974701366
+    },
+    "Peptides-struct": {
+      "n_graphs": 2000,
+      "mean_graph_sri": 0.13888279,
+      "mean_node_sri_avg": 2.198049691077009,
+      "std_within_graph": 2.767617974701366
+    },
+    "Synthetic-aliased-pairs": {
+      "n_graphs": 100,
+      "mean_graph_sri": 29.0932638,
+      "mean_node_sri_avg": 28.50909249432128,
+      "std_within_graph": 9.654696229483319
+    }
+  },
+  "phase2_distinguishability": {
+    "ZINC-subset": {
+      "n_sampled_graphs": 500,
+      "n_total_nodes": 11632,
+      "node_level_rho": 0.17882980482471475,
+      "node_level_p": 3.40957239326911e-84,
+      "mean_graph_gap": 0.0030202227200362337,
+      "n_within_graph_rhos": 500,
+      "mean_within_graph_rho": 0.08927591037147424
+    },
+    "Peptides-func": {
+      "n_sampled_graphs": 500,
+      "n_total_nodes": 45860,
+      "node_level_rho": 0.05967547797985909,
+      "node_level_p": 1.852221790366437e-37,
+      "mean_graph_gap": 0.0005664415703532267,
+      "n_within_graph_rhos": 1000,
+      "mean_within_graph_rho": 0.05962135963036872
+    },
+    "Peptides-struct": {
+      "n_sampled_graphs": 500,
+      "n_total_nodes": 46852,
+      "node_level_rho": 0.05489516507641639,
+      "node_level_p": 1.3200071179771742e-32,
+      "mean_graph_gap": 0.0004998389364738004,
+      "n_within_graph_rhos": 1500,
+      "mean_within_graph_rho": 0.05094202098370268
+    },
+    "Synthetic-aliased-pairs": {
+      "n_sampled_graphs": 100,
+      "n_total_nodes": 1007,
+      "node_level_rho": 0.01877681230599545,
+      "node_level_p": 0.5517352282975408,
+      "mean_graph_gap": 0.4598282842888106,
+      "n_within_graph_rhos": 1559,
+      "mean_within_graph_rho": 0.0476587419253768
+    }
+  },
+  "phase3_correlations": {
+    "ZINC-subset": {
+      "graph_sri": {
+        "rho": 0.21455050736647752,
+        "p_value": 1.2854802384824248e-06,
+        "ci_lower": 0.12177477972005356,
+        "ci_upper": 0.307168601529747,
+        "n": 500
+      },
+      "graph_sri_partial": {
+        "rho": 0.11271875910208987,
+        "p_value": 0.01166225986476163
+      },
+      "mean_node_sri": {
+        "rho": 0.4110767257044989,
+        "p_value": 8.27446935400431e-22,
+        "ci_lower": 0.3280656116724585,
+        "ci_upper": 0.4875930077156248,
+        "n": 500
+      },
+      "mean_node_sri_partial": {
+        "rho": 0.2907732091538346,
+        "p_value": 3.37087060749922e-11
+      },
+      "min_node_sri": {
+        "rho": 0.15067819298147003,
+        "p_value": 0.0007244589339025479,
+        "ci_lower": 0.04956362729986465,
+        "ci_upper": 0.2522208180044347,
+        "n": 500
+      },
+      "min_node_sri_partial": {
+        "rho": 0.06908389707211851,
+        "p_value": 0.12289383984054031
+      },
+      "median_node_sri": {
+        "rho": 0.3208302687323014,
+        "p_value": 1.9636944505647322e-13,
+        "ci_lower": 0.2354094024339329,
+        "ci_upper": 0.4027569884130275,
+        "n": 500
+      },
+      "median_node_sri_partial": {
+        "rho": 0.1946274553644548,
+        "p_value": 1.170063854609132e-05
+      },
+      "p10_node_sri": {
+        "rho": 0.22816362648817087,
+        "p_value": 2.505296792938607e-07,
+        "ci_lower": 0.1292375113314802,
+        "ci_upper": 0.32371887894891593,
+        "n": 500
+      },
+      "p10_node_sri_partial": {
+        "rho": 0.1269879429202173,
+        "p_value": 0.0044557847244994985
+      },
+      "harmonic_node_sri": {
+        "rho": 0.2935448770124393,
+        "p_value": 2.1493993532612335e-11,
+        "ci_lower": 0.20346231564435305,
+        "ci_upper": 0.3791161064704869,
+        "n": 500
+      },
+      "entropy_node_sri": {
+        "rho": -0.3048968441941874,
+        "p_value": 3.2328920591926015e-12,
+        "ci_lower": -0.38600692020540756,
+        "ci_upper": -0.221688329776628,
+        "n": 500
+      },
+      "frac_low_sri": {
+        "rho": -0.150470163433689,
+        "p_value": 0.000737002073927415,
+        "ci_lower": -0.22664087452573606,
+        "ci_upper": -0.07155986101410217,
+        "n": 500
+      }
+    },
+    "Peptides-func": {
+      "graph_sri": {
+        "rho": 0.1899906399729877,
+        "p_value": 1.896831789708333e-05,
+        "ci_lower": 0.1001105970719667,
+        "ci_upper": 0.279163415415986,
+        "n": 500
+      },
+      "graph_sri_partial": {
+        "rho": -0.01983772892563563,
+        "p_value": 0.6581141096355737
+      },
+      "mean_node_sri": {
+        "rho": 0.03521125395082907,
+        "p_value": 0.4320898067743525,
+        "ci_lower": -0.06687144236027663,
+        "ci_upper": 0.1381520410960195,
+        "n": 500
+      },
+      "mean_node_sri_partial": {
+        "rho": 0.027976506483882127,
+        "p_value": 0.5325421221881023
+      },
+      "min_node_sri": {
+        "rho": 0.11828461518451859,
+        "p_value": 0.008106419780828843,
+        "ci_lower": 0.019036758560983635,
+        "ci_upper": 0.21671384545011368,
+        "n": 500
+      },
+      "min_node_sri_partial": {
+        "rho": -0.02117431111808168,
+        "p_value": 0.6366841908548132
+      },
+      "median_node_sri": {
+        "rho": 0.01754664480503205,
+        "p_value": 0.6954993585392553,
+        "ci_lower": -0.0872370638642242,
+        "ci_upper": 0.1274458173404021,
+        "n": 500
+      },
+      "median_node_sri_partial": {
+        "rho": -0.040438573841583364,
+        "p_value": 0.36687631385172526
+      },
+      "p10_node_sri": {
+        "rho": 0.03564347456063332,
+        "p_value": 0.42645633320703935,
+        "ci_lower": -0.06924505974836016,
+        "ci_upper": 0.13914858959839785,
+        "n": 500
+      },
+      "p10_node_sri_partial": {
+        "rho": -0.07677394209245786,
+        "p_value": 0.08635390638537739
+      },
+      "harmonic_node_sri": {
+        "rho": 0.0805543002662147,
+        "p_value": 0.0719133703388396,
+        "ci_lower": -0.024036905777879074,
+        "ci_upper": 0.1828766997546177,
+        "n": 500
+      },
+      "entropy_node_sri": {
+        "rho": -0.056335936756712356,
+        "p_value": 0.20855244020186461,
+        "ci_lower": -0.13888723812038972,
+        "ci_upper": 0.025216199203318086,
+        "n": 500
+      },
+      "frac_low_sri": {
+        "rho": -0.026614363226075965,
+        "p_value": 0.5526920931657672,
+        "ci_lower": -0.13458392348231915,
+        "ci_upper": 0.07571123943313408,
+        "n": 500
+      }
+    },
+    "Peptides-struct": {
+      "graph_sri": {
+        "rho": 0.1804295491202884,
+        "p_value": 4.9541563703811174e-05,
+        "ci_lower": 0.08774076293159513,
+        "ci_upper": 0.2681615824883275,
+        "n": 500
+      },
+      "graph_sri_partial": {
+        "rho": -0.05318900277325743,
+        "p_value": 0.2351463813625803
+      },
+      "mean_node_sri": {
+        "rho": 0.07757770833243796,
+        "p_value": 0.08310260628296423,
+        "ci_lower": -0.021893795210258103,
+        "ci_upper": 0.17294705524895918,
+        "n": 500
+      },
+      "mean_node_sri_partial": {
+        "rho": 0.061376296564060746,
+        "p_value": 0.17060175152171303
+      },
+      "min_node_sri": {
+        "rho": 0.11680561108708115,
+        "p_value": 0.008941835945151891,
+        "ci_lower": 0.0173154634078871,
+        "ci_upper": 0.21462426874044485,
+        "n": 500
+      },
+      "min_node_sri_partial": {
+        "rho": 0.0014814469921523722,
+        "p_value": 0.9736400827223642
+      },
+      "median_node_sri": {
+        "rho": 0.04565110988564288,
+        "p_value": 0.30831400936001446,
+        "ci_lower": -0.053141749239137656,
+        "ci_upper": 0.1442969360799387,
+        "n": 500
+      },
+      "median_node_sri_partial": {
+        "rho": -0.013125419707356024,
+        "p_value": 0.7696969359360616
+      },
+      "p10_node_sri": {
+        "rho": 0.04939725210741243,
+        "p_value": 0.2702597040653742,
+        "ci_lower": -0.05446076541463901,
+        "ci_upper": 0.15512358528598835,
+        "n": 500
+      },
+      "p10_node_sri_partial": {
+        "rho": -0.02935235955050355,
+        "p_value": 0.5125726545122705
+      },
+      "harmonic_node_sri": {
+        "rho": 0.07766976967253317,
+        "p_value": 0.08273660688380918,
+        "ci_lower": -0.024169916068586535,
+        "ci_upper": 0.18056578723678812,
+        "n": 500
+      },
+      "entropy_node_sri": {
+        "rho": -0.07333002895899522,
+        "p_value": 0.10146115165787635,
+        "ci_lower": -0.15082172252531345,
+        "ci_upper": 0.007404372222124729,
+        "n": 500
+      },
+      "frac_low_sri": {
+        "rho": -0.05456874398257045,
+        "p_value": 0.2232057670172929,
+        "ci_lower": -0.15225187235075124,
+        "ci_upper": 0.04504524948872749,
+        "n": 500
+      }
+    },
+    "Synthetic-aliased-pairs": {
+      "graph_sri": {
+        "rho": 0.3857037923262894,
+        "p_value": 7.400472703189796e-05,
+        "ci_lower": 0.19874002240064,
+        "ci_upper": 0.5453372417603016,
+        "n": 100
+      },
+      "graph_sri_partial": {
+        "rho": 0.5644517942028897,
+        "p_value": 9.577857795022506e-10
+      },
+      "mean_node_sri": {
+        "rho": 0.021674163961546263,
+        "p_value": 0.8305144680619099,
+        "ci_lower": -0.18682486022302863,
+        "ci_upper": 0.2326753633386985,
+        "n": 100
+      },
+      "mean_node_sri_partial": {
+        "rho": 0.11853516735438627,
+        "p_value": 0.2401567029563581
+      },
+      "min_node_sri": {
+        "rho": 0.2791790867426836,
+        "p_value": 0.004910480383640996,
+        "ci_lower": 0.09153165979813908,
+        "ci_upper": 0.4480068091430504,
+        "n": 100
+      },
+      "min_node_sri_partial": {
+        "rho": 0.38001653185683737,
+        "p_value": 9.629490295144546e-05
+      },
+      "median_node_sri": {
+        "rho": 0.04183682087207058,
+        "p_value": 0.6793946566258385,
+        "ci_lower": -0.16099221495487032,
+        "ci_upper": 0.24483858077605133,
+        "n": 100
+      },
+      "median_node_sri_partial": {
+        "rho": 0.15581443474201437,
+        "p_value": 0.12161611659021114
+      },
+      "p10_node_sri": {
+        "rho": 0.26346950057795754,
+        "p_value": 0.008084035829293077,
+        "ci_lower": 0.06157264158114901,
+        "ci_upper": 0.449438681609778,
+        "n": 100
+      },
+      "p10_node_sri_partial": {
+        "rho": 0.36680686479753155,
+        "p_value": 0.0001742630376144631
+      },
+      "harmonic_node_sri": {
+        "rho": 0.2764617523136775,
+        "p_value": 0.00763773200943043,
+        "ci_lower": 0.06178862448463592,
+        "ci_upper": 0.46996631510717446,
+        "n": 92
+      },
+      "entropy_node_sri": {
+        "rho": 0.12242791316110138,
+        "p_value": 0.2249548872062296,
+        "ci_lower": -0.0799117049740145,
+        "ci_upper": 0.31939790871925877,
+        "n": 100
+      },
+      "frac_low_sri": {
+        "rho": 0.0,
+        "p_value": 1.0,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "n": 100
+      }
+    },
+    "Pooled": {
+      "graph_sri": {
+        "rho": 0.3786921793939031,
+        "p_value": 1.0155999032950035e-55,
+        "ci_lower": 0.3324651483731117,
+        "ci_upper": 0.4232266884746853,
+        "n": 1600
+      },
+      "graph_sri_partial": {
+        "rho": 0.053060451368409894,
+        "p_value": 0.03381638213376024
+      },
+      "mean_node_sri": {
+        "rho": 0.3271762255620511,
+        "p_value": 3.1345441014210694e-41,
+        "ci_lower": 0.2697805980558847,
+        "ci_upper": 0.3805807650539566,
+        "n": 1600
+      },
+      "mean_node_sri_partial": {
+        "rho": 0.14110109459464285,
+        "p_value": 1.4446409505924723e-08
+      },
+      "min_node_sri": {
+        "rho": 0.24796703350856877,
+        "p_value": 7.606673029105955e-24,
+        "ci_lower": 0.1881640976410165,
+        "ci_upper": 0.30416068391565826,
+        "n": 1600
+      },
+      "min_node_sri_partial": {
+        "rho": -0.03139782719864862,
+        "p_value": 0.2093912788003918
+      },
+      "median_node_sri": {
+        "rho": 0.30430502030799095,
+        "p_value": 1.2438972988465628e-35,
+        "ci_lower": 0.24744668485423849,
+        "ci_upper": 0.35786763801434857,
+        "n": 1600
+      },
+      "median_node_sri_partial": {
+        "rho": 0.054894357356615006,
+        "p_value": 0.028112427124983155
+      },
+      "p10_node_sri": {
+        "rho": 0.2819533301982267,
+        "p_value": 1.266786190200158e-30,
+        "ci_lower": 0.2252944569099218,
+        "ci_upper": 0.33695459526502475,
+        "n": 1600
+      },
+      "p10_node_sri_partial": {
+        "rho": 0.008744706416874103,
+        "p_value": 0.7266977810809734
+      }
+    },
+    "improvement": {
+      "best_node_metric": "mean_node_sri",
+      "graph_rho": 0.3786921793939031,
+      "node_rho": 0.3271762255620511,
+      "improvement": -0.05151595383185198,
+      "significant": false
+    }
+  },
+  "phase4_srwe": {
+    "n_already_resolved": 29013,
+    "n_newly_resolved": 1789,
+    "n_still_unresolved": 636,
+    "mean_sri_already": 2.1130800925722952,
+    "mean_sri_newly": 15.011287114253772,
+    "mean_sri_unresolved": 11.721413855660378,
+    "mann_whitney_newly_vs_already": {
+      "U_statistic": 44920213.5,
+      "p_value": 1.0,
+      "significant": false
+    }
+  }
+}

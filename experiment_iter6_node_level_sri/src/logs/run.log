@@ -1,0 +1,844 @@
+2026-02-22 10:21:29.880 | INFO     | __main__:<module>:81 - Hardware: 20 CPUs, 134.7GB RAM, 125.4GB available
+2026-02-22 10:21:29.881 | INFO     | __main__:main:1424 - ============================================================
+2026-02-22 10:21:29.881 | INFO     | __main__:main:1425 - Node-Level SRI vs Graph-Level SRI Analysis
+2026-02-22 10:21:29.881 | INFO     | __main__:main:1426 - ============================================================
+2026-02-22 10:21:29.881 | INFO     | __main__:main:1438 - Run mode: mini, SRWE: enabled
+2026-02-22 10:21:29.881 | INFO     | __main__:load_mini_data:122 - Loading mini data from /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/mini_data_out.json
+2026-02-22 10:21:29.881 | INFO     | __main__:run_analysis:830 - ============================================================
+2026-02-22 10:21:29.881 | INFO     | __main__:run_analysis:831 - PHASE 1: Node-Level SRI Computation
+2026-02-22 10:21:29.882 | INFO     | __main__:run_analysis:832 - ============================================================
+2026-02-22 10:21:29.882 | INFO     | __main__:run_analysis:838 - Processing ZINC-subset (3 examples)
+2026-02-22 10:21:29.885 | INFO     | __main__:run_analysis:892 -   ZINC-subset: 3 graphs processed
+2026-02-22 10:21:29.885 | INFO     | __main__:run_analysis:838 - Processing Peptides-func (3 examples)
+2026-02-22 10:21:29.892 | INFO     | __main__:run_analysis:892 -   Peptides-func: 3 graphs processed
+2026-02-22 10:21:29.892 | INFO     | __main__:run_analysis:838 - Processing Peptides-struct (3 examples)
+2026-02-22 10:21:29.899 | INFO     | __main__:run_analysis:892 -   Peptides-struct: 3 graphs processed
+2026-02-22 10:21:29.899 | INFO     | __main__:run_analysis:838 - Processing Synthetic-aliased-pairs (3 examples)
+2026-02-22 10:21:29.900 | INFO     | __main__:run_analysis:892 -   Synthetic-aliased-pairs: 3 graphs processed
+2026-02-22 10:21:29.900 | INFO     | __main__:run_analysis:905 - ============================================================
+2026-02-22 10:21:29.900 | INFO     | __main__:run_analysis:906 - PHASE 2: Node-Level Distinguishability
+2026-02-22 10:21:29.900 | INFO     | __main__:run_analysis:907 - ============================================================
+2026-02-22 10:21:29.900 | INFO     | __main__:run_analysis:919 - Phase 2: ZINC-subset — sampling 3 graphs
+2026-02-22 10:21:29.903 | INFO     | __main__:run_analysis:1038 -   ZINC-subset: 3 graphs, node-level rho=0.0000
+2026-02-22 10:21:29.903 | INFO     | __main__:run_analysis:919 - Phase 2: Peptides-func — sampling 3 graphs
+2026-02-22 10:21:29.911 | INFO     | __main__:run_analysis:1038 -   Peptides-func: 3 graphs, node-level rho=-0.0475
+2026-02-22 10:21:29.911 | INFO     | __main__:run_analysis:919 - Phase 2: Peptides-struct — sampling 3 graphs
+2026-02-22 10:21:29.918 | INFO     | __main__:run_analysis:1038 -   Peptides-struct: 3 graphs, node-level rho=-0.0269
+2026-02-22 10:21:29.918 | INFO     | __main__:run_analysis:919 - Phase 2: Synthetic-aliased-pairs — sampling 3 graphs
+2026-02-22 10:21:29.919 | INFO     | __main__:run_analysis:1038 -   Synthetic-aliased-pairs: 3 graphs, node-level rho=-0.4584
+2026-02-22 10:21:29.919 | INFO     | __main__:run_analysis:1041 - ============================================================
+2026-02-22 10:21:29.919 | INFO     | __main__:run_analysis:1042 - PHASE 3: Graph-Level Correlations and Comparison
+2026-02-22 10:21:29.919 | INFO     | __main__:run_analysis:1043 - ============================================================
+2026-02-22 10:21:29.919 | WARNING  | __main__:run_analysis:1049 - Skipping ZINC-subset correlations: only 3 samples
+2026-02-22 10:21:29.919 | WARNING  | __main__:run_analysis:1049 - Skipping Peptides-func correlations: only 3 samples
+2026-02-22 10:21:29.919 | WARNING  | __main__:run_analysis:1049 - Skipping Peptides-struct correlations: only 3 samples
+2026-02-22 10:21:29.919 | WARNING  | __main__:run_analysis:1049 - Skipping Synthetic-aliased-pairs correlations: only 3 samples
+2026-02-22 10:21:33.273 | INFO     | __main__:run_analysis:1155 -   Pooled: graph_sri rho=0.1732, mean_node_sri rho=0.2328
+2026-02-22 10:21:33.273 | INFO     | __main__:run_analysis:1175 -   Best node metric: min_node_sri, improvement: 0.4509
+2026-02-22 10:21:33.273 | INFO     | __main__:run_analysis:1178 - ============================================================
+2026-02-22 10:21:33.273 | INFO     | __main__:run_analysis:1179 - PHASE 4: SRWE Benefit Prediction
+2026-02-22 10:21:33.273 | INFO     | __main__:run_analysis:1180 - ============================================================
+2026-02-22 10:21:33.273 | INFO     | __main__:run_analysis:1192 - Phase 4: Processing 3 graphs from ZINC-subset
+2026-02-22 10:21:33.280 | INFO     | __main__:run_analysis:1192 - Phase 4: Processing 3 graphs from Peptides-func
+2026-02-22 10:21:33.336 | INFO     | __main__:run_analysis:1192 - Phase 4: Processing 3 graphs from Peptides-struct
+2026-02-22 10:21:33.390 | INFO     | __main__:run_analysis:1192 - Phase 4: Processing 3 graphs from Synthetic-aliased-pairs
+2026-02-22 10:21:33.391 | INFO     | __main__:run_analysis:1293 - Insufficient data for Mann-Whitney: newly=0, already=1754
+2026-02-22 10:21:33.391 | INFO     | __main__:run_analysis:1295 -   SRWE categories: already=1754, newly=0, unresolved=42
+2026-02-22 10:21:33.391 | INFO     | __main__:run_analysis:1298 - ============================================================
+2026-02-22 10:21:33.391 | INFO     | __main__:run_analysis:1299 - PHASE 5: Visualization
+2026-02-22 10:21:33.391 | INFO     | __main__:run_analysis:1300 - ============================================================
+2026-02-22 10:21:33.586 | INFO     | __main__:plot_correlation_comparison:650 - Saved correlation comparison figure: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig1_correlation_comparison.png
+2026-02-22 10:21:33.835 | INFO     | __main__:plot_scatter_sri_comparison:694 - Saved scatter comparison: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig2_sri_scatter.png
+2026-02-22 10:21:33.910 | INFO     | __main__:plot_within_graph_correlations:757 - Saved within-graph correlations: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig3_within_graph_rhos.png
+2026-02-22 10:21:34.299 | INFO     | __main__:plot_node_sri_heatmaps:790 - Saved node SRI heatmaps: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig4_node_sri_heatmaps.png
+2026-02-22 10:21:34.355 | INFO     | __main__:plot_srwe_benefit:732 - Saved SRWE benefit figure: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig5_srwe_benefit.png
+2026-02-22 10:21:34.355 | INFO     | __main__:run_analysis:1346 - Total runtime: 4.5s
+2026-02-22 10:21:34.356 | INFO     | __main__:main:1488 - Saved analysis results: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/analysis_results.json
+2026-02-22 10:21:34.356 | INFO     | __main__:main:1491 - Formatting output for exp_gen_sol_out schema...
+2026-02-22 10:21:34.365 | INFO     | __main__:main:1498 - Saved method_out.json (0.4 MB)
+2026-02-22 10:21:34.365 | INFO     | __main__:main:1513 - ============================================================
+2026-02-22 10:21:34.365 | INFO     | __main__:main:1514 - Done!
+2026-02-22 10:21:47.865 | INFO     | __main__:<module>:81 - Hardware: 20 CPUs, 134.7GB RAM, 124.5GB available
+2026-02-22 10:21:47.865 | INFO     | __main__:main:1424 - ============================================================
+2026-02-22 10:21:47.865 | INFO     | __main__:main:1425 - Node-Level SRI vs Graph-Level SRI Analysis
+2026-02-22 10:21:47.865 | INFO     | __main__:main:1426 - ============================================================
+2026-02-22 10:21:47.866 | INFO     | __main__:main:1438 - Run mode: 10, SRWE: enabled
+2026-02-22 10:21:47.866 | INFO     | __main__:load_all_data:90 - Loading data from all parts...
+2026-02-22 10:21:47.866 | INFO     | __main__:load_all_data:94 -   Loading full_data_out_1.json (94.3 MB)
+2026-02-22 10:21:48.000 | INFO     | __main__:load_all_data:107 -     ZINC-subset: +9594 examples (total: 9594)
+2026-02-22 10:21:48.000 | INFO     | __main__:load_all_data:94 -   Loading full_data_out_2.json (23.7 MB)
+2026-02-22 10:21:48.033 | INFO     | __main__:load_all_data:107 -     ZINC-subset: +2406 examples (total: 12000)
+2026-02-22 10:21:48.033 | INFO     | __main__:load_all_data:94 -   Loading full_data_out_3.json (97.2 MB)
+2026-02-22 10:21:48.162 | INFO     | __main__:load_all_data:107 -     Peptides-func: +2000 examples (total: 2000)
+2026-02-22 10:21:48.162 | INFO     | __main__:load_all_data:94 -   Loading full_data_out_4.json (97.4 MB)
+2026-02-22 10:21:48.290 | INFO     | __main__:load_all_data:107 -     Peptides-struct: +2000 examples (total: 2000)
+2026-02-22 10:21:48.291 | INFO     | __main__:load_all_data:94 -   Loading full_data_out_5.json (0.4 MB)
+2026-02-22 10:21:48.291 | INFO     | __main__:load_all_data:107 -     Synthetic-aliased-pairs: +100 examples (total: 100)
+2026-02-22 10:21:48.293 | INFO     | __main__:load_all_data:113 -   Truncated ZINC-subset to 10 examples
+2026-02-22 10:21:48.294 | INFO     | __main__:load_all_data:113 -   Truncated Peptides-func to 10 examples
+2026-02-22 10:21:48.294 | INFO     | __main__:load_all_data:113 -   Truncated Peptides-struct to 10 examples
+2026-02-22 10:21:48.294 | INFO     | __main__:load_all_data:113 -   Truncated Synthetic-aliased-pairs to 10 examples
+2026-02-22 10:21:48.294 | INFO     | __main__:load_all_data:116 - Total loaded: 40 examples across 4 datasets
+2026-02-22 10:21:48.294 | INFO     | __main__:run_analysis:830 - ============================================================
+2026-02-22 10:21:48.294 | INFO     | __main__:run_analysis:831 - PHASE 1: Node-Level SRI Computation
+2026-02-22 10:21:48.295 | INFO     | __main__:run_analysis:832 - ============================================================
+2026-02-22 10:21:48.295 | INFO     | __main__:run_analysis:838 - Processing ZINC-subset (10 examples)
+2026-02-22 10:21:48.303 | INFO     | __main__:run_analysis:892 -   ZINC-subset: 10 graphs processed
+2026-02-22 10:21:48.303 | INFO     | __main__:run_analysis:838 - Processing Peptides-func (10 examples)
+2026-02-22 10:21:48.327 | INFO     | __main__:run_analysis:892 -   Peptides-func: 10 graphs processed
+2026-02-22 10:21:48.327 | INFO     | __main__:run_analysis:838 - Processing Peptides-struct (10 examples)
+2026-02-22 10:21:48.350 | INFO     | __main__:run_analysis:892 -   Peptides-struct: 10 graphs processed
+2026-02-22 10:21:48.350 | INFO     | __main__:run_analysis:838 - Processing Synthetic-aliased-pairs (10 examples)
+2026-02-22 10:21:48.354 | INFO     | __main__:run_analysis:892 -   Synthetic-aliased-pairs: 10 graphs processed
+2026-02-22 10:21:48.354 | INFO     | __main__:run_analysis:905 - ============================================================
+2026-02-22 10:21:48.354 | INFO     | __main__:run_analysis:906 - PHASE 2: Node-Level Distinguishability
+2026-02-22 10:21:48.354 | INFO     | __main__:run_analysis:907 - ============================================================
+2026-02-22 10:21:48.354 | INFO     | __main__:run_analysis:919 - Phase 2: ZINC-subset — sampling 10 graphs
+2026-02-22 10:21:48.362 | INFO     | __main__:run_analysis:1038 -   ZINC-subset: 10 graphs, node-level rho=-0.0270
+2026-02-22 10:21:48.363 | INFO     | __main__:run_analysis:919 - Phase 2: Peptides-func — sampling 10 graphs
+2026-02-22 10:21:48.386 | INFO     | __main__:run_analysis:1038 -   Peptides-func: 10 graphs, node-level rho=0.0863
+2026-02-22 10:21:48.386 | INFO     | __main__:run_analysis:919 - Phase 2: Peptides-struct — sampling 10 graphs
+2026-02-22 10:21:48.408 | INFO     | __main__:run_analysis:1038 -   Peptides-struct: 10 graphs, node-level rho=0.0546
+2026-02-22 10:21:48.408 | INFO     | __main__:run_analysis:919 - Phase 2: Synthetic-aliased-pairs — sampling 10 graphs
+2026-02-22 10:21:48.410 | INFO     | __main__:run_analysis:1038 -   Synthetic-aliased-pairs: 10 graphs, node-level rho=0.6403
+2026-02-22 10:21:48.410 | INFO     | __main__:run_analysis:1041 - ============================================================
+2026-02-22 10:21:48.410 | INFO     | __main__:run_analysis:1042 - PHASE 3: Graph-Level Correlations and Comparison
+2026-02-22 10:21:48.410 | INFO     | __main__:run_analysis:1043 - ============================================================
+2026-02-22 10:21:53.851 | INFO     | __main__:run_analysis:1115 -   ZINC-subset: graph_sri rho=0.3546, mean_node_sri rho=0.2422, min_node_sri rho=-0.3892
+2026-02-22 10:21:54.473 | INFO     | __main__:run_analysis:1115 -   Peptides-func: graph_sri rho=0.0000, mean_node_sri rho=0.0000, min_node_sri rho=0.0000
+2026-02-22 10:21:55.083 | INFO     | __main__:run_analysis:1115 -   Peptides-struct: graph_sri rho=0.0000, mean_node_sri rho=0.0000, min_node_sri rho=0.0000
+2026-02-22 10:22:00.436 | INFO     | __main__:run_analysis:1115 -   Synthetic-aliased-pairs: graph_sri rho=0.5933, mean_node_sri rho=0.8737, min_node_sri rho=0.8237
+2026-02-22 10:22:04.308 | INFO     | __main__:run_analysis:1155 -   Pooled: graph_sri rho=0.7074, mean_node_sri rho=0.7082
+2026-02-22 10:22:04.308 | INFO     | __main__:run_analysis:1175 -   Best node metric: mean_node_sri, improvement: 0.0008
+2026-02-22 10:22:04.308 | INFO     | __main__:run_analysis:1178 - ============================================================
+2026-02-22 10:22:04.308 | INFO     | __main__:run_analysis:1179 - PHASE 4: SRWE Benefit Prediction
+2026-02-22 10:22:04.308 | INFO     | __main__:run_analysis:1180 - ============================================================
+2026-02-22 10:22:04.308 | INFO     | __main__:run_analysis:1192 - Phase 4: Processing 10 graphs from ZINC-subset
+2026-02-22 10:22:04.320 | INFO     | __main__:run_analysis:1192 - Phase 4: Processing 10 graphs from Peptides-func
+2026-02-22 10:22:04.461 | INFO     | __main__:run_analysis:1192 - Phase 4: Processing 10 graphs from Peptides-struct
+2026-02-22 10:22:04.598 | INFO     | __main__:run_analysis:1192 - Phase 4: Processing 10 graphs from Synthetic-aliased-pairs
+2026-02-22 10:22:04.602 | INFO     | __main__:run_analysis:1293 - Insufficient data for Mann-Whitney: newly=0, already=5833
+2026-02-22 10:22:04.602 | INFO     | __main__:run_analysis:1295 -   SRWE categories: already=5833, newly=0, unresolved=286
+2026-02-22 10:22:04.602 | INFO     | __main__:run_analysis:1298 - ============================================================
+2026-02-22 10:22:04.602 | INFO     | __main__:run_analysis:1299 - PHASE 5: Visualization
+2026-02-22 10:22:04.602 | INFO     | __main__:run_analysis:1300 - ============================================================
+2026-02-22 10:22:04.841 | INFO     | __main__:plot_correlation_comparison:650 - Saved correlation comparison figure: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig1_correlation_comparison.png
+2026-02-22 10:22:05.084 | INFO     | __main__:plot_scatter_sri_comparison:694 - Saved scatter comparison: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig2_sri_scatter.png
+2026-02-22 10:22:05.155 | INFO     | __main__:plot_within_graph_correlations:757 - Saved within-graph correlations: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig3_within_graph_rhos.png
+2026-02-22 10:22:05.512 | INFO     | __main__:plot_node_sri_heatmaps:790 - Saved node SRI heatmaps: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig4_node_sri_heatmaps.png
+2026-02-22 10:22:05.605 | INFO     | __main__:plot_srwe_benefit:732 - Saved SRWE benefit figure: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig5_srwe_benefit.png
+2026-02-22 10:22:05.605 | INFO     | __main__:run_analysis:1346 - Total runtime: 17.3s
+2026-02-22 10:22:05.606 | INFO     | __main__:main:1488 - Saved analysis results: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/analysis_results.json
+2026-02-22 10:22:05.606 | INFO     | __main__:main:1491 - Formatting output for exp_gen_sol_out schema...
+2026-02-22 10:22:05.634 | INFO     | __main__:main:1498 - Saved method_out.json (1.2 MB)
+2026-02-22 10:22:05.634 | INFO     | __main__:main:1513 - ============================================================
+2026-02-22 10:22:05.634 | INFO     | __main__:main:1514 - Done!
+2026-02-22 10:24:09.027 | INFO     | __main__:<module>:81 - Hardware: 20 CPUs, 134.7GB RAM, 125.4GB available
+2026-02-22 10:24:09.027 | INFO     | __main__:main:1466 - ============================================================
+2026-02-22 10:24:09.027 | INFO     | __main__:main:1467 - Node-Level SRI vs Graph-Level SRI Analysis
+2026-02-22 10:24:09.027 | INFO     | __main__:main:1468 - ============================================================
+2026-02-22 10:24:09.028 | INFO     | __main__:main:1480 - Run mode: 50, SRWE: enabled
+2026-02-22 10:24:09.028 | INFO     | __main__:load_all_data:90 - Loading data from all parts...
+2026-02-22 10:24:09.028 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_1.json (94.3 MB)
+2026-02-22 10:24:09.170 | INFO     | __main__:load_all_data:118 -     ZINC-subset: +50 examples (total: 50)
+2026-02-22 10:24:09.170 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_2.json (23.7 MB)
+2026-02-22 10:24:09.206 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_3.json (97.2 MB)
+2026-02-22 10:24:09.324 | INFO     | __main__:load_all_data:118 -     Peptides-func: +50 examples (total: 50)
+2026-02-22 10:24:09.324 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_4.json (97.4 MB)
+2026-02-22 10:24:09.447 | INFO     | __main__:load_all_data:118 -     Peptides-struct: +50 examples (total: 50)
+2026-02-22 10:24:09.447 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_5.json (0.4 MB)
+2026-02-22 10:24:09.448 | INFO     | __main__:load_all_data:118 -     Synthetic-aliased-pairs: +50 examples (total: 50)
+2026-02-22 10:24:09.448 | INFO     | __main__:load_all_data:124 - Total loaded: 200 examples across 4 datasets
+2026-02-22 10:24:09.448 | INFO     | __main__:run_analysis:862 - ============================================================
+2026-02-22 10:24:09.448 | INFO     | __main__:run_analysis:863 - PHASE 1: Node-Level SRI Computation
+2026-02-22 10:24:09.448 | INFO     | __main__:run_analysis:864 - ============================================================
+2026-02-22 10:24:09.448 | INFO     | __main__:run_analysis:870 - Processing ZINC-subset (50 examples)
+2026-02-22 10:24:09.488 | INFO     | __main__:run_analysis:924 -   ZINC-subset: 50 graphs processed
+2026-02-22 10:24:09.488 | INFO     | __main__:run_analysis:870 - Processing Peptides-func (50 examples)
+2026-02-22 10:24:09.611 | INFO     | __main__:run_analysis:924 -   Peptides-func: 50 graphs processed
+2026-02-22 10:24:09.611 | INFO     | __main__:run_analysis:870 - Processing Peptides-struct (50 examples)
+2026-02-22 10:24:09.750 | INFO     | __main__:run_analysis:924 -   Peptides-struct: 50 graphs processed
+2026-02-22 10:24:09.750 | INFO     | __main__:run_analysis:870 - Processing Synthetic-aliased-pairs (50 examples)
+2026-02-22 10:24:09.770 | INFO     | __main__:run_analysis:924 -   Synthetic-aliased-pairs: 50 graphs processed
+2026-02-22 10:24:09.770 | INFO     | __main__:run_analysis:937 - ============================================================
+2026-02-22 10:24:09.770 | INFO     | __main__:run_analysis:938 - PHASE 2: Node-Level Distinguishability
+2026-02-22 10:24:09.770 | INFO     | __main__:run_analysis:939 - ============================================================
+2026-02-22 10:24:09.770 | INFO     | __main__:run_analysis:951 - Phase 2: ZINC-subset — sampling 50 graphs
+2026-02-22 10:24:09.807 | INFO     | __main__:run_analysis:1070 -   ZINC-subset: 50 graphs, node-level rho=0.1340
+2026-02-22 10:24:09.807 | INFO     | __main__:run_analysis:951 - Phase 2: Peptides-func — sampling 50 graphs
+2026-02-22 10:24:09.922 | INFO     | __main__:run_analysis:1070 -   Peptides-func: 50 graphs, node-level rho=0.0667
+2026-02-22 10:24:09.922 | INFO     | __main__:run_analysis:951 - Phase 2: Peptides-struct — sampling 50 graphs
+2026-02-22 10:24:10.054 | INFO     | __main__:run_analysis:1070 -   Peptides-struct: 50 graphs, node-level rho=0.0678
+2026-02-22 10:24:10.054 | INFO     | __main__:run_analysis:951 - Phase 2: Synthetic-aliased-pairs — sampling 50 graphs
+2026-02-22 10:24:10.067 | INFO     | __main__:run_analysis:1070 -   Synthetic-aliased-pairs: 50 graphs, node-level rho=-0.1481
+2026-02-22 10:24:10.067 | INFO     | __main__:run_analysis:1073 - ============================================================
+2026-02-22 10:24:10.067 | INFO     | __main__:run_analysis:1074 - PHASE 3: Graph-Level Correlations and Comparison
+2026-02-22 10:24:10.067 | INFO     | __main__:run_analysis:1075 - ============================================================
+2026-02-22 10:24:16.262 | INFO     | __main__:run_analysis:1147 -   ZINC-subset: graph_sri rho=0.2522, mean_node_sri rho=0.4327, min_node_sri rho=0.0319
+2026-02-22 10:24:22.340 | INFO     | __main__:run_analysis:1147 -   Peptides-func: graph_sri rho=0.0816, mean_node_sri rho=0.0067, min_node_sri rho=-0.0884
+2026-02-22 10:24:28.616 | INFO     | __main__:run_analysis:1147 -   Peptides-struct: graph_sri rho=0.1700, mean_node_sri rho=-0.0376, min_node_sri rho=0.0076
+2026-02-22 10:24:34.127 | INFO     | __main__:run_analysis:1147 -   Synthetic-aliased-pairs: graph_sri rho=0.1598, mean_node_sri rho=-0.1073, min_node_sri rho=0.3152
+2026-02-22 10:24:38.506 | INFO     | __main__:run_analysis:1187 -   Pooled: graph_sri rho=0.6157, mean_node_sri rho=0.5161
+2026-02-22 10:24:38.506 | INFO     | __main__:run_analysis:1207 -   Best node metric: mean_node_sri, improvement: -0.0996
+2026-02-22 10:24:38.507 | INFO     | __main__:run_analysis:1210 - ============================================================
+2026-02-22 10:24:38.507 | INFO     | __main__:run_analysis:1211 - PHASE 4: SRWE Benefit Prediction
+2026-02-22 10:24:38.507 | INFO     | __main__:run_analysis:1212 - ============================================================
+2026-02-22 10:24:38.507 | INFO     | __main__:run_analysis:1224 - Phase 4: Processing 50 graphs from ZINC-subset
+2026-02-22 10:24:38.591 | INFO     | __main__:run_analysis:1307 -   Phase 4: ZINC-subset 50/50 (29.1s)
+2026-02-22 10:24:38.591 | INFO     | __main__:run_analysis:1224 - Phase 4: Processing 50 graphs from Peptides-func
+2026-02-22 10:24:39.398 | INFO     | __main__:run_analysis:1307 -   Phase 4: Peptides-func 50/50 (29.9s)
+2026-02-22 10:24:39.398 | INFO     | __main__:run_analysis:1224 - Phase 4: Processing 50 graphs from Peptides-struct
+2026-02-22 10:24:40.218 | INFO     | __main__:run_analysis:1307 -   Phase 4: Peptides-struct 50/50 (30.8s)
+2026-02-22 10:24:40.218 | INFO     | __main__:run_analysis:1224 - Phase 4: Processing 50 graphs from Synthetic-aliased-pairs
+2026-02-22 10:24:40.247 | INFO     | __main__:run_analysis:1307 -   Phase 4: Synthetic-aliased-pairs 50/50 (30.8s)
+2026-02-22 10:24:40.259 | INFO     | __main__:run_analysis:1331 - Mann-Whitney U: newly vs already: U=45472901.0, p=1.0000
+2026-02-22 10:24:40.259 | INFO     | __main__:run_analysis:1337 -   SRWE categories: already=29478, newly=1744, unresolved=610
+2026-02-22 10:24:40.259 | INFO     | __main__:run_analysis:1340 - ============================================================
+2026-02-22 10:24:40.259 | INFO     | __main__:run_analysis:1341 - PHASE 5: Visualization
+2026-02-22 10:24:40.259 | INFO     | __main__:run_analysis:1342 - ============================================================
+2026-02-22 10:24:40.480 | INFO     | __main__:plot_correlation_comparison:682 - Saved correlation comparison figure: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig1_correlation_comparison.png
+2026-02-22 10:24:40.720 | INFO     | __main__:plot_scatter_sri_comparison:726 - Saved scatter comparison: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig2_sri_scatter.png
+2026-02-22 10:24:40.797 | INFO     | __main__:plot_within_graph_correlations:789 - Saved within-graph correlations: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig3_within_graph_rhos.png
+2026-02-22 10:24:41.175 | INFO     | __main__:plot_node_sri_heatmaps:822 - Saved node SRI heatmaps: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig4_node_sri_heatmaps.png
+2026-02-22 10:24:41.259 | INFO     | __main__:plot_srwe_benefit:764 - Saved SRWE benefit figure: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig5_srwe_benefit.png
+2026-02-22 10:24:41.259 | INFO     | __main__:run_analysis:1388 - Total runtime: 31.8s
+2026-02-22 10:24:41.260 | INFO     | __main__:main:1530 - Saved analysis results: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/analysis_results.json
+2026-02-22 10:24:41.260 | INFO     | __main__:main:1533 - Formatting output for exp_gen_sol_out schema...
+2026-02-22 10:24:41.423 | INFO     | __main__:main:1540 - Saved method_out.json (5.5 MB)
+2026-02-22 10:24:41.423 | INFO     | __main__:main:1555 - ============================================================
+2026-02-22 10:24:41.423 | INFO     | __main__:main:1556 - Done!
+2026-02-22 10:24:49.055 | INFO     | __main__:<module>:81 - Hardware: 20 CPUs, 134.7GB RAM, 125.6GB available
+2026-02-22 10:24:49.055 | INFO     | __main__:main:1466 - ============================================================
+2026-02-22 10:24:49.055 | INFO     | __main__:main:1467 - Node-Level SRI vs Graph-Level SRI Analysis
+2026-02-22 10:24:49.055 | INFO     | __main__:main:1468 - ============================================================
+2026-02-22 10:24:49.055 | INFO     | __main__:main:1480 - Run mode: 200, SRWE: enabled
+2026-02-22 10:24:49.055 | INFO     | __main__:load_all_data:90 - Loading data from all parts...
+2026-02-22 10:24:49.055 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_1.json (94.3 MB)
+2026-02-22 10:24:49.192 | INFO     | __main__:load_all_data:118 -     ZINC-subset: +200 examples (total: 200)
+2026-02-22 10:24:49.192 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_2.json (23.7 MB)
+2026-02-22 10:24:49.227 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_3.json (97.2 MB)
+2026-02-22 10:24:49.340 | INFO     | __main__:load_all_data:118 -     Peptides-func: +200 examples (total: 200)
+2026-02-22 10:24:49.340 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_4.json (97.4 MB)
+2026-02-22 10:24:49.463 | INFO     | __main__:load_all_data:118 -     Peptides-struct: +200 examples (total: 200)
+2026-02-22 10:24:49.463 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_5.json (0.4 MB)
+2026-02-22 10:24:49.464 | INFO     | __main__:load_all_data:118 -     Synthetic-aliased-pairs: +100 examples (total: 100)
+2026-02-22 10:24:49.464 | INFO     | __main__:load_all_data:124 - Total loaded: 700 examples across 4 datasets
+2026-02-22 10:24:49.464 | INFO     | __main__:run_analysis:862 - ============================================================
+2026-02-22 10:24:49.464 | INFO     | __main__:run_analysis:863 - PHASE 1: Node-Level SRI Computation
+2026-02-22 10:24:49.464 | INFO     | __main__:run_analysis:864 - ============================================================
+2026-02-22 10:24:49.464 | INFO     | __main__:run_analysis:870 - Processing ZINC-subset (200 examples)
+2026-02-22 10:24:49.619 | INFO     | __main__:run_analysis:924 -   ZINC-subset: 200 graphs processed
+2026-02-22 10:24:49.620 | INFO     | __main__:run_analysis:870 - Processing Peptides-func (200 examples)
+2026-02-22 10:24:50.161 | INFO     | __main__:run_analysis:924 -   Peptides-func: 200 graphs processed
+2026-02-22 10:24:50.162 | INFO     | __main__:run_analysis:870 - Processing Peptides-struct (200 examples)
+2026-02-22 10:24:50.711 | INFO     | __main__:run_analysis:924 -   Peptides-struct: 200 graphs processed
+2026-02-22 10:24:50.712 | INFO     | __main__:run_analysis:870 - Processing Synthetic-aliased-pairs (100 examples)
+2026-02-22 10:24:50.753 | INFO     | __main__:run_analysis:924 -   Synthetic-aliased-pairs: 100 graphs processed
+2026-02-22 10:24:50.753 | INFO     | __main__:run_analysis:937 - ============================================================
+2026-02-22 10:24:50.753 | INFO     | __main__:run_analysis:938 - PHASE 2: Node-Level Distinguishability
+2026-02-22 10:24:50.753 | INFO     | __main__:run_analysis:939 - ============================================================
+2026-02-22 10:24:50.753 | INFO     | __main__:run_analysis:951 - Phase 2: ZINC-subset — sampling 200 graphs
+2026-02-22 10:24:50.894 | INFO     | __main__:run_analysis:1029 -   Phase 2: ZINC-subset 200/200 (1.4s)
+2026-02-22 10:24:50.898 | INFO     | __main__:run_analysis:1070 -   ZINC-subset: 200 graphs, node-level rho=0.1829
+2026-02-22 10:24:50.898 | INFO     | __main__:run_analysis:951 - Phase 2: Peptides-func — sampling 200 graphs
+2026-02-22 10:24:51.379 | INFO     | __main__:run_analysis:1029 -   Phase 2: Peptides-func 200/200 (1.9s)
+2026-02-22 10:24:51.393 | INFO     | __main__:run_analysis:1070 -   Peptides-func: 200 graphs, node-level rho=0.0479
+2026-02-22 10:24:51.393 | INFO     | __main__:run_analysis:951 - Phase 2: Peptides-struct — sampling 200 graphs
+2026-02-22 10:24:51.889 | INFO     | __main__:run_analysis:1029 -   Phase 2: Peptides-struct 200/200 (2.4s)
+2026-02-22 10:24:51.903 | INFO     | __main__:run_analysis:1070 -   Peptides-struct: 200 graphs, node-level rho=0.0446
+2026-02-22 10:24:51.903 | INFO     | __main__:run_analysis:951 - Phase 2: Synthetic-aliased-pairs — sampling 100 graphs
+2026-02-22 10:24:51.932 | INFO     | __main__:run_analysis:1070 -   Synthetic-aliased-pairs: 100 graphs, node-level rho=0.0188
+2026-02-22 10:24:51.932 | INFO     | __main__:run_analysis:1073 - ============================================================
+2026-02-22 10:24:51.932 | INFO     | __main__:run_analysis:1074 - PHASE 3: Graph-Level Correlations and Comparison
+2026-02-22 10:24:51.932 | INFO     | __main__:run_analysis:1075 - ============================================================
+2026-02-22 10:24:58.790 | INFO     | __main__:run_analysis:1147 -   ZINC-subset: graph_sri rho=0.2061, mean_node_sri rho=0.3853, min_node_sri rho=0.0673
+2026-02-22 10:25:05.601 | INFO     | __main__:run_analysis:1147 -   Peptides-func: graph_sri rho=0.2738, mean_node_sri rho=0.0823, min_node_sri rho=0.1589
+2026-02-22 10:25:12.427 | INFO     | __main__:run_analysis:1147 -   Peptides-struct: graph_sri rho=0.1939, mean_node_sri rho=0.0241, min_node_sri rho=0.0838
+2026-02-22 10:25:18.067 | INFO     | __main__:run_analysis:1147 -   Synthetic-aliased-pairs: graph_sri rho=0.3857, mean_node_sri rho=0.0217, min_node_sri rho=0.2792
+2026-02-22 10:25:23.834 | INFO     | __main__:run_analysis:1187 -   Pooled: graph_sri rho=0.5070, mean_node_sri rho=0.3897
+2026-02-22 10:25:23.834 | INFO     | __main__:run_analysis:1207 -   Best node metric: mean_node_sri, improvement: -0.1172
+2026-02-22 10:25:23.834 | INFO     | __main__:run_analysis:1210 - ============================================================
+2026-02-22 10:25:23.834 | INFO     | __main__:run_analysis:1211 - PHASE 4: SRWE Benefit Prediction
+2026-02-22 10:25:23.834 | INFO     | __main__:run_analysis:1212 - ============================================================
+2026-02-22 10:25:23.834 | INFO     | __main__:run_analysis:1224 - Phase 4: Processing 200 graphs from ZINC-subset
+2026-02-22 10:25:23.917 | INFO     | __main__:run_analysis:1307 -   Phase 4: ZINC-subset 50/200 (34.5s)
+2026-02-22 10:25:24.001 | INFO     | __main__:run_analysis:1307 -   Phase 4: ZINC-subset 100/200 (34.5s)
+2026-02-22 10:25:24.082 | INFO     | __main__:run_analysis:1307 -   Phase 4: ZINC-subset 150/200 (34.6s)
+2026-02-22 10:25:24.168 | INFO     | __main__:run_analysis:1307 -   Phase 4: ZINC-subset 200/200 (34.7s)
+2026-02-22 10:25:24.181 | INFO     | __main__:run_analysis:1331 - Mann-Whitney U: newly vs already: U=4711330.0, p=1.0000
+2026-02-22 10:25:24.182 | INFO     | __main__:run_analysis:1337 -   SRWE categories: already=37130, newly=171, unresolved=503
+2026-02-22 10:25:24.182 | INFO     | __main__:run_analysis:1340 - ============================================================
+2026-02-22 10:25:24.182 | INFO     | __main__:run_analysis:1341 - PHASE 5: Visualization
+2026-02-22 10:25:24.182 | INFO     | __main__:run_analysis:1342 - ============================================================
+2026-02-22 10:25:24.404 | INFO     | __main__:plot_correlation_comparison:682 - Saved correlation comparison figure: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig1_correlation_comparison.png
+2026-02-22 10:25:24.678 | INFO     | __main__:plot_scatter_sri_comparison:726 - Saved scatter comparison: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig2_sri_scatter.png
+2026-02-22 10:25:24.754 | INFO     | __main__:plot_within_graph_correlations:789 - Saved within-graph correlations: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig3_within_graph_rhos.png
+2026-02-22 10:25:25.099 | INFO     | __main__:plot_node_sri_heatmaps:822 - Saved node SRI heatmaps: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig4_node_sri_heatmaps.png
+2026-02-22 10:25:25.190 | INFO     | __main__:plot_srwe_benefit:764 - Saved SRWE benefit figure: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig5_srwe_benefit.png
+2026-02-22 10:25:25.191 | INFO     | __main__:run_analysis:1388 - Total runtime: 35.7s
+2026-02-22 10:25:25.192 | INFO     | __main__:main:1530 - Saved analysis results: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/analysis_results.json
+2026-02-22 10:25:25.192 | INFO     | __main__:main:1533 - Formatting output for exp_gen_sol_out schema...
+2026-02-22 10:25:25.814 | INFO     | __main__:main:1540 - Saved method_out.json (20.9 MB)
+2026-02-22 10:25:25.814 | INFO     | __main__:main:1555 - ============================================================
+2026-02-22 10:25:25.814 | INFO     | __main__:main:1556 - Done!
+2026-02-22 10:25:58.009 | INFO     | __main__:<module>:81 - Hardware: 20 CPUs, 134.7GB RAM, 125.2GB available
+2026-02-22 10:25:58.009 | INFO     | __main__:main:1463 - ============================================================
+2026-02-22 10:25:58.009 | INFO     | __main__:main:1464 - Node-Level SRI vs Graph-Level SRI Analysis
+2026-02-22 10:25:58.009 | INFO     | __main__:main:1465 - ============================================================
+2026-02-22 10:25:58.009 | INFO     | __main__:main:1477 - Run mode: full, SRWE: enabled
+2026-02-22 10:25:58.009 | INFO     | __main__:load_all_data:90 - Loading data from all parts...
+2026-02-22 10:25:58.009 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_1.json (94.3 MB)
+2026-02-22 10:25:58.145 | INFO     | __main__:load_all_data:118 -     ZINC-subset: +9594 examples (total: 9594)
+2026-02-22 10:25:58.145 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_2.json (23.7 MB)
+2026-02-22 10:25:58.179 | INFO     | __main__:load_all_data:118 -     ZINC-subset: +2406 examples (total: 12000)
+2026-02-22 10:25:58.179 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_3.json (97.2 MB)
+2026-02-22 10:25:58.309 | INFO     | __main__:load_all_data:118 -     Peptides-func: +2000 examples (total: 2000)
+2026-02-22 10:25:58.309 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_4.json (97.4 MB)
+2026-02-22 10:25:58.439 | INFO     | __main__:load_all_data:118 -     Peptides-struct: +2000 examples (total: 2000)
+2026-02-22 10:25:58.439 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_5.json (0.4 MB)
+2026-02-22 10:25:58.440 | INFO     | __main__:load_all_data:118 -     Synthetic-aliased-pairs: +100 examples (total: 100)
+2026-02-22 10:25:58.440 | INFO     | __main__:load_all_data:124 - Total loaded: 16100 examples across 4 datasets
+2026-02-22 10:25:58.440 | INFO     | __main__:run_analysis:862 - ============================================================
+2026-02-22 10:25:58.440 | INFO     | __main__:run_analysis:863 - PHASE 1: Node-Level SRI Computation
+2026-02-22 10:25:58.440 | INFO     | __main__:run_analysis:864 - ============================================================
+2026-02-22 10:25:58.440 | INFO     | __main__:run_analysis:870 - Processing ZINC-subset (12000 examples)
+2026-02-22 10:25:59.221 | INFO     | __main__:run_analysis:921 -   Phase 1: ZINC-subset 1000/12000 (0.8s)
+2026-02-22 10:26:00.004 | INFO     | __main__:run_analysis:921 -   Phase 1: ZINC-subset 2000/12000 (1.6s)
+2026-02-22 10:26:00.785 | INFO     | __main__:run_analysis:921 -   Phase 1: ZINC-subset 3000/12000 (2.3s)
+2026-02-22 10:26:01.582 | INFO     | __main__:run_analysis:921 -   Phase 1: ZINC-subset 4000/12000 (3.1s)
+2026-02-22 10:26:02.367 | INFO     | __main__:run_analysis:921 -   Phase 1: ZINC-subset 5000/12000 (3.9s)
+2026-02-22 10:26:03.142 | INFO     | __main__:run_analysis:921 -   Phase 1: ZINC-subset 6000/12000 (4.7s)
+2026-02-22 10:26:03.922 | INFO     | __main__:run_analysis:921 -   Phase 1: ZINC-subset 7000/12000 (5.5s)
+2026-02-22 10:26:04.698 | INFO     | __main__:run_analysis:921 -   Phase 1: ZINC-subset 8000/12000 (6.3s)
+2026-02-22 10:26:05.509 | INFO     | __main__:run_analysis:921 -   Phase 1: ZINC-subset 9000/12000 (7.1s)
+2026-02-22 10:26:06.292 | INFO     | __main__:run_analysis:921 -   Phase 1: ZINC-subset 10000/12000 (7.9s)
+2026-02-22 10:26:07.074 | INFO     | __main__:run_analysis:921 -   Phase 1: ZINC-subset 11000/12000 (8.6s)
+2026-02-22 10:26:07.859 | INFO     | __main__:run_analysis:921 -   Phase 1: ZINC-subset 12000/12000 (9.4s)
+2026-02-22 10:26:07.859 | INFO     | __main__:run_analysis:924 -   ZINC-subset: 12000 graphs processed
+2026-02-22 10:26:07.875 | INFO     | __main__:run_analysis:870 - Processing Peptides-func (2000 examples)
+2026-02-22 10:26:10.731 | INFO     | __main__:run_analysis:921 -   Phase 1: Peptides-func 1000/2000 (12.3s)
+2026-02-22 10:26:13.671 | INFO     | __main__:run_analysis:921 -   Phase 1: Peptides-func 2000/2000 (15.2s)
+2026-02-22 10:26:13.671 | INFO     | __main__:run_analysis:924 -   Peptides-func: 2000 graphs processed
+2026-02-22 10:26:13.674 | INFO     | __main__:run_analysis:870 - Processing Peptides-struct (2000 examples)
+2026-02-22 10:26:16.539 | INFO     | __main__:run_analysis:921 -   Phase 1: Peptides-struct 1000/2000 (18.1s)
+2026-02-22 10:26:19.501 | INFO     | __main__:run_analysis:921 -   Phase 1: Peptides-struct 2000/2000 (21.1s)
+2026-02-22 10:26:19.501 | INFO     | __main__:run_analysis:924 -   Peptides-struct: 2000 graphs processed
+2026-02-22 10:26:19.504 | INFO     | __main__:run_analysis:870 - Processing Synthetic-aliased-pairs (100 examples)
+2026-02-22 10:26:19.546 | INFO     | __main__:run_analysis:924 -   Synthetic-aliased-pairs: 100 graphs processed
+2026-02-22 10:26:19.546 | INFO     | __main__:run_analysis:937 - ============================================================
+2026-02-22 10:26:19.546 | INFO     | __main__:run_analysis:938 - PHASE 2: Node-Level Distinguishability
+2026-02-22 10:26:19.546 | INFO     | __main__:run_analysis:939 - ============================================================
+2026-02-22 10:26:19.546 | INFO     | __main__:run_analysis:951 - Phase 2: ZINC-subset — sampling 500 graphs
+2026-02-22 10:26:19.686 | INFO     | __main__:run_analysis:1029 -   Phase 2: ZINC-subset 200/500 (21.2s)
+2026-02-22 10:26:19.823 | INFO     | __main__:run_analysis:1029 -   Phase 2: ZINC-subset 400/500 (21.4s)
+2026-02-22 10:26:19.902 | INFO     | __main__:run_analysis:1070 -   ZINC-subset: 500 graphs, node-level rho=0.1788
+2026-02-22 10:26:19.902 | INFO     | __main__:run_analysis:951 - Phase 2: Peptides-func — sampling 500 graphs
+2026-02-22 10:26:20.407 | INFO     | __main__:run_analysis:1029 -   Phase 2: Peptides-func 200/500 (22.0s)
+2026-02-22 10:26:20.958 | INFO     | __main__:run_analysis:1029 -   Phase 2: Peptides-func 400/500 (22.5s)
+2026-02-22 10:26:21.226 | INFO     | __main__:run_analysis:1070 -   Peptides-func: 500 graphs, node-level rho=0.0597
+2026-02-22 10:26:21.226 | INFO     | __main__:run_analysis:951 - Phase 2: Peptides-struct — sampling 500 graphs
+2026-02-22 10:26:21.735 | INFO     | __main__:run_analysis:1029 -   Phase 2: Peptides-struct 200/500 (23.3s)
+2026-02-22 10:26:22.296 | INFO     | __main__:run_analysis:1029 -   Phase 2: Peptides-struct 400/500 (23.9s)
+2026-02-22 10:26:22.567 | INFO     | __main__:run_analysis:1070 -   Peptides-struct: 500 graphs, node-level rho=0.0549
+2026-02-22 10:26:22.567 | INFO     | __main__:run_analysis:951 - Phase 2: Synthetic-aliased-pairs — sampling 100 graphs
+2026-02-22 10:26:22.596 | INFO     | __main__:run_analysis:1070 -   Synthetic-aliased-pairs: 100 graphs, node-level rho=0.0188
+2026-02-22 10:26:22.596 | INFO     | __main__:run_analysis:1073 - ============================================================
+2026-02-22 10:26:22.596 | INFO     | __main__:run_analysis:1074 - PHASE 3: Graph-Level Correlations and Comparison
+2026-02-22 10:26:22.596 | INFO     | __main__:run_analysis:1075 - ============================================================
+2026-02-22 10:26:30.672 | INFO     | __main__:run_analysis:1147 -   ZINC-subset: graph_sri rho=0.2146, mean_node_sri rho=0.4111, min_node_sri rho=0.1507
+2026-02-22 10:26:38.617 | INFO     | __main__:run_analysis:1147 -   Peptides-func: graph_sri rho=0.1900, mean_node_sri rho=0.0352, min_node_sri rho=0.1183
+2026-02-22 10:26:46.538 | INFO     | __main__:run_analysis:1147 -   Peptides-struct: graph_sri rho=0.1804, mean_node_sri rho=0.0776, min_node_sri rho=0.1168
+2026-02-22 10:26:52.169 | INFO     | __main__:run_analysis:1147 -   Synthetic-aliased-pairs: graph_sri rho=0.3857, mean_node_sri rho=0.0217, min_node_sri rho=0.2792
+2026-02-22 10:26:59.837 | INFO     | __main__:run_analysis:1187 -   Pooled: graph_sri rho=0.3787, mean_node_sri rho=0.3272
+2026-02-22 10:26:59.837 | INFO     | __main__:run_analysis:1207 -   Best node metric: mean_node_sri, improvement: -0.0515
+2026-02-22 10:26:59.837 | INFO     | __main__:run_analysis:1210 - ============================================================
+2026-02-22 10:26:59.837 | INFO     | __main__:run_analysis:1211 - PHASE 4: SRWE Benefit Prediction
+2026-02-22 10:26:59.837 | INFO     | __main__:run_analysis:1212 - ============================================================
+2026-02-22 10:26:59.837 | INFO     | __main__:run_analysis:1223 - Phase 4: Processing 50 graphs from ZINC-subset
+2026-02-22 10:26:59.917 | INFO     | __main__:run_analysis:1304 -   Phase 4: ZINC-subset 50/50 (61.5s)
+2026-02-22 10:26:59.917 | INFO     | __main__:run_analysis:1223 - Phase 4: Processing 50 graphs from Peptides-func
+2026-02-22 10:27:00.537 | INFO     | __main__:run_analysis:1304 -   Phase 4: Peptides-func 50/50 (62.1s)
+2026-02-22 10:27:00.537 | INFO     | __main__:run_analysis:1223 - Phase 4: Processing 50 graphs from Peptides-struct
+2026-02-22 10:27:01.281 | INFO     | __main__:run_analysis:1304 -   Phase 4: Peptides-struct 50/50 (62.8s)
+2026-02-22 10:27:01.281 | INFO     | __main__:run_analysis:1223 - Phase 4: Processing 50 graphs from Synthetic-aliased-pairs
+2026-02-22 10:27:01.310 | INFO     | __main__:run_analysis:1304 -   Phase 4: Synthetic-aliased-pairs 50/50 (62.9s)
+2026-02-22 10:27:01.322 | INFO     | __main__:run_analysis:1328 - Mann-Whitney U: newly vs already: U=44920213.5, p=1.0000
+2026-02-22 10:27:01.322 | INFO     | __main__:run_analysis:1334 -   SRWE categories: already=29013, newly=1789, unresolved=636
+2026-02-22 10:27:01.322 | INFO     | __main__:run_analysis:1337 - ============================================================
+2026-02-22 10:27:01.322 | INFO     | __main__:run_analysis:1338 - PHASE 5: Visualization
+2026-02-22 10:27:01.322 | INFO     | __main__:run_analysis:1339 - ============================================================
+2026-02-22 10:27:01.593 | INFO     | __main__:plot_correlation_comparison:682 - Saved correlation comparison figure: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig1_correlation_comparison.png
+2026-02-22 10:27:01.860 | INFO     | __main__:plot_scatter_sri_comparison:726 - Saved scatter comparison: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig2_sri_scatter.png
+2026-02-22 10:27:01.938 | INFO     | __main__:plot_within_graph_correlations:789 - Saved within-graph correlations: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig3_within_graph_rhos.png
+2026-02-22 10:27:02.293 | INFO     | __main__:plot_node_sri_heatmaps:822 - Saved node SRI heatmaps: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig4_node_sri_heatmaps.png
+2026-02-22 10:27:02.377 | INFO     | __main__:plot_srwe_benefit:764 - Saved SRWE benefit figure: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig5_srwe_benefit.png
+2026-02-22 10:27:02.377 | INFO     | __main__:run_analysis:1385 - Total runtime: 63.9s
+2026-02-22 10:27:02.392 | INFO     | __main__:main:1527 - Saved analysis results: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/analysis_results.json
+2026-02-22 10:27:02.392 | INFO     | __main__:main:1530 - Formatting output for exp_gen_sol_out schema...
+2026-02-22 10:27:12.133 | INFO     | __main__:main:1537 - Saved method_out.json (301.3 MB)
+2026-02-22 10:27:12.133 | INFO     | __main__:main:1541 - Output exceeds 100 MB, splitting...
+2026-02-22 10:27:12.393 | INFO     | __main__:main:1549 -   Part 1: ZINC-subset -> /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/method_out/method_out_1.json
+2026-02-22 10:27:12.585 | INFO     | __main__:main:1549 -   Part 2: Peptides-func -> /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/method_out/method_out_2.json
+2026-02-22 10:27:12.778 | INFO     | __main__:main:1549 -   Part 3: Peptides-struct -> /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/method_out/method_out_3.json
+2026-02-22 10:27:12.779 | INFO     | __main__:main:1549 -   Part 4: Synthetic-aliased-pairs -> /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/method_out/method_out_4.json
+2026-02-22 10:27:12.780 | INFO     | __main__:main:1552 - ============================================================
+2026-02-22 10:27:12.780 | INFO     | __main__:main:1553 - Done!
+2026-02-22 10:28:42.999 | INFO     | __main__:<module>:81 - Hardware: 20 CPUs, 134.7GB RAM, 125.3GB available
+2026-02-22 10:28:42.999 | INFO     | __main__:main:1463 - ============================================================
+2026-02-22 10:28:42.999 | INFO     | __main__:main:1464 - Node-Level SRI vs Graph-Level SRI Analysis
+2026-02-22 10:28:42.999 | INFO     | __main__:main:1465 - ============================================================
+2026-02-22 10:28:42.999 | INFO     | __main__:main:1477 - Run mode: mini, SRWE: enabled
+2026-02-22 10:28:42.999 | INFO     | __main__:load_mini_data:130 - Loading mini data from /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/mini_data_out.json
+2026-02-22 10:28:43.000 | INFO     | __main__:run_analysis:862 - ============================================================
+2026-02-22 10:28:43.000 | INFO     | __main__:run_analysis:863 - PHASE 1: Node-Level SRI Computation
+2026-02-22 10:28:43.000 | INFO     | __main__:run_analysis:864 - ============================================================
+2026-02-22 10:28:43.000 | INFO     | __main__:run_analysis:870 - Processing ZINC-subset (3 examples)
+2026-02-22 10:28:43.003 | INFO     | __main__:run_analysis:924 -   ZINC-subset: 3 graphs processed
+2026-02-22 10:28:43.003 | INFO     | __main__:run_analysis:870 - Processing Peptides-func (3 examples)
+2026-02-22 10:28:43.010 | INFO     | __main__:run_analysis:924 -   Peptides-func: 3 graphs processed
+2026-02-22 10:28:43.010 | INFO     | __main__:run_analysis:870 - Processing Peptides-struct (3 examples)
+2026-02-22 10:28:43.017 | INFO     | __main__:run_analysis:924 -   Peptides-struct: 3 graphs processed
+2026-02-22 10:28:43.017 | INFO     | __main__:run_analysis:870 - Processing Synthetic-aliased-pairs (3 examples)
+2026-02-22 10:28:43.018 | INFO     | __main__:run_analysis:924 -   Synthetic-aliased-pairs: 3 graphs processed
+2026-02-22 10:28:43.018 | INFO     | __main__:run_analysis:937 - ============================================================
+2026-02-22 10:28:43.018 | INFO     | __main__:run_analysis:938 - PHASE 2: Node-Level Distinguishability
+2026-02-22 10:28:43.018 | INFO     | __main__:run_analysis:939 - ============================================================
+2026-02-22 10:28:43.018 | INFO     | __main__:run_analysis:951 - Phase 2: ZINC-subset — sampling 3 graphs
+2026-02-22 10:28:43.020 | INFO     | __main__:run_analysis:1070 -   ZINC-subset: 3 graphs, node-level rho=0.0000
+2026-02-22 10:28:43.020 | INFO     | __main__:run_analysis:951 - Phase 2: Peptides-func — sampling 3 graphs
+2026-02-22 10:28:43.027 | INFO     | __main__:run_analysis:1070 -   Peptides-func: 3 graphs, node-level rho=-0.0475
+2026-02-22 10:28:43.027 | INFO     | __main__:run_analysis:951 - Phase 2: Peptides-struct — sampling 3 graphs
+2026-02-22 10:28:43.034 | INFO     | __main__:run_analysis:1070 -   Peptides-struct: 3 graphs, node-level rho=-0.0269
+2026-02-22 10:28:43.034 | INFO     | __main__:run_analysis:951 - Phase 2: Synthetic-aliased-pairs — sampling 3 graphs
+2026-02-22 10:28:43.035 | INFO     | __main__:run_analysis:1070 -   Synthetic-aliased-pairs: 3 graphs, node-level rho=-0.4584
+2026-02-22 10:28:43.035 | INFO     | __main__:run_analysis:1073 - ============================================================
+2026-02-22 10:28:43.035 | INFO     | __main__:run_analysis:1074 - PHASE 3: Graph-Level Correlations and Comparison
+2026-02-22 10:28:43.035 | INFO     | __main__:run_analysis:1075 - ============================================================
+2026-02-22 10:28:43.035 | WARNING  | __main__:run_analysis:1081 - Skipping ZINC-subset correlations: only 3 samples
+2026-02-22 10:28:43.035 | WARNING  | __main__:run_analysis:1081 - Skipping Peptides-func correlations: only 3 samples
+2026-02-22 10:28:43.035 | WARNING  | __main__:run_analysis:1081 - Skipping Peptides-struct correlations: only 3 samples
+2026-02-22 10:28:43.035 | WARNING  | __main__:run_analysis:1081 - Skipping Synthetic-aliased-pairs correlations: only 3 samples
+2026-02-22 10:28:46.404 | INFO     | __main__:run_analysis:1187 -   Pooled: graph_sri rho=0.1732, mean_node_sri rho=0.2328
+2026-02-22 10:28:46.404 | INFO     | __main__:run_analysis:1207 -   Best node metric: min_node_sri, improvement: 0.4509
+2026-02-22 10:28:46.404 | INFO     | __main__:run_analysis:1210 - ============================================================
+2026-02-22 10:28:46.404 | INFO     | __main__:run_analysis:1211 - PHASE 4: SRWE Benefit Prediction
+2026-02-22 10:28:46.404 | INFO     | __main__:run_analysis:1212 - ============================================================
+2026-02-22 10:28:46.404 | INFO     | __main__:run_analysis:1223 - Phase 4: Processing 3 graphs from ZINC-subset
+2026-02-22 10:28:46.409 | INFO     | __main__:run_analysis:1223 - Phase 4: Processing 3 graphs from Peptides-func
+2026-02-22 10:28:46.472 | INFO     | __main__:run_analysis:1223 - Phase 4: Processing 3 graphs from Peptides-struct
+2026-02-22 10:28:46.535 | INFO     | __main__:run_analysis:1223 - Phase 4: Processing 3 graphs from Synthetic-aliased-pairs
+2026-02-22 10:28:46.537 | INFO     | __main__:run_analysis:1328 - Mann-Whitney U: newly vs already: U=343.5, p=0.0009
+2026-02-22 10:28:46.537 | INFO     | __main__:run_analysis:1334 -   SRWE categories: already=1754, newly=4, unresolved=38
+2026-02-22 10:28:46.537 | INFO     | __main__:run_analysis:1337 - ============================================================
+2026-02-22 10:28:46.537 | INFO     | __main__:run_analysis:1338 - PHASE 5: Visualization
+2026-02-22 10:28:46.537 | INFO     | __main__:run_analysis:1339 - ============================================================
+2026-02-22 10:28:46.709 | INFO     | __main__:plot_correlation_comparison:682 - Saved correlation comparison figure: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig1_correlation_comparison.png
+2026-02-22 10:28:46.953 | INFO     | __main__:plot_scatter_sri_comparison:726 - Saved scatter comparison: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig2_sri_scatter.png
+2026-02-22 10:28:47.025 | INFO     | __main__:plot_within_graph_correlations:789 - Saved within-graph correlations: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig3_within_graph_rhos.png
+2026-02-22 10:28:47.405 | INFO     | __main__:plot_node_sri_heatmaps:822 - Saved node SRI heatmaps: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig4_node_sri_heatmaps.png
+2026-02-22 10:28:47.459 | INFO     | __main__:plot_srwe_benefit:764 - Saved SRWE benefit figure: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig5_srwe_benefit.png
+2026-02-22 10:28:47.459 | INFO     | __main__:run_analysis:1385 - Total runtime: 4.5s
+2026-02-22 10:28:47.460 | INFO     | __main__:main:1527 - Saved analysis results: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/analysis_results.json
+2026-02-22 10:28:47.460 | INFO     | __main__:main:1530 - Formatting output for exp_gen_sol_out schema...
+2026-02-22 10:28:47.469 | INFO     | __main__:main:1537 - Saved method_out.json (0.4 MB)
+2026-02-22 10:28:47.469 | INFO     | __main__:main:1575 - ============================================================
+2026-02-22 10:28:47.469 | INFO     | __main__:main:1576 - Done!
+2026-02-22 10:28:51.352 | INFO     | __main__:<module>:81 - Hardware: 20 CPUs, 134.7GB RAM, 125.4GB available
+2026-02-22 10:28:51.352 | INFO     | __main__:main:1463 - ============================================================
+2026-02-22 10:28:51.352 | INFO     | __main__:main:1464 - Node-Level SRI vs Graph-Level SRI Analysis
+2026-02-22 10:28:51.352 | INFO     | __main__:main:1465 - ============================================================
+2026-02-22 10:28:51.352 | INFO     | __main__:main:1477 - Run mode: 10, SRWE: enabled
+2026-02-22 10:28:51.352 | INFO     | __main__:load_all_data:90 - Loading data from all parts...
+2026-02-22 10:28:51.352 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_1.json (94.3 MB)
+2026-02-22 10:28:51.487 | INFO     | __main__:load_all_data:118 -     ZINC-subset: +10 examples (total: 10)
+2026-02-22 10:28:51.488 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_2.json (23.7 MB)
+2026-02-22 10:28:51.522 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_3.json (97.2 MB)
+2026-02-22 10:28:51.633 | INFO     | __main__:load_all_data:118 -     Peptides-func: +10 examples (total: 10)
+2026-02-22 10:28:51.633 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_4.json (97.4 MB)
+2026-02-22 10:28:51.755 | INFO     | __main__:load_all_data:118 -     Peptides-struct: +10 examples (total: 10)
+2026-02-22 10:28:51.756 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_5.json (0.4 MB)
+2026-02-22 10:28:51.756 | INFO     | __main__:load_all_data:118 -     Synthetic-aliased-pairs: +10 examples (total: 10)
+2026-02-22 10:28:51.756 | INFO     | __main__:load_all_data:124 - Total loaded: 40 examples across 4 datasets
+2026-02-22 10:28:51.757 | INFO     | __main__:run_analysis:862 - ============================================================
+2026-02-22 10:28:51.757 | INFO     | __main__:run_analysis:863 - PHASE 1: Node-Level SRI Computation
+2026-02-22 10:28:51.757 | INFO     | __main__:run_analysis:864 - ============================================================
+2026-02-22 10:28:51.757 | INFO     | __main__:run_analysis:870 - Processing ZINC-subset (10 examples)
+2026-02-22 10:28:51.765 | INFO     | __main__:run_analysis:924 -   ZINC-subset: 10 graphs processed
+2026-02-22 10:28:51.765 | INFO     | __main__:run_analysis:870 - Processing Peptides-func (10 examples)
+2026-02-22 10:28:51.788 | INFO     | __main__:run_analysis:924 -   Peptides-func: 10 graphs processed
+2026-02-22 10:28:51.789 | INFO     | __main__:run_analysis:870 - Processing Peptides-struct (10 examples)
+2026-02-22 10:28:51.812 | INFO     | __main__:run_analysis:924 -   Peptides-struct: 10 graphs processed
+2026-02-22 10:28:51.812 | INFO     | __main__:run_analysis:870 - Processing Synthetic-aliased-pairs (10 examples)
+2026-02-22 10:28:51.815 | INFO     | __main__:run_analysis:924 -   Synthetic-aliased-pairs: 10 graphs processed
+2026-02-22 10:28:51.815 | INFO     | __main__:run_analysis:937 - ============================================================
+2026-02-22 10:28:51.815 | INFO     | __main__:run_analysis:938 - PHASE 2: Node-Level Distinguishability
+2026-02-22 10:28:51.815 | INFO     | __main__:run_analysis:939 - ============================================================
+2026-02-22 10:28:51.815 | INFO     | __main__:run_analysis:951 - Phase 2: ZINC-subset — sampling 10 graphs
+2026-02-22 10:28:51.823 | INFO     | __main__:run_analysis:1070 -   ZINC-subset: 10 graphs, node-level rho=-0.0270
+2026-02-22 10:28:51.823 | INFO     | __main__:run_analysis:951 - Phase 2: Peptides-func — sampling 10 graphs
+2026-02-22 10:28:51.846 | INFO     | __main__:run_analysis:1070 -   Peptides-func: 10 graphs, node-level rho=0.0863
+2026-02-22 10:28:51.846 | INFO     | __main__:run_analysis:951 - Phase 2: Peptides-struct — sampling 10 graphs
+2026-02-22 10:28:51.868 | INFO     | __main__:run_analysis:1070 -   Peptides-struct: 10 graphs, node-level rho=0.0546
+2026-02-22 10:28:51.868 | INFO     | __main__:run_analysis:951 - Phase 2: Synthetic-aliased-pairs — sampling 10 graphs
+2026-02-22 10:28:51.870 | INFO     | __main__:run_analysis:1070 -   Synthetic-aliased-pairs: 10 graphs, node-level rho=0.6403
+2026-02-22 10:28:51.870 | INFO     | __main__:run_analysis:1073 - ============================================================
+2026-02-22 10:28:51.870 | INFO     | __main__:run_analysis:1074 - PHASE 3: Graph-Level Correlations and Comparison
+2026-02-22 10:28:51.870 | INFO     | __main__:run_analysis:1075 - ============================================================
+2026-02-22 10:28:57.215 | INFO     | __main__:run_analysis:1147 -   ZINC-subset: graph_sri rho=0.3546, mean_node_sri rho=0.2422, min_node_sri rho=-0.3892
+2026-02-22 10:28:57.821 | INFO     | __main__:run_analysis:1147 -   Peptides-func: graph_sri rho=0.0000, mean_node_sri rho=0.0000, min_node_sri rho=0.0000
+2026-02-22 10:28:58.431 | INFO     | __main__:run_analysis:1147 -   Peptides-struct: graph_sri rho=0.0000, mean_node_sri rho=0.0000, min_node_sri rho=0.0000
+2026-02-22 10:29:03.660 | INFO     | __main__:run_analysis:1147 -   Synthetic-aliased-pairs: graph_sri rho=0.5933, mean_node_sri rho=0.8737, min_node_sri rho=0.8237
+2026-02-22 10:29:07.432 | INFO     | __main__:run_analysis:1187 -   Pooled: graph_sri rho=0.7074, mean_node_sri rho=0.7082
+2026-02-22 10:29:07.432 | INFO     | __main__:run_analysis:1207 -   Best node metric: mean_node_sri, improvement: 0.0008
+2026-02-22 10:29:07.432 | INFO     | __main__:run_analysis:1210 - ============================================================
+2026-02-22 10:29:07.432 | INFO     | __main__:run_analysis:1211 - PHASE 4: SRWE Benefit Prediction
+2026-02-22 10:29:07.432 | INFO     | __main__:run_analysis:1212 - ============================================================
+2026-02-22 10:29:07.432 | INFO     | __main__:run_analysis:1223 - Phase 4: Processing 10 graphs from ZINC-subset
+2026-02-22 10:29:07.450 | INFO     | __main__:run_analysis:1223 - Phase 4: Processing 10 graphs from Peptides-func
+2026-02-22 10:29:07.610 | INFO     | __main__:run_analysis:1223 - Phase 4: Processing 10 graphs from Peptides-struct
+2026-02-22 10:29:07.769 | INFO     | __main__:run_analysis:1223 - Phase 4: Processing 10 graphs from Synthetic-aliased-pairs
+2026-02-22 10:29:07.776 | INFO     | __main__:run_analysis:1328 - Mann-Whitney U: newly vs already: U=944306.5, p=1.0000
+2026-02-22 10:29:07.776 | INFO     | __main__:run_analysis:1334 -   SRWE categories: already=5833, newly=180, unresolved=106
+2026-02-22 10:29:07.776 | INFO     | __main__:run_analysis:1337 - ============================================================
+2026-02-22 10:29:07.776 | INFO     | __main__:run_analysis:1338 - PHASE 5: Visualization
+2026-02-22 10:29:07.776 | INFO     | __main__:run_analysis:1339 - ============================================================
+2026-02-22 10:29:08.010 | INFO     | __main__:plot_correlation_comparison:682 - Saved correlation comparison figure: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig1_correlation_comparison.png
+2026-02-22 10:29:08.251 | INFO     | __main__:plot_scatter_sri_comparison:726 - Saved scatter comparison: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig2_sri_scatter.png
+2026-02-22 10:29:08.320 | INFO     | __main__:plot_within_graph_correlations:789 - Saved within-graph correlations: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig3_within_graph_rhos.png
+2026-02-22 10:29:08.668 | INFO     | __main__:plot_node_sri_heatmaps:822 - Saved node SRI heatmaps: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig4_node_sri_heatmaps.png
+2026-02-22 10:29:08.758 | INFO     | __main__:plot_srwe_benefit:764 - Saved SRWE benefit figure: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig5_srwe_benefit.png
+2026-02-22 10:29:08.758 | INFO     | __main__:run_analysis:1385 - Total runtime: 17.0s
+2026-02-22 10:29:08.758 | INFO     | __main__:main:1527 - Saved analysis results: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/analysis_results.json
+2026-02-22 10:29:08.759 | INFO     | __main__:main:1530 - Formatting output for exp_gen_sol_out schema...
+2026-02-22 10:29:08.786 | INFO     | __main__:main:1537 - Saved method_out.json (1.2 MB)
+2026-02-22 10:29:08.786 | INFO     | __main__:main:1575 - ============================================================
+2026-02-22 10:29:08.786 | INFO     | __main__:main:1576 - Done!
+2026-02-22 10:29:12.278 | INFO     | __main__:<module>:81 - Hardware: 20 CPUs, 134.7GB RAM, 126.1GB available
+2026-02-22 10:29:12.278 | INFO     | __main__:main:1463 - ============================================================
+2026-02-22 10:29:12.278 | INFO     | __main__:main:1464 - Node-Level SRI vs Graph-Level SRI Analysis
+2026-02-22 10:29:12.279 | INFO     | __main__:main:1465 - ============================================================
+2026-02-22 10:29:12.279 | INFO     | __main__:main:1477 - Run mode: 50, SRWE: enabled
+2026-02-22 10:29:12.279 | INFO     | __main__:load_all_data:90 - Loading data from all parts...
+2026-02-22 10:29:12.279 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_1.json (94.3 MB)
+2026-02-22 10:29:12.415 | INFO     | __main__:load_all_data:118 -     ZINC-subset: +50 examples (total: 50)
+2026-02-22 10:29:12.415 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_2.json (23.7 MB)
+2026-02-22 10:29:12.450 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_3.json (97.2 MB)
+2026-02-22 10:29:12.563 | INFO     | __main__:load_all_data:118 -     Peptides-func: +50 examples (total: 50)
+2026-02-22 10:29:12.563 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_4.json (97.4 MB)
+2026-02-22 10:29:12.686 | INFO     | __main__:load_all_data:118 -     Peptides-struct: +50 examples (total: 50)
+2026-02-22 10:29:12.686 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_5.json (0.4 MB)
+2026-02-22 10:29:12.687 | INFO     | __main__:load_all_data:118 -     Synthetic-aliased-pairs: +50 examples (total: 50)
+2026-02-22 10:29:12.687 | INFO     | __main__:load_all_data:124 - Total loaded: 200 examples across 4 datasets
+2026-02-22 10:29:12.687 | INFO     | __main__:run_analysis:862 - ============================================================
+2026-02-22 10:29:12.687 | INFO     | __main__:run_analysis:863 - PHASE 1: Node-Level SRI Computation
+2026-02-22 10:29:12.687 | INFO     | __main__:run_analysis:864 - ============================================================
+2026-02-22 10:29:12.687 | INFO     | __main__:run_analysis:870 - Processing ZINC-subset (50 examples)
+2026-02-22 10:29:12.726 | INFO     | __main__:run_analysis:924 -   ZINC-subset: 50 graphs processed
+2026-02-22 10:29:12.727 | INFO     | __main__:run_analysis:870 - Processing Peptides-func (50 examples)
+2026-02-22 10:29:12.848 | INFO     | __main__:run_analysis:924 -   Peptides-func: 50 graphs processed
+2026-02-22 10:29:12.849 | INFO     | __main__:run_analysis:870 - Processing Peptides-struct (50 examples)
+2026-02-22 10:29:12.986 | INFO     | __main__:run_analysis:924 -   Peptides-struct: 50 graphs processed
+2026-02-22 10:29:12.986 | INFO     | __main__:run_analysis:870 - Processing Synthetic-aliased-pairs (50 examples)
+2026-02-22 10:29:13.005 | INFO     | __main__:run_analysis:924 -   Synthetic-aliased-pairs: 50 graphs processed
+2026-02-22 10:29:13.006 | INFO     | __main__:run_analysis:937 - ============================================================
+2026-02-22 10:29:13.006 | INFO     | __main__:run_analysis:938 - PHASE 2: Node-Level Distinguishability
+2026-02-22 10:29:13.006 | INFO     | __main__:run_analysis:939 - ============================================================
+2026-02-22 10:29:13.006 | INFO     | __main__:run_analysis:951 - Phase 2: ZINC-subset — sampling 50 graphs
+2026-02-22 10:29:13.042 | INFO     | __main__:run_analysis:1070 -   ZINC-subset: 50 graphs, node-level rho=0.1340
+2026-02-22 10:29:13.042 | INFO     | __main__:run_analysis:951 - Phase 2: Peptides-func — sampling 50 graphs
+2026-02-22 10:29:13.157 | INFO     | __main__:run_analysis:1070 -   Peptides-func: 50 graphs, node-level rho=0.0667
+2026-02-22 10:29:13.157 | INFO     | __main__:run_analysis:951 - Phase 2: Peptides-struct — sampling 50 graphs
+2026-02-22 10:29:13.287 | INFO     | __main__:run_analysis:1070 -   Peptides-struct: 50 graphs, node-level rho=0.0678
+2026-02-22 10:29:13.287 | INFO     | __main__:run_analysis:951 - Phase 2: Synthetic-aliased-pairs — sampling 50 graphs
+2026-02-22 10:29:13.300 | INFO     | __main__:run_analysis:1070 -   Synthetic-aliased-pairs: 50 graphs, node-level rho=-0.1481
+2026-02-22 10:29:13.300 | INFO     | __main__:run_analysis:1073 - ============================================================
+2026-02-22 10:29:13.300 | INFO     | __main__:run_analysis:1074 - PHASE 3: Graph-Level Correlations and Comparison
+2026-02-22 10:29:13.300 | INFO     | __main__:run_analysis:1075 - ============================================================
+2026-02-22 10:29:19.373 | INFO     | __main__:run_analysis:1147 -   ZINC-subset: graph_sri rho=0.2522, mean_node_sri rho=0.4327, min_node_sri rho=0.0319
+2026-02-22 10:29:25.326 | INFO     | __main__:run_analysis:1147 -   Peptides-func: graph_sri rho=0.0816, mean_node_sri rho=0.0067, min_node_sri rho=-0.0884
+2026-02-22 10:29:31.379 | INFO     | __main__:run_analysis:1147 -   Peptides-struct: graph_sri rho=0.1700, mean_node_sri rho=-0.0376, min_node_sri rho=0.0076
+2026-02-22 10:29:36.794 | INFO     | __main__:run_analysis:1147 -   Synthetic-aliased-pairs: graph_sri rho=0.1598, mean_node_sri rho=-0.1073, min_node_sri rho=0.3152
+2026-02-22 10:29:41.106 | INFO     | __main__:run_analysis:1187 -   Pooled: graph_sri rho=0.6157, mean_node_sri rho=0.5161
+2026-02-22 10:29:41.106 | INFO     | __main__:run_analysis:1207 -   Best node metric: mean_node_sri, improvement: -0.0996
+2026-02-22 10:29:41.106 | INFO     | __main__:run_analysis:1210 - ============================================================
+2026-02-22 10:29:41.106 | INFO     | __main__:run_analysis:1211 - PHASE 4: SRWE Benefit Prediction
+2026-02-22 10:29:41.106 | INFO     | __main__:run_analysis:1212 - ============================================================
+2026-02-22 10:29:41.106 | INFO     | __main__:run_analysis:1223 - Phase 4: Processing 50 graphs from ZINC-subset
+2026-02-22 10:29:41.190 | INFO     | __main__:run_analysis:1304 -   Phase 4: ZINC-subset 50/50 (28.5s)
+2026-02-22 10:29:41.190 | INFO     | __main__:run_analysis:1223 - Phase 4: Processing 50 graphs from Peptides-func
+2026-02-22 10:29:41.998 | INFO     | __main__:run_analysis:1304 -   Phase 4: Peptides-func 50/50 (29.3s)
+2026-02-22 10:29:41.998 | INFO     | __main__:run_analysis:1223 - Phase 4: Processing 50 graphs from Peptides-struct
+2026-02-22 10:29:42.819 | INFO     | __main__:run_analysis:1304 -   Phase 4: Peptides-struct 50/50 (30.1s)
+2026-02-22 10:29:42.819 | INFO     | __main__:run_analysis:1223 - Phase 4: Processing 50 graphs from Synthetic-aliased-pairs
+2026-02-22 10:29:42.848 | INFO     | __main__:run_analysis:1304 -   Phase 4: Synthetic-aliased-pairs 50/50 (30.2s)
+2026-02-22 10:29:42.860 | INFO     | __main__:run_analysis:1328 - Mann-Whitney U: newly vs already: U=45472901.0, p=1.0000
+2026-02-22 10:29:42.860 | INFO     | __main__:run_analysis:1334 -   SRWE categories: already=29478, newly=1744, unresolved=610
+2026-02-22 10:29:42.860 | INFO     | __main__:run_analysis:1337 - ============================================================
+2026-02-22 10:29:42.860 | INFO     | __main__:run_analysis:1338 - PHASE 5: Visualization
+2026-02-22 10:29:42.860 | INFO     | __main__:run_analysis:1339 - ============================================================
+2026-02-22 10:29:43.081 | INFO     | __main__:plot_correlation_comparison:682 - Saved correlation comparison figure: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig1_correlation_comparison.png
+2026-02-22 10:29:43.319 | INFO     | __main__:plot_scatter_sri_comparison:726 - Saved scatter comparison: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig2_sri_scatter.png
+2026-02-22 10:29:43.396 | INFO     | __main__:plot_within_graph_correlations:789 - Saved within-graph correlations: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig3_within_graph_rhos.png
+2026-02-22 10:29:43.771 | INFO     | __main__:plot_node_sri_heatmaps:822 - Saved node SRI heatmaps: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig4_node_sri_heatmaps.png
+2026-02-22 10:29:43.855 | INFO     | __main__:plot_srwe_benefit:764 - Saved SRWE benefit figure: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig5_srwe_benefit.png
+2026-02-22 10:29:43.855 | INFO     | __main__:run_analysis:1385 - Total runtime: 31.2s
+2026-02-22 10:29:43.856 | INFO     | __main__:main:1527 - Saved analysis results: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/analysis_results.json
+2026-02-22 10:29:43.856 | INFO     | __main__:main:1530 - Formatting output for exp_gen_sol_out schema...
+2026-02-22 10:29:44.016 | INFO     | __main__:main:1537 - Saved method_out.json (5.5 MB)
+2026-02-22 10:29:44.016 | INFO     | __main__:main:1575 - ============================================================
+2026-02-22 10:29:44.016 | INFO     | __main__:main:1576 - Done!
+2026-02-22 10:29:47.387 | INFO     | __main__:<module>:81 - Hardware: 20 CPUs, 134.7GB RAM, 126.1GB available
+2026-02-22 10:29:47.387 | INFO     | __main__:main:1463 - ============================================================
+2026-02-22 10:29:47.387 | INFO     | __main__:main:1464 - Node-Level SRI vs Graph-Level SRI Analysis
+2026-02-22 10:29:47.387 | INFO     | __main__:main:1465 - ============================================================
+2026-02-22 10:29:47.387 | INFO     | __main__:main:1477 - Run mode: 100, SRWE: enabled
+2026-02-22 10:29:47.387 | INFO     | __main__:load_all_data:90 - Loading data from all parts...
+2026-02-22 10:29:47.387 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_1.json (94.3 MB)
+2026-02-22 10:29:47.523 | INFO     | __main__:load_all_data:118 -     ZINC-subset: +100 examples (total: 100)
+2026-02-22 10:29:47.523 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_2.json (23.7 MB)
+2026-02-22 10:29:47.558 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_3.json (97.2 MB)
+2026-02-22 10:29:47.671 | INFO     | __main__:load_all_data:118 -     Peptides-func: +100 examples (total: 100)
+2026-02-22 10:29:47.671 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_4.json (97.4 MB)
+2026-02-22 10:29:47.794 | INFO     | __main__:load_all_data:118 -     Peptides-struct: +100 examples (total: 100)
+2026-02-22 10:29:47.794 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_5.json (0.4 MB)
+2026-02-22 10:29:47.795 | INFO     | __main__:load_all_data:118 -     Synthetic-aliased-pairs: +100 examples (total: 100)
+2026-02-22 10:29:47.795 | INFO     | __main__:load_all_data:124 - Total loaded: 400 examples across 4 datasets
+2026-02-22 10:29:47.795 | INFO     | __main__:run_analysis:862 - ============================================================
+2026-02-22 10:29:47.795 | INFO     | __main__:run_analysis:863 - PHASE 1: Node-Level SRI Computation
+2026-02-22 10:29:47.795 | INFO     | __main__:run_analysis:864 - ============================================================
+2026-02-22 10:29:47.795 | INFO     | __main__:run_analysis:870 - Processing ZINC-subset (100 examples)
+2026-02-22 10:29:47.874 | INFO     | __main__:run_analysis:924 -   ZINC-subset: 100 graphs processed
+2026-02-22 10:29:47.874 | INFO     | __main__:run_analysis:870 - Processing Peptides-func (100 examples)
+2026-02-22 10:29:48.133 | INFO     | __main__:run_analysis:924 -   Peptides-func: 100 graphs processed
+2026-02-22 10:29:48.134 | INFO     | __main__:run_analysis:870 - Processing Peptides-struct (100 examples)
+2026-02-22 10:29:48.394 | INFO     | __main__:run_analysis:924 -   Peptides-struct: 100 graphs processed
+2026-02-22 10:29:48.394 | INFO     | __main__:run_analysis:870 - Processing Synthetic-aliased-pairs (100 examples)
+2026-02-22 10:29:48.435 | INFO     | __main__:run_analysis:924 -   Synthetic-aliased-pairs: 100 graphs processed
+2026-02-22 10:29:48.436 | INFO     | __main__:run_analysis:937 - ============================================================
+2026-02-22 10:29:48.436 | INFO     | __main__:run_analysis:938 - PHASE 2: Node-Level Distinguishability
+2026-02-22 10:29:48.436 | INFO     | __main__:run_analysis:939 - ============================================================
+2026-02-22 10:29:48.436 | INFO     | __main__:run_analysis:951 - Phase 2: ZINC-subset — sampling 100 graphs
+2026-02-22 10:29:48.510 | INFO     | __main__:run_analysis:1070 -   ZINC-subset: 100 graphs, node-level rho=0.2162
+2026-02-22 10:29:48.510 | INFO     | __main__:run_analysis:951 - Phase 2: Peptides-func — sampling 100 graphs
+2026-02-22 10:29:48.742 | INFO     | __main__:run_analysis:1070 -   Peptides-func: 100 graphs, node-level rho=0.0617
+2026-02-22 10:29:48.742 | INFO     | __main__:run_analysis:951 - Phase 2: Peptides-struct — sampling 100 graphs
+2026-02-22 10:29:48.989 | INFO     | __main__:run_analysis:1070 -   Peptides-struct: 100 graphs, node-level rho=0.0537
+2026-02-22 10:29:48.990 | INFO     | __main__:run_analysis:951 - Phase 2: Synthetic-aliased-pairs — sampling 100 graphs
+2026-02-22 10:29:49.019 | INFO     | __main__:run_analysis:1070 -   Synthetic-aliased-pairs: 100 graphs, node-level rho=0.0188
+2026-02-22 10:29:49.019 | INFO     | __main__:run_analysis:1073 - ============================================================
+2026-02-22 10:29:49.019 | INFO     | __main__:run_analysis:1074 - PHASE 3: Graph-Level Correlations and Comparison
+2026-02-22 10:29:49.019 | INFO     | __main__:run_analysis:1075 - ============================================================
+2026-02-22 10:29:55.523 | INFO     | __main__:run_analysis:1147 -   ZINC-subset: graph_sri rho=0.3304, mean_node_sri rho=0.4829, min_node_sri rho=0.1695
+2026-02-22 10:30:02.043 | INFO     | __main__:run_analysis:1147 -   Peptides-func: graph_sri rho=0.3173, mean_node_sri rho=0.0457, min_node_sri rho=0.2056
+2026-02-22 10:30:08.485 | INFO     | __main__:run_analysis:1147 -   Peptides-struct: graph_sri rho=0.2811, mean_node_sri rho=-0.0428, min_node_sri rho=0.1743
+2026-02-22 10:30:14.286 | INFO     | __main__:run_analysis:1147 -   Synthetic-aliased-pairs: graph_sri rho=0.3857, mean_node_sri rho=0.0217, min_node_sri rho=0.2792
+2026-02-22 10:30:19.291 | INFO     | __main__:run_analysis:1187 -   Pooled: graph_sri rho=0.6459, mean_node_sri rho=0.4682
+2026-02-22 10:30:19.291 | INFO     | __main__:run_analysis:1207 -   Best node metric: mean_node_sri, improvement: -0.1777
+2026-02-22 10:30:19.292 | INFO     | __main__:run_analysis:1210 - ============================================================
+2026-02-22 10:30:19.292 | INFO     | __main__:run_analysis:1211 - PHASE 4: SRWE Benefit Prediction
+2026-02-22 10:30:19.292 | INFO     | __main__:run_analysis:1212 - ============================================================
+2026-02-22 10:30:19.292 | INFO     | __main__:run_analysis:1223 - Phase 4: Processing 50 graphs from ZINC-subset
+2026-02-22 10:30:19.377 | INFO     | __main__:run_analysis:1304 -   Phase 4: ZINC-subset 50/50 (31.6s)
+2026-02-22 10:30:19.377 | INFO     | __main__:run_analysis:1223 - Phase 4: Processing 50 graphs from Peptides-func
+2026-02-22 10:30:20.202 | INFO     | __main__:run_analysis:1304 -   Phase 4: Peptides-func 50/50 (32.4s)
+2026-02-22 10:30:20.202 | INFO     | __main__:run_analysis:1223 - Phase 4: Processing 50 graphs from Peptides-struct
+2026-02-22 10:30:21.012 | INFO     | __main__:run_analysis:1304 -   Phase 4: Peptides-struct 50/50 (33.2s)
+2026-02-22 10:30:21.012 | INFO     | __main__:run_analysis:1223 - Phase 4: Processing 50 graphs from Synthetic-aliased-pairs
+2026-02-22 10:30:21.042 | INFO     | __main__:run_analysis:1304 -   Phase 4: Synthetic-aliased-pairs 50/50 (33.2s)
+2026-02-22 10:30:21.054 | INFO     | __main__:run_analysis:1328 - Mann-Whitney U: newly vs already: U=46354086.5, p=1.0000
+2026-02-22 10:30:21.054 | INFO     | __main__:run_analysis:1334 -   SRWE categories: already=29476, newly=1785, unresolved=563
+2026-02-22 10:30:21.054 | INFO     | __main__:run_analysis:1337 - ============================================================
+2026-02-22 10:30:21.054 | INFO     | __main__:run_analysis:1338 - PHASE 5: Visualization
+2026-02-22 10:30:21.054 | INFO     | __main__:run_analysis:1339 - ============================================================
+2026-02-22 10:30:21.275 | INFO     | __main__:plot_correlation_comparison:682 - Saved correlation comparison figure: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig1_correlation_comparison.png
+2026-02-22 10:30:21.540 | INFO     | __main__:plot_scatter_sri_comparison:726 - Saved scatter comparison: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig2_sri_scatter.png
+2026-02-22 10:30:21.619 | INFO     | __main__:plot_within_graph_correlations:789 - Saved within-graph correlations: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig3_within_graph_rhos.png
+2026-02-22 10:30:21.962 | INFO     | __main__:plot_node_sri_heatmaps:822 - Saved node SRI heatmaps: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig4_node_sri_heatmaps.png
+2026-02-22 10:30:22.047 | INFO     | __main__:plot_srwe_benefit:764 - Saved SRWE benefit figure: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig5_srwe_benefit.png
+2026-02-22 10:30:22.048 | INFO     | __main__:run_analysis:1385 - Total runtime: 34.3s
+2026-02-22 10:30:22.049 | INFO     | __main__:main:1527 - Saved analysis results: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/analysis_results.json
+2026-02-22 10:30:22.049 | INFO     | __main__:main:1530 - Formatting output for exp_gen_sol_out schema...
+2026-02-22 10:30:22.362 | INFO     | __main__:main:1537 - Saved method_out.json (10.6 MB)
+2026-02-22 10:30:22.362 | INFO     | __main__:main:1575 - ============================================================
+2026-02-22 10:30:22.362 | INFO     | __main__:main:1576 - Done!
+2026-02-22 10:30:25.759 | INFO     | __main__:<module>:81 - Hardware: 20 CPUs, 134.7GB RAM, 126.1GB available
+2026-02-22 10:30:25.759 | INFO     | __main__:main:1463 - ============================================================
+2026-02-22 10:30:25.759 | INFO     | __main__:main:1464 - Node-Level SRI vs Graph-Level SRI Analysis
+2026-02-22 10:30:25.759 | INFO     | __main__:main:1465 - ============================================================
+2026-02-22 10:30:25.759 | INFO     | __main__:main:1477 - Run mode: 200, SRWE: enabled
+2026-02-22 10:30:25.759 | INFO     | __main__:load_all_data:90 - Loading data from all parts...
+2026-02-22 10:30:25.759 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_1.json (94.3 MB)
+2026-02-22 10:30:25.895 | INFO     | __main__:load_all_data:118 -     ZINC-subset: +200 examples (total: 200)
+2026-02-22 10:30:25.896 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_2.json (23.7 MB)
+2026-02-22 10:30:25.931 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_3.json (97.2 MB)
+2026-02-22 10:30:26.043 | INFO     | __main__:load_all_data:118 -     Peptides-func: +200 examples (total: 200)
+2026-02-22 10:30:26.043 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_4.json (97.4 MB)
+2026-02-22 10:30:26.165 | INFO     | __main__:load_all_data:118 -     Peptides-struct: +200 examples (total: 200)
+2026-02-22 10:30:26.166 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_5.json (0.4 MB)
+2026-02-22 10:30:26.166 | INFO     | __main__:load_all_data:118 -     Synthetic-aliased-pairs: +100 examples (total: 100)
+2026-02-22 10:30:26.166 | INFO     | __main__:load_all_data:124 - Total loaded: 700 examples across 4 datasets
+2026-02-22 10:30:26.167 | INFO     | __main__:run_analysis:862 - ============================================================
+2026-02-22 10:30:26.167 | INFO     | __main__:run_analysis:863 - PHASE 1: Node-Level SRI Computation
+2026-02-22 10:30:26.167 | INFO     | __main__:run_analysis:864 - ============================================================
+2026-02-22 10:30:26.167 | INFO     | __main__:run_analysis:870 - Processing ZINC-subset (200 examples)
+2026-02-22 10:30:26.320 | INFO     | __main__:run_analysis:924 -   ZINC-subset: 200 graphs processed
+2026-02-22 10:30:26.320 | INFO     | __main__:run_analysis:870 - Processing Peptides-func (200 examples)
+2026-02-22 10:30:26.858 | INFO     | __main__:run_analysis:924 -   Peptides-func: 200 graphs processed
+2026-02-22 10:30:26.858 | INFO     | __main__:run_analysis:870 - Processing Peptides-struct (200 examples)
+2026-02-22 10:30:27.398 | INFO     | __main__:run_analysis:924 -   Peptides-struct: 200 graphs processed
+2026-02-22 10:30:27.398 | INFO     | __main__:run_analysis:870 - Processing Synthetic-aliased-pairs (100 examples)
+2026-02-22 10:30:27.438 | INFO     | __main__:run_analysis:924 -   Synthetic-aliased-pairs: 100 graphs processed
+2026-02-22 10:30:27.438 | INFO     | __main__:run_analysis:937 - ============================================================
+2026-02-22 10:30:27.438 | INFO     | __main__:run_analysis:938 - PHASE 2: Node-Level Distinguishability
+2026-02-22 10:30:27.438 | INFO     | __main__:run_analysis:939 - ============================================================
+2026-02-22 10:30:27.438 | INFO     | __main__:run_analysis:951 - Phase 2: ZINC-subset — sampling 200 graphs
+2026-02-22 10:30:27.577 | INFO     | __main__:run_analysis:1029 -   Phase 2: ZINC-subset 200/200 (1.4s)
+2026-02-22 10:30:27.581 | INFO     | __main__:run_analysis:1070 -   ZINC-subset: 200 graphs, node-level rho=0.1829
+2026-02-22 10:30:27.581 | INFO     | __main__:run_analysis:951 - Phase 2: Peptides-func — sampling 200 graphs
+2026-02-22 10:30:28.060 | INFO     | __main__:run_analysis:1029 -   Phase 2: Peptides-func 200/200 (1.9s)
+2026-02-22 10:30:28.074 | INFO     | __main__:run_analysis:1070 -   Peptides-func: 200 graphs, node-level rho=0.0479
+2026-02-22 10:30:28.074 | INFO     | __main__:run_analysis:951 - Phase 2: Peptides-struct — sampling 200 graphs
+2026-02-22 10:30:28.567 | INFO     | __main__:run_analysis:1029 -   Phase 2: Peptides-struct 200/200 (2.4s)
+2026-02-22 10:30:28.580 | INFO     | __main__:run_analysis:1070 -   Peptides-struct: 200 graphs, node-level rho=0.0446
+2026-02-22 10:30:28.580 | INFO     | __main__:run_analysis:951 - Phase 2: Synthetic-aliased-pairs — sampling 100 graphs
+2026-02-22 10:30:28.609 | INFO     | __main__:run_analysis:1070 -   Synthetic-aliased-pairs: 100 graphs, node-level rho=0.0188
+2026-02-22 10:30:28.609 | INFO     | __main__:run_analysis:1073 - ============================================================
+2026-02-22 10:30:28.609 | INFO     | __main__:run_analysis:1074 - PHASE 3: Graph-Level Correlations and Comparison
+2026-02-22 10:30:28.609 | INFO     | __main__:run_analysis:1075 - ============================================================
+2026-02-22 10:30:35.529 | INFO     | __main__:run_analysis:1147 -   ZINC-subset: graph_sri rho=0.2061, mean_node_sri rho=0.3853, min_node_sri rho=0.0673
+2026-02-22 10:30:42.358 | INFO     | __main__:run_analysis:1147 -   Peptides-func: graph_sri rho=0.2738, mean_node_sri rho=0.0823, min_node_sri rho=0.1589
+2026-02-22 10:30:49.234 | INFO     | __main__:run_analysis:1147 -   Peptides-struct: graph_sri rho=0.1939, mean_node_sri rho=0.0241, min_node_sri rho=0.0838
+2026-02-22 10:30:54.934 | INFO     | __main__:run_analysis:1147 -   Synthetic-aliased-pairs: graph_sri rho=0.3857, mean_node_sri rho=0.0217, min_node_sri rho=0.2792
+2026-02-22 10:31:00.664 | INFO     | __main__:run_analysis:1187 -   Pooled: graph_sri rho=0.5070, mean_node_sri rho=0.3897
+2026-02-22 10:31:00.664 | INFO     | __main__:run_analysis:1207 -   Best node metric: mean_node_sri, improvement: -0.1172
+2026-02-22 10:31:00.664 | INFO     | __main__:run_analysis:1210 - ============================================================
+2026-02-22 10:31:00.664 | INFO     | __main__:run_analysis:1211 - PHASE 4: SRWE Benefit Prediction
+2026-02-22 10:31:00.664 | INFO     | __main__:run_analysis:1212 - ============================================================
+2026-02-22 10:31:00.664 | INFO     | __main__:run_analysis:1223 - Phase 4: Processing 50 graphs from ZINC-subset
+2026-02-22 10:31:00.749 | INFO     | __main__:run_analysis:1304 -   Phase 4: ZINC-subset 50/50 (34.6s)
+2026-02-22 10:31:00.749 | INFO     | __main__:run_analysis:1223 - Phase 4: Processing 50 graphs from Peptides-func
+2026-02-22 10:31:01.577 | INFO     | __main__:run_analysis:1304 -   Phase 4: Peptides-func 50/50 (35.4s)
+2026-02-22 10:31:01.577 | INFO     | __main__:run_analysis:1223 - Phase 4: Processing 50 graphs from Peptides-struct
+2026-02-22 10:31:02.384 | INFO     | __main__:run_analysis:1304 -   Phase 4: Peptides-struct 50/50 (36.2s)
+2026-02-22 10:31:02.384 | INFO     | __main__:run_analysis:1223 - Phase 4: Processing 50 graphs from Synthetic-aliased-pairs
+2026-02-22 10:31:02.413 | INFO     | __main__:run_analysis:1304 -   Phase 4: Synthetic-aliased-pairs 50/50 (36.2s)
+2026-02-22 10:31:02.425 | INFO     | __main__:run_analysis:1328 - Mann-Whitney U: newly vs already: U=46411222.5, p=1.0000
+2026-02-22 10:31:02.425 | INFO     | __main__:run_analysis:1334 -   SRWE categories: already=29496, newly=1776, unresolved=547
+2026-02-22 10:31:02.425 | INFO     | __main__:run_analysis:1337 - ============================================================
+2026-02-22 10:31:02.425 | INFO     | __main__:run_analysis:1338 - PHASE 5: Visualization
+2026-02-22 10:31:02.425 | INFO     | __main__:run_analysis:1339 - ============================================================
+2026-02-22 10:31:02.645 | INFO     | __main__:plot_correlation_comparison:682 - Saved correlation comparison figure: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig1_correlation_comparison.png
+2026-02-22 10:31:02.916 | INFO     | __main__:plot_scatter_sri_comparison:726 - Saved scatter comparison: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig2_sri_scatter.png
+2026-02-22 10:31:02.992 | INFO     | __main__:plot_within_graph_correlations:789 - Saved within-graph correlations: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig3_within_graph_rhos.png
+2026-02-22 10:31:03.336 | INFO     | __main__:plot_node_sri_heatmaps:822 - Saved node SRI heatmaps: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig4_node_sri_heatmaps.png
+2026-02-22 10:31:03.420 | INFO     | __main__:plot_srwe_benefit:764 - Saved SRWE benefit figure: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig5_srwe_benefit.png
+2026-02-22 10:31:03.421 | INFO     | __main__:run_analysis:1385 - Total runtime: 37.3s
+2026-02-22 10:31:03.422 | INFO     | __main__:main:1527 - Saved analysis results: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/analysis_results.json
+2026-02-22 10:31:03.422 | INFO     | __main__:main:1530 - Formatting output for exp_gen_sol_out schema...
+2026-02-22 10:31:04.025 | INFO     | __main__:main:1537 - Saved method_out.json (20.9 MB)
+2026-02-22 10:31:04.026 | INFO     | __main__:main:1575 - ============================================================
+2026-02-22 10:31:04.026 | INFO     | __main__:main:1576 - Done!
+2026-02-22 10:31:18.964 | INFO     | __main__:<module>:81 - Hardware: 20 CPUs, 134.7GB RAM, 125.8GB available
+2026-02-22 10:31:18.964 | INFO     | __main__:main:1463 - ============================================================
+2026-02-22 10:31:18.964 | INFO     | __main__:main:1464 - Node-Level SRI vs Graph-Level SRI Analysis
+2026-02-22 10:31:18.964 | INFO     | __main__:main:1465 - ============================================================
+2026-02-22 10:31:18.964 | INFO     | __main__:main:1477 - Run mode: full, SRWE: enabled
+2026-02-22 10:31:18.964 | INFO     | __main__:load_all_data:90 - Loading data from all parts...
+2026-02-22 10:31:18.964 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_1.json (94.3 MB)
+2026-02-22 10:31:19.108 | INFO     | __main__:load_all_data:118 -     ZINC-subset: +9594 examples (total: 9594)
+2026-02-22 10:31:19.109 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_2.json (23.7 MB)
+2026-02-22 10:31:19.151 | INFO     | __main__:load_all_data:118 -     ZINC-subset: +2406 examples (total: 12000)
+2026-02-22 10:31:19.152 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_3.json (97.2 MB)
+2026-02-22 10:31:19.344 | INFO     | __main__:load_all_data:118 -     Peptides-func: +2000 examples (total: 2000)
+2026-02-22 10:31:19.344 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_4.json (97.4 MB)
+2026-02-22 10:31:19.475 | INFO     | __main__:load_all_data:118 -     Peptides-struct: +2000 examples (total: 2000)
+2026-02-22 10:31:19.475 | INFO     | __main__:load_all_data:95 -   Loading full_data_out_5.json (0.4 MB)
+2026-02-22 10:31:19.476 | INFO     | __main__:load_all_data:118 -     Synthetic-aliased-pairs: +100 examples (total: 100)
+2026-02-22 10:31:19.476 | INFO     | __main__:load_all_data:124 - Total loaded: 16100 examples across 4 datasets
+2026-02-22 10:31:19.476 | INFO     | __main__:run_analysis:862 - ============================================================
+2026-02-22 10:31:19.476 | INFO     | __main__:run_analysis:863 - PHASE 1: Node-Level SRI Computation
+2026-02-22 10:31:19.476 | INFO     | __main__:run_analysis:864 - ============================================================
+2026-02-22 10:31:19.476 | INFO     | __main__:run_analysis:870 - Processing ZINC-subset (12000 examples)
+2026-02-22 10:31:20.259 | INFO     | __main__:run_analysis:921 -   Phase 1: ZINC-subset 1000/12000 (0.8s)
+2026-02-22 10:31:21.039 | INFO     | __main__:run_analysis:921 -   Phase 1: ZINC-subset 2000/12000 (1.6s)
+2026-02-22 10:31:21.814 | INFO     | __main__:run_analysis:921 -   Phase 1: ZINC-subset 3000/12000 (2.3s)
+2026-02-22 10:31:22.619 | INFO     | __main__:run_analysis:921 -   Phase 1: ZINC-subset 4000/12000 (3.1s)
+2026-02-22 10:31:23.407 | INFO     | __main__:run_analysis:921 -   Phase 1: ZINC-subset 5000/12000 (3.9s)
+2026-02-22 10:31:24.196 | INFO     | __main__:run_analysis:921 -   Phase 1: ZINC-subset 6000/12000 (4.7s)
+2026-02-22 10:31:24.985 | INFO     | __main__:run_analysis:921 -   Phase 1: ZINC-subset 7000/12000 (5.5s)
+2026-02-22 10:31:25.771 | INFO     | __main__:run_analysis:921 -   Phase 1: ZINC-subset 8000/12000 (6.3s)
+2026-02-22 10:31:26.585 | INFO     | __main__:run_analysis:921 -   Phase 1: ZINC-subset 9000/12000 (7.1s)
+2026-02-22 10:31:27.374 | INFO     | __main__:run_analysis:921 -   Phase 1: ZINC-subset 10000/12000 (7.9s)
+2026-02-22 10:31:28.163 | INFO     | __main__:run_analysis:921 -   Phase 1: ZINC-subset 11000/12000 (8.7s)
+2026-02-22 10:31:28.952 | INFO     | __main__:run_analysis:921 -   Phase 1: ZINC-subset 12000/12000 (9.5s)
+2026-02-22 10:31:28.952 | INFO     | __main__:run_analysis:924 -   ZINC-subset: 12000 graphs processed
+2026-02-22 10:31:28.968 | INFO     | __main__:run_analysis:870 - Processing Peptides-func (2000 examples)
+2026-02-22 10:31:31.837 | INFO     | __main__:run_analysis:921 -   Phase 1: Peptides-func 1000/2000 (12.4s)
+2026-02-22 10:31:34.798 | INFO     | __main__:run_analysis:921 -   Phase 1: Peptides-func 2000/2000 (15.3s)
+2026-02-22 10:31:34.798 | INFO     | __main__:run_analysis:924 -   Peptides-func: 2000 graphs processed
+2026-02-22 10:31:34.801 | INFO     | __main__:run_analysis:870 - Processing Peptides-struct (2000 examples)
+2026-02-22 10:31:37.699 | INFO     | __main__:run_analysis:921 -   Phase 1: Peptides-struct 1000/2000 (18.2s)
+2026-02-22 10:31:40.690 | INFO     | __main__:run_analysis:921 -   Phase 1: Peptides-struct 2000/2000 (21.2s)
+2026-02-22 10:31:40.690 | INFO     | __main__:run_analysis:924 -   Peptides-struct: 2000 graphs processed
+2026-02-22 10:31:40.692 | INFO     | __main__:run_analysis:870 - Processing Synthetic-aliased-pairs (100 examples)
+2026-02-22 10:31:40.734 | INFO     | __main__:run_analysis:924 -   Synthetic-aliased-pairs: 100 graphs processed
+2026-02-22 10:31:40.734 | INFO     | __main__:run_analysis:937 - ============================================================
+2026-02-22 10:31:40.734 | INFO     | __main__:run_analysis:938 - PHASE 2: Node-Level Distinguishability
+2026-02-22 10:31:40.734 | INFO     | __main__:run_analysis:939 - ============================================================
+2026-02-22 10:31:40.734 | INFO     | __main__:run_analysis:951 - Phase 2: ZINC-subset — sampling 500 graphs
+2026-02-22 10:31:40.875 | INFO     | __main__:run_analysis:1029 -   Phase 2: ZINC-subset 200/500 (21.4s)
+2026-02-22 10:31:41.013 | INFO     | __main__:run_analysis:1029 -   Phase 2: ZINC-subset 400/500 (21.5s)
+2026-02-22 10:31:41.093 | INFO     | __main__:run_analysis:1070 -   ZINC-subset: 500 graphs, node-level rho=0.1788
+2026-02-22 10:31:41.093 | INFO     | __main__:run_analysis:951 - Phase 2: Peptides-func — sampling 500 graphs
+2026-02-22 10:31:41.595 | INFO     | __main__:run_analysis:1029 -   Phase 2: Peptides-func 200/500 (22.1s)
+2026-02-22 10:31:42.140 | INFO     | __main__:run_analysis:1029 -   Phase 2: Peptides-func 400/500 (22.7s)
+2026-02-22 10:31:42.411 | INFO     | __main__:run_analysis:1070 -   Peptides-func: 500 graphs, node-level rho=0.0597
+2026-02-22 10:31:42.411 | INFO     | __main__:run_analysis:951 - Phase 2: Peptides-struct — sampling 500 graphs
+2026-02-22 10:31:42.921 | INFO     | __main__:run_analysis:1029 -   Phase 2: Peptides-struct 200/500 (23.4s)
+2026-02-22 10:31:43.474 | INFO     | __main__:run_analysis:1029 -   Phase 2: Peptides-struct 400/500 (24.0s)
+2026-02-22 10:31:43.749 | INFO     | __main__:run_analysis:1070 -   Peptides-struct: 500 graphs, node-level rho=0.0549
+2026-02-22 10:31:43.749 | INFO     | __main__:run_analysis:951 - Phase 2: Synthetic-aliased-pairs — sampling 100 graphs
+2026-02-22 10:31:43.778 | INFO     | __main__:run_analysis:1070 -   Synthetic-aliased-pairs: 100 graphs, node-level rho=0.0188
+2026-02-22 10:31:43.778 | INFO     | __main__:run_analysis:1073 - ============================================================
+2026-02-22 10:31:43.778 | INFO     | __main__:run_analysis:1074 - PHASE 3: Graph-Level Correlations and Comparison
+2026-02-22 10:31:43.778 | INFO     | __main__:run_analysis:1075 - ============================================================
+2026-02-22 10:31:51.909 | INFO     | __main__:run_analysis:1147 -   ZINC-subset: graph_sri rho=0.2146, mean_node_sri rho=0.4111, min_node_sri rho=0.1507
+2026-02-22 10:31:59.883 | INFO     | __main__:run_analysis:1147 -   Peptides-func: graph_sri rho=0.1900, mean_node_sri rho=0.0352, min_node_sri rho=0.1183
+2026-02-22 10:32:07.829 | INFO     | __main__:run_analysis:1147 -   Peptides-struct: graph_sri rho=0.1804, mean_node_sri rho=0.0776, min_node_sri rho=0.1168
+2026-02-22 10:32:13.461 | INFO     | __main__:run_analysis:1147 -   Synthetic-aliased-pairs: graph_sri rho=0.3857, mean_node_sri rho=0.0217, min_node_sri rho=0.2792
+2026-02-22 10:32:21.146 | INFO     | __main__:run_analysis:1187 -   Pooled: graph_sri rho=0.3787, mean_node_sri rho=0.3272
+2026-02-22 10:32:21.147 | INFO     | __main__:run_analysis:1207 -   Best node metric: mean_node_sri, improvement: -0.0515
+2026-02-22 10:32:21.147 | INFO     | __main__:run_analysis:1210 - ============================================================
+2026-02-22 10:32:21.147 | INFO     | __main__:run_analysis:1211 - PHASE 4: SRWE Benefit Prediction
+2026-02-22 10:32:21.147 | INFO     | __main__:run_analysis:1212 - ============================================================
+2026-02-22 10:32:21.147 | INFO     | __main__:run_analysis:1223 - Phase 4: Processing 50 graphs from ZINC-subset
+2026-02-22 10:32:21.228 | INFO     | __main__:run_analysis:1304 -   Phase 4: ZINC-subset 50/50 (61.8s)
+2026-02-22 10:32:21.228 | INFO     | __main__:run_analysis:1223 - Phase 4: Processing 50 graphs from Peptides-func
+2026-02-22 10:32:21.849 | INFO     | __main__:run_analysis:1304 -   Phase 4: Peptides-func 50/50 (62.4s)
+2026-02-22 10:32:21.849 | INFO     | __main__:run_analysis:1223 - Phase 4: Processing 50 graphs from Peptides-struct
+2026-02-22 10:32:22.594 | INFO     | __main__:run_analysis:1304 -   Phase 4: Peptides-struct 50/50 (63.1s)
+2026-02-22 10:32:22.594 | INFO     | __main__:run_analysis:1223 - Phase 4: Processing 50 graphs from Synthetic-aliased-pairs
+2026-02-22 10:32:22.623 | INFO     | __main__:run_analysis:1304 -   Phase 4: Synthetic-aliased-pairs 50/50 (63.1s)
+2026-02-22 10:32:22.635 | INFO     | __main__:run_analysis:1328 - Mann-Whitney U: newly vs already: U=44920213.5, p=1.0000
+2026-02-22 10:32:22.635 | INFO     | __main__:run_analysis:1334 -   SRWE categories: already=29013, newly=1789, unresolved=636
+2026-02-22 10:32:22.635 | INFO     | __main__:run_analysis:1337 - ============================================================
+2026-02-22 10:32:22.635 | INFO     | __main__:run_analysis:1338 - PHASE 5: Visualization
+2026-02-22 10:32:22.635 | INFO     | __main__:run_analysis:1339 - ============================================================
+2026-02-22 10:32:22.904 | INFO     | __main__:plot_correlation_comparison:682 - Saved correlation comparison figure: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig1_correlation_comparison.png
+2026-02-22 10:32:23.171 | INFO     | __main__:plot_scatter_sri_comparison:726 - Saved scatter comparison: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig2_sri_scatter.png
+2026-02-22 10:32:23.249 | INFO     | __main__:plot_within_graph_correlations:789 - Saved within-graph correlations: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig3_within_graph_rhos.png
+2026-02-22 10:32:23.605 | INFO     | __main__:plot_node_sri_heatmaps:822 - Saved node SRI heatmaps: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig4_node_sri_heatmaps.png
+2026-02-22 10:32:23.688 | INFO     | __main__:plot_srwe_benefit:764 - Saved SRWE benefit figure: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/figures/fig5_srwe_benefit.png
+2026-02-22 10:32:23.689 | INFO     | __main__:run_analysis:1385 - Total runtime: 64.2s
+2026-02-22 10:32:23.704 | INFO     | __main__:main:1527 - Saved analysis results: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_6/gen_art/exp_id3_it6__opus/analysis_results.json
+2026-02-22 10:32:23.704 | INFO     | __main__:main:1530 - Formatting output for exp_gen_sol_out schema...
+2026-02-22 10:32:33.229 | INFO     | __main__:main:1537 - Saved method_out.json (301.3 MB)
+2026-02-22 10:32:33.229 | INFO     | __main__:main:1542 - Output exceeds 100 MB, splitting...
+2026-02-22 10:32:33.658 | INFO     | __main__:main:1570 -   Part 1: ZINC-subset [0:8889] (85.0 MB)
+2026-02-22 10:32:33.720 | INFO     | __main__:main:1570 -   Part 2: ZINC-subset [8889:12000] (29.8 MB)
+2026-02-22 10:32:33.941 | INFO     | __main__:main:1556 -   Part 3: Peptides-func (93.0 MB)
+2026-02-22 10:32:34.165 | INFO     | __main__:main:1556 -   Part 4: Peptides-struct (93.1 MB)
+2026-02-22 10:32:34.171 | INFO     | __main__:main:1556 -   Part 5: Synthetic-aliased-pairs (0.4 MB)
+2026-02-22 10:32:34.172 | INFO     | __main__:main:1573 - Split into 5 parts in method_out/
+2026-02-22 10:32:34.172 | INFO     | __main__:main:1575 - ============================================================
+2026-02-22 10:32:34.172 | INFO     | __main__:main:1576 - Done!

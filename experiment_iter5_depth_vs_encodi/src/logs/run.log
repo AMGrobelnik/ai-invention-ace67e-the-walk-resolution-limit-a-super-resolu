@@ -1,0 +1,373 @@
+2026-02-22 09:29:59.929 | INFO     | __main__:<module>:68 - Hardware: 12 CPUs, 134.7GB RAM, GPU=True (21.0GB VRAM)
+2026-02-22 09:29:59.929 | INFO     | __main__:<module>:69 - Device: cuda
+2026-02-22 09:29:59.929 | INFO     | __main__:main:543 - ============================================================
+2026-02-22 09:29:59.929 | INFO     | __main__:main:544 - Depth vs Encoding Aliasing Experiment
+2026-02-22 09:29:59.929 | INFO     | __main__:main:545 - ============================================================
+2026-02-22 09:29:59.929 | INFO     | __main__:load_all_data:110 - Loading data from split files...
+2026-02-22 09:29:59.930 | INFO     | __main__:load_all_data:118 -   Loading full_data_out_1.json
+2026-02-22 09:30:00.068 | INFO     | __main__:load_all_data:118 -   Loading full_data_out_2.json
+2026-02-22 09:30:00.102 | INFO     | __main__:load_all_data:118 -   Loading full_data_out_3.json
+2026-02-22 09:30:00.231 | INFO     | __main__:load_all_data:118 -   Loading full_data_out_4.json
+2026-02-22 09:30:00.359 | INFO     | __main__:load_all_data:118 -   Loading full_data_out_5.json
+2026-02-22 09:30:00.359 | INFO     | __main__:load_all_data:128 -   ZINC-subset: 12000 examples
+2026-02-22 09:30:00.360 | INFO     | __main__:load_all_data:128 -   Peptides-func: 2000 examples
+2026-02-22 09:30:00.360 | INFO     | __main__:load_all_data:128 -   Peptides-struct: 2000 examples
+2026-02-22 09:30:00.360 | INFO     | __main__:load_all_data:128 -   Synthetic-aliased-pairs: 100 examples
+2026-02-22 09:30:00.360 | INFO     | __main__:main:585 - Parsing ZINC-subset: 2000 examples
+2026-02-22 09:30:00.508 | INFO     | __main__:main:598 -   Parsed 2000 graphs from ZINC-subset
+2026-02-22 09:30:00.508 | INFO     | __main__:main:585 - Parsing Peptides-struct: 1500 examples
+2026-02-22 09:30:01.249 | INFO     | __main__:main:598 -   Parsed 1500 graphs from Peptides-struct
+2026-02-22 09:30:01.249 | INFO     | __main__:main:604 - Building eigen cache for ZINC-subset...
+2026-02-22 09:30:01.249 | INFO     | __main__:build_eigen_cache:509 - Building eigen cache for 2000 graphs...
+2026-02-22 09:30:01.262 | DEBUG    | __main__:build_eigen_cache:523 -   Eigen cache: 200/2000 (0.0s)
+2026-02-22 09:30:01.274 | DEBUG    | __main__:build_eigen_cache:523 -   Eigen cache: 400/2000 (0.0s)
+2026-02-22 09:30:01.287 | DEBUG    | __main__:build_eigen_cache:523 -   Eigen cache: 600/2000 (0.0s)
+2026-02-22 09:30:01.299 | DEBUG    | __main__:build_eigen_cache:523 -   Eigen cache: 800/2000 (0.1s)
+2026-02-22 09:30:01.312 | DEBUG    | __main__:build_eigen_cache:523 -   Eigen cache: 1000/2000 (0.1s)
+2026-02-22 09:30:01.324 | DEBUG    | __main__:build_eigen_cache:523 -   Eigen cache: 1200/2000 (0.1s)
+2026-02-22 09:30:01.337 | DEBUG    | __main__:build_eigen_cache:523 -   Eigen cache: 1400/2000 (0.1s)
+2026-02-22 09:30:01.349 | DEBUG    | __main__:build_eigen_cache:523 -   Eigen cache: 1600/2000 (0.1s)
+2026-02-22 09:30:01.361 | DEBUG    | __main__:build_eigen_cache:523 -   Eigen cache: 1800/2000 (0.1s)
+2026-02-22 09:30:01.374 | INFO     | __main__:build_eigen_cache:532 - Eigen cache: 0.1s (0 skipped for size, 2000 total)
+2026-02-22 09:30:01.374 | INFO     | __main__:main:607 -   Eigen cache done in 0.1s
+2026-02-22 09:30:01.374 | INFO     | __main__:main:609 - Precomputing PE for ZINC-subset...
+2026-02-22 09:30:03.172 | INFO     | __main__:main:612 -   PE precomputed in 1.8s
+2026-02-22 09:30:03.172 | INFO     | __main__:main:604 - Building eigen cache for Peptides-struct...
+2026-02-22 09:30:03.172 | INFO     | __main__:build_eigen_cache:509 - Building eigen cache for 1500 graphs...
+2026-02-22 09:30:05.383 | DEBUG    | __main__:build_eigen_cache:523 -   Eigen cache: 200/1500 (2.2s)
+2026-02-22 09:30:08.386 | DEBUG    | __main__:build_eigen_cache:523 -   Eigen cache: 400/1500 (5.2s)
+2026-02-22 09:30:24.647 | DEBUG    | __main__:build_eigen_cache:523 -   Eigen cache: 800/1500 (21.5s)
+2026-02-22 09:30:44.273 | DEBUG    | __main__:build_eigen_cache:523 -   Eigen cache: 1000/1500 (41.1s)
+2026-02-22 09:31:10.445 | DEBUG    | __main__:build_eigen_cache:523 -   Eigen cache: 1400/1500 (67.3s)
+2026-02-22 09:31:17.266 | INFO     | __main__:build_eigen_cache:532 - Eigen cache: 74.1s (391 skipped for size, 1500 total)
+2026-02-22 09:31:17.266 | INFO     | __main__:main:607 -   Eigen cache done in 74.1s
+2026-02-22 09:31:17.267 | INFO     | __main__:main:609 - Precomputing PE for Peptides-struct...
+2026-02-22 09:31:44.342 | INFO     | __main__:main:612 -   PE precomputed in 27.1s
+2026-02-22 09:31:44.343 | INFO     | __main__:split_zinc:487 - ZINC split: train=1648, val=191, test=161
+2026-02-22 09:31:44.344 | INFO     | __main__:main:634 - 
+========================================
+2026-02-22 09:31:44.344 | INFO     | __main__:main:635 - Dataset: ZINC-subset
+2026-02-22 09:31:44.344 | INFO     | __main__:main:636 -   Train: 1648, Val: 191, Test: 161
+2026-02-22 09:31:44.344 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=2, pe=rwse, seed=0
+2026-02-22 09:31:50.720 | INFO     | __main__:main:670 -     MAE: 0.440876 (val: 0.406460)
+2026-02-22 09:31:50.721 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=2, pe=rwse, seed=1
+2026-02-22 09:31:56.831 | INFO     | __main__:main:670 -     MAE: 0.467862 (val: 0.424655)
+2026-02-22 09:31:56.831 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=2, pe=rwse, seed=2
+2026-02-22 09:32:02.940 | INFO     | __main__:main:670 -     MAE: 0.453197 (val: 0.438509)
+2026-02-22 09:32:02.941 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=2, pe=lappe, seed=0
+2026-02-22 09:32:06.045 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 50
+2026-02-22 09:32:06.050 | INFO     | __main__:main:670 -     MAE: 0.703047 (val: 0.613337)
+2026-02-22 09:32:06.051 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=2, pe=lappe, seed=1
+2026-02-22 09:32:10.605 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 66
+2026-02-22 09:32:10.610 | INFO     | __main__:main:670 -     MAE: 0.688205 (val: 0.632129)
+2026-02-22 09:32:10.610 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=2, pe=lappe, seed=2
+2026-02-22 09:32:15.188 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 73
+2026-02-22 09:32:15.192 | INFO     | __main__:main:670 -     MAE: 0.676132 (val: 0.623230)
+2026-02-22 09:32:15.193 | INFO     | __main__:main:703 -   Budget check: ~7.2min needed, 52.7min left
+2026-02-22 09:32:15.193 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=2, pe=srwe, seed=0
+2026-02-22 09:32:21.368 | INFO     | __main__:main:670 -     MAE: 0.601129 (val: 0.486335)
+2026-02-22 09:32:21.368 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=2, pe=srwe, seed=1
+2026-02-22 09:32:25.872 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 72
+2026-02-22 09:32:25.876 | INFO     | __main__:main:670 -     MAE: 0.627215 (val: 0.552731)
+2026-02-22 09:32:25.877 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=2, pe=srwe, seed=2
+2026-02-22 09:32:31.287 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 88
+2026-02-22 09:32:31.292 | INFO     | __main__:main:670 -     MAE: 0.606892 (val: 0.520514)
+2026-02-22 09:32:31.292 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=3, pe=rwse, seed=0
+2026-02-22 09:32:38.560 | INFO     | __main__:main:670 -     MAE: 0.434126 (val: 0.422251)
+2026-02-22 09:32:38.561 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=3, pe=rwse, seed=1
+2026-02-22 09:32:44.713 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 84
+2026-02-22 09:32:44.718 | INFO     | __main__:main:670 -     MAE: 0.447400 (val: 0.416868)
+2026-02-22 09:32:44.718 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=3, pe=rwse, seed=2
+2026-02-22 09:32:52.027 | INFO     | __main__:main:670 -     MAE: 0.450799 (val: 0.440334)
+2026-02-22 09:32:52.027 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=3, pe=lappe, seed=0
+2026-02-22 09:32:57.035 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 69
+2026-02-22 09:32:57.040 | INFO     | __main__:main:670 -     MAE: 0.742700 (val: 0.612924)
+2026-02-22 09:32:57.041 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=3, pe=lappe, seed=1
+2026-02-22 09:33:03.928 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 93
+2026-02-22 09:33:03.933 | INFO     | __main__:main:670 -     MAE: 0.644752 (val: 0.614257)
+2026-02-22 09:33:03.934 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=3, pe=lappe, seed=2
+2026-02-22 09:33:09.680 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 77
+2026-02-22 09:33:09.686 | INFO     | __main__:main:670 -     MAE: 0.696541 (val: 0.624082)
+2026-02-22 09:33:09.687 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=3, pe=srwe, seed=0
+2026-02-22 09:33:17.104 | INFO     | __main__:main:670 -     MAE: 0.565270 (val: 0.487999)
+2026-02-22 09:33:17.105 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=3, pe=srwe, seed=1
+2026-02-22 09:33:24.397 | INFO     | __main__:main:670 -     MAE: 0.588499 (val: 0.493803)
+2026-02-22 09:33:24.397 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=3, pe=srwe, seed=2
+2026-02-22 09:33:31.934 | INFO     | __main__:main:670 -     MAE: 0.553149 (val: 0.532400)
+2026-02-22 09:33:31.934 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=4, pe=rwse, seed=0
+2026-02-22 09:33:40.890 | INFO     | __main__:main:670 -     MAE: 0.385372 (val: 0.390506)
+2026-02-22 09:33:40.890 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=4, pe=rwse, seed=1
+2026-02-22 09:33:49.093 | INFO     | __main__:main:670 -     MAE: 0.445432 (val: 0.390153)
+2026-02-22 09:33:49.094 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=4, pe=rwse, seed=2
+2026-02-22 09:33:53.887 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 58
+2026-02-22 09:33:53.893 | INFO     | __main__:main:670 -     MAE: 0.525543 (val: 0.509898)
+2026-02-22 09:33:53.894 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=4, pe=lappe, seed=0
+2026-02-22 09:34:02.359 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 77
+2026-02-22 09:34:02.367 | INFO     | __main__:main:670 -     MAE: 0.663851 (val: 0.574250)
+2026-02-22 09:34:02.368 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=4, pe=lappe, seed=1
+2026-02-22 09:34:14.375 | INFO     | __main__:main:670 -     MAE: 0.685070 (val: 0.636588)
+2026-02-22 09:34:14.375 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=4, pe=lappe, seed=2
+2026-02-22 09:34:22.309 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 68
+2026-02-22 09:34:22.317 | INFO     | __main__:main:670 -     MAE: 0.616563 (val: 0.596473)
+2026-02-22 09:34:22.318 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=4, pe=srwe, seed=0
+2026-02-22 09:34:31.192 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 76
+2026-02-22 09:34:31.201 | INFO     | __main__:main:670 -     MAE: 0.575109 (val: 0.500099)
+2026-02-22 09:34:31.202 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=4, pe=srwe, seed=1
+2026-02-22 09:34:42.973 | INFO     | __main__:main:670 -     MAE: 0.564432 (val: 0.501975)
+2026-02-22 09:34:42.974 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=4, pe=srwe, seed=2
+2026-02-22 09:34:51.738 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 74
+2026-02-22 09:34:51.746 | INFO     | __main__:main:670 -     MAE: 0.606369 (val: 0.558579)
+2026-02-22 09:34:51.747 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=6, pe=rwse, seed=0
+2026-02-22 09:35:05.645 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 94
+2026-02-22 09:35:05.656 | INFO     | __main__:main:670 -     MAE: 0.465229 (val: 0.448231)
+2026-02-22 09:35:05.656 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=6, pe=rwse, seed=1
+2026-02-22 09:35:12.460 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 48
+2026-02-22 09:35:12.470 | INFO     | __main__:main:670 -     MAE: 0.597958 (val: 0.535108)
+2026-02-22 09:35:12.471 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=6, pe=rwse, seed=2
+2026-02-22 09:35:26.493 | INFO     | __main__:main:670 -     MAE: 0.504908 (val: 0.453136)
+2026-02-22 09:35:26.493 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=6, pe=lappe, seed=0
+2026-02-22 09:35:40.850 | INFO     | __main__:main:670 -     MAE: 0.680447 (val: 0.605025)
+2026-02-22 09:35:40.851 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=6, pe=lappe, seed=1
+2026-02-22 09:35:54.461 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 99
+2026-02-22 09:35:54.471 | INFO     | __main__:main:670 -     MAE: 0.673358 (val: 0.626567)
+2026-02-22 09:35:54.472 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=6, pe=lappe, seed=2
+2026-02-22 09:36:07.607 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 96
+2026-02-22 09:36:07.618 | INFO     | __main__:main:670 -     MAE: 0.767006 (val: 0.641450)
+2026-02-22 09:36:07.619 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=6, pe=srwe, seed=0
+2026-02-22 09:36:21.861 | INFO     | __main__:main:670 -     MAE: 0.575997 (val: 0.521209)
+2026-02-22 09:36:21.861 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=6, pe=srwe, seed=1
+2026-02-22 09:36:35.595 | INFO     | __main__:main:670 -     MAE: 0.600038 (val: 0.506601)
+2026-02-22 09:36:35.596 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=6, pe=srwe, seed=2
+2026-02-22 09:36:49.325 | INFO     | __main__:main:670 -     MAE: 0.671139 (val: 0.558066)
+2026-02-22 09:36:49.325 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=8, pe=rwse, seed=0
+2026-02-22 09:37:05.672 | INFO     | __main__:main:670 -     MAE: 0.441749 (val: 0.424200)
+2026-02-22 09:37:05.673 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=8, pe=rwse, seed=1
+2026-02-22 09:37:22.331 | INFO     | __main__:main:670 -     MAE: 0.508451 (val: 0.431160)
+2026-02-22 09:37:22.332 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=8, pe=rwse, seed=2
+2026-02-22 09:37:38.439 | INFO     | __main__:main:670 -     MAE: 0.454562 (val: 0.432923)
+2026-02-22 09:37:38.440 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=8, pe=lappe, seed=0
+2026-02-22 09:37:54.474 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 92
+2026-02-22 09:37:54.486 | INFO     | __main__:main:670 -     MAE: 0.660595 (val: 0.643764)
+2026-02-22 09:37:54.487 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=8, pe=lappe, seed=1
+2026-02-22 09:38:07.819 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 80
+2026-02-22 09:38:07.831 | INFO     | __main__:main:670 -     MAE: 0.713869 (val: 0.630773)
+2026-02-22 09:38:07.832 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=8, pe=lappe, seed=2
+2026-02-22 09:38:24.788 | INFO     | __main__:main:670 -     MAE: 0.670999 (val: 0.649951)
+2026-02-22 09:38:24.788 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=8, pe=srwe, seed=0
+2026-02-22 09:38:41.322 | INFO     | __main__:main:670 -     MAE: 0.623464 (val: 0.543392)
+2026-02-22 09:38:41.323 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=8, pe=srwe, seed=1
+2026-02-22 09:38:57.954 | INFO     | __main__:main:670 -     MAE: 0.604107 (val: 0.515581)
+2026-02-22 09:38:57.955 | INFO     | __main__:main:652 -   Run: ZINC-subset, depth=8, pe=srwe, seed=2
+2026-02-22 09:39:11.117 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 77
+2026-02-22 09:39:11.130 | INFO     | __main__:main:670 -     MAE: 0.687197 (val: 0.606480)
+2026-02-22 09:39:11.132 | INFO     | __main__:main:634 - 
+========================================
+2026-02-22 09:39:11.132 | INFO     | __main__:main:635 - Dataset: Peptides-struct
+2026-02-22 09:39:11.132 | INFO     | __main__:main:636 -   Train: 1050, Val: 225, Test: 225
+2026-02-22 09:39:11.132 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=2, pe=rwse, seed=0
+2026-02-22 09:39:15.442 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 60
+2026-02-22 09:39:15.453 | INFO     | __main__:main:670 -     MAE: 22.868593 (val: 18.188400)
+2026-02-22 09:39:15.455 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=2, pe=rwse, seed=1
+2026-02-22 09:39:19.406 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 56
+2026-02-22 09:39:19.417 | INFO     | __main__:main:670 -     MAE: 23.316706 (val: 18.485961)
+2026-02-22 09:39:19.420 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=2, pe=rwse, seed=2
+2026-02-22 09:39:26.233 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 97
+2026-02-22 09:39:26.244 | INFO     | __main__:main:670 -     MAE: 22.338634 (val: 17.871415)
+2026-02-22 09:39:26.247 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=2, pe=lappe, seed=0
+2026-02-22 09:39:28.534 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 32
+2026-02-22 09:39:28.545 | INFO     | __main__:main:670 -     MAE: 24.120912 (val: 18.368849)
+2026-02-22 09:39:28.548 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=2, pe=lappe, seed=1
+2026-02-22 09:39:30.943 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 33
+2026-02-22 09:39:30.953 | INFO     | __main__:main:670 -     MAE: 24.171074 (val: 18.605037)
+2026-02-22 09:39:30.956 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=2, pe=lappe, seed=2
+2026-02-22 09:39:32.736 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 25
+2026-02-22 09:39:32.747 | INFO     | __main__:main:670 -     MAE: 24.824355 (val: 19.184138)
+2026-02-22 09:39:32.750 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=2, pe=srwe, seed=0
+2026-02-22 09:39:34.856 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 29
+2026-02-22 09:39:34.867 | INFO     | __main__:main:670 -     MAE: 24.413915 (val: 18.850312)
+2026-02-22 09:39:34.870 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=2, pe=srwe, seed=1
+2026-02-22 09:39:38.057 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 46
+2026-02-22 09:39:38.067 | INFO     | __main__:main:670 -     MAE: 23.620529 (val: 18.612023)
+2026-02-22 09:39:38.070 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=2, pe=srwe, seed=2
+2026-02-22 09:39:40.099 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 29
+2026-02-22 09:39:40.110 | INFO     | __main__:main:670 -     MAE: 24.300549 (val: 18.796303)
+2026-02-22 09:39:40.112 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=3, pe=rwse, seed=0
+2026-02-22 09:39:43.214 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 38
+2026-02-22 09:39:43.226 | INFO     | __main__:main:670 -     MAE: 23.393381 (val: 18.669352)
+2026-02-22 09:39:43.229 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=3, pe=rwse, seed=1
+2026-02-22 09:39:47.784 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 56
+2026-02-22 09:39:47.796 | INFO     | __main__:main:670 -     MAE: 22.488459 (val: 17.947485)
+2026-02-22 09:39:47.799 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=3, pe=rwse, seed=2
+2026-02-22 09:39:50.526 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 33
+2026-02-22 09:39:50.537 | INFO     | __main__:main:670 -     MAE: 23.462953 (val: 18.406550)
+2026-02-22 09:39:50.540 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=3, pe=lappe, seed=0
+2026-02-22 09:39:54.277 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 45
+2026-02-22 09:39:54.289 | INFO     | __main__:main:670 -     MAE: 22.246456 (val: 17.275310)
+2026-02-22 09:39:54.292 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=3, pe=lappe, seed=1
+2026-02-22 09:39:58.680 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 52
+2026-02-22 09:39:58.693 | INFO     | __main__:main:670 -     MAE: 21.693728 (val: 16.516353)
+2026-02-22 09:39:58.696 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=3, pe=lappe, seed=2
+2026-02-22 09:40:03.770 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 61
+2026-02-22 09:40:03.782 | INFO     | __main__:main:670 -     MAE: 22.233599 (val: 17.434577)
+2026-02-22 09:40:03.785 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=3, pe=srwe, seed=0
+2026-02-22 09:40:07.666 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 47
+2026-02-22 09:40:07.678 | INFO     | __main__:main:670 -     MAE: 23.909042 (val: 19.372046)
+2026-02-22 09:40:07.681 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=3, pe=srwe, seed=1
+2026-02-22 09:40:12.635 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 60
+2026-02-22 09:40:12.647 | INFO     | __main__:main:670 -     MAE: 22.876702 (val: 17.940319)
+2026-02-22 09:40:12.650 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=3, pe=srwe, seed=2
+2026-02-22 09:40:15.089 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 29
+2026-02-22 09:40:15.101 | INFO     | __main__:main:670 -     MAE: 24.334357 (val: 18.948103)
+2026-02-22 09:40:15.105 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=4, pe=rwse, seed=0
+2026-02-22 09:40:24.366 | INFO     | __main__:main:670 -     MAE: 21.808087 (val: 16.903735)
+2026-02-22 09:40:24.369 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=4, pe=rwse, seed=1
+2026-02-22 09:40:32.981 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 90
+2026-02-22 09:40:32.995 | INFO     | __main__:main:670 -     MAE: 21.508373 (val: 16.916432)
+2026-02-22 09:40:32.999 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=4, pe=rwse, seed=2
+2026-02-22 09:40:42.227 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 99
+2026-02-22 09:40:42.241 | INFO     | __main__:main:670 -     MAE: 21.411017 (val: 17.055273)
+2026-02-22 09:40:42.245 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=4, pe=lappe, seed=0
+2026-02-22 09:40:46.100 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 41
+2026-02-22 09:40:46.113 | INFO     | __main__:main:670 -     MAE: 22.383785 (val: 17.372300)
+2026-02-22 09:40:46.117 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=4, pe=lappe, seed=1
+2026-02-22 09:40:49.031 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 31
+2026-02-22 09:40:49.044 | INFO     | __main__:main:670 -     MAE: 24.599479 (val: 18.854903)
+2026-02-22 09:40:49.048 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=4, pe=lappe, seed=2
+2026-02-22 09:40:53.248 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 45
+2026-02-22 09:40:53.261 | INFO     | __main__:main:670 -     MAE: 22.445884 (val: 17.217581)
+2026-02-22 09:40:53.264 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=4, pe=srwe, seed=0
+2026-02-22 09:40:56.801 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 38
+2026-02-22 09:40:56.815 | INFO     | __main__:main:670 -     MAE: 23.489267 (val: 18.845696)
+2026-02-22 09:40:56.819 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=4, pe=srwe, seed=1
+2026-02-22 09:41:04.483 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 82
+2026-02-22 09:41:04.496 | INFO     | __main__:main:670 -     MAE: 22.416378 (val: 17.847580)
+2026-02-22 09:41:04.500 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=4, pe=srwe, seed=2
+2026-02-22 09:41:06.866 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 25
+2026-02-22 09:41:06.880 | INFO     | __main__:main:670 -     MAE: 24.847246 (val: 19.264551)
+2026-02-22 09:41:06.883 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=6, pe=rwse, seed=0
+2026-02-22 09:41:10.663 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 33
+2026-02-22 09:41:10.680 | INFO     | __main__:main:670 -     MAE: 23.751858 (val: 18.675146)
+2026-02-22 09:41:10.684 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=6, pe=rwse, seed=1
+2026-02-22 09:41:19.579 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 78
+2026-02-22 09:41:19.596 | INFO     | __main__:main:670 -     MAE: 22.425289 (val: 17.717103)
+2026-02-22 09:41:19.600 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=6, pe=rwse, seed=2
+2026-02-22 09:41:27.636 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 71
+2026-02-22 09:41:27.652 | INFO     | __main__:main:670 -     MAE: 22.193469 (val: 17.711496)
+2026-02-22 09:41:27.656 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=6, pe=lappe, seed=0
+2026-02-22 09:41:34.068 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 56
+2026-02-22 09:41:34.084 | INFO     | __main__:main:670 -     MAE: 22.314689 (val: 17.180255)
+2026-02-22 09:41:34.088 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=6, pe=lappe, seed=1
+2026-02-22 09:41:42.119 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 69
+2026-02-22 09:41:42.135 | INFO     | __main__:main:670 -     MAE: 21.489455 (val: 16.649371)
+2026-02-22 09:41:42.139 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=6, pe=lappe, seed=2
+2026-02-22 09:41:45.943 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 33
+2026-02-22 09:41:45.960 | INFO     | __main__:main:670 -     MAE: 23.124099 (val: 17.518790)
+2026-02-22 09:41:45.964 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=6, pe=srwe, seed=0
+2026-02-22 09:41:54.630 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 75
+2026-02-22 09:41:54.646 | INFO     | __main__:main:670 -     MAE: 23.062482 (val: 18.125900)
+2026-02-22 09:41:54.650 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=6, pe=srwe, seed=1
+2026-02-22 09:42:03.046 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 74
+2026-02-22 09:42:03.063 | INFO     | __main__:main:670 -     MAE: 22.581146 (val: 17.857459)
+2026-02-22 09:42:03.067 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=6, pe=srwe, seed=2
+2026-02-22 09:42:12.495 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 83
+2026-02-22 09:42:12.511 | INFO     | __main__:main:670 -     MAE: 22.827677 (val: 18.113821)
+2026-02-22 09:42:12.515 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=8, pe=rwse, seed=0
+2026-02-22 09:42:18.362 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 43
+2026-02-22 09:42:18.382 | INFO     | __main__:main:670 -     MAE: 23.202152 (val: 18.674712)
+2026-02-22 09:42:18.387 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=8, pe=rwse, seed=1
+2026-02-22 09:42:26.320 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 58
+2026-02-22 09:42:26.338 | INFO     | __main__:main:670 -     MAE: 22.158885 (val: 17.584857)
+2026-02-22 09:42:26.343 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=8, pe=rwse, seed=2
+2026-02-22 09:42:37.575 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 83
+2026-02-22 09:42:37.594 | INFO     | __main__:main:670 -     MAE: 22.580028 (val: 17.738518)
+2026-02-22 09:42:37.599 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=8, pe=lappe, seed=0
+2026-02-22 09:42:45.090 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 55
+2026-02-22 09:42:45.109 | INFO     | __main__:main:670 -     MAE: 22.040006 (val: 16.687810)
+2026-02-22 09:42:45.114 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=8, pe=lappe, seed=1
+2026-02-22 09:42:50.714 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 41
+2026-02-22 09:42:50.734 | INFO     | __main__:main:670 -     MAE: 22.658628 (val: 17.312721)
+2026-02-22 09:42:50.739 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=8, pe=lappe, seed=2
+2026-02-22 09:42:58.377 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 56
+2026-02-22 09:42:58.396 | INFO     | __main__:main:670 -     MAE: 23.413111 (val: 18.213650)
+2026-02-22 09:42:58.401 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=8, pe=srwe, seed=0
+2026-02-22 09:43:06.550 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 60
+2026-02-22 09:43:06.569 | INFO     | __main__:main:670 -     MAE: 22.882752 (val: 18.054970)
+2026-02-22 09:43:06.574 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=8, pe=srwe, seed=1
+2026-02-22 09:43:15.164 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 59
+2026-02-22 09:43:15.184 | INFO     | __main__:main:670 -     MAE: 23.136199 (val: 18.031696)
+2026-02-22 09:43:15.189 | INFO     | __main__:main:652 -   Run: Peptides-struct, depth=8, pe=srwe, seed=2
+2026-02-22 09:43:20.741 | DEBUG    | __main__:train_model:471 -   Early stopping at epoch 40
+2026-02-22 09:43:20.761 | INFO     | __main__:main:670 -     MAE: 23.304795 (val: 18.373453)
+2026-02-22 09:43:20.766 | INFO     | __main__:main:713 - 
+Completed 90 runs, skipped 0
+2026-02-22 09:43:20.766 | INFO     | __main__:main:716 - 
+============================================================
+2026-02-22 09:43:20.766 | INFO     | __main__:main:717 - ANALYSIS
+2026-02-22 09:43:20.766 | INFO     | __main__:main:718 - ============================================================
+2026-02-22 09:43:20.766 | INFO     | __main__:main:732 -   ZINC-subset_depth2_rwse: 0.4540 +/- 0.0110
+2026-02-22 09:43:20.766 | INFO     | __main__:main:732 -   ZINC-subset_depth2_lappe: 0.6891 +/- 0.0110
+2026-02-22 09:43:20.766 | INFO     | __main__:main:732 -   ZINC-subset_depth2_srwe: 0.6117 +/- 0.0112
+2026-02-22 09:43:20.766 | INFO     | __main__:main:732 -   ZINC-subset_depth3_rwse: 0.4441 +/- 0.0072
+2026-02-22 09:43:20.766 | INFO     | __main__:main:732 -   ZINC-subset_depth3_lappe: 0.6947 +/- 0.0400
+2026-02-22 09:43:20.766 | INFO     | __main__:main:732 -   ZINC-subset_depth3_srwe: 0.5690 +/- 0.0147
+2026-02-22 09:43:20.766 | INFO     | __main__:main:732 -   ZINC-subset_depth4_rwse: 0.4521 +/- 0.0574
+2026-02-22 09:43:20.766 | INFO     | __main__:main:732 -   ZINC-subset_depth4_lappe: 0.6552 +/- 0.0286
+2026-02-22 09:43:20.766 | INFO     | __main__:main:732 -   ZINC-subset_depth4_srwe: 0.5820 +/- 0.0178
+2026-02-22 09:43:20.766 | INFO     | __main__:main:732 -   ZINC-subset_depth6_rwse: 0.5227 +/- 0.0556
+2026-02-22 09:43:20.766 | INFO     | __main__:main:732 -   ZINC-subset_depth6_lappe: 0.7069 +/- 0.0426
+2026-02-22 09:43:20.767 | INFO     | __main__:main:732 -   ZINC-subset_depth6_srwe: 0.6157 +/- 0.0404
+2026-02-22 09:43:20.767 | INFO     | __main__:main:732 -   ZINC-subset_depth8_rwse: 0.4683 +/- 0.0289
+2026-02-22 09:43:20.767 | INFO     | __main__:main:732 -   ZINC-subset_depth8_lappe: 0.6818 +/- 0.0231
+2026-02-22 09:43:20.767 | INFO     | __main__:main:732 -   ZINC-subset_depth8_srwe: 0.6383 +/- 0.0355
+2026-02-22 09:43:20.767 | INFO     | __main__:main:732 -   Peptides-struct_depth2_rwse: 22.8413 +/- 0.3998
+2026-02-22 09:43:20.767 | INFO     | __main__:main:732 -   Peptides-struct_depth2_lappe: 24.3721 +/- 0.3204
+2026-02-22 09:43:20.767 | INFO     | __main__:main:732 -   Peptides-struct_depth2_srwe: 24.1117 +/- 0.3504
+2026-02-22 09:43:20.767 | INFO     | __main__:main:732 -   Peptides-struct_depth3_rwse: 23.1149 +/- 0.4439
+2026-02-22 09:43:20.767 | INFO     | __main__:main:732 -   Peptides-struct_depth3_lappe: 22.0579 +/- 0.2576
+2026-02-22 09:43:20.767 | INFO     | __main__:main:732 -   Peptides-struct_depth3_srwe: 23.7067 +/- 0.6120
+2026-02-22 09:43:20.767 | INFO     | __main__:main:732 -   Peptides-struct_depth4_rwse: 21.5758 +/- 0.1690
+2026-02-22 09:43:20.767 | INFO     | __main__:main:732 -   Peptides-struct_depth4_lappe: 23.1430 +/- 1.0302
+2026-02-22 09:43:20.767 | INFO     | __main__:main:732 -   Peptides-struct_depth4_srwe: 23.5843 +/- 0.9947
+2026-02-22 09:43:20.767 | INFO     | __main__:main:732 -   Peptides-struct_depth6_rwse: 22.7902 +/- 0.6865
+2026-02-22 09:43:20.767 | INFO     | __main__:main:732 -   Peptides-struct_depth6_lappe: 22.3094 +/- 0.6674
+2026-02-22 09:43:20.767 | INFO     | __main__:main:732 -   Peptides-struct_depth6_srwe: 22.8238 +/- 0.1965
+2026-02-22 09:43:20.767 | INFO     | __main__:main:732 -   Peptides-struct_depth8_rwse: 22.6470 +/- 0.4285
+2026-02-22 09:43:20.767 | INFO     | __main__:main:732 -   Peptides-struct_depth8_lappe: 22.7039 +/- 0.5615
+2026-02-22 09:43:20.767 | INFO     | __main__:main:732 -   Peptides-struct_depth8_srwe: 23.1079 +/- 0.1735
+2026-02-22 09:43:20.767 | INFO     | __main__:main:747 -   Gap ZINC-subset depth=2: -0.235150
+2026-02-22 09:43:20.767 | INFO     | __main__:main:747 -   Gap ZINC-subset depth=3: -0.250556
+2026-02-22 09:43:20.767 | INFO     | __main__:main:747 -   Gap ZINC-subset depth=4: -0.203046
+2026-02-22 09:43:20.767 | INFO     | __main__:main:747 -   Gap ZINC-subset depth=6: -0.184239
+2026-02-22 09:43:20.767 | INFO     | __main__:main:747 -   Gap ZINC-subset depth=8: -0.213567
+2026-02-22 09:43:20.767 | INFO     | __main__:main:759 -   Gap reduction ZINC-subset: -9.2%
+2026-02-22 09:43:20.767 | INFO     | __main__:main:747 -   Gap Peptides-struct depth=2: -1.530803
+2026-02-22 09:43:20.767 | INFO     | __main__:main:747 -   Gap Peptides-struct depth=3: 1.057004
+2026-02-22 09:43:20.767 | INFO     | __main__:main:747 -   Gap Peptides-struct depth=4: -1.567224
+2026-02-22 09:43:20.768 | INFO     | __main__:main:747 -   Gap Peptides-struct depth=6: 0.480791
+2026-02-22 09:43:20.768 | INFO     | __main__:main:747 -   Gap Peptides-struct depth=8: -0.056893
+2026-02-22 09:43:20.768 | INFO     | __main__:main:759 -   Gap reduction Peptides-struct: -96.3%
+2026-02-22 09:43:20.768 | INFO     | __main__:split_zinc:487 - ZINC split: train=1648, val=191, test=161
+2026-02-22 09:43:20.772 | INFO     | __main__:main:799 -   SRI corr ZINC-subset d=2: rho=0.0325, p=0.4766
+2026-02-22 09:43:20.775 | INFO     | __main__:main:799 -   SRI corr ZINC-subset d=3: rho=0.0588, p=0.1968
+2026-02-22 09:43:20.778 | INFO     | __main__:main:799 -   SRI corr ZINC-subset d=4: rho=0.0429, p=0.3472
+2026-02-22 09:43:20.781 | INFO     | __main__:main:799 -   SRI corr ZINC-subset d=6: rho=0.0568, p=0.2125
+2026-02-22 09:43:20.784 | INFO     | __main__:main:799 -   SRI corr ZINC-subset d=8: rho=0.0921, p=0.0430
+2026-02-22 09:43:20.789 | INFO     | __main__:main:799 -   SRI corr Peptides-struct d=2: rho=0.1473, p=0.0001
+2026-02-22 09:43:20.793 | INFO     | __main__:main:799 -   SRI corr Peptides-struct d=3: rho=0.1474, p=0.0001
+2026-02-22 09:43:20.798 | INFO     | __main__:main:799 -   SRI corr Peptides-struct d=4: rho=0.1661, p=0.0000
+2026-02-22 09:43:20.803 | INFO     | __main__:main:799 -   SRI corr Peptides-struct d=6: rho=0.0990, p=0.0100
+2026-02-22 09:43:20.807 | INFO     | __main__:main:799 -   SRI corr Peptides-struct d=8: rho=0.1088, p=0.0047
+2026-02-22 09:43:20.807 | INFO     | __main__:main:817 -   SRWE adv ZINC-subset d=2: 0.157767
+2026-02-22 09:43:20.807 | INFO     | __main__:main:817 -   SRWE adv ZINC-subset d=3: 0.124864
+2026-02-22 09:43:20.807 | INFO     | __main__:main:817 -   SRWE adv ZINC-subset d=4: 0.129854
+2026-02-22 09:43:20.807 | INFO     | __main__:main:817 -   SRWE adv ZINC-subset d=6: 0.093026
+2026-02-22 09:43:20.807 | INFO     | __main__:main:817 -   SRWE adv ZINC-subset d=8: 0.170002
+2026-02-22 09:43:20.807 | INFO     | __main__:main:817 -   SRWE adv Peptides-struct d=2: 1.270353
+2026-02-22 09:43:20.807 | INFO     | __main__:main:817 -   SRWE adv Peptides-struct d=3: 0.591770
+2026-02-22 09:43:20.807 | INFO     | __main__:main:817 -   SRWE adv Peptides-struct d=4: 2.008472
+2026-02-22 09:43:20.807 | INFO     | __main__:main:817 -   SRWE adv Peptides-struct d=6: 0.033563
+2026-02-22 09:43:20.808 | INFO     | __main__:main:817 -   SRWE adv Peptides-struct d=8: 0.460894
+2026-02-22 09:43:20.808 | INFO     | __main__:main:821 - Building output JSON...
+2026-02-22 09:43:20.808 | INFO     | __main__:split_zinc:487 - ZINC split: train=1648, val=191, test=161
+2026-02-22 09:43:20.862 | INFO     | __main__:main:910 - Output saved: /opt/ai-inventor/aii_pipeline/runs/run__20260222_005317/3_invention_loop/iter_5/gen_art/exp_id1_it5__opus/method_out.json (0.83 MB)
+2026-02-22 09:43:20.862 | INFO     | __main__:main:911 - Total time: 800.9s

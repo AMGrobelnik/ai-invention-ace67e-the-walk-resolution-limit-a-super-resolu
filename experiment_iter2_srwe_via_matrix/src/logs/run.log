@@ -1,0 +1,530 @@
+2026-02-22 03:34:01.875 | INFO     | __main__:<module>:78 - Hardware: 20 CPUs, 61.0GB RAM, GPU=True (21.0GB VRAM)
+2026-02-22 03:34:01.875 | INFO     | __main__:main:1292 - ============================================================
+2026-02-22 03:34:01.879 | INFO     | __main__:main:1293 - SRWE via Matrix Pencil Method — method.py
+2026-02-22 03:34:01.879 | INFO     | __main__:main:1294 - ============================================================
+2026-02-22 03:34:01.879 | INFO     | __main__:load_all_data:112 - Loading all datasets...
+2026-02-22 03:34:01.879 | INFO     | __main__:load_all_data:116 -   Loading full_data_out_1.json...
+2026-02-22 03:34:02.589 | INFO     | __main__:load_all_data:123 -     ZINC-subset: +9594 = 9594 total
+2026-02-22 03:34:02.589 | INFO     | __main__:load_all_data:116 -   Loading full_data_out_2.json...
+2026-02-22 03:34:02.780 | INFO     | __main__:load_all_data:123 -     ZINC-subset: +2406 = 12000 total
+2026-02-22 03:34:02.780 | INFO     | __main__:load_all_data:116 -   Loading full_data_out_3.json...
+2026-02-22 03:34:03.467 | INFO     | __main__:load_all_data:123 -     Peptides-func: +2000 = 2000 total
+2026-02-22 03:34:03.467 | INFO     | __main__:load_all_data:116 -   Loading full_data_out_4.json...
+2026-02-22 03:34:04.152 | INFO     | __main__:load_all_data:123 -     Peptides-struct: +2000 = 2000 total
+2026-02-22 03:34:04.155 | INFO     | __main__:load_all_data:116 -   Loading full_data_out_5.json...
+2026-02-22 03:34:04.156 | INFO     | __main__:load_all_data:123 -     Synthetic-aliased-pairs: +100 = 100 total
+2026-02-22 03:34:04.156 | INFO     | __main__:load_all_data:126 -   Dataset 'ZINC-subset': 12000 examples
+2026-02-22 03:34:04.156 | INFO     | __main__:load_all_data:126 -   Dataset 'Peptides-func': 2000 examples
+2026-02-22 03:34:04.156 | INFO     | __main__:load_all_data:126 -   Dataset 'Peptides-struct': 2000 examples
+2026-02-22 03:34:04.156 | INFO     | __main__:load_all_data:126 -   Dataset 'Synthetic-aliased-pairs': 100 examples
+2026-02-22 03:34:04.156 | INFO     | __main__:main:1300 - ============================================================
+2026-02-22 03:34:04.156 | INFO     | __main__:main:1301 - Phase 1: MPM Smoke Test
+2026-02-22 03:34:04.156 | INFO     | __main__:main:1302 - ============================================================
+2026-02-22 03:34:04.158 | INFO     | __main__:main:1309 -   Smoke test: K_1_4 (5 nodes)
+2026-02-22 03:34:04.158 | INFO     | __main__:main:1310 -   True eigenvalues: [-2.0, 0.0, 0.0, 0.0, 2.0]
+2026-02-22 03:34:04.167 | INFO     | __main__:main:1313 -     Node 0 SRWE: [(-2.0, 0.5), (2.0, 0.5)]
+2026-02-22 03:34:04.167 | INFO     | __main__:main:1313 -     Node 1 SRWE: [(0.0, 0.75), (-2.0, 0.125), (2.0, 0.125)]
+2026-02-22 03:34:04.167 | INFO     | __main__:main:1313 -     Node 2 SRWE: [(0.0, 0.75), (-2.0, 0.125), (2.0, 0.125)]
+2026-02-22 03:34:04.172 | INFO     | __main__:main:1315 -   Histogram shape: (5, 20), sum per node: [1. 1. 1.]
+2026-02-22 03:34:04.172 | INFO     | __main__:validate_synthetic_pairs:369 - ============================================================
+2026-02-22 03:34:04.172 | INFO     | __main__:validate_synthetic_pairs:370 - Phase 2: Synthetic Pair Validation
+2026-02-22 03:34:04.172 | INFO     | __main__:validate_synthetic_pairs:371 - ============================================================
+2026-02-22 03:34:04.183 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair cospectral_1 (exactly_cospectral)
+2026-02-22 03:34:04.189 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair cospectral_2 (exactly_cospectral)
+2026-02-22 03:34:04.197 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair cospectral_3 (exactly_cospectral)
+2026-02-22 03:34:04.244 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair cospectral_4 (exactly_cospectral)
+2026-02-22 03:34:04.251 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair cospectral_5 (exactly_cospectral)
+2026-02-22 03:34:04.259 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair cospectral_6 (exactly_cospectral)
+2026-02-22 03:34:04.276 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair cospectral_7 (exactly_cospectral)
+2026-02-22 03:34:04.283 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair cospectral_8 (exactly_cospectral)
+2026-02-22 03:34:04.291 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair cospectral_9 (exactly_cospectral)
+2026-02-22 03:34:04.300 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair cospectral_10 (exactly_cospectral)
+2026-02-22 03:34:04.350 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair cospectral_11 (exactly_cospectral)
+2026-02-22 03:34:04.359 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair cospectral_12 (exactly_cospectral)
+2026-02-22 03:34:04.368 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair cospectral_13 (exactly_cospectral)
+2026-02-22 03:34:04.381 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair cospectral_14 (exactly_cospectral)
+2026-02-22 03:34:04.391 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair cospectral_15 (exactly_cospectral)
+2026-02-22 03:34:04.444 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair near_cospectral_1 (near_cospectral)
+2026-02-22 03:34:04.452 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair near_cospectral_2 (near_cospectral)
+2026-02-22 03:34:04.457 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair near_cospectral_3 (near_cospectral)
+2026-02-22 03:34:04.471 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair near_cospectral_4 (near_cospectral)
+2026-02-22 03:34:04.486 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair near_cospectral_5 (near_cospectral)
+2026-02-22 03:34:04.547 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair near_cospectral_6 (near_cospectral)
+2026-02-22 03:34:04.554 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair near_cospectral_7 (near_cospectral)
+2026-02-22 03:34:04.562 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair near_cospectral_8 (near_cospectral)
+2026-02-22 03:34:04.565 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair near_cospectral_9 (near_cospectral)
+2026-02-22 03:34:04.573 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair near_cospectral_10 (near_cospectral)
+2026-02-22 03:34:04.581 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair near_cospectral_11 (near_cospectral)
+2026-02-22 03:34:04.593 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair near_cospectral_12 (near_cospectral)
+2026-02-22 03:34:04.597 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair near_cospectral_13 (near_cospectral)
+2026-02-22 03:34:04.652 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair near_cospectral_14 (near_cospectral)
+2026-02-22 03:34:04.658 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair near_cospectral_15 (near_cospectral)
+2026-02-22 03:34:04.673 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair near_cospectral_16 (near_cospectral)
+2026-02-22 03:34:04.685 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair near_cospectral_17 (near_cospectral)
+2026-02-22 03:34:04.694 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair near_cospectral_18 (near_cospectral)
+2026-02-22 03:34:04.704 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair near_cospectral_19 (near_cospectral)
+2026-02-22 03:34:04.756 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair near_cospectral_20 (near_cospectral)
+2026-02-22 03:34:04.774 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair control_1 (control)
+2026-02-22 03:34:04.782 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair control_2 (control)
+2026-02-22 03:34:04.790 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair control_3 (control)
+2026-02-22 03:34:04.800 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair control_4 (control)
+2026-02-22 03:34:04.855 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair control_5 (control)
+2026-02-22 03:34:04.860 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair control_6 (control)
+2026-02-22 03:34:04.875 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair control_7 (control)
+2026-02-22 03:34:04.880 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair control_8 (control)
+2026-02-22 03:34:04.899 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair control_9 (control)
+2026-02-22 03:34:04.942 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair control_10 (control)
+2026-02-22 03:34:04.952 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair control_11 (control)
+2026-02-22 03:34:04.966 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair control_12 (control)
+2026-02-22 03:34:04.975 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair control_13 (control)
+2026-02-22 03:34:04.988 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair control_14 (control)
+2026-02-22 03:34:04.992 | DEBUG    | __main__:validate_synthetic_pairs:398 - Processing pair control_15 (control)
+2026-02-22 03:34:05.007 | INFO     | __main__:validate_synthetic_pairs:474 -   exactly_cospectral: 15 pairs
+2026-02-22 03:34:05.008 | INFO     | __main__:validate_synthetic_pairs:475 -     RWSE mean dist: 0.106744
+2026-02-22 03:34:05.008 | INFO     | __main__:validate_synthetic_pairs:476 -     SRWE mean dist: 0.206807
+2026-02-22 03:34:05.041 | INFO     | __main__:validate_synthetic_pairs:477 -     LapPE mean dist: 0.428105
+2026-02-22 03:34:05.041 | INFO     | __main__:validate_synthetic_pairs:478 -     SRWE > RWSE: 11/15 (73.3%)
+2026-02-22 03:34:05.042 | INFO     | __main__:validate_synthetic_pairs:474 -   near_cospectral: 20 pairs
+2026-02-22 03:34:05.042 | INFO     | __main__:validate_synthetic_pairs:475 -     RWSE mean dist: 0.120581
+2026-02-22 03:34:05.042 | INFO     | __main__:validate_synthetic_pairs:476 -     SRWE mean dist: 0.333854
+2026-02-22 03:34:05.042 | INFO     | __main__:validate_synthetic_pairs:477 -     LapPE mean dist: 1.621108
+2026-02-22 03:34:05.042 | INFO     | __main__:validate_synthetic_pairs:478 -     SRWE > RWSE: 18/20 (90.0%)
+2026-02-22 03:34:05.042 | INFO     | __main__:validate_synthetic_pairs:474 -   control: 15 pairs
+2026-02-22 03:34:05.042 | INFO     | __main__:validate_synthetic_pairs:475 -     RWSE mean dist: 0.537529
+2026-02-22 03:34:05.042 | INFO     | __main__:validate_synthetic_pairs:476 -     SRWE mean dist: 0.881708
+2026-02-22 03:34:05.042 | INFO     | __main__:validate_synthetic_pairs:477 -     LapPE mean dist: 6.013466
+2026-02-22 03:34:05.042 | INFO     | __main__:validate_synthetic_pairs:478 -     SRWE > RWSE: 13/15 (86.7%)
+2026-02-22 03:34:05.047 | INFO     | __main__:validate_synthetic_pairs:491 -   Spearman(SRI, SRWE-RWSE): rho=-0.0745, p=0.7550
+2026-02-22 03:34:05.048 | INFO     | __main__:validate_spectral_recovery_zinc:549 - ============================================================
+2026-02-22 03:34:05.048 | INFO     | __main__:validate_spectral_recovery_zinc:550 - Phase 3: ZINC Spectral Recovery Quality
+2026-02-22 03:34:05.048 | INFO     | __main__:validate_spectral_recovery_zinc:551 - ============================================================
+2026-02-22 03:34:15.495 | INFO     | __main__:validate_spectral_recovery_zinc:580 - Sampled 500 graphs for spectral recovery analysis
+2026-02-22 03:34:16.080 | INFO     | __main__:validate_spectral_recovery_zinc:613 -   rank_threshold=0.001: mean W1=0.4537 (n=500)
+2026-02-22 03:34:16.396 | INFO     | __main__:validate_spectral_recovery_zinc:613 -   rank_threshold=0.01: mean W1=0.4810 (n=500)
+2026-02-22 03:34:16.686 | INFO     | __main__:validate_spectral_recovery_zinc:613 -   rank_threshold=0.05: mean W1=0.5606 (n=500)
+2026-02-22 03:34:16.968 | INFO     | __main__:validate_spectral_recovery_zinc:613 -   rank_threshold=0.1: mean W1=0.6306 (n=500)
+2026-02-22 03:34:17.205 | INFO     | __main__:validate_spectral_recovery_zinc:613 -   rank_threshold=0.2: mean W1=0.6888 (n=500)
+2026-02-22 03:34:17.241 | INFO     | __main__:validate_spectral_recovery_zinc:618 -   Best rank_threshold: 0.001 (mean W1=0.4537)
+2026-02-22 03:34:17.998 | INFO     | __main__:validate_spectral_recovery_zinc:676 -   Processed 100/500 ZINC graphs
+2026-02-22 03:34:19.368 | INFO     | __main__:validate_spectral_recovery_zinc:676 -   Processed 200/500 ZINC graphs
+2026-02-22 03:34:20.849 | INFO     | __main__:validate_spectral_recovery_zinc:676 -   Processed 300/500 ZINC graphs
+2026-02-22 03:34:22.101 | INFO     | __main__:validate_spectral_recovery_zinc:676 -   Processed 400/500 ZINC graphs
+2026-02-22 03:34:23.061 | INFO     | __main__:validate_spectral_recovery_zinc:676 -   Processed 500/500 ZINC graphs
+2026-02-22 03:34:23.068 | INFO     | __main__:validate_spectral_recovery_zinc:708 -   Spearman(SRI, W1): rho=-0.0300, p=0.001211
+2026-02-22 03:34:23.068 | INFO     | __main__:validate_spectral_recovery_zinc:712 -   Overall mean W1: 0.443039
+2026-02-22 03:34:23.068 | INFO     | __main__:validate_spectral_recovery_zinc:713 -   Overall mean eig error: 0.157808
+2026-02-22 03:34:23.068 | INFO     | __main__:validate_spectral_recovery_zinc:714 -   Overall rank accuracy: 0.5732
+2026-02-22 03:34:23.575 | INFO     | __main__:main:1332 -   Elapsed: 22s, remaining budget: 3458s
+2026-02-22 03:34:23.575 | INFO     | __main__:run_gnn_benchmark:1039 - ============================================================
+2026-02-22 03:34:23.575 | INFO     | __main__:run_gnn_benchmark:1040 - Phase 4: GNN Benchmark on ZINC
+2026-02-22 03:34:23.575 | INFO     | __main__:run_gnn_benchmark:1041 - ============================================================
+2026-02-22 03:34:23.577 | INFO     | __main__:run_gnn_benchmark:1048 -   Split: 2000 train, 500 val, 500 test
+2026-02-22 03:34:23.577 | INFO     | __main__:run_gnn_benchmark:1065 - 
+  Preparing rwse data...
+2026-02-22 03:34:25.549 | INFO     | __main__:run_gnn_benchmark:1073 -   rwse data prepared in 2.0s: 2000 train, 500 val, 500 test
+2026-02-22 03:34:25.553 | INFO     | __main__:train_gnn_single:939 -   Training rwse (seed=42): 2000 train, 500 val, 500 test
+2026-02-22 03:35:51.660 | INFO     | __main__:train_gnn_single:1024 -     Epoch 10: train_loss=1.4686 val_mae=1.4940 best_val=1.4908 test@best=1.3878
+2026-02-22 03:36:41.887 | INFO     | __main__:train_gnn_single:1024 -     Epoch 20: train_loss=1.4689 val_mae=1.4910 best_val=1.4908 test@best=1.3883
+2026-02-22 03:39:10.702 | INFO     | __main__:train_gnn_single:1024 -     Epoch 30: train_loss=1.4645 val_mae=1.4868 best_val=1.4868 test@best=1.3760
+2026-02-22 03:42:19.548 | INFO     | __main__:train_gnn_single:1024 -     Epoch 40: train_loss=1.4579 val_mae=1.4786 best_val=1.4784 test@best=1.3718
+2026-02-22 03:43:16.657 | INFO     | __main__:train_gnn_single:1024 -     Epoch 50: train_loss=1.4532 val_mae=1.4756 best_val=1.4756 test@best=1.3613
+2026-02-22 03:43:16.657 | INFO     | __main__:run_gnn_benchmark:1089 -   rwse seed=42: test_mae=1.3613 (531.1s)
+2026-02-22 03:43:16.658 | INFO     | __main__:train_gnn_single:939 -   Training rwse (seed=123): 2000 train, 500 val, 500 test
+2026-02-22 03:44:08.540 | INFO     | __main__:train_gnn_single:1024 -     Epoch 10: train_loss=1.4682 val_mae=1.4912 best_val=1.4908 test@best=1.3886
+2026-02-22 03:44:59.072 | INFO     | __main__:train_gnn_single:1024 -     Epoch 20: train_loss=1.4703 val_mae=1.4908 best_val=1.4908 test@best=1.3882
+2026-02-22 03:45:49.791 | INFO     | __main__:train_gnn_single:1024 -     Epoch 30: train_loss=1.4680 val_mae=1.4910 best_val=1.4908 test@best=1.3891
+2026-02-22 03:46:41.714 | INFO     | __main__:train_gnn_single:1024 -     Epoch 40: train_loss=1.4629 val_mae=1.4849 best_val=1.4849 test@best=1.3712
+2026-02-22 03:47:33.887 | INFO     | __main__:train_gnn_single:1024 -     Epoch 50: train_loss=1.4546 val_mae=1.4673 best_val=1.4673 test@best=1.3613
+2026-02-22 03:47:33.887 | INFO     | __main__:run_gnn_benchmark:1089 -   rwse seed=123: test_mae=1.3613 (257.2s)
+2026-02-22 03:47:33.887 | INFO     | __main__:train_gnn_single:939 -   Training rwse (seed=456): 2000 train, 500 val, 500 test
+2026-02-22 03:48:25.389 | INFO     | __main__:train_gnn_single:1024 -     Epoch 10: train_loss=1.4678 val_mae=1.4949 best_val=1.4908 test@best=1.3893
+2026-02-22 03:49:16.257 | INFO     | __main__:train_gnn_single:1024 -     Epoch 20: train_loss=1.4672 val_mae=1.4909 best_val=1.4908 test@best=1.3886
+2026-02-22 03:50:08.130 | INFO     | __main__:train_gnn_single:1024 -     Epoch 30: train_loss=1.4669 val_mae=1.4910 best_val=1.4908 test@best=1.3886
+2026-02-22 03:50:58.694 | INFO     | __main__:train_gnn_single:1024 -     Epoch 40: train_loss=1.4668 val_mae=1.4910 best_val=1.4908 test@best=1.3886
+2026-02-22 03:51:49.388 | INFO     | __main__:train_gnn_single:1024 -     Epoch 50: train_loss=1.4668 val_mae=1.4910 best_val=1.4908 test@best=1.3886
+2026-02-22 03:51:49.388 | INFO     | __main__:run_gnn_benchmark:1089 -   rwse seed=456: test_mae=1.3886 (255.5s)
+2026-02-22 03:51:49.388 | INFO     | __main__:run_gnn_benchmark:1098 -   rwse: mean MAE = 1.3704 +/- 0.0129
+2026-02-22 03:51:49.388 | INFO     | __main__:run_gnn_benchmark:1065 - 
+  Preparing lappe data...
+2026-02-22 03:51:49.756 | INFO     | __main__:run_gnn_benchmark:1073 -   lappe data prepared in 0.4s: 2000 train, 500 val, 500 test
+2026-02-22 03:51:49.756 | INFO     | __main__:train_gnn_single:939 -   Training lappe (seed=42): 2000 train, 500 val, 500 test
+2026-02-22 03:52:42.267 | INFO     | __main__:train_gnn_single:1024 -     Epoch 10: train_loss=1.4685 val_mae=1.5099 best_val=1.4910 test@best=1.3863
+2026-02-22 03:53:33.738 | INFO     | __main__:train_gnn_single:1024 -     Epoch 20: train_loss=1.4671 val_mae=1.4909 best_val=1.4908 test@best=1.3891
+2026-02-22 03:54:24.559 | INFO     | __main__:train_gnn_single:1024 -     Epoch 30: train_loss=1.4670 val_mae=1.4909 best_val=1.4908 test@best=1.3891
+2026-02-22 03:55:15.869 | INFO     | __main__:train_gnn_single:1024 -     Epoch 40: train_loss=1.4668 val_mae=1.4910 best_val=1.4908 test@best=1.3891
+2026-02-22 03:56:06.235 | INFO     | __main__:train_gnn_single:1024 -     Epoch 50: train_loss=1.4668 val_mae=1.4910 best_val=1.4908 test@best=1.3891
+2026-02-22 03:56:06.236 | INFO     | __main__:run_gnn_benchmark:1089 -   lappe seed=42: test_mae=1.3891 (256.5s)
+2026-02-22 03:56:06.236 | INFO     | __main__:train_gnn_single:939 -   Training lappe (seed=123): 2000 train, 500 val, 500 test
+2026-02-22 03:56:57.984 | INFO     | __main__:train_gnn_single:1024 -     Epoch 10: train_loss=1.4674 val_mae=1.4908 best_val=1.4908 test@best=1.3887
+2026-02-22 03:57:49.574 | INFO     | __main__:train_gnn_single:1024 -     Epoch 20: train_loss=1.4693 val_mae=1.4909 best_val=1.4908 test@best=1.3887
+2026-02-22 03:58:41.096 | INFO     | __main__:train_gnn_single:1024 -     Epoch 30: train_loss=1.4675 val_mae=1.4909 best_val=1.4908 test@best=1.3887
+2026-02-22 03:59:32.407 | INFO     | __main__:train_gnn_single:1024 -     Epoch 40: train_loss=1.4668 val_mae=1.4909 best_val=1.4908 test@best=1.3887
+2026-02-22 04:00:22.560 | INFO     | __main__:train_gnn_single:1024 -     Epoch 50: train_loss=1.4668 val_mae=1.4909 best_val=1.4908 test@best=1.3887
+2026-02-22 04:00:22.561 | INFO     | __main__:run_gnn_benchmark:1089 -   lappe seed=123: test_mae=1.3887 (256.3s)
+2026-02-22 04:00:22.561 | INFO     | __main__:train_gnn_single:939 -   Training lappe (seed=456): 2000 train, 500 val, 500 test
+2026-02-22 04:01:14.159 | INFO     | __main__:train_gnn_single:1024 -     Epoch 10: train_loss=1.4679 val_mae=1.4908 best_val=1.4908 test@best=1.3889
+2026-02-22 04:02:04.493 | INFO     | __main__:train_gnn_single:1024 -     Epoch 20: train_loss=1.4671 val_mae=1.4910 best_val=1.4908 test@best=1.3889
+2026-02-22 04:02:56.199 | INFO     | __main__:train_gnn_single:1024 -     Epoch 30: train_loss=1.4669 val_mae=1.4910 best_val=1.4908 test@best=1.3889
+2026-02-22 04:03:47.666 | INFO     | __main__:train_gnn_single:1024 -     Epoch 40: train_loss=1.4668 val_mae=1.4910 best_val=1.4908 test@best=1.3889
+2026-02-22 04:07:39.145 | INFO     | __main__:<module>:77 - Hardware: 20 CPUs, 61.0GB RAM, GPU=True (21.0GB VRAM), Device=cuda
+2026-02-22 04:07:39.145 | INFO     | __main__:main:968 - ============================================================
+2026-02-22 04:07:39.145 | INFO     | __main__:main:969 - SRWE via Matrix Pencil Method — method.py
+2026-02-22 04:07:39.145 | INFO     | __main__:main:970 - ============================================================
+2026-02-22 04:07:39.145 | INFO     | __main__:load_all_data:108 - Loading all datasets...
+2026-02-22 04:07:39.145 | INFO     | __main__:load_all_data:111 -   Loading full_data_out_1.json...
+2026-02-22 04:07:39.279 | INFO     | __main__:load_all_data:118 -     ZINC-subset: +9594 = 9594 total
+2026-02-22 04:07:39.279 | INFO     | __main__:load_all_data:111 -   Loading full_data_out_2.json...
+2026-02-22 04:07:39.313 | INFO     | __main__:load_all_data:118 -     ZINC-subset: +2406 = 12000 total
+2026-02-22 04:07:39.313 | INFO     | __main__:load_all_data:111 -   Loading full_data_out_3.json...
+2026-02-22 04:07:39.439 | INFO     | __main__:load_all_data:118 -     Peptides-func: +2000 = 2000 total
+2026-02-22 04:07:39.439 | INFO     | __main__:load_all_data:111 -   Loading full_data_out_4.json...
+2026-02-22 04:07:39.565 | INFO     | __main__:load_all_data:118 -     Peptides-struct: +2000 = 2000 total
+2026-02-22 04:07:39.565 | INFO     | __main__:load_all_data:111 -   Loading full_data_out_5.json...
+2026-02-22 04:07:39.565 | INFO     | __main__:load_all_data:118 -     Synthetic-aliased-pairs: +100 = 100 total
+2026-02-22 04:07:39.565 | INFO     | __main__:main:976 - ============================================================
+2026-02-22 04:07:39.565 | INFO     | __main__:main:977 - Phase 1: MPM Smoke Test
+2026-02-22 04:07:39.565 | INFO     | __main__:main:982 -   K_1_4: true eigs=[-2.0, 0.0, 0.0, 0.0, 2.0]
+2026-02-22 04:07:39.570 | INFO     | __main__:main:985 -     Node 0: [(-2.0, 0.5), (2.0, 0.5)]
+2026-02-22 04:07:39.570 | INFO     | __main__:main:985 -     Node 1: [(0.0, 0.75), (-2.0, 0.125), (2.0, 0.125)]
+2026-02-22 04:07:39.570 | INFO     | __main__:main:985 -     Node 2: [(0.0, 0.75), (-2.0, 0.125), (2.0, 0.125)]
+2026-02-22 04:07:39.570 | INFO     | __main__:main:987 -   Hist shape=(5, 20), sums=[1. 1. 1.]
+2026-02-22 04:07:39.570 | INFO     | __main__:validate_synthetic_pairs:303 - ============================================================
+2026-02-22 04:07:39.570 | INFO     | __main__:validate_synthetic_pairs:304 - Phase 2: Synthetic Pair Validation
+2026-02-22 04:07:39.680 | INFO     | __main__:validate_synthetic_pairs:380 -   exactly_cospectral: 15 pairs | RWSE=0.1067 SRWE=0.2068 LapPE=0.4281 | SRWE>RWSE: 11/15
+2026-02-22 04:07:39.680 | INFO     | __main__:validate_synthetic_pairs:380 -   near_cospectral: 20 pairs | RWSE=0.1206 SRWE=0.3339 LapPE=1.6211 | SRWE>RWSE: 18/20
+2026-02-22 04:07:39.680 | INFO     | __main__:validate_synthetic_pairs:380 -   control: 15 pairs | RWSE=0.5375 SRWE=0.8817 LapPE=6.0135 | SRWE>RWSE: 13/15
+2026-02-22 04:07:39.681 | INFO     | __main__:validate_synthetic_pairs:394 -   Spearman(SRI, SRWE-RWSE advantage): rho=-0.0745, p=0.7550
+2026-02-22 04:07:39.681 | INFO     | __main__:validate_spectral_recovery_zinc:424 - ============================================================
+2026-02-22 04:07:39.681 | INFO     | __main__:validate_spectral_recovery_zinc:425 - Phase 3: ZINC Spectral Recovery Quality
+2026-02-22 04:07:42.122 | INFO     | __main__:validate_spectral_recovery_zinc:445 -   Sampled 500 graphs
+2026-02-22 04:07:42.247 | INFO     | __main__:validate_spectral_recovery_zinc:469 -   rt=0.001: W1=0.4942 (n=500)
+2026-02-22 04:07:42.367 | INFO     | __main__:validate_spectral_recovery_zinc:469 -   rt=0.01: W1=0.5086 (n=500)
+2026-02-22 04:07:42.485 | INFO     | __main__:validate_spectral_recovery_zinc:469 -   rt=0.05: W1=0.5985 (n=500)
+2026-02-22 04:07:42.600 | INFO     | __main__:validate_spectral_recovery_zinc:469 -   rt=0.1: W1=0.6810 (n=500)
+2026-02-22 04:07:42.713 | INFO     | __main__:validate_spectral_recovery_zinc:469 -   rt=0.2: W1=0.7145 (n=500)
+2026-02-22 04:07:42.713 | INFO     | __main__:validate_spectral_recovery_zinc:473 -   Best rank_threshold: 0.001
+2026-02-22 04:07:43.015 | INFO     | __main__:validate_spectral_recovery_zinc:508 -   100/500 done
+2026-02-22 04:07:43.305 | INFO     | __main__:validate_spectral_recovery_zinc:508 -   200/500 done
+2026-02-22 04:07:43.586 | INFO     | __main__:validate_spectral_recovery_zinc:508 -   300/500 done
+2026-02-22 04:07:43.852 | INFO     | __main__:validate_spectral_recovery_zinc:508 -   400/500 done
+2026-02-22 04:07:44.071 | INFO     | __main__:validate_spectral_recovery_zinc:508 -   500/500 done
+2026-02-22 04:07:44.074 | INFO     | __main__:validate_spectral_recovery_zinc:531 -   Spearman(SRI, W1): rho=-0.0771, p=0.000000
+2026-02-22 04:07:44.074 | INFO     | __main__:validate_spectral_recovery_zinc:535 -   Mean W1=0.484056, Mean eig err=0.157808, Rank acc=0.5732
+2026-02-22 04:07:44.229 | INFO     | __main__:main:998 -   Elapsed so far: 5s
+2026-02-22 04:07:44.229 | INFO     | __main__:run_gnn_benchmark:786 - ============================================================
+2026-02-22 04:07:44.229 | INFO     | __main__:run_gnn_benchmark:787 - Phase 4: GNN Benchmark on ZINC
+2026-02-22 04:07:44.230 | INFO     | __main__:run_gnn_benchmark:803 -   Split: 1500 train, 400 val, 400 test
+2026-02-22 04:07:44.231 | INFO     | __main__:run_gnn_benchmark:807 - 
+  Preparing rwse data...
+2026-02-22 04:07:44.395 | INFO     | __main__:run_gnn_benchmark:813 -   rwse prepared in 0.2s: 1500/400/400
+2026-02-22 04:07:46.274 | INFO     | __main__:train_gnn:763 -     [rwse s42] E10: loss=1.3490 val=1.9825 best_val=1.3632 test@best=1.3642
+2026-02-22 04:07:47.366 | INFO     | __main__:train_gnn:763 -     [rwse s42] E20: loss=1.2884 val=1.6443 best_val=1.3495 test@best=1.3138
+2026-02-22 04:07:48.498 | INFO     | __main__:train_gnn:763 -     [rwse s42] E30: loss=1.2385 val=6.0130 best_val=1.3168 test@best=1.2807
+2026-02-22 04:07:49.693 | INFO     | __main__:train_gnn:763 -     [rwse s42] E40: loss=1.2398 val=1.2419 best_val=1.2384 test@best=1.2002
+2026-02-22 04:07:49.693 | INFO     | __main__:run_gnn_benchmark:825 -   rwse s42: test_mae=1.2002 (5.3s)
+2026-02-22 04:07:50.854 | INFO     | __main__:train_gnn:763 -     [rwse s123] E10: loss=1.3672 val=5.3420 best_val=1.3586 test@best=1.3638
+2026-02-22 04:07:51.982 | INFO     | __main__:train_gnn:763 -     [rwse s123] E20: loss=1.2849 val=1.5497 best_val=1.3586 test@best=1.3638
+2026-02-22 04:07:53.186 | INFO     | __main__:train_gnn:763 -     [rwse s123] E30: loss=1.2481 val=1.3347 best_val=1.2659 test@best=1.2662
+2026-02-22 04:07:54.387 | INFO     | __main__:train_gnn:763 -     [rwse s123] E40: loss=1.2265 val=1.2311 best_val=1.2310 test@best=1.2196
+2026-02-22 04:07:54.387 | INFO     | __main__:run_gnn_benchmark:825 -   rwse s123: test_mae=1.2196 (4.7s)
+2026-02-22 04:07:55.560 | INFO     | __main__:train_gnn:763 -     [rwse s456] E10: loss=1.3546 val=3.1217 best_val=1.3876 test@best=1.4109
+2026-02-22 04:07:56.681 | INFO     | __main__:train_gnn:763 -     [rwse s456] E20: loss=1.2791 val=1.3497 best_val=1.3217 test@best=1.2368
+2026-02-22 04:07:57.856 | INFO     | __main__:train_gnn:763 -     [rwse s456] E30: loss=1.2368 val=1.3043 best_val=1.2919 test@best=1.2474
+2026-02-22 04:07:59.037 | INFO     | __main__:train_gnn:763 -     [rwse s456] E40: loss=1.2393 val=1.2325 best_val=1.2272 test@best=1.2089
+2026-02-22 04:07:59.037 | INFO     | __main__:run_gnn_benchmark:825 -   rwse s456: test_mae=1.2089 (4.6s)
+2026-02-22 04:07:59.037 | INFO     | __main__:run_gnn_benchmark:834 -   rwse: MAE = 1.2095 +/- 0.0079
+2026-02-22 04:07:59.037 | INFO     | __main__:run_gnn_benchmark:807 - 
+  Preparing lappe data...
+2026-02-22 04:07:59.292 | INFO     | __main__:run_gnn_benchmark:813 -   lappe prepared in 0.3s: 1500/400/400
+2026-02-22 04:08:00.500 | INFO     | __main__:train_gnn:763 -     [lappe s42] E10: loss=1.3241 val=1.5884 best_val=1.2780 test@best=1.3766
+2026-02-22 04:08:01.665 | INFO     | __main__:train_gnn:763 -     [lappe s42] E20: loss=1.2547 val=1.3117 best_val=1.2706 test@best=1.3378
+2026-02-22 04:08:02.833 | INFO     | __main__:train_gnn:763 -     [lappe s42] E30: loss=1.1957 val=1.3015 best_val=1.2706 test@best=1.3378
+2026-02-22 04:08:04.014 | INFO     | __main__:train_gnn:763 -     [lappe s42] E40: loss=1.1814 val=1.3060 best_val=1.2706 test@best=1.3378
+2026-02-22 04:08:04.014 | INFO     | __main__:run_gnn_benchmark:825 -   lappe s42: test_mae=1.3378 (4.7s)
+2026-02-22 04:08:05.202 | INFO     | __main__:train_gnn:763 -     [lappe s123] E10: loss=1.3247 val=1.5083 best_val=1.2559 test@best=1.3434
+2026-02-22 04:08:06.373 | INFO     | __main__:train_gnn:763 -     [lappe s123] E20: loss=1.2481 val=1.3162 best_val=1.2559 test@best=1.3434
+2026-02-22 04:08:07.517 | INFO     | __main__:train_gnn:763 -     [lappe s123] E30: loss=1.1710 val=1.3355 best_val=1.2559 test@best=1.3434
+2026-02-22 04:08:08.657 | INFO     | __main__:train_gnn:763 -     [lappe s123] E40: loss=1.1505 val=1.3225 best_val=1.2559 test@best=1.3434
+2026-02-22 04:08:08.657 | INFO     | __main__:run_gnn_benchmark:825 -   lappe s123: test_mae=1.3434 (4.6s)
+2026-02-22 04:08:09.900 | INFO     | __main__:train_gnn:763 -     [lappe s456] E10: loss=1.3399 val=2.0169 best_val=1.3000 test@best=1.3207
+2026-02-22 04:08:11.096 | INFO     | __main__:train_gnn:763 -     [lappe s456] E20: loss=1.2727 val=1.3207 best_val=1.2855 test@best=1.3448
+2026-02-22 04:08:12.225 | INFO     | __main__:train_gnn:763 -     [lappe s456] E30: loss=1.2061 val=1.3580 best_val=1.2855 test@best=1.3448
+2026-02-22 04:08:13.360 | INFO     | __main__:train_gnn:763 -     [lappe s456] E40: loss=1.1981 val=1.3251 best_val=1.2855 test@best=1.3448
+2026-02-22 04:08:13.361 | INFO     | __main__:run_gnn_benchmark:825 -   lappe s456: test_mae=1.3448 (4.7s)
+2026-02-22 04:08:13.361 | INFO     | __main__:run_gnn_benchmark:834 -   lappe: MAE = 1.3420 +/- 0.0030
+2026-02-22 04:08:13.361 | INFO     | __main__:run_gnn_benchmark:807 - 
+  Preparing srwe data...
+2026-02-22 04:08:18.625 | INFO     | __main__:run_gnn_benchmark:813 -   srwe prepared in 5.3s: 1500/400/400
+2026-02-22 04:08:19.817 | INFO     | __main__:train_gnn:763 -     [srwe s42] E10: loss=1.3275 val=1.4376 best_val=1.3487 test@best=1.3473
+2026-02-22 04:08:20.979 | INFO     | __main__:train_gnn:763 -     [srwe s42] E20: loss=1.2572 val=1.3489 best_val=1.3370 test@best=1.2821
+2026-02-22 04:08:22.154 | INFO     | __main__:train_gnn:763 -     [srwe s42] E30: loss=1.1997 val=1.3570 best_val=1.3370 test@best=1.2821
+2026-02-22 04:08:23.302 | INFO     | __main__:train_gnn:763 -     [srwe s42] E40: loss=1.1957 val=1.3466 best_val=1.3370 test@best=1.2821
+2026-02-22 04:08:23.302 | INFO     | __main__:run_gnn_benchmark:825 -   srwe s42: test_mae=1.2821 (4.7s)
+2026-02-22 04:08:24.488 | INFO     | __main__:train_gnn:763 -     [srwe s123] E10: loss=1.3143 val=1.5430 best_val=1.3590 test@best=1.3916
+2026-02-22 04:08:25.638 | INFO     | __main__:train_gnn:763 -     [srwe s123] E20: loss=1.2589 val=1.4174 best_val=1.3590 test@best=1.3916
+2026-02-22 04:08:26.812 | INFO     | __main__:train_gnn:763 -     [srwe s123] E30: loss=1.1789 val=1.3422 best_val=1.3213 test@best=1.2751
+2026-02-22 04:08:27.961 | INFO     | __main__:train_gnn:763 -     [srwe s123] E40: loss=1.1645 val=1.3420 best_val=1.3213 test@best=1.2751
+2026-02-22 04:08:27.961 | INFO     | __main__:run_gnn_benchmark:825 -   srwe s123: test_mae=1.2751 (4.7s)
+2026-02-22 04:08:29.169 | INFO     | __main__:train_gnn:763 -     [srwe s456] E10: loss=1.3559 val=1.4899 best_val=1.3461 test@best=1.3556
+2026-02-22 04:08:30.395 | INFO     | __main__:train_gnn:763 -     [srwe s456] E20: loss=1.2559 val=1.3279 best_val=1.3279 test@best=1.2874
+2026-02-22 04:08:31.578 | INFO     | __main__:train_gnn:763 -     [srwe s456] E30: loss=1.2005 val=1.3410 best_val=1.3279 test@best=1.2874
+2026-02-22 04:08:32.761 | INFO     | __main__:train_gnn:763 -     [srwe s456] E40: loss=1.1873 val=1.3325 best_val=1.3279 test@best=1.2874
+2026-02-22 04:08:32.761 | INFO     | __main__:run_gnn_benchmark:825 -   srwe s456: test_mae=1.2874 (4.8s)
+2026-02-22 04:08:32.761 | INFO     | __main__:run_gnn_benchmark:834 -   srwe: MAE = 1.2815 +/- 0.0051
+2026-02-22 04:08:32.762 | INFO     | __main__:run_timing_benchmark:848 - ============================================================
+2026-02-22 04:08:32.762 | INFO     | __main__:run_timing_benchmark:849 - Phase 5: Timing Benchmark
+2026-02-22 04:08:33.011 | INFO     | __main__:run_timing_benchmark:885 -   rwse: 0.05 +/- 0.01 ms
+2026-02-22 04:08:33.011 | INFO     | __main__:run_timing_benchmark:885 -   mpm_srwe: 2.27 +/- 0.43 ms
+2026-02-22 04:08:33.011 | INFO     | __main__:run_timing_benchmark:885 -   eigendecomp: 0.04 +/- 0.02 ms
+2026-02-22 04:08:33.011 | INFO     | __main__:run_timing_benchmark:885 -   lappe: 0.06 +/- 0.01 ms
+2026-02-22 04:08:33.011 | INFO     | __main__:main:1009 - ============================================================
+2026-02-22 04:08:33.011 | INFO     | __main__:main:1010 - Formatting output...
+2026-02-22 04:08:34.422 | INFO     | __main__:format_output:956 -   Output: ZINC-subset = 12000 examples
+2026-02-22 04:08:38.284 | INFO     | __main__:format_output:956 -   Output: Peptides-func = 2000 examples
+2026-02-22 04:08:42.519 | INFO     | __main__:format_output:956 -   Output: Peptides-struct = 2000 examples
+2026-02-22 04:08:42.633 | INFO     | __main__:format_output:956 -   Output: Synthetic-aliased-pairs = 100 examples
+2026-02-22 04:08:43.337 | INFO     | __main__:main:1015 - Saved method_out.json (299.7 MB)
+2026-02-22 04:08:43.338 | INFO     | __main__:main:1019 - Output exceeds 100MB, need to split (reducing predictions)
+2026-02-22 04:08:44.105 | INFO     | __main__:main:1029 - Resaved method_out.json (299.7 MB)
+2026-02-22 04:08:44.105 | INFO     | __main__:main:1032 - Total runtime: 65.0s (1.1 min)
+2026-02-22 04:08:44.105 | INFO     | __main__:main:1033 - Done!
+2026-02-22 04:09:29.058 | INFO     | __main__:<module>:77 - Hardware: 20 CPUs, 61.0GB RAM, GPU=True (21.0GB VRAM), Device=cuda
+2026-02-22 04:09:29.059 | INFO     | __main__:main:985 - ============================================================
+2026-02-22 04:09:29.059 | INFO     | __main__:main:986 - SRWE via Matrix Pencil Method — method.py
+2026-02-22 04:09:29.059 | INFO     | __main__:main:987 - ============================================================
+2026-02-22 04:09:29.059 | INFO     | __main__:load_all_data:108 - Loading all datasets...
+2026-02-22 04:09:29.059 | INFO     | __main__:load_all_data:111 -   Loading full_data_out_1.json...
+2026-02-22 04:09:29.199 | INFO     | __main__:load_all_data:118 -     ZINC-subset: +9594 = 9594 total
+2026-02-22 04:09:29.199 | INFO     | __main__:load_all_data:111 -   Loading full_data_out_2.json...
+2026-02-22 04:09:29.233 | INFO     | __main__:load_all_data:118 -     ZINC-subset: +2406 = 12000 total
+2026-02-22 04:09:29.234 | INFO     | __main__:load_all_data:111 -   Loading full_data_out_3.json...
+2026-02-22 04:09:29.366 | INFO     | __main__:load_all_data:118 -     Peptides-func: +2000 = 2000 total
+2026-02-22 04:09:29.366 | INFO     | __main__:load_all_data:111 -   Loading full_data_out_4.json...
+2026-02-22 04:09:29.495 | INFO     | __main__:load_all_data:118 -     Peptides-struct: +2000 = 2000 total
+2026-02-22 04:09:29.496 | INFO     | __main__:load_all_data:111 -   Loading full_data_out_5.json...
+2026-02-22 04:09:29.496 | INFO     | __main__:load_all_data:118 -     Synthetic-aliased-pairs: +100 = 100 total
+2026-02-22 04:09:29.496 | INFO     | __main__:main:993 - ============================================================
+2026-02-22 04:09:29.496 | INFO     | __main__:main:994 - Phase 1: MPM Smoke Test
+2026-02-22 04:09:29.496 | INFO     | __main__:main:999 -   K_1_4: true eigs=[-2.0, 0.0, 0.0, 0.0, 2.0]
+2026-02-22 04:09:29.497 | INFO     | __main__:main:1002 -     Node 0: [(-2.0, 0.5), (2.0, 0.5)]
+2026-02-22 04:09:29.497 | INFO     | __main__:main:1002 -     Node 1: [(0.0, 0.75), (-2.0, 0.125), (2.0, 0.125)]
+2026-02-22 04:09:29.497 | INFO     | __main__:main:1002 -     Node 2: [(0.0, 0.75), (-2.0, 0.125), (2.0, 0.125)]
+2026-02-22 04:09:29.498 | INFO     | __main__:main:1004 -   Hist shape=(5, 20), sums=[1. 1. 1.]
+2026-02-22 04:09:29.498 | INFO     | __main__:validate_synthetic_pairs:303 - ============================================================
+2026-02-22 04:09:29.498 | INFO     | __main__:validate_synthetic_pairs:304 - Phase 2: Synthetic Pair Validation
+2026-02-22 04:09:29.608 | INFO     | __main__:validate_synthetic_pairs:380 -   exactly_cospectral: 15 pairs | RWSE=0.1067 SRWE=0.2068 LapPE=0.4281 | SRWE>RWSE: 11/15
+2026-02-22 04:09:29.608 | INFO     | __main__:validate_synthetic_pairs:380 -   near_cospectral: 20 pairs | RWSE=0.1206 SRWE=0.3339 LapPE=1.6211 | SRWE>RWSE: 18/20
+2026-02-22 04:09:29.608 | INFO     | __main__:validate_synthetic_pairs:380 -   control: 15 pairs | RWSE=0.5375 SRWE=0.8817 LapPE=6.0135 | SRWE>RWSE: 13/15
+2026-02-22 04:09:29.608 | INFO     | __main__:validate_synthetic_pairs:394 -   Spearman(SRI, SRWE-RWSE advantage): rho=-0.0745, p=0.7550
+2026-02-22 04:09:29.609 | INFO     | __main__:validate_spectral_recovery_zinc:424 - ============================================================
+2026-02-22 04:09:29.609 | INFO     | __main__:validate_spectral_recovery_zinc:425 - Phase 3: ZINC Spectral Recovery Quality
+2026-02-22 04:09:32.131 | INFO     | __main__:validate_spectral_recovery_zinc:445 -   Sampled 500 graphs
+2026-02-22 04:09:32.256 | INFO     | __main__:validate_spectral_recovery_zinc:469 -   rt=0.001: W1=0.4942 (n=500)
+2026-02-22 04:09:32.376 | INFO     | __main__:validate_spectral_recovery_zinc:469 -   rt=0.01: W1=0.5086 (n=500)
+2026-02-22 04:09:32.493 | INFO     | __main__:validate_spectral_recovery_zinc:469 -   rt=0.05: W1=0.5985 (n=500)
+2026-02-22 04:09:32.607 | INFO     | __main__:validate_spectral_recovery_zinc:469 -   rt=0.1: W1=0.6810 (n=500)
+2026-02-22 04:09:32.720 | INFO     | __main__:validate_spectral_recovery_zinc:469 -   rt=0.2: W1=0.7145 (n=500)
+2026-02-22 04:09:32.720 | INFO     | __main__:validate_spectral_recovery_zinc:473 -   Best rank_threshold: 0.001
+2026-02-22 04:09:33.023 | INFO     | __main__:validate_spectral_recovery_zinc:508 -   100/500 done
+2026-02-22 04:09:33.315 | INFO     | __main__:validate_spectral_recovery_zinc:508 -   200/500 done
+2026-02-22 04:09:33.597 | INFO     | __main__:validate_spectral_recovery_zinc:508 -   300/500 done
+2026-02-22 04:09:33.866 | INFO     | __main__:validate_spectral_recovery_zinc:508 -   400/500 done
+2026-02-22 04:09:34.086 | INFO     | __main__:validate_spectral_recovery_zinc:508 -   500/500 done
+2026-02-22 04:09:34.089 | INFO     | __main__:validate_spectral_recovery_zinc:531 -   Spearman(SRI, W1): rho=-0.0771, p=0.000000
+2026-02-22 04:09:34.089 | INFO     | __main__:validate_spectral_recovery_zinc:535 -   Mean W1=0.484056, Mean eig err=0.157808, Rank acc=0.5732
+2026-02-22 04:09:34.227 | INFO     | __main__:main:1015 -   Elapsed so far: 5s
+2026-02-22 04:09:34.227 | INFO     | __main__:run_gnn_benchmark:786 - ============================================================
+2026-02-22 04:09:34.227 | INFO     | __main__:run_gnn_benchmark:787 - Phase 4: GNN Benchmark on ZINC
+2026-02-22 04:09:34.228 | INFO     | __main__:run_gnn_benchmark:803 -   Split: 1500 train, 400 val, 400 test
+2026-02-22 04:09:34.228 | INFO     | __main__:run_gnn_benchmark:807 - 
+  Preparing rwse data...
+2026-02-22 04:09:34.392 | INFO     | __main__:run_gnn_benchmark:813 -   rwse prepared in 0.2s: 1500/400/400
+2026-02-22 04:09:36.201 | INFO     | __main__:train_gnn:763 -     [rwse s42] E10: loss=1.3509 val=1.3508 best_val=1.3508 test@best=1.3144
+2026-02-22 04:09:37.314 | INFO     | __main__:train_gnn:763 -     [rwse s42] E20: loss=1.2909 val=1.3694 best_val=1.3103 test@best=1.3153
+2026-02-22 04:09:38.415 | INFO     | __main__:train_gnn:763 -     [rwse s42] E30: loss=1.2434 val=1.2567 best_val=1.2567 test@best=1.2341
+2026-02-22 04:09:39.541 | INFO     | __main__:train_gnn:763 -     [rwse s42] E40: loss=1.2452 val=1.2182 best_val=1.2158 test@best=1.2233
+2026-02-22 04:09:39.541 | INFO     | __main__:run_gnn_benchmark:825 -   rwse s42: test_mae=1.2233 (5.1s)
+2026-02-22 04:09:40.647 | INFO     | __main__:train_gnn:763 -     [rwse s123] E10: loss=1.3698 val=2.9717 best_val=1.4537 test@best=1.3827
+2026-02-22 04:09:41.735 | INFO     | __main__:train_gnn:763 -     [rwse s123] E20: loss=1.2866 val=38.7274 best_val=1.3314 test@best=1.2903
+2026-02-22 04:09:42.826 | INFO     | __main__:train_gnn:763 -     [rwse s123] E30: loss=1.2472 val=1.3931 best_val=1.2847 test@best=1.2587
+2026-02-22 04:09:43.961 | INFO     | __main__:train_gnn:763 -     [rwse s123] E40: loss=1.2240 val=1.2360 best_val=1.2348 test@best=1.2224
+2026-02-22 04:09:43.961 | INFO     | __main__:run_gnn_benchmark:825 -   rwse s123: test_mae=1.2224 (4.4s)
+2026-02-22 04:09:45.071 | INFO     | __main__:train_gnn:763 -     [rwse s456] E10: loss=1.3598 val=1.4157 best_val=1.3542 test@best=1.3549
+2026-02-22 04:09:46.164 | INFO     | __main__:train_gnn:763 -     [rwse s456] E20: loss=1.2819 val=1.4946 best_val=1.3492 test@best=1.3488
+2026-02-22 04:09:47.256 | INFO     | __main__:train_gnn:763 -     [rwse s456] E30: loss=1.2370 val=2.9391 best_val=1.3020 test@best=1.2878
+2026-02-22 04:09:48.416 | INFO     | __main__:train_gnn:763 -     [rwse s456] E40: loss=1.2360 val=1.2365 best_val=1.2334 test@best=1.2057
+2026-02-22 04:09:48.417 | INFO     | __main__:run_gnn_benchmark:825 -   rwse s456: test_mae=1.2057 (4.5s)
+2026-02-22 04:09:48.417 | INFO     | __main__:run_gnn_benchmark:834 -   rwse: MAE = 1.2171 +/- 0.0081
+2026-02-22 04:09:48.417 | INFO     | __main__:run_gnn_benchmark:807 - 
+  Preparing lappe data...
+2026-02-22 04:09:48.673 | INFO     | __main__:run_gnn_benchmark:813 -   lappe prepared in 0.3s: 1500/400/400
+2026-02-22 04:09:49.798 | INFO     | __main__:train_gnn:763 -     [lappe s42] E10: loss=1.3231 val=1.4622 best_val=1.2858 test@best=1.3197
+2026-02-22 04:09:50.902 | INFO     | __main__:train_gnn:763 -     [lappe s42] E20: loss=1.2599 val=1.3156 best_val=1.2846 test@best=1.3275
+2026-02-22 04:09:52.016 | INFO     | __main__:train_gnn:763 -     [lappe s42] E30: loss=1.1995 val=1.2883 best_val=1.2721 test@best=1.3371
+2026-02-22 04:09:53.110 | INFO     | __main__:train_gnn:763 -     [lappe s42] E40: loss=1.1815 val=1.2923 best_val=1.2721 test@best=1.3371
+2026-02-22 04:09:53.111 | INFO     | __main__:run_gnn_benchmark:825 -   lappe s42: test_mae=1.3371 (4.4s)
+2026-02-22 04:09:54.219 | INFO     | __main__:train_gnn:763 -     [lappe s123] E10: loss=1.3285 val=1.3754 best_val=1.2887 test@best=1.3448
+2026-02-22 04:09:55.325 | INFO     | __main__:train_gnn:763 -     [lappe s123] E20: loss=1.2474 val=1.3099 best_val=1.2842 test@best=1.3166
+2026-02-22 04:09:56.418 | INFO     | __main__:train_gnn:763 -     [lappe s123] E30: loss=1.1670 val=1.3421 best_val=1.2842 test@best=1.3166
+2026-02-22 04:09:57.514 | INFO     | __main__:train_gnn:763 -     [lappe s123] E40: loss=1.1476 val=1.3398 best_val=1.2842 test@best=1.3166
+2026-02-22 04:09:57.514 | INFO     | __main__:run_gnn_benchmark:825 -   lappe s123: test_mae=1.3166 (4.4s)
+2026-02-22 04:09:58.662 | INFO     | __main__:train_gnn:763 -     [lappe s456] E10: loss=1.3402 val=1.3165 best_val=1.2457 test@best=1.3208
+2026-02-22 04:09:59.759 | INFO     | __main__:train_gnn:763 -     [lappe s456] E20: loss=1.2650 val=1.3384 best_val=1.2457 test@best=1.3208
+2026-02-22 04:10:00.992 | INFO     | __main__:train_gnn:763 -     [lappe s456] E30: loss=1.1954 val=1.3179 best_val=1.2457 test@best=1.3208
+2026-02-22 04:10:02.130 | INFO     | __main__:train_gnn:763 -     [lappe s456] E40: loss=1.1833 val=1.3294 best_val=1.2457 test@best=1.3208
+2026-02-22 04:10:02.130 | INFO     | __main__:run_gnn_benchmark:825 -   lappe s456: test_mae=1.3208 (4.6s)
+2026-02-22 04:10:02.130 | INFO     | __main__:run_gnn_benchmark:834 -   lappe: MAE = 1.3248 +/- 0.0089
+2026-02-22 04:10:02.130 | INFO     | __main__:run_gnn_benchmark:807 - 
+  Preparing srwe data...
+2026-02-22 04:10:07.439 | INFO     | __main__:run_gnn_benchmark:813 -   srwe prepared in 5.3s: 1500/400/400
+2026-02-22 04:10:08.575 | INFO     | __main__:train_gnn:763 -     [srwe s42] E10: loss=1.3179 val=2.3407 best_val=1.3575 test@best=1.3354
+2026-02-22 04:10:09.665 | INFO     | __main__:train_gnn:763 -     [srwe s42] E20: loss=1.2488 val=1.3778 best_val=1.3275 test@best=1.2949
+2026-02-22 04:10:10.741 | INFO     | __main__:train_gnn:763 -     [srwe s42] E30: loss=1.1966 val=1.3603 best_val=1.3275 test@best=1.2949
+2026-02-22 04:10:11.815 | INFO     | __main__:train_gnn:763 -     [srwe s42] E40: loss=1.1915 val=1.3641 best_val=1.3275 test@best=1.2949
+2026-02-22 04:10:11.815 | INFO     | __main__:run_gnn_benchmark:825 -   srwe s42: test_mae=1.2949 (4.4s)
+2026-02-22 04:10:12.963 | INFO     | __main__:train_gnn:763 -     [srwe s123] E10: loss=1.3210 val=1.3485 best_val=1.3485 test@best=1.3066
+2026-02-22 04:10:14.109 | INFO     | __main__:train_gnn:763 -     [srwe s123] E20: loss=1.2569 val=1.9122 best_val=1.3485 test@best=1.3066
+2026-02-22 04:10:15.189 | INFO     | __main__:train_gnn:763 -     [srwe s123] E30: loss=1.1816 val=1.3610 best_val=1.3485 test@best=1.3066
+2026-02-22 04:10:16.288 | INFO     | __main__:train_gnn:763 -     [srwe s123] E40: loss=1.1643 val=1.3483 best_val=1.3417 test@best=1.2692
+2026-02-22 04:10:16.289 | INFO     | __main__:run_gnn_benchmark:825 -   srwe s123: test_mae=1.2692 (4.5s)
+2026-02-22 04:10:17.478 | INFO     | __main__:train_gnn:763 -     [srwe s456] E10: loss=1.3456 val=1.3674 best_val=1.3523 test@best=1.3144
+2026-02-22 04:10:18.593 | INFO     | __main__:train_gnn:763 -     [srwe s456] E20: loss=1.2558 val=1.3727 best_val=1.3335 test@best=1.3437
+2026-02-22 04:10:19.708 | INFO     | __main__:train_gnn:763 -     [srwe s456] E30: loss=1.2009 val=1.3474 best_val=1.3207 test@best=1.2895
+2026-02-22 04:10:20.788 | INFO     | __main__:train_gnn:763 -     [srwe s456] E40: loss=1.1896 val=1.3398 best_val=1.3207 test@best=1.2895
+2026-02-22 04:10:20.788 | INFO     | __main__:run_gnn_benchmark:825 -   srwe s456: test_mae=1.2895 (4.5s)
+2026-02-22 04:10:20.788 | INFO     | __main__:run_gnn_benchmark:834 -   srwe: MAE = 1.2845 +/- 0.0111
+2026-02-22 04:10:20.789 | INFO     | __main__:run_timing_benchmark:848 - ============================================================
+2026-02-22 04:10:20.789 | INFO     | __main__:run_timing_benchmark:849 - Phase 5: Timing Benchmark
+2026-02-22 04:10:21.041 | INFO     | __main__:run_timing_benchmark:885 -   rwse: 0.05 +/- 0.01 ms
+2026-02-22 04:10:21.041 | INFO     | __main__:run_timing_benchmark:885 -   mpm_srwe: 2.29 +/- 0.47 ms
+2026-02-22 04:10:21.041 | INFO     | __main__:run_timing_benchmark:885 -   eigendecomp: 0.04 +/- 0.01 ms
+2026-02-22 04:10:21.041 | INFO     | __main__:run_timing_benchmark:885 -   lappe: 0.06 +/- 0.01 ms
+2026-02-22 04:10:21.041 | INFO     | __main__:main:1026 - ============================================================
+2026-02-22 04:10:21.041 | INFO     | __main__:main:1027 - Formatting output...
+2026-02-22 04:10:22.288 | INFO     | __main__:format_output:973 -   Output: ZINC-subset = 12000 examples
+2026-02-22 04:10:24.645 | INFO     | __main__:format_output:973 -   Output: Peptides-func = 2000 examples
+2026-02-22 04:10:27.340 | INFO     | __main__:format_output:973 -   Output: Peptides-struct = 2000 examples
+2026-02-22 04:10:27.455 | INFO     | __main__:format_output:973 -   Output: Synthetic-aliased-pairs = 100 examples
+2026-02-22 04:10:27.502 | INFO     | __main__:main:1032 - Saved method_out.json (6.9 MB)
+2026-02-22 04:10:27.502 | INFO     | __main__:main:1049 - Total runtime: 58.4s (1.0 min)
+2026-02-22 04:10:27.502 | INFO     | __main__:main:1050 - Done!
+2026-02-22 04:11:19.332 | INFO     | __main__:<module>:77 - Hardware: 20 CPUs, 61.0GB RAM, GPU=True (21.0GB VRAM), Device=cuda
+2026-02-22 04:11:19.333 | INFO     | __main__:main:985 - ============================================================
+2026-02-22 04:11:19.333 | INFO     | __main__:main:986 - SRWE via Matrix Pencil Method — method.py
+2026-02-22 04:11:19.333 | INFO     | __main__:main:987 - ============================================================
+2026-02-22 04:11:19.333 | INFO     | __main__:load_all_data:108 - Loading all datasets...
+2026-02-22 04:11:19.333 | INFO     | __main__:load_all_data:111 -   Loading full_data_out_1.json...
+2026-02-22 04:11:19.464 | INFO     | __main__:load_all_data:118 -     ZINC-subset: +9594 = 9594 total
+2026-02-22 04:11:19.464 | INFO     | __main__:load_all_data:111 -   Loading full_data_out_2.json...
+2026-02-22 04:11:19.497 | INFO     | __main__:load_all_data:118 -     ZINC-subset: +2406 = 12000 total
+2026-02-22 04:11:19.497 | INFO     | __main__:load_all_data:111 -   Loading full_data_out_3.json...
+2026-02-22 04:11:19.623 | INFO     | __main__:load_all_data:118 -     Peptides-func: +2000 = 2000 total
+2026-02-22 04:11:19.623 | INFO     | __main__:load_all_data:111 -   Loading full_data_out_4.json...
+2026-02-22 04:11:19.749 | INFO     | __main__:load_all_data:118 -     Peptides-struct: +2000 = 2000 total
+2026-02-22 04:11:19.750 | INFO     | __main__:load_all_data:111 -   Loading full_data_out_5.json...
+2026-02-22 04:11:19.750 | INFO     | __main__:load_all_data:118 -     Synthetic-aliased-pairs: +100 = 100 total
+2026-02-22 04:11:19.750 | INFO     | __main__:main:993 - ============================================================
+2026-02-22 04:11:19.750 | INFO     | __main__:main:994 - Phase 1: MPM Smoke Test
+2026-02-22 04:11:19.750 | INFO     | __main__:main:999 -   K_1_4: true eigs=[-2.0, 0.0, 0.0, 0.0, 2.0]
+2026-02-22 04:11:19.751 | INFO     | __main__:main:1002 -     Node 0: [(-2.0, 0.5), (2.0, 0.5)]
+2026-02-22 04:11:19.751 | INFO     | __main__:main:1002 -     Node 1: [(0.0, 0.75), (-2.0, 0.125), (2.0, 0.125)]
+2026-02-22 04:11:19.751 | INFO     | __main__:main:1002 -     Node 2: [(0.0, 0.75), (-2.0, 0.125), (2.0, 0.125)]
+2026-02-22 04:11:19.752 | INFO     | __main__:main:1004 -   Hist shape=(5, 20), sums=[1. 1. 1.]
+2026-02-22 04:11:19.752 | INFO     | __main__:validate_synthetic_pairs:303 - ============================================================
+2026-02-22 04:11:19.752 | INFO     | __main__:validate_synthetic_pairs:304 - Phase 2: Synthetic Pair Validation
+2026-02-22 04:11:19.866 | INFO     | __main__:validate_synthetic_pairs:380 -   exactly_cospectral: 15 pairs | RWSE=0.1067 SRWE=0.2068 LapPE=0.4281 | SRWE>RWSE: 11/15
+2026-02-22 04:11:19.866 | INFO     | __main__:validate_synthetic_pairs:380 -   near_cospectral: 20 pairs | RWSE=0.1206 SRWE=0.3339 LapPE=1.6211 | SRWE>RWSE: 18/20
+2026-02-22 04:11:19.866 | INFO     | __main__:validate_synthetic_pairs:380 -   control: 15 pairs | RWSE=0.5375 SRWE=0.8817 LapPE=6.0135 | SRWE>RWSE: 13/15
+2026-02-22 04:11:19.867 | INFO     | __main__:validate_synthetic_pairs:394 -   Spearman(SRI, SRWE-RWSE advantage): rho=-0.0745, p=0.7550
+2026-02-22 04:11:19.867 | INFO     | __main__:validate_spectral_recovery_zinc:424 - ============================================================
+2026-02-22 04:11:19.867 | INFO     | __main__:validate_spectral_recovery_zinc:425 - Phase 3: ZINC Spectral Recovery Quality
+2026-02-22 04:11:22.320 | INFO     | __main__:validate_spectral_recovery_zinc:445 -   Sampled 500 graphs
+2026-02-22 04:11:22.450 | INFO     | __main__:validate_spectral_recovery_zinc:469 -   rt=0.001: W1=0.4942 (n=500)
+2026-02-22 04:11:22.576 | INFO     | __main__:validate_spectral_recovery_zinc:469 -   rt=0.01: W1=0.5086 (n=500)
+2026-02-22 04:11:22.699 | INFO     | __main__:validate_spectral_recovery_zinc:469 -   rt=0.05: W1=0.5985 (n=500)
+2026-02-22 04:11:22.820 | INFO     | __main__:validate_spectral_recovery_zinc:469 -   rt=0.1: W1=0.6810 (n=500)
+2026-02-22 04:11:22.941 | INFO     | __main__:validate_spectral_recovery_zinc:469 -   rt=0.2: W1=0.7145 (n=500)
+2026-02-22 04:11:22.941 | INFO     | __main__:validate_spectral_recovery_zinc:473 -   Best rank_threshold: 0.001
+2026-02-22 04:11:23.273 | INFO     | __main__:validate_spectral_recovery_zinc:508 -   100/500 done
+2026-02-22 04:11:23.610 | INFO     | __main__:validate_spectral_recovery_zinc:508 -   200/500 done
+2026-02-22 04:11:23.905 | INFO     | __main__:validate_spectral_recovery_zinc:508 -   300/500 done
+2026-02-22 04:11:24.185 | INFO     | __main__:validate_spectral_recovery_zinc:508 -   400/500 done
+2026-02-22 04:11:24.415 | INFO     | __main__:validate_spectral_recovery_zinc:508 -   500/500 done
+2026-02-22 04:11:24.418 | INFO     | __main__:validate_spectral_recovery_zinc:531 -   Spearman(SRI, W1): rho=-0.0771, p=0.000000
+2026-02-22 04:11:24.418 | INFO     | __main__:validate_spectral_recovery_zinc:535 -   Mean W1=0.484056, Mean eig err=0.157808, Rank acc=0.5732
+2026-02-22 04:11:24.558 | INFO     | __main__:main:1015 -   Elapsed so far: 5s
+2026-02-22 04:11:24.558 | INFO     | __main__:run_gnn_benchmark:786 - ============================================================
+2026-02-22 04:11:24.558 | INFO     | __main__:run_gnn_benchmark:787 - Phase 4: GNN Benchmark on ZINC
+2026-02-22 04:11:24.560 | INFO     | __main__:run_gnn_benchmark:803 -   Split: 1500 train, 400 val, 400 test
+2026-02-22 04:11:24.560 | INFO     | __main__:run_gnn_benchmark:807 - 
+  Preparing rwse data...
+2026-02-22 04:11:24.724 | INFO     | __main__:run_gnn_benchmark:813 -   rwse prepared in 0.2s: 1500/400/400
+2026-02-22 04:11:26.535 | INFO     | __main__:train_gnn:763 -     [rwse s42] E10: loss=1.3486 val=1.3722 best_val=1.3363 test@best=1.3052
+2026-02-22 04:11:27.633 | INFO     | __main__:train_gnn:763 -     [rwse s42] E20: loss=1.2869 val=1.2921 best_val=1.2921 test@best=1.2595
+2026-02-22 04:11:28.746 | INFO     | __main__:train_gnn:763 -     [rwse s42] E30: loss=1.2351 val=2.2914 best_val=1.2921 test@best=1.2595
+2026-02-22 04:11:29.931 | INFO     | __main__:train_gnn:763 -     [rwse s42] E40: loss=1.2434 val=1.2307 best_val=1.2307 test@best=1.2084
+2026-02-22 04:11:29.932 | INFO     | __main__:run_gnn_benchmark:825 -   rwse s42: test_mae=1.2084 (5.2s)
+2026-02-22 04:11:31.108 | INFO     | __main__:train_gnn:763 -     [rwse s123] E10: loss=1.3639 val=1.3606 best_val=1.3606 test@best=1.3249
+2026-02-22 04:11:32.201 | INFO     | __main__:train_gnn:763 -     [rwse s123] E20: loss=1.2785 val=18.4556 best_val=1.3606 test@best=1.3249
+2026-02-22 04:11:33.336 | INFO     | __main__:train_gnn:763 -     [rwse s123] E30: loss=1.2372 val=1.2970 best_val=1.2970 test@best=1.2526
+2026-02-22 04:11:34.509 | INFO     | __main__:train_gnn:763 -     [rwse s123] E40: loss=1.2193 val=1.2213 best_val=1.2213 test@best=1.2149
+2026-02-22 04:11:34.509 | INFO     | __main__:run_gnn_benchmark:825 -   rwse s123: test_mae=1.2149 (4.6s)
+2026-02-22 04:11:35.682 | INFO     | __main__:train_gnn:763 -     [rwse s456] E10: loss=1.3584 val=1.9396 best_val=1.3206 test@best=1.2899
+2026-02-22 04:11:36.800 | INFO     | __main__:train_gnn:763 -     [rwse s456] E20: loss=1.2926 val=1.6495 best_val=1.2991 test@best=1.2685
+2026-02-22 04:11:37.929 | INFO     | __main__:train_gnn:763 -     [rwse s456] E30: loss=1.2316 val=7.2568 best_val=1.2710 test@best=1.2470
+2026-02-22 04:11:39.035 | INFO     | __main__:train_gnn:763 -     [rwse s456] E40: loss=1.2347 val=1.2252 best_val=1.2202 test@best=1.2165
+2026-02-22 04:11:39.035 | INFO     | __main__:run_gnn_benchmark:825 -   rwse s456: test_mae=1.2165 (4.5s)
+2026-02-22 04:11:39.035 | INFO     | __main__:run_gnn_benchmark:834 -   rwse: MAE = 1.2133 +/- 0.0035
+2026-02-22 04:11:39.035 | INFO     | __main__:run_gnn_benchmark:807 - 
+  Preparing lappe data...
+2026-02-22 04:11:39.294 | INFO     | __main__:run_gnn_benchmark:813 -   lappe prepared in 0.3s: 1500/400/400
+2026-02-22 04:11:40.479 | INFO     | __main__:train_gnn:763 -     [lappe s42] E10: loss=1.3231 val=1.4805 best_val=1.2995 test@best=1.3343
+2026-02-22 04:11:41.607 | INFO     | __main__:train_gnn:763 -     [lappe s42] E20: loss=1.2636 val=1.3313 best_val=1.2570 test@best=1.3395
+2026-02-22 04:11:42.735 | INFO     | __main__:train_gnn:763 -     [lappe s42] E30: loss=1.2019 val=1.3275 best_val=1.2570 test@best=1.3395
+2026-02-22 04:11:43.879 | INFO     | __main__:train_gnn:763 -     [lappe s42] E40: loss=1.1852 val=1.2967 best_val=1.2570 test@best=1.3395
+2026-02-22 04:11:43.879 | INFO     | __main__:run_gnn_benchmark:825 -   lappe s42: test_mae=1.3395 (4.6s)
+2026-02-22 04:11:45.012 | INFO     | __main__:train_gnn:763 -     [lappe s123] E10: loss=1.3206 val=1.4146 best_val=1.2679 test@best=1.3439
+2026-02-22 04:11:46.121 | INFO     | __main__:train_gnn:763 -     [lappe s123] E20: loss=1.2489 val=1.3122 best_val=1.2507 test@best=1.3309
+2026-02-22 04:11:47.239 | INFO     | __main__:train_gnn:763 -     [lappe s123] E30: loss=1.1682 val=1.3798 best_val=1.2507 test@best=1.3309
+2026-02-22 04:11:48.375 | INFO     | __main__:train_gnn:763 -     [lappe s123] E40: loss=1.1467 val=1.3271 best_val=1.2507 test@best=1.3309
+2026-02-22 04:11:48.375 | INFO     | __main__:run_gnn_benchmark:825 -   lappe s123: test_mae=1.3309 (4.5s)
+2026-02-22 04:11:49.559 | INFO     | __main__:train_gnn:763 -     [lappe s456] E10: loss=1.3374 val=1.3316 best_val=1.3011 test@best=1.3588
+2026-02-22 04:11:50.723 | INFO     | __main__:train_gnn:763 -     [lappe s456] E20: loss=1.2716 val=1.3109 best_val=1.2761 test@best=1.3692
+2026-02-22 04:11:51.834 | INFO     | __main__:train_gnn:763 -     [lappe s456] E30: loss=1.2021 val=1.3168 best_val=1.2761 test@best=1.3692
+2026-02-22 04:11:52.960 | INFO     | __main__:train_gnn:763 -     [lappe s456] E40: loss=1.1855 val=1.3195 best_val=1.2761 test@best=1.3692
+2026-02-22 04:11:52.960 | INFO     | __main__:run_gnn_benchmark:825 -   lappe s456: test_mae=1.3692 (4.6s)
+2026-02-22 04:11:52.960 | INFO     | __main__:run_gnn_benchmark:834 -   lappe: MAE = 1.3465 +/- 0.0164
+2026-02-22 04:11:52.960 | INFO     | __main__:run_gnn_benchmark:807 - 
+  Preparing srwe data...
+2026-02-22 04:11:58.460 | INFO     | __main__:run_gnn_benchmark:813 -   srwe prepared in 5.5s: 1500/400/400
+2026-02-22 04:11:59.633 | INFO     | __main__:train_gnn:763 -     [srwe s42] E10: loss=1.3194 val=1.3451 best_val=1.3451 test@best=1.3347
+2026-02-22 04:12:00.794 | INFO     | __main__:train_gnn:763 -     [srwe s42] E20: loss=1.2431 val=1.4216 best_val=1.3451 test@best=1.3347
+2026-02-22 04:12:01.955 | INFO     | __main__:train_gnn:763 -     [srwe s42] E30: loss=1.1862 val=1.3295 best_val=1.3291 test@best=1.2631
+2026-02-22 04:12:03.097 | INFO     | __main__:train_gnn:763 -     [srwe s42] E40: loss=1.1838 val=1.3469 best_val=1.3291 test@best=1.2631
+2026-02-22 04:12:03.097 | INFO     | __main__:run_gnn_benchmark:825 -   srwe s42: test_mae=1.2631 (4.6s)
+2026-02-22 04:12:04.249 | INFO     | __main__:train_gnn:763 -     [srwe s123] E10: loss=1.3073 val=1.7628 best_val=1.3591 test@best=1.3918
+2026-02-22 04:12:05.389 | INFO     | __main__:train_gnn:763 -     [srwe s123] E20: loss=1.2511 val=1.4550 best_val=1.3114 test@best=1.2754
+2026-02-22 04:12:06.511 | INFO     | __main__:train_gnn:763 -     [srwe s123] E30: loss=1.1767 val=1.3369 best_val=1.3114 test@best=1.2754
+2026-02-22 04:12:07.618 | INFO     | __main__:train_gnn:763 -     [srwe s123] E40: loss=1.1630 val=1.3378 best_val=1.3114 test@best=1.2754
+2026-02-22 04:12:07.618 | INFO     | __main__:run_gnn_benchmark:825 -   srwe s123: test_mae=1.2754 (4.5s)
+2026-02-22 04:12:08.780 | INFO     | __main__:train_gnn:763 -     [srwe s456] E10: loss=1.3487 val=1.3701 best_val=1.3653 test@best=1.4258
+2026-02-22 04:12:09.949 | INFO     | __main__:train_gnn:763 -     [srwe s456] E20: loss=1.2673 val=1.3541 best_val=1.3164 test@best=1.2819
+2026-02-22 04:12:11.103 | INFO     | __main__:train_gnn:763 -     [srwe s456] E30: loss=1.2135 val=1.3417 best_val=1.3164 test@best=1.2819
+2026-02-22 04:12:12.205 | INFO     | __main__:train_gnn:763 -     [srwe s456] E40: loss=1.2012 val=1.3366 best_val=1.3164 test@best=1.2819
+2026-02-22 04:12:12.206 | INFO     | __main__:run_gnn_benchmark:825 -   srwe s456: test_mae=1.2819 (4.6s)
+2026-02-22 04:12:12.206 | INFO     | __main__:run_gnn_benchmark:834 -   srwe: MAE = 1.2735 +/- 0.0078
+2026-02-22 04:12:12.207 | INFO     | __main__:run_timing_benchmark:848 - ============================================================
+2026-02-22 04:12:12.207 | INFO     | __main__:run_timing_benchmark:849 - Phase 5: Timing Benchmark
+2026-02-22 04:12:12.466 | INFO     | __main__:run_timing_benchmark:885 -   rwse: 0.05 +/- 0.01 ms
+2026-02-22 04:12:12.466 | INFO     | __main__:run_timing_benchmark:885 -   mpm_srwe: 2.37 +/- 0.43 ms
+2026-02-22 04:12:12.466 | INFO     | __main__:run_timing_benchmark:885 -   eigendecomp: 0.04 +/- 0.02 ms
+2026-02-22 04:12:12.466 | INFO     | __main__:run_timing_benchmark:885 -   lappe: 0.06 +/- 0.01 ms
+2026-02-22 04:12:12.466 | INFO     | __main__:main:1026 - ============================================================
+2026-02-22 04:12:12.466 | INFO     | __main__:main:1027 - Formatting output...
+2026-02-22 04:12:13.718 | INFO     | __main__:format_output:973 -   Output: ZINC-subset = 12000 examples
+2026-02-22 04:12:16.164 | INFO     | __main__:format_output:973 -   Output: Peptides-func = 2000 examples
+2026-02-22 04:12:18.894 | INFO     | __main__:format_output:973 -   Output: Peptides-struct = 2000 examples
+2026-02-22 04:12:19.014 | INFO     | __main__:format_output:973 -   Output: Synthetic-aliased-pairs = 100 examples
+2026-02-22 04:12:19.063 | INFO     | __main__:main:1032 - Saved method_out.json (6.9 MB)
+2026-02-22 04:12:19.063 | INFO     | __main__:main:1049 - Total runtime: 59.7s (1.0 min)
+2026-02-22 04:12:19.063 | INFO     | __main__:main:1050 - Done!

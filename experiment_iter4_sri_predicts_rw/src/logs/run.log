@@ -1,0 +1,307 @@
+2026-02-22 06:54:21.499 | INFO     | __main__:main:1111 - ======================================================================
+2026-02-22 06:54:21.499 | INFO     | __main__:main:1112 - SRI Predicts RWSE-vs-LapPE Quality on Fixed-Size (n=30) Graphs
+2026-02-22 06:54:21.499 | INFO     | __main__:main:1113 -   num_per_category=5, seed=42
+2026-02-22 06:54:21.499 | INFO     | __main__:main:1114 - ======================================================================
+2026-02-22 06:54:21.499 | INFO     | __main__:generate_all_graphs:344 - Phase 1: Generating 25 graphs (5 per category)...
+2026-02-22 06:54:21.499 | INFO     | __main__:generate_well_resolved_sbm:107 -   Generating 5 well_resolved SBM graphs...
+2026-02-22 06:54:21.501 | INFO     | __main__:generate_well_resolved_sbm:134 -     → 5 well_resolved graphs generated
+2026-02-22 06:54:21.501 | INFO     | __main__:generate_marginally_resolved_sbm:142 -   Generating 5 marginally_resolved SBM graphs...
+2026-02-22 06:54:21.502 | INFO     | __main__:generate_marginally_resolved_sbm:171 -     → 5 marginally_resolved graphs generated
+2026-02-22 06:54:21.502 | INFO     | __main__:generate_aliased:177 -   Generating 5 aliased graphs...
+2026-02-22 06:54:21.536 | INFO     | __main__:generate_aliased:253 -     → 5 aliased graphs generated
+2026-02-22 06:54:21.536 | INFO     | __main__:generate_clustered_spectrum:261 -   Generating 5 clustered_spectrum graphs...
+2026-02-22 06:54:21.552 | INFO     | __main__:generate_clustered_spectrum:317 -     → 5 clustered_spectrum graphs generated
+2026-02-22 06:54:21.552 | INFO     | __main__:generate_er_control:323 -   Generating 5 control_er graphs...
+2026-02-22 06:54:21.568 | INFO     | __main__:generate_er_control:338 -     → 5 control_er graphs generated
+2026-02-22 06:54:21.568 | INFO     | __main__:generate_all_graphs:353 - Phase 1 complete: 25 graphs total
+2026-02-22 06:54:21.568 | INFO     | __main__:process_all_graphs:547 - Phase 2-3: Computing encodings and metrics for 25 graphs...
+2026-02-22 06:55:10.892 | INFO     | __main__:process_all_graphs:626 - Phase 2-3 complete: 25 results in 49.3s
+2026-02-22 06:55:10.893 | INFO     | __main__:sanity_check:1034 - Sanity check: verifying SRI distribution across categories...
+2026-02-22 06:55:10.893 | INFO     | __main__:sanity_check:1048 -   aliased: mean_SRI=0.7107 ± 0.5547 (range [0.0155, 1.4143], n=5)
+2026-02-22 06:55:10.893 | INFO     | __main__:sanity_check:1048 -   clustered_spectrum: mean_SRI=0.6893 ± 0.3592 (range [0.0538, 1.1016], n=5)
+2026-02-22 06:55:10.893 | INFO     | __main__:sanity_check:1048 -   control_er: mean_SRI=1.1245 ± 0.4240 (range [0.6476, 1.6299], n=5)
+2026-02-22 06:55:10.893 | INFO     | __main__:sanity_check:1048 -   marginally_resolved: mean_SRI=1.1775 ± 0.4774 (range [0.3285, 1.6440], n=5)
+2026-02-22 06:55:10.893 | INFO     | __main__:sanity_check:1048 -   well_resolved: mean_SRI=0.6754 ± 0.4475 (range [0.1106, 1.4173], n=5)
+2026-02-22 06:55:10.893 | INFO     | __main__:sanity_check:1058 -   well_resolved mean SRI: 0.6754
+2026-02-22 06:55:10.893 | INFO     | __main__:sanity_check:1063 -   Overall SRI: mean=0.8755, std=0.5098, range=[0.0155, 1.6440]
+2026-02-22 06:55:10.893 | INFO     | __main__:sanity_check:1073 -   acc_rwse: mean=0.5196, acc_lappe: mean=0.6027
+2026-02-22 06:55:10.893 | INFO     | __main__:sanity_check:1077 -   gap_classification: mean=0.0831, std=0.2043
+2026-02-22 06:55:10.893 | INFO     | __main__:analyze_all_results:709 - Phase 5: Statistical analysis...
+2026-02-22 06:55:10.900 | INFO     | __main__:analyze_all_results:915 - Analysis results:
+2026-02-22 06:55:10.900 | INFO     | __main__:analyze_all_results:916 -   Spearman(SRI, gap_class): rho=0.1747, p=4.04e-01
+2026-02-22 06:55:10.900 | INFO     | __main__:analyze_all_results:917 -   Spearman(SRI, gap_fd):    rho=-0.3891, p=5.46e-02
+2026-02-22 06:55:10.900 | INFO     | __main__:analyze_all_results:918 -   Partial Spearman:         rho=0.0485, p=8.18e-01
+2026-02-22 06:55:10.900 | INFO     | __main__:analyze_all_results:919 -   Quintile monotonic: False
+2026-02-22 06:55:10.900 | INFO     | __main__:analyze_all_results:920 -   SRWE gap reduction (low SRI): -0.7417
+2026-02-22 06:55:10.900 | INFO     | __main__:analyze_all_results:921 -   Targets met: rho>0.3: False, p<0.01: False, monotonic: False, SRWE>50%: False
+2026-02-22 06:55:10.900 | INFO     | __main__:analyze_all_results:927 -   aliased: mean_SRI=0.7107, mean_gap=-0.0267, rho=0.3000
+2026-02-22 06:55:10.900 | INFO     | __main__:analyze_all_results:927 -   clustered_spectrum: mean_SRI=0.6893, mean_gap=-0.0422, rho=0.0000
+2026-02-22 06:55:10.900 | INFO     | __main__:analyze_all_results:927 -   control_er: mean_SRI=1.1245, mean_gap=0.0911, rho=0.7000
+2026-02-22 06:55:10.900 | INFO     | __main__:analyze_all_results:927 -   marginally_resolved: mean_SRI=1.1775, mean_gap=0.1644, rho=0.3000
+2026-02-22 06:55:10.900 | INFO     | __main__:analyze_all_results:927 -   well_resolved: mean_SRI=0.6754, mean_gap=0.2289, rho=-0.3000
+2026-02-22 06:55:10.900 | INFO     | __main__:build_output_json:942 - Phase 6: Building output JSON...
+2026-02-22 06:55:10.901 | INFO     | __main__:main:1150 - Saved method_out.json (0.04 MB)
+2026-02-22 06:55:10.901 | INFO     | __main__:main:1157 - Total runtime: 49.4s (0.8 min)
+2026-02-22 06:55:10.901 | INFO     | __main__:main:1158 - Done!
+2026-02-22 06:56:14.622 | INFO     | __main__:main:1111 - ======================================================================
+2026-02-22 06:56:14.622 | INFO     | __main__:main:1112 - SRI Predicts RWSE-vs-LapPE Quality on Fixed-Size (n=30) Graphs
+2026-02-22 06:56:14.622 | INFO     | __main__:main:1113 -   num_per_category=10, seed=42
+2026-02-22 06:56:14.622 | INFO     | __main__:main:1114 - ======================================================================
+2026-02-22 06:56:14.622 | INFO     | __main__:generate_all_graphs:344 - Phase 1: Generating 50 graphs (10 per category)...
+2026-02-22 06:56:14.622 | INFO     | __main__:generate_well_resolved_sbm:107 -   Generating 10 well_resolved SBM graphs...
+2026-02-22 06:56:14.624 | INFO     | __main__:generate_well_resolved_sbm:134 -     → 10 well_resolved graphs generated
+2026-02-22 06:56:14.624 | INFO     | __main__:generate_marginally_resolved_sbm:142 -   Generating 10 marginally_resolved SBM graphs...
+2026-02-22 06:56:14.625 | INFO     | __main__:generate_marginally_resolved_sbm:171 -     → 10 marginally_resolved graphs generated
+2026-02-22 06:56:14.625 | INFO     | __main__:generate_aliased:177 -   Generating 10 aliased graphs...
+2026-02-22 06:56:14.686 | INFO     | __main__:generate_aliased:253 -     → 10 aliased graphs generated
+2026-02-22 06:56:14.686 | INFO     | __main__:generate_clustered_spectrum:261 -   Generating 10 clustered_spectrum graphs...
+2026-02-22 06:56:14.759 | INFO     | __main__:generate_clustered_spectrum:317 -     → 10 clustered_spectrum graphs generated
+2026-02-22 06:56:14.759 | INFO     | __main__:generate_er_control:323 -   Generating 10 control_er graphs...
+2026-02-22 06:56:14.830 | INFO     | __main__:generate_er_control:338 -     → 10 control_er graphs generated
+2026-02-22 06:56:14.831 | INFO     | __main__:generate_all_graphs:353 - Phase 1 complete: 50 graphs total
+2026-02-22 06:56:14.831 | INFO     | __main__:process_all_graphs:547 - Phase 2-3: Computing encodings and metrics for 50 graphs...
+2026-02-22 06:57:54.493 | INFO     | __main__:process_all_graphs:620 -   Processed 50/50 (99.7s elapsed, ~0s remaining)
+2026-02-22 06:57:54.493 | INFO     | __main__:process_all_graphs:626 - Phase 2-3 complete: 50 results in 99.7s
+2026-02-22 06:57:54.493 | INFO     | __main__:sanity_check:1034 - Sanity check: verifying SRI distribution across categories...
+2026-02-22 06:57:54.493 | INFO     | __main__:sanity_check:1048 -   aliased: mean_SRI=0.8475 ± 0.4215 (range [0.2737, 1.4143], n=10)
+2026-02-22 06:57:54.493 | INFO     | __main__:sanity_check:1048 -   clustered_spectrum: mean_SRI=0.4287 ± 0.1906 (range [0.1176, 0.7060], n=10)
+2026-02-22 06:57:54.493 | INFO     | __main__:sanity_check:1048 -   control_er: mean_SRI=0.9608 ± 0.4794 (range [0.3116, 2.0460], n=10)
+2026-02-22 06:57:54.493 | INFO     | __main__:sanity_check:1048 -   marginally_resolved: mean_SRI=0.8306 ± 0.5570 (range [0.2122, 2.0191], n=10)
+2026-02-22 06:57:54.493 | INFO     | __main__:sanity_check:1048 -   well_resolved: mean_SRI=0.7877 ± 0.5080 (range [0.0616, 1.6787], n=10)
+2026-02-22 06:57:54.493 | INFO     | __main__:sanity_check:1058 -   well_resolved mean SRI: 0.7877
+2026-02-22 06:57:54.493 | INFO     | __main__:sanity_check:1063 -   Overall SRI: mean=0.7710, std=0.4848, range=[0.0616, 2.0460]
+2026-02-22 06:57:54.494 | INFO     | __main__:sanity_check:1073 -   acc_rwse: mean=0.5104, acc_lappe: mean=0.5762
+2026-02-22 06:57:54.494 | INFO     | __main__:sanity_check:1077 -   gap_classification: mean=0.0658, std=0.1869
+2026-02-22 06:57:54.494 | INFO     | __main__:analyze_all_results:709 - Phase 5: Statistical analysis...
+2026-02-22 06:57:54.497 | INFO     | __main__:analyze_all_results:915 - Analysis results:
+2026-02-22 06:57:54.497 | INFO     | __main__:analyze_all_results:916 -   Spearman(SRI, gap_class): rho=0.0339, p=8.15e-01
+2026-02-22 06:57:54.497 | INFO     | __main__:analyze_all_results:917 -   Spearman(SRI, gap_fd):    rho=0.0163, p=9.11e-01
+2026-02-22 06:57:54.497 | INFO     | __main__:analyze_all_results:918 -   Partial Spearman:         rho=-0.0780, p=5.90e-01
+2026-02-22 06:57:54.497 | INFO     | __main__:analyze_all_results:919 -   Quintile monotonic: False
+2026-02-22 06:57:54.497 | INFO     | __main__:analyze_all_results:920 -   SRWE gap reduction (low SRI): 0.6384
+2026-02-22 06:57:54.497 | INFO     | __main__:analyze_all_results:921 -   Targets met: rho>0.3: False, p<0.01: False, monotonic: False, SRWE>50%: True
+2026-02-22 06:57:54.497 | INFO     | __main__:analyze_all_results:927 -   aliased: mean_SRI=0.8475, mean_gap=-0.0722, rho=-0.1284
+2026-02-22 06:57:54.497 | INFO     | __main__:analyze_all_results:927 -   clustered_spectrum: mean_SRI=0.4287, mean_gap=-0.0744, rho=0.1879
+2026-02-22 06:57:54.497 | INFO     | __main__:analyze_all_results:927 -   control_er: mean_SRI=0.9608, mean_gap=0.0833, rho=-0.3212
+2026-02-22 06:57:54.497 | INFO     | __main__:analyze_all_results:927 -   marginally_resolved: mean_SRI=0.8306, mean_gap=0.1578, rho=-0.0061
+2026-02-22 06:57:54.497 | INFO     | __main__:analyze_all_results:927 -   well_resolved: mean_SRI=0.7877, mean_gap=0.2344, rho=-0.0909
+2026-02-22 06:57:54.497 | INFO     | __main__:build_output_json:942 - Phase 6: Building output JSON...
+2026-02-22 06:57:54.500 | INFO     | __main__:main:1150 - Saved method_out.json (0.08 MB)
+2026-02-22 06:57:54.500 | INFO     | __main__:main:1157 - Total runtime: 99.9s (1.7 min)
+2026-02-22 06:57:54.500 | INFO     | __main__:main:1158 - Done!
+2026-02-22 07:00:07.327 | INFO     | __main__:main:1217 - ======================================================================
+2026-02-22 07:00:07.327 | INFO     | __main__:main:1218 - SRI Predicts RWSE-vs-LapPE Quality on Fixed-Size (n=30) Graphs
+2026-02-22 07:00:07.327 | INFO     | __main__:main:1219 -   num_per_category=5, seed=42
+2026-02-22 07:00:07.327 | INFO     | __main__:main:1220 - ======================================================================
+2026-02-22 07:00:07.327 | INFO     | __main__:generate_all_graphs:344 - Phase 1: Generating 25 graphs (5 per category)...
+2026-02-22 07:00:07.327 | INFO     | __main__:generate_well_resolved_sbm:107 -   Generating 5 well_resolved SBM graphs...
+2026-02-22 07:00:07.329 | INFO     | __main__:generate_well_resolved_sbm:134 -     → 5 well_resolved graphs generated
+2026-02-22 07:00:07.329 | INFO     | __main__:generate_marginally_resolved_sbm:142 -   Generating 5 marginally_resolved SBM graphs...
+2026-02-22 07:00:07.329 | INFO     | __main__:generate_marginally_resolved_sbm:171 -     → 5 marginally_resolved graphs generated
+2026-02-22 07:00:07.329 | INFO     | __main__:generate_aliased:177 -   Generating 5 aliased graphs...
+2026-02-22 07:00:07.356 | INFO     | __main__:generate_aliased:253 -     → 5 aliased graphs generated
+2026-02-22 07:00:07.356 | INFO     | __main__:generate_clustered_spectrum:261 -   Generating 5 clustered_spectrum graphs...
+2026-02-22 07:00:07.372 | INFO     | __main__:generate_clustered_spectrum:317 -     → 5 clustered_spectrum graphs generated
+2026-02-22 07:00:07.372 | INFO     | __main__:generate_er_control:323 -   Generating 5 control_er graphs...
+2026-02-22 07:00:07.388 | INFO     | __main__:generate_er_control:338 -     → 5 control_er graphs generated
+2026-02-22 07:00:07.388 | INFO     | __main__:generate_all_graphs:353 - Phase 1 complete: 25 graphs total
+2026-02-22 07:00:07.388 | INFO     | __main__:process_all_graphs:547 - Phase 2-3: Computing encodings and metrics for 25 graphs...
+2026-02-22 07:00:56.783 | INFO     | __main__:process_all_graphs:626 - Phase 2-3 complete: 25 results in 49.4s
+2026-02-22 07:00:56.783 | INFO     | __main__:sanity_check:1140 - Sanity check: verifying SRI distribution across categories...
+2026-02-22 07:00:56.783 | INFO     | __main__:sanity_check:1154 -   aliased: mean_SRI=0.7107 ± 0.5547 (range [0.0155, 1.4143], n=5)
+2026-02-22 07:00:56.783 | INFO     | __main__:sanity_check:1154 -   clustered_spectrum: mean_SRI=0.6893 ± 0.3592 (range [0.0538, 1.1016], n=5)
+2026-02-22 07:00:56.783 | INFO     | __main__:sanity_check:1154 -   control_er: mean_SRI=1.1245 ± 0.4240 (range [0.6476, 1.6299], n=5)
+2026-02-22 07:00:56.783 | INFO     | __main__:sanity_check:1154 -   marginally_resolved: mean_SRI=1.1775 ± 0.4774 (range [0.3285, 1.6440], n=5)
+2026-02-22 07:00:56.783 | INFO     | __main__:sanity_check:1154 -   well_resolved: mean_SRI=0.6754 ± 0.4475 (range [0.1106, 1.4173], n=5)
+2026-02-22 07:00:56.783 | INFO     | __main__:sanity_check:1164 -   well_resolved mean SRI: 0.6754
+2026-02-22 07:00:56.783 | INFO     | __main__:sanity_check:1169 -   Overall SRI: mean=0.8755, std=0.5098, range=[0.0155, 1.6440]
+2026-02-22 07:00:56.783 | INFO     | __main__:sanity_check:1179 -   acc_rwse: mean=0.5196, acc_lappe: mean=0.6027
+2026-02-22 07:00:56.783 | INFO     | __main__:sanity_check:1183 -   gap_classification: mean=0.0831, std=0.2043
+2026-02-22 07:00:56.783 | INFO     | __main__:analyze_all_results:709 - Phase 5: Statistical analysis...
+2026-02-22 07:00:57.026 | INFO     | __main__:analyze_all_results:1008 - Analysis results:
+2026-02-22 07:00:57.026 | INFO     | __main__:analyze_all_results:1009 -   Spearman(SRI, gap_class): rho=0.1747, p=4.04e-01
+2026-02-22 07:00:57.026 | INFO     | __main__:analyze_all_results:1010 -   Spearman(SRI, gap_fd):    rho=-0.3891, p=5.46e-02
+2026-02-22 07:00:57.026 | INFO     | __main__:analyze_all_results:1011 -   Partial Spearman:         rho=0.0485, p=8.18e-01
+2026-02-22 07:00:57.026 | INFO     | __main__:analyze_all_results:1012 -   Quintile monotonic: False
+2026-02-22 07:00:57.026 | INFO     | __main__:analyze_all_results:1013 -   SRWE gap reduction (low SRI): -0.7417
+2026-02-22 07:00:57.026 | INFO     | __main__:analyze_all_results:1014 -   Targets met: rho>0.3: False, p<0.01: False, monotonic: False, SRWE>50%: False
+2026-02-22 07:00:57.026 | INFO     | __main__:analyze_all_results:1020 -   aliased: mean_SRI=0.7107, mean_gap=-0.0267, rho=0.3000
+2026-02-22 07:00:57.026 | INFO     | __main__:analyze_all_results:1020 -   clustered_spectrum: mean_SRI=0.6893, mean_gap=-0.0422, rho=0.0000
+2026-02-22 07:00:57.026 | INFO     | __main__:analyze_all_results:1020 -   control_er: mean_SRI=1.1245, mean_gap=0.0911, rho=0.7000
+2026-02-22 07:00:57.026 | INFO     | __main__:analyze_all_results:1020 -   marginally_resolved: mean_SRI=1.1775, mean_gap=0.1644, rho=0.3000
+2026-02-22 07:00:57.026 | INFO     | __main__:analyze_all_results:1020 -   well_resolved: mean_SRI=0.6754, mean_gap=0.2289, rho=-0.3000
+2026-02-22 07:00:57.026 | INFO     | __main__:analyze_all_results:1025 -   Threshold (SRI<1 vs >=1): gap_low=0.0459, gap_high=0.1389, U_p=3.4550e-01
+2026-02-22 07:00:57.026 | INFO     | __main__:analyze_all_results:1030 -   Kruskal-Wallis H=0.9559, p=6.2006e-01
+2026-02-22 07:00:57.026 | INFO     | __main__:analyze_all_results:1035 -   LR gap correlation: rho=0.1129, p=5.91e-01
+2026-02-22 07:00:57.026 | INFO     | __main__:build_output_json:1048 - Phase 6: Building output JSON...
+2026-02-22 07:00:57.028 | INFO     | __main__:main:1256 - Saved method_out.json (0.05 MB)
+2026-02-22 07:00:57.028 | INFO     | __main__:main:1263 - Total runtime: 49.7s (0.8 min)
+2026-02-22 07:00:57.028 | INFO     | __main__:main:1264 - Done!
+2026-02-22 07:01:06.323 | INFO     | __main__:main:1217 - ======================================================================
+2026-02-22 07:01:06.323 | INFO     | __main__:main:1218 - SRI Predicts RWSE-vs-LapPE Quality on Fixed-Size (n=30) Graphs
+2026-02-22 07:01:06.324 | INFO     | __main__:main:1219 -   num_per_category=100, seed=42
+2026-02-22 07:01:06.324 | INFO     | __main__:main:1220 - ======================================================================
+2026-02-22 07:01:06.324 | INFO     | __main__:generate_all_graphs:344 - Phase 1: Generating 500 graphs (100 per category)...
+2026-02-22 07:01:06.324 | INFO     | __main__:generate_well_resolved_sbm:107 -   Generating 100 well_resolved SBM graphs...
+2026-02-22 07:01:06.336 | INFO     | __main__:generate_well_resolved_sbm:134 -     → 100 well_resolved graphs generated
+2026-02-22 07:01:06.336 | INFO     | __main__:generate_marginally_resolved_sbm:142 -   Generating 100 marginally_resolved SBM graphs...
+2026-02-22 07:01:06.349 | INFO     | __main__:generate_marginally_resolved_sbm:171 -     → 100 marginally_resolved graphs generated
+2026-02-22 07:01:06.349 | INFO     | __main__:generate_aliased:177 -   Generating 100 aliased graphs...
+2026-02-22 07:01:06.789 | INFO     | __main__:generate_aliased:253 -     → 100 aliased graphs generated
+2026-02-22 07:01:06.789 | INFO     | __main__:generate_clustered_spectrum:261 -   Generating 100 clustered_spectrum graphs...
+2026-02-22 07:01:07.568 | INFO     | __main__:generate_clustered_spectrum:317 -     → 100 clustered_spectrum graphs generated
+2026-02-22 07:01:07.568 | INFO     | __main__:generate_er_control:323 -   Generating 100 control_er graphs...
+2026-02-22 07:01:08.307 | INFO     | __main__:generate_er_control:338 -     → 100 control_er graphs generated
+2026-02-22 07:01:08.307 | INFO     | __main__:generate_all_graphs:353 - Phase 1 complete: 500 graphs total
+2026-02-22 07:01:08.307 | INFO     | __main__:process_all_graphs:547 - Phase 2-3: Computing encodings and metrics for 500 graphs...
+2026-02-22 07:02:58.492 | INFO     | __main__:process_all_graphs:620 -   Processed 50/500 (110.2s elapsed, ~992s remaining)
+2026-02-22 07:05:45.065 | INFO     | __main__:process_all_graphs:620 -   Processed 100/500 (276.8s elapsed, ~1107s remaining)
+2026-02-22 07:09:28.831 | INFO     | __main__:process_all_graphs:620 -   Processed 150/500 (500.5s elapsed, ~1168s remaining)
+2026-02-22 07:11:54.769 | INFO     | __main__:process_all_graphs:620 -   Processed 200/500 (646.5s elapsed, ~970s remaining)
+2026-02-22 07:13:10.967 | INFO     | __main__:process_all_graphs:620 -   Processed 250/500 (722.7s elapsed, ~723s remaining)
+2026-02-22 07:14:16.921 | INFO     | __main__:process_all_graphs:620 -   Processed 300/500 (788.6s elapsed, ~526s remaining)
+2026-02-22 07:15:33.198 | INFO     | __main__:process_all_graphs:620 -   Processed 350/500 (864.9s elapsed, ~371s remaining)
+2026-02-22 07:17:11.656 | INFO     | __main__:process_all_graphs:620 -   Processed 400/500 (963.3s elapsed, ~241s remaining)
+2026-02-22 07:18:57.988 | INFO     | __main__:process_all_graphs:620 -   Processed 450/500 (1069.7s elapsed, ~119s remaining)
+2026-02-22 07:21:23.168 | INFO     | __main__:process_all_graphs:620 -   Processed 500/500 (1214.9s elapsed, ~0s remaining)
+2026-02-22 07:21:23.168 | INFO     | __main__:process_all_graphs:626 - Phase 2-3 complete: 500 results in 1214.9s
+2026-02-22 07:21:23.168 | INFO     | __main__:sanity_check:1140 - Sanity check: verifying SRI distribution across categories...
+2026-02-22 07:21:23.168 | INFO     | __main__:sanity_check:1154 -   aliased: mean_SRI=0.8843 ± 0.4673 (range [0.0155, 1.4266], n=100)
+2026-02-22 07:21:23.169 | INFO     | __main__:sanity_check:1154 -   clustered_spectrum: mean_SRI=0.5981 ± 0.3739 (range [0.0155, 2.1376], n=100)
+2026-02-22 07:21:23.169 | INFO     | __main__:sanity_check:1154 -   control_er: mean_SRI=1.0499 ± 0.5391 (range [0.0461, 2.8769], n=100)
+2026-02-22 07:21:23.169 | INFO     | __main__:sanity_check:1154 -   marginally_resolved: mean_SRI=0.8162 ± 0.3752 (range [0.0805, 1.7882], n=100)
+2026-02-22 07:21:23.169 | INFO     | __main__:sanity_check:1154 -   well_resolved: mean_SRI=0.7923 ± 0.4021 (range [0.0616, 1.9954], n=100)
+2026-02-22 07:21:23.169 | INFO     | __main__:sanity_check:1164 -   well_resolved mean SRI: 0.7923
+2026-02-22 07:21:23.169 | INFO     | __main__:sanity_check:1169 -   Overall SRI: mean=0.8282, std=0.4600, range=[0.0155, 2.8769]
+2026-02-22 07:21:23.169 | INFO     | __main__:sanity_check:1179 -   acc_rwse: mean=0.5144, acc_lappe: mean=0.5706
+2026-02-22 07:21:23.169 | INFO     | __main__:sanity_check:1183 -   gap_classification: mean=0.0561, std=0.1813
+2026-02-22 07:21:23.169 | INFO     | __main__:k_dependent_analysis:663 - Phase 5E: K-dependent analysis on 50 graphs...
+2026-02-22 07:23:07.039 | INFO     | __main__:k_dependent_analysis:701 -   K-dependent analysis: 300 data points
+2026-02-22 07:23:07.039 | INFO     | __main__:analyze_all_results:709 - Phase 5: Statistical analysis...
+2026-02-22 07:23:07.919 | INFO     | __main__:analyze_all_results:1008 - Analysis results:
+2026-02-22 07:23:07.920 | INFO     | __main__:analyze_all_results:1009 -   Spearman(SRI, gap_class): rho=0.0241, p=5.92e-01
+2026-02-22 07:23:07.920 | INFO     | __main__:analyze_all_results:1010 -   Spearman(SRI, gap_fd):    rho=-0.0108, p=8.10e-01
+2026-02-22 07:23:07.920 | INFO     | __main__:analyze_all_results:1011 -   Partial Spearman:         rho=-0.0349, p=4.36e-01
+2026-02-22 07:23:07.920 | INFO     | __main__:analyze_all_results:1012 -   Quintile monotonic: False
+2026-02-22 07:23:07.920 | INFO     | __main__:analyze_all_results:1013 -   SRWE gap reduction (low SRI): 0.7422
+2026-02-22 07:23:07.920 | INFO     | __main__:analyze_all_results:1014 -   Targets met: rho>0.3: False, p<0.01: False, monotonic: False, SRWE>50%: True
+2026-02-22 07:23:07.920 | INFO     | __main__:analyze_all_results:1020 -   aliased: mean_SRI=0.8843, mean_gap=-0.0143, rho=-0.2706
+2026-02-22 07:23:07.920 | INFO     | __main__:analyze_all_results:1020 -   clustered_spectrum: mean_SRI=0.5981, mean_gap=-0.0689, rho=0.2321
+2026-02-22 07:23:07.920 | INFO     | __main__:analyze_all_results:1020 -   control_er: mean_SRI=1.0499, mean_gap=0.0219, rho=-0.0233
+2026-02-22 07:23:07.920 | INFO     | __main__:analyze_all_results:1020 -   marginally_resolved: mean_SRI=0.8162, mean_gap=0.1621, rho=0.0301
+2026-02-22 07:23:07.920 | INFO     | __main__:analyze_all_results:1020 -   well_resolved: mean_SRI=0.7923, mean_gap=0.1799, rho=-0.0901
+2026-02-22 07:23:07.920 | INFO     | __main__:analyze_all_results:1025 -   Threshold (SRI<1 vs >=1): gap_low=0.0561, gap_high=0.0561, U_p=9.8749e-01
+2026-02-22 07:23:07.920 | INFO     | __main__:analyze_all_results:1030 -   Kruskal-Wallis H=0.6678, p=7.1612e-01
+2026-02-22 07:23:07.920 | INFO     | __main__:analyze_all_results:1035 -   LR gap correlation: rho=-0.0798, p=4.30e-01
+2026-02-22 07:23:07.920 | INFO     | __main__:build_output_json:1048 - Phase 6: Building output JSON...
+2026-02-22 07:23:07.940 | INFO     | __main__:main:1256 - Saved method_out.json (0.76 MB)
+2026-02-22 07:23:07.940 | INFO     | __main__:main:1263 - Total runtime: 1321.6s (22.0 min)
+2026-02-22 07:23:07.940 | INFO     | __main__:main:1264 - Done!
+2026-02-22 07:23:59.017 | INFO     | __main__:main:1217 - ======================================================================
+2026-02-22 07:23:59.017 | INFO     | __main__:main:1218 - SRI Predicts RWSE-vs-LapPE Quality on Fixed-Size (n=30) Graphs
+2026-02-22 07:23:59.017 | INFO     | __main__:main:1219 -   num_per_category=5, seed=42
+2026-02-22 07:23:59.017 | INFO     | __main__:main:1220 - ======================================================================
+2026-02-22 07:23:59.017 | INFO     | __main__:generate_all_graphs:344 - Phase 1: Generating 25 graphs (5 per category)...
+2026-02-22 07:23:59.017 | INFO     | __main__:generate_well_resolved_sbm:107 -   Generating 5 well_resolved SBM graphs...
+2026-02-22 07:23:59.018 | INFO     | __main__:generate_well_resolved_sbm:134 -     → 5 well_resolved graphs generated
+2026-02-22 07:23:59.018 | INFO     | __main__:generate_marginally_resolved_sbm:142 -   Generating 5 marginally_resolved SBM graphs...
+2026-02-22 07:23:59.019 | INFO     | __main__:generate_marginally_resolved_sbm:171 -     → 5 marginally_resolved graphs generated
+2026-02-22 07:23:59.019 | INFO     | __main__:generate_aliased:177 -   Generating 5 aliased graphs...
+2026-02-22 07:23:59.046 | INFO     | __main__:generate_aliased:253 -     → 5 aliased graphs generated
+2026-02-22 07:23:59.046 | INFO     | __main__:generate_clustered_spectrum:261 -   Generating 5 clustered_spectrum graphs...
+2026-02-22 07:23:59.061 | INFO     | __main__:generate_clustered_spectrum:317 -     → 5 clustered_spectrum graphs generated
+2026-02-22 07:23:59.062 | INFO     | __main__:generate_er_control:323 -   Generating 5 control_er graphs...
+2026-02-22 07:23:59.077 | INFO     | __main__:generate_er_control:338 -     → 5 control_er graphs generated
+2026-02-22 07:23:59.077 | INFO     | __main__:generate_all_graphs:353 - Phase 1 complete: 25 graphs total
+2026-02-22 07:23:59.077 | INFO     | __main__:process_all_graphs:547 - Phase 2-3: Computing encodings and metrics for 25 graphs...
+2026-02-22 07:24:48.211 | INFO     | __main__:process_all_graphs:626 - Phase 2-3 complete: 25 results in 49.1s
+2026-02-22 07:24:48.211 | INFO     | __main__:sanity_check:1140 - Sanity check: verifying SRI distribution across categories...
+2026-02-22 07:24:48.211 | INFO     | __main__:sanity_check:1154 -   aliased: mean_SRI=0.7107 ± 0.5547 (range [0.0155, 1.4143], n=5)
+2026-02-22 07:24:48.211 | INFO     | __main__:sanity_check:1154 -   clustered_spectrum: mean_SRI=0.6893 ± 0.3592 (range [0.0538, 1.1016], n=5)
+2026-02-22 07:24:48.212 | INFO     | __main__:sanity_check:1154 -   control_er: mean_SRI=1.1245 ± 0.4240 (range [0.6476, 1.6299], n=5)
+2026-02-22 07:24:48.212 | INFO     | __main__:sanity_check:1154 -   marginally_resolved: mean_SRI=1.1775 ± 0.4774 (range [0.3285, 1.6440], n=5)
+2026-02-22 07:24:48.212 | INFO     | __main__:sanity_check:1154 -   well_resolved: mean_SRI=0.6754 ± 0.4475 (range [0.1106, 1.4173], n=5)
+2026-02-22 07:24:48.212 | INFO     | __main__:sanity_check:1164 -   well_resolved mean SRI: 0.6754
+2026-02-22 07:24:48.212 | INFO     | __main__:sanity_check:1169 -   Overall SRI: mean=0.8755, std=0.5098, range=[0.0155, 1.6440]
+2026-02-22 07:24:48.212 | INFO     | __main__:sanity_check:1179 -   acc_rwse: mean=0.5196, acc_lappe: mean=0.6027
+2026-02-22 07:24:48.212 | INFO     | __main__:sanity_check:1183 -   gap_classification: mean=0.0831, std=0.2043
+2026-02-22 07:24:48.212 | INFO     | __main__:analyze_all_results:709 - Phase 5: Statistical analysis...
+2026-02-22 07:24:48.453 | INFO     | __main__:analyze_all_results:1008 - Analysis results:
+2026-02-22 07:24:48.453 | INFO     | __main__:analyze_all_results:1009 -   Spearman(SRI, gap_class): rho=0.1747, p=4.04e-01
+2026-02-22 07:24:48.453 | INFO     | __main__:analyze_all_results:1010 -   Spearman(SRI, gap_fd):    rho=-0.3891, p=5.46e-02
+2026-02-22 07:24:48.453 | INFO     | __main__:analyze_all_results:1011 -   Partial Spearman:         rho=0.0485, p=8.18e-01
+2026-02-22 07:24:48.453 | INFO     | __main__:analyze_all_results:1012 -   Quintile monotonic: False
+2026-02-22 07:24:48.453 | INFO     | __main__:analyze_all_results:1013 -   SRWE gap reduction (low SRI): -0.7417
+2026-02-22 07:24:48.453 | INFO     | __main__:analyze_all_results:1014 -   Targets met: rho>0.3: False, p<0.01: False, monotonic: False, SRWE>50%: False
+2026-02-22 07:24:48.453 | INFO     | __main__:analyze_all_results:1020 -   aliased: mean_SRI=0.7107, mean_gap=-0.0267, rho=0.3000
+2026-02-22 07:24:48.453 | INFO     | __main__:analyze_all_results:1020 -   clustered_spectrum: mean_SRI=0.6893, mean_gap=-0.0422, rho=0.0000
+2026-02-22 07:24:48.453 | INFO     | __main__:analyze_all_results:1020 -   control_er: mean_SRI=1.1245, mean_gap=0.0911, rho=0.7000
+2026-02-22 07:24:48.453 | INFO     | __main__:analyze_all_results:1020 -   marginally_resolved: mean_SRI=1.1775, mean_gap=0.1644, rho=0.3000
+2026-02-22 07:24:48.453 | INFO     | __main__:analyze_all_results:1020 -   well_resolved: mean_SRI=0.6754, mean_gap=0.2289, rho=-0.3000
+2026-02-22 07:24:48.453 | INFO     | __main__:analyze_all_results:1025 -   Threshold (SRI<1 vs >=1): gap_low=0.0459, gap_high=0.1389, U_p=3.4550e-01
+2026-02-22 07:24:48.453 | INFO     | __main__:analyze_all_results:1030 -   Kruskal-Wallis H=0.9559, p=6.2006e-01
+2026-02-22 07:24:48.453 | INFO     | __main__:analyze_all_results:1035 -   LR gap correlation: rho=0.1129, p=5.91e-01
+2026-02-22 07:24:48.453 | INFO     | __main__:build_output_json:1048 - Phase 6: Building output JSON...
+2026-02-22 07:24:48.454 | INFO     | __main__:main:1256 - Saved method_out.json (0.05 MB)
+2026-02-22 07:24:48.454 | INFO     | __main__:main:1263 - Total runtime: 49.4s (0.8 min)
+2026-02-22 07:24:48.454 | INFO     | __main__:main:1264 - Done!
+2026-02-22 07:24:52.812 | INFO     | __main__:main:1217 - ======================================================================
+2026-02-22 07:24:52.812 | INFO     | __main__:main:1218 - SRI Predicts RWSE-vs-LapPE Quality on Fixed-Size (n=30) Graphs
+2026-02-22 07:24:52.812 | INFO     | __main__:main:1219 -   num_per_category=100, seed=42
+2026-02-22 07:24:52.812 | INFO     | __main__:main:1220 - ======================================================================
+2026-02-22 07:24:52.812 | INFO     | __main__:generate_all_graphs:344 - Phase 1: Generating 500 graphs (100 per category)...
+2026-02-22 07:24:52.812 | INFO     | __main__:generate_well_resolved_sbm:107 -   Generating 100 well_resolved SBM graphs...
+2026-02-22 07:24:52.825 | INFO     | __main__:generate_well_resolved_sbm:134 -     → 100 well_resolved graphs generated
+2026-02-22 07:24:52.825 | INFO     | __main__:generate_marginally_resolved_sbm:142 -   Generating 100 marginally_resolved SBM graphs...
+2026-02-22 07:24:52.838 | INFO     | __main__:generate_marginally_resolved_sbm:171 -     → 100 marginally_resolved graphs generated
+2026-02-22 07:24:52.838 | INFO     | __main__:generate_aliased:177 -   Generating 100 aliased graphs...
+2026-02-22 07:24:53.155 | INFO     | __main__:generate_aliased:253 -     → 100 aliased graphs generated
+2026-02-22 07:24:53.155 | INFO     | __main__:generate_clustered_spectrum:261 -   Generating 100 clustered_spectrum graphs...
+2026-02-22 07:24:53.485 | INFO     | __main__:generate_clustered_spectrum:317 -     → 100 clustered_spectrum graphs generated
+2026-02-22 07:24:53.485 | INFO     | __main__:generate_er_control:323 -   Generating 100 control_er graphs...
+2026-02-22 07:24:53.831 | INFO     | __main__:generate_er_control:338 -     → 100 control_er graphs generated
+2026-02-22 07:24:53.831 | INFO     | __main__:generate_all_graphs:353 - Phase 1 complete: 500 graphs total
+2026-02-22 07:24:53.831 | INFO     | __main__:process_all_graphs:547 - Phase 2-3: Computing encodings and metrics for 500 graphs...
+2026-02-22 07:28:11.341 | INFO     | __main__:process_all_graphs:620 -   Processed 50/500 (197.5s elapsed, ~1778s remaining)
+2026-02-22 07:29:56.957 | INFO     | __main__:process_all_graphs:620 -   Processed 100/500 (303.1s elapsed, ~1213s remaining)
+2026-02-22 07:33:13.689 | INFO     | __main__:process_all_graphs:620 -   Processed 150/500 (499.9s elapsed, ~1166s remaining)
+2026-02-22 07:35:03.812 | INFO     | __main__:process_all_graphs:620 -   Processed 200/500 (610.0s elapsed, ~915s remaining)
+2026-02-22 07:36:20.306 | INFO     | __main__:process_all_graphs:620 -   Processed 250/500 (686.5s elapsed, ~686s remaining)
+2026-02-22 07:37:27.062 | INFO     | __main__:process_all_graphs:620 -   Processed 300/500 (753.2s elapsed, ~502s remaining)
+2026-02-22 07:38:43.219 | INFO     | __main__:process_all_graphs:620 -   Processed 350/500 (829.4s elapsed, ~355s remaining)
+2026-02-22 07:40:23.216 | INFO     | __main__:process_all_graphs:620 -   Processed 400/500 (929.4s elapsed, ~232s remaining)
+2026-02-22 07:42:11.200 | INFO     | __main__:process_all_graphs:620 -   Processed 450/500 (1037.4s elapsed, ~115s remaining)
+2026-02-22 07:43:56.294 | INFO     | __main__:process_all_graphs:620 -   Processed 500/500 (1142.5s elapsed, ~0s remaining)
+2026-02-22 07:43:56.294 | INFO     | __main__:process_all_graphs:626 - Phase 2-3 complete: 500 results in 1142.5s
+2026-02-22 07:43:56.295 | INFO     | __main__:sanity_check:1140 - Sanity check: verifying SRI distribution across categories...
+2026-02-22 07:43:56.295 | INFO     | __main__:sanity_check:1154 -   aliased: mean_SRI=0.8843 ± 0.4673 (range [0.0155, 1.4266], n=100)
+2026-02-22 07:43:56.295 | INFO     | __main__:sanity_check:1154 -   clustered_spectrum: mean_SRI=0.5981 ± 0.3739 (range [0.0155, 2.1376], n=100)
+2026-02-22 07:43:56.295 | INFO     | __main__:sanity_check:1154 -   control_er: mean_SRI=1.0499 ± 0.5391 (range [0.0461, 2.8769], n=100)
+2026-02-22 07:43:56.295 | INFO     | __main__:sanity_check:1154 -   marginally_resolved: mean_SRI=0.8162 ± 0.3752 (range [0.0805, 1.7882], n=100)
+2026-02-22 07:43:56.295 | INFO     | __main__:sanity_check:1154 -   well_resolved: mean_SRI=0.7923 ± 0.4021 (range [0.0616, 1.9954], n=100)
+2026-02-22 07:43:56.295 | INFO     | __main__:sanity_check:1164 -   well_resolved mean SRI: 0.7923
+2026-02-22 07:43:56.295 | INFO     | __main__:sanity_check:1169 -   Overall SRI: mean=0.8282, std=0.4600, range=[0.0155, 2.8769]
+2026-02-22 07:43:56.295 | INFO     | __main__:sanity_check:1179 -   acc_rwse: mean=0.5145, acc_lappe: mean=0.5706
+2026-02-22 07:43:56.295 | INFO     | __main__:sanity_check:1183 -   gap_classification: mean=0.0561, std=0.1813
+2026-02-22 07:43:56.295 | INFO     | __main__:k_dependent_analysis:663 - Phase 5E: K-dependent analysis on 50 graphs...
+2026-02-22 07:45:10.693 | INFO     | __main__:k_dependent_analysis:701 -   K-dependent analysis: 300 data points
+2026-02-22 07:45:10.693 | INFO     | __main__:analyze_all_results:709 - Phase 5: Statistical analysis...
+2026-02-22 07:45:11.570 | INFO     | __main__:analyze_all_results:1008 - Analysis results:
+2026-02-22 07:45:11.570 | INFO     | __main__:analyze_all_results:1009 -   Spearman(SRI, gap_class): rho=0.0241, p=5.91e-01
+2026-02-22 07:45:11.570 | INFO     | __main__:analyze_all_results:1010 -   Spearman(SRI, gap_fd):    rho=-0.0108, p=8.10e-01
+2026-02-22 07:45:11.570 | INFO     | __main__:analyze_all_results:1011 -   Partial Spearman:         rho=-0.0348, p=4.37e-01
+2026-02-22 07:45:11.570 | INFO     | __main__:analyze_all_results:1012 -   Quintile monotonic: False
+2026-02-22 07:45:11.570 | INFO     | __main__:analyze_all_results:1013 -   SRWE gap reduction (low SRI): 0.7419
+2026-02-22 07:45:11.570 | INFO     | __main__:analyze_all_results:1014 -   Targets met: rho>0.3: False, p<0.01: False, monotonic: False, SRWE>50%: True
+2026-02-22 07:45:11.570 | INFO     | __main__:analyze_all_results:1020 -   aliased: mean_SRI=0.8843, mean_gap=-0.0143, rho=-0.2706
+2026-02-22 07:45:11.570 | INFO     | __main__:analyze_all_results:1020 -   clustered_spectrum: mean_SRI=0.5981, mean_gap=-0.0689, rho=0.2338
+2026-02-22 07:45:11.570 | INFO     | __main__:analyze_all_results:1020 -   control_er: mean_SRI=1.0499, mean_gap=0.0219, rho=-0.0233
+2026-02-22 07:45:11.570 | INFO     | __main__:analyze_all_results:1020 -   marginally_resolved: mean_SRI=0.8162, mean_gap=0.1621, rho=0.0301
+2026-02-22 07:45:11.570 | INFO     | __main__:analyze_all_results:1020 -   well_resolved: mean_SRI=0.7923, mean_gap=0.1799, rho=-0.0901
+2026-02-22 07:45:11.570 | INFO     | __main__:analyze_all_results:1025 -   Threshold (SRI<1 vs >=1): gap_low=0.0561, gap_high=0.0561, U_p=9.8749e-01
+2026-02-22 07:45:11.570 | INFO     | __main__:analyze_all_results:1030 -   Kruskal-Wallis H=0.6703, p=7.1524e-01
+2026-02-22 07:45:11.570 | INFO     | __main__:analyze_all_results:1035 -   LR gap correlation: rho=-0.0798, p=4.30e-01
+2026-02-22 07:45:11.570 | INFO     | __main__:build_output_json:1048 - Phase 6: Building output JSON...
+2026-02-22 07:45:11.589 | INFO     | __main__:main:1256 - Saved method_out.json (0.76 MB)
+2026-02-22 07:45:11.589 | INFO     | __main__:main:1263 - Total runtime: 1218.8s (20.3 min)
+2026-02-22 07:45:11.589 | INFO     | __main__:main:1264 - Done!

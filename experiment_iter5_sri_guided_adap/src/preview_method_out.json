@@ -1,0 +1,406 @@
+{
+  "metadata": {
+    "method_name": "SRI-Guided Adaptive Encoding Selection & RWSE+SRWE Concatenation",
+    "description": "Compares 5 positional-encoding strategies for GPS graph transformer: FIXED-RWSE (baseline), FIXED-LapPE, FIXED-SRWE (Tikhonov spectral recovery), SRI-THRESHOLD (adaptive selection per-graph based on S...",
+    "strategies": [
+      "FIXED-RWSE",
+      "FIXED-LapPE",
+      "FIXED-SRWE"
+    ],
+    "hyperparameters": {
+      "gps_channels": 64,
+      "gps_pe_dim": 8,
+      "gps_layers": 3,
+      "gps_heads": 4,
+      "num_epochs": 50,
+      "batch_size": 128,
+      "lr": 0.001,
+      "seeds": [
+        42,
+        123
+      ],
+      "lappe_k": 8,
+      "srwe_bins": 20,
+      "srwe_reg": 0.001
+    },
+    "results_summary": {
+      "zinc": {
+        "FIXED-RWSE": {
+          "mean": 0.21843455731868744,
+          "std": 0.005871504545211792,
+          "seeds": [
+            0.21256305277347565,
+            0.22430606186389923
+          ]
+        },
+        "FIXED-LapPE": {
+          "mean": 0.26657770574092865,
+          "std": 0.012139484286308289,
+          "seeds": [
+            0.27871719002723694,
+            0.25443822145462036
+          ]
+        },
+        "FIXED-SRWE": {
+          "mean": 0.19798621535301208,
+          "std": 0.005861654877662659,
+          "seeds": [
+            0.20384787023067474,
+            0.19212456047534943
+          ]
+        },
+        "SRI-THRESHOLD": {
+          "mean": 0.2317444235086441,
+          "std": 0.003026053309440613,
+          "seeds": [
+            0.23477047681808472,
+            0.2287183701992035
+          ]
+        },
+        "CONCAT-RWSE-SRWE": {
+          "mean": 0.2034589648246765,
+          "std": 0.0010237246751785278,
+          "seeds": [
+            0.20448268949985504,
+            0.20243524014949799
+          ]
+        },
+        "ORACLE": {
+          "mean": 0.11036190762836486,
+          "std": 0.0,
+          "seeds": [
+            0.11036190762836486
+          ]
+        }
+      },
+      "peptides_func": {
+        "FIXED-RWSE": {
+          "mean": 0.43603700243146337,
+          "std": 0.009832880812218142,
+          "seeds": [
+            0.44586988324368154,
+            0.42620412161924526
+          ]
+        },
+        "FIXED-LapPE": {
+          "mean": 0.4174869506586215,
+          "std": 0.012742543994670757,
+          "seeds": [
+            0.4302294946532923,
+            0.4047444066639508
+          ]
+        },
+        "FIXED-SRWE": {
+          "mean": 0.42608328042910093,
+          "std": 0.022373452838011374,
+          "seeds": [
+            0.40370982759108953,
+            0.4484567332671123
+          ]
+        },
+        "SRI-THRESHOLD": {
+          "mean": 0.41607301960995713,
+          "std": 0.0012520232101738138,
+          "seeds": [
+            0.41732504282013094,
+            0.4148209963997833
+          ]
+        },
+        "CONCAT-RWSE-SRWE": {
+          "mean": 0.4468987834320397,
+          "std": 0.006097913565815766,
+          "seeds": [
+            0.4408008698662239,
+            0.45299669699785544
+          ]
+        },
+        "ORACLE": {
+          "mean": 0.16800000000000004,
+          "std": 0.0,
+          "seeds": [
+            0.16800000000000004
+          ]
+        }
+      },
+      "peptides_struct": {
+        "FIXED-RWSE": {
+          "mean": 22.47314453125,
+          "std": 0.5413017272949219,
+          "seeds": [
+            23.014446258544922,
+            21.931842803955078
+          ]
+        },
+        "FIXED-LapPE": {
+          "mean": 20.431153297424316,
+          "std": 0.4072999954223633,
+          "seeds": [
+            20.83845329284668,
+            20.023853302001953
+          ]
+        },
+        "FIXED-SRWE": {
+          "mean": 22.10265827178955,
+          "std": 0.1957712173461914,
+          "seeds": [
+            22.298429489135742,
+            21.90688705444336
+          ]
+        },
+        "SRI-THRESHOLD": {
+          "mean": 22.333373069763184,
+          "std": 0.3762216567993164,
+          "seeds": [
+            22.7095947265625,
+            21.957151412963867
+          ]
+        },
+        "CONCAT-RWSE-SRWE": {
+          "mean": 21.95248031616211,
+          "std": 0.2542457580566406,
+          "seeds": [
+            22.20672607421875,
+            21.69823455810547
+          ]
+        },
+        "ORACLE": {
+          "mean": 15.43234801992774,
+          "std": 0.0,
+          "seeds": [
+            15.43234801992774
+          ]
+        }
+      }
+    },
+    "hypothesis_assessment": {
+      "zinc": {
+        "concat_outperforms_best_fixed": false,
+        "sri_threshold_outperforms_best_fixed": false
+      },
+      "peptides_func": {
+        "concat_outperforms_best_fixed": true,
+        "sri_threshold_outperforms_best_fixed": false
+      },
+      "peptides_struct": {
+        "concat_outperforms_best_fixed": false,
+        "sri_threshold_outperforms_best_fixed": false
+      }
+    },
+    "correlation_analysis": {
+      "zinc": {
+        "sri_vs_gap_rho": 0.006922189067555039,
+        "sri_vs_gap_pval": 0.8269400914493046,
+        "sri_median": 1.03124
+      },
+      "peptides_func": {
+        "sri_vs_gap_rho": 0.0,
+        "sri_vs_gap_pval": 1.0,
+        "sri_median": 0.021339999999999998
+      },
+      "peptides_struct": {
+        "sri_vs_gap_rho": -0.15376824526462976,
+        "sri_vs_gap_pval": 0.002095630430583484,
+        "sri_median": 0.021339999999999998
+      }
+    },
+    "selector_analysis": {
+      "zinc": {
+        "selector_preds_sample": [
+          2,
+          0,
+          1
+        ],
+        "sri_preds_sample": [
+          0,
+          2,
+          0
+        ]
+      },
+      "peptides_func": {
+        "selector_preds_sample": [
+          0,
+          0,
+          0
+        ],
+        "sri_preds_sample": [
+          2,
+          2,
+          2
+        ]
+      },
+      "peptides_struct": {
+        "selector_preds_sample": [
+          1,
+          1,
+          1
+        ],
+        "sri_preds_sample": [
+          2,
+          2,
+          2
+        ]
+      }
+    },
+    "computational_cost": {
+      "encoding_precompute_s": 26.524914026260376,
+      "total_time_s": 2372.122828722,
+      "training_times": {
+        "zinc/FIXED-RWSE": 54.80642855167389,
+        "zinc/FIXED-LapPE": 55.19673979282379,
+        "zinc/FIXED-SRWE": 54.42728507518768,
+        "zinc/SRI-THRESHOLD": 192.66364073753357,
+        "zinc/CONCAT-RWSE-SRWE": 55.21952140331268,
+        "peptides_func/FIXED-RWSE": 34.66101324558258,
+        "peptides_func/FIXED-LapPE": 81.00551700592041,
+        "peptides_func/FIXED-SRWE": 58.15005826950073,
+        "peptides_func/SRI-THRESHOLD": 118.42205846309662,
+        "peptides_func/CONCAT-RWSE-SRWE": 66.75577902793884,
+        "peptides_struct/FIXED-RWSE": 50.58845818042755,
+        "peptides_struct/FIXED-LapPE": 40.02417266368866,
+        "peptides_struct/FIXED-SRWE": 39.951350927352905,
+        "peptides_struct/SRI-THRESHOLD": 128.5869106054306,
+        "peptides_struct/CONCAT-RWSE-SRWE": 36.03584849834442
+      }
+    },
+    "hardware": {
+      "device": "cuda",
+      "gpu": "NVIDIA RTX A4500",
+      "vram_gb": 21.016543232,
+      "num_cpus": 20
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "ZINC-subset",
+      "examples": [
+        {
+          "input": "{\"edge_index\":[[0,1,1,1,1,2,3,4,4,4,5,5,6,6,7,7,7,8,8,9,9,10,10,10,11,11,12,12,12,13,14,14,15,15,15,16,16,17,17,18,18,19,19,20,20,20,21,22,22,22,23,23],[1,0,2,3,4,1,1,1,5,23,4,6,5,7,6,8,22,7,9,8,10,9,...",
+          "output": "3.1381945610046387",
+          "predict_FIXED_RWSE": "2.990551",
+          "predict_FIXED_LapPE": "2.979121",
+          "predict_FIXED_SRWE": "3.112548",
+          "predict_SRI_THRESHOLD": "2.785546",
+          "predict_CONCAT_RWSE_SRWE": "3.091319",
+          "predict_ORACLE": "3.112548",
+          "metadata_sri_K20": "1.41652",
+          "metadata_delta_min": "0.070826",
+          "metadata_num_nodes": "24"
+        },
+        {
+          "input": "{\"edge_index\":[[0,1,1,1,2,2,3,3,3,4,4,5,5,5,6,6,7,7,8,8,9,9,9,10,10,10,11,11,12,12,13,13,14,14,14,15,16,16,17,17,18,18,18,19,20,20],[1,0,2,20,1,3,2,4,17,3,5,4,6,16,5,7,6,8,7,9,8,10,16,9,11,14,10,12,11...",
+          "output": "0.17193032801151276",
+          "predict_FIXED_RWSE": "0.141503",
+          "predict_FIXED_LapPE": "0.307046",
+          "predict_FIXED_SRWE": "0.27514",
+          "predict_SRI_THRESHOLD": "0.382565",
+          "predict_CONCAT_RWSE_SRWE": "0.305881",
+          "predict_ORACLE": "0.141503",
+          "metadata_sri_K20": "0.82386",
+          "metadata_delta_min": "0.041193",
+          "metadata_num_nodes": "21"
+        },
+        {
+          "input": "{\"edge_index\":[[0,1,1,2,2,2,3,3,4,4,5,5,5,6,6,6,7,7,8,8,9,9,9,10,10,11,11,11,12,12,12,13,14,14,14,15,15,16,16,17,17,18,18,19,19,19,20,20,21,21,22,22,23,23,24,24,25,25,26,26,27,27,28,28],[1,0,2,1,3,28,...",
+          "output": "2.617279291152954",
+          "predict_FIXED_RWSE": "2.573393",
+          "predict_FIXED_LapPE": "2.570461",
+          "predict_FIXED_SRWE": "2.66249",
+          "predict_SRI_THRESHOLD": "2.37598",
+          "predict_CONCAT_RWSE_SRWE": "2.55087",
+          "predict_ORACLE": "2.573393",
+          "metadata_sri_K20": "1.12618",
+          "metadata_delta_min": "0.056309",
+          "metadata_num_nodes": "29"
+        }
+      ]
+    },
+    {
+      "dataset": "Peptides-func",
+      "examples": [
+        {
+          "input": "{\"smiles\":\"CSCC[C@H](NC(=O)[C@H](CC(N)=O)NC(=O)[C@H](CCCNC(N)=[NH2+])NC(=O)[C@H](CCC(N)=O)NC(=O)[C@H](Cc1c[nH]c2ccccc12)NC(=O)[C@H](CCC(N)=O)NC(=O)[C@@H](N)Cc1ccccc1)C(=O)N[C@@H](CCCNC(N)=[NH2+])C(=O)...",
+          "output": "[1, 0, 0, 0, 1, 0, 0, 1, 0, 0]",
+          "predict_FIXED_RWSE": "[0.0088, 0.0563, 0.095, 0.2347, 0.5417, 0.2598, 0.0172, 0.0252, 0.0235, 0.0481]",
+          "predict_FIXED_LapPE": "[0.0394, 0.0259, 0.054, 0.0231, 0.8476, 0.3675, 0.0048, 0.1297, 0.0117, 0.1524]",
+          "predict_FIXED_SRWE": "[0.0945, 0.1004, 0.2956, 0.3258, 0.5378, 0.3161, 0.0453, 0.0955, 0.1044, 0.2055]",
+          "predict_SRI_THRESHOLD": "[0.0393, 0.0456, 0.1634, 0.1575, 0.5869, 0.2735, 0.0315, 0.0762, 0.0171, 0.1723]",
+          "predict_CONCAT_RWSE_SRWE": "[0.0157, 0.0181, 0.0316, 0.0996, 0.6738, 0.1815, 0.0123, 0.0319, 0.0055, 0.0758]",
+          "predict_ORACLE": "[0.0088, 0.0563, 0.095, 0.2347, 0.5417, 0.2598, 0.0172, 0.0252, 0.0235, 0.0481]",
+          "metadata_sri_K20": "0.02138",
+          "metadata_delta_min": "0.001069",
+          "metadata_num_nodes": "139"
+        },
+        {
+          "input": "{\"smiles\":\"CC[C@H](C)[C@H](NC(=O)[C@H](CCCCN)NC(=O)[C@H](CCCCN)NC(=O)[C@H](Cc1ccc(O)cc1)NC(=O)[C@H](Cc1ccccc1)NC(=O)[C@H](CCC(=O)O)NC(=O)[C@H](CCC(=O)O)NC(=O)[C@H](CCC(N)=O)NC(=O)[C@H](CCCCN)NC(=O)[C@...",
+          "output": "[0, 0, 0, 0, 1, 1, 0, 0, 0, 0]",
+          "predict_FIXED_RWSE": "[0.0034, 0.0001, 0.0003, 0.0001, 0.9912, 0.0625, 0.0, 0.0142, 0.0029, 0.776]",
+          "predict_FIXED_LapPE": "[0.0061, 0.0761, 0.0137, 0.0017, 0.9599, 0.8211, 0.0079, 0.0735, 0.0162, 0.0453]",
+          "predict_FIXED_SRWE": "[0.0, 0.0138, 0.0027, 0.0016, 0.8902, 0.752, 0.0, 0.0039, 0.0001, 0.0201]",
+          "predict_SRI_THRESHOLD": "[0.0, 0.0083, 0.0005, 0.0074, 0.4439, 0.6446, 0.0714, 0.0001, 0.0, 0.0006]",
+          "predict_CONCAT_RWSE_SRWE": "[0.0, 0.0001, 0.0006, 0.0002, 0.3049, 0.0195, 0.2012, 0.0, 0.0, 0.005]",
+          "predict_ORACLE": "[0.0034, 0.0001, 0.0003, 0.0001, 0.9912, 0.0625, 0.0, 0.0142, 0.0029, 0.776]",
+          "metadata_sri_K20": "0.0006",
+          "metadata_delta_min": "3e-05",
+          "metadata_num_nodes": "371"
+        },
+        {
+          "input": "{\"smiles\":\"CC[C@H](C)[C@H](NC(=O)[C@H](CCCC[NH3+])NC(=O)[C@H](CCCC[NH3+])NC(=O)CNC(=O)[C@@H](NC(=O)CNC(=O)[C@H](CC(C)C)NC(=O)[C@@H](NC(=O)CNC(=O)[C@H](CO)NC(=O)[C@H](CC(C)C)NC(=O)[C@H](CC(C)C)NC(=O)CN...",
+          "output": "[0, 0, 0, 0, 1, 0, 0, 0, 0, 0]",
+          "predict_FIXED_RWSE": "[0.4036, 0.0008, 0.0117, 0.0018, 0.9529, 0.033, 0.0002, 0.7337, 0.0098, 0.3144]",
+          "predict_FIXED_LapPE": "[0.2226, 0.0004, 0.0114, 0.0, 0.9887, 0.0408, 0.0, 0.5031, 0.0057, 0.1384]",
+          "predict_FIXED_SRWE": "[0.3787, 0.0032, 0.0204, 0.0015, 0.9342, 0.0432, 0.0001, 0.6, 0.0118, 0.1517]",
+          "predict_SRI_THRESHOLD": "[0.6091, 0.0033, 0.0052, 0.002, 0.989, 0.0796, 0.0, 0.3022, 0.0128, 0.0947]",
+          "predict_CONCAT_RWSE_SRWE": "[0.2722, 0.0048, 0.0123, 0.0031, 0.9714, 0.0759, 0.0008, 0.5703, 0.0136, 0.1757]",
+          "predict_ORACLE": "[0.4036, 0.0008, 0.0117, 0.0018, 0.9529, 0.033, 0.0002, 0.7337, 0.0098, 0.3144]",
+          "metadata_sri_K20": "0.14562",
+          "metadata_delta_min": "0.007281",
+          "metadata_num_nodes": "138"
+        }
+      ]
+    },
+    {
+      "dataset": "Peptides-struct",
+      "examples": [
+        {
+          "input": "{\"smiles\":\"CSCC[C@H](NC(=O)[C@H](CC(N)=O)NC(=O)[C@H](CCCNC(N)=[NH2+])NC(=O)[C@H](CCC(N)=O)NC(=O)[C@H](Cc1c[nH]c2ccccc12)NC(=O)[C@H](CCC(N)=O)NC(=O)[C@@H](N)Cc1ccccc1)C(=O)N[C@@H](CCCNC(N)=[NH2+])C(=O)...",
+          "output": "[89.759073, 75.974814, 30.417185, 94.230813, 76.969391, 36.354064, 2.411343, 1.866481, 1.092123, 0.250686, 1.914579]",
+          "predict_FIXED_RWSE": "[62.2625, 53.9821, 24.4501, 68.4615, 58.0254, 28.8051, 2.8965, 1.679, 1.7654, 0.4392, 3.2991]",
+          "predict_FIXED_LapPE": "[89.4888, 73.7227, 39.5022, 89.3377, 72.1112, 39.4334, 2.6236, 1.1777, 1.1668, 0.321, 1.953]",
+          "predict_FIXED_SRWE": "[80.3637, 69.2734, 31.6672, 85.8374, 71.7687, 36.3735, 3.0445, 1.3407, 1.9438, 0.3433, 2.7463]",
+          "predict_SRI_THRESHOLD": "[74.4926, 60.1146, 28.0569, 80.0705, 67.6236, 32.8003, 2.0812, 1.6587, 1.5858, 0.3014, 1.7415]",
+          "predict_CONCAT_RWSE_SRWE": "[68.2092, 59.6513, 26.8636, 73.1442, 64.046, 31.5819, 2.8921, 0.6797, 1.225, 0.832, 2.1906]",
+          "predict_ORACLE": "[89.4888, 73.7227, 39.5022, 89.3377, 72.1112, 39.4334, 2.6236, 1.1777, 1.1668, 0.321, 1.953]",
+          "metadata_sri_K20": "0.02138",
+          "metadata_delta_min": "0.001069",
+          "metadata_num_nodes": "139"
+        },
+        {
+          "input": "{\"smiles\":\"CC[C@H](C)[C@H](NC(=O)[C@H](CCCCN)NC(=O)[C@H](CCCCN)NC(=O)[C@H](Cc1ccc(O)cc1)NC(=O)[C@H](Cc1ccccc1)NC(=O)[C@H](CCC(=O)O)NC(=O)[C@H](CCC(=O)O)NC(=O)[C@H](CCC(N)=O)NC(=O)[C@H](CCCCN)NC(=O)[C@...",
+          "output": "[1238.891843, 1131.834343, 165.574872, 1220.463649, 1134.612634, 155.42262, 6.366372, 2.784966, 1.536875, 0.069172, 2.108901]",
+          "predict_FIXED_RWSE": "[951.8205, 896.8754, 141.6219, 965.3375, 906.9088, 133.9742, 8.5707, 6.5582, 6.6313, 0.8889, 7.82]",
+          "predict_FIXED_LapPE": "[1499.7935, 1391.6591, 242.2551, 1425.8374, 1320.5699, 211.2311, 3.4036, -7.6072, 7.0586, -4.2765, -3.37]",
+          "predict_FIXED_SRWE": "[1023.0735, 920.6873, 155.2487, 1022.0229, 959.3765, 139.7672, 4.5743, 1.8561, 0.37, 4.1693, 0.6692]",
+          "predict_SRI_THRESHOLD": "[954.0611, 823.8066, 152.0493, 979.5779, 878.9929, 137.5877, 10.3438, 4.5603, 1.116, 4.5584, 6.3135]",
+          "predict_CONCAT_RWSE_SRWE": "[1254.3475, 1097.4064, 161.9852, 1232.522, 1092.2209, 152.6933, -5.7339, 10.6555, -9.561, -2.058, 2.9923]",
+          "predict_ORACLE": "[1023.0736, 920.6875, 155.2487, 1022.0231, 959.3766, 139.7673, 4.5743, 1.8561, 0.37, 4.1693, 0.6693]",
+          "metadata_sri_K20": "0.0006",
+          "metadata_delta_min": "3e-05",
+          "metadata_num_nodes": "371"
+        },
+        {
+          "input": "{\"smiles\":\"CC[C@H](C)[C@H](NC(=O)[C@H](CCCC[NH3+])NC(=O)[C@H](CCCC[NH3+])NC(=O)CNC(=O)[C@@H](NC(=O)CNC(=O)[C@H](CC(C)C)NC(=O)[C@@H](NC(=O)CNC(=O)[C@H](CO)NC(=O)[C@H](CC(C)C)NC(=O)[C@H](CC(C)C)NC(=O)CN...",
+          "output": "[108.932726, 100.971882, 25.172, 128.880985, 117.738734, 35.373923, 2.680136, 1.565046, 1.088047, 0.21996, 2.023196]",
+          "predict_FIXED_RWSE": "[71.2204, 61.5771, 27.0466, 78.705, 67.0925, 31.965, 3.043, 1.6767, 1.6744, 0.4533, 3.333]",
+          "predict_FIXED_LapPE": "[90.0534, 74.5288, 36.4639, 91.2492, 76.7836, 38.3313, 2.6783, 1.2247, 0.8399, 0.2323, 2.125]",
+          "predict_FIXED_SRWE": "[96.5148, 81.9131, 37.5289, 102.8263, 85.1969, 43.2483, 3.0856, 1.5636, 2.1895, 0.478, 3.1201]",
+          "predict_SRI_THRESHOLD": "[93.5393, 73.1605, 33.9246, 99.3259, 83.4171, 40.8312, 1.8911, 1.7166, 1.6604, 0.1213, 1.7353]",
+          "predict_CONCAT_RWSE_SRWE": "[73.2161, 64.3244, 29.0017, 78.8093, 68.7443, 34.0088, 2.9349, 0.6279, 1.1592, 0.9036, 2.2522]",
+          "predict_ORACLE": "[96.5148, 81.9131, 37.5289, 102.8263, 85.1969, 43.2483, 3.0856, 1.5636, 2.1895, 0.478, 3.1201]",
+          "metadata_sri_K20": "0.14562",
+          "metadata_delta_min": "0.007281",
+          "metadata_num_nodes": "138"
+        }
+      ]
+    }
+  ]
+}

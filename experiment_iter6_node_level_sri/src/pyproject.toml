@@ -1,0 +1,13 @@
+[project]
+name = "node-level-sri-experiment"
+version = "0.1.0"
+requires-python = ">=3.10,<3.12"
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "loguru",
+    "psutil",
+]
+
+[tool.uv]

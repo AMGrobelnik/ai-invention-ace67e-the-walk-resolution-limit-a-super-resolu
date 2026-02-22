@@ -1,0 +1,1174 @@
+{
+  "metadata": {
+    "method_name": "Spectral Diagnostics for Walk Resolution Limit Hypothesis",
+    "description": "Comprehensive spectral diagnostic experiment validating 4 aspects: (1) spectral sparsity of local node measures, (2) SRI distribution differences with KS tests, (3) node-level vs graph-level resolution, (4) Vandermonde conditioning. Plus baseline eigenvalue clustering analysis.",
+    "analysis_1_spectral_sparsity": {
+      "ZINC-subset": {
+        "eff_rank_1pct": {
+          "mean": 9.940527226638517,
+          "median": 10.0,
+          "std": 0.32950304221833976,
+          "percentiles": {
+            "25": 10.0,
+            "75": 10.0,
+            "90": 10.0
+          },
+          "histogram_counts": [
+            0,
+            0,
+            0,
+            0,
+            5,
+            27,
+            275,
+            555,
+            3670,
+            6294,
+            267688
+          ],
+          "histogram_edges": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        "eff_rank_5pct": {
+          "mean": 7.234117494991275,
+          "median": 7.0,
+          "std": 1.8063121819204149,
+          "percentiles": {
+            "25": 6.0,
+            "75": 9.0,
+            "90": 10.0
+          }
+        },
+        "participation_ratio": {
+          "mean": 6.686274471487131,
+          "median": 6.813932461780509,
+          "std": 1.613252762239891,
+          "percentiles": {
+            "25": 5.569754665067041,
+            "75": 7.960238858886273,
+            "90": 8.705287714849767
+          }
+        },
+        "spectral_entropy": {
+          "mean": 2.956154732986454,
+          "median": 3.0081246053103037,
+          "std": 0.24701507152090077
+        },
+        "n_nodes_analyzed": 278514,
+        "median_graph_size": 23.0,
+        "sparsity_ratio": 0.43478260869565216,
+        "sparsity_confirmed": false
+      },
+      "Peptides-func": {
+        "eff_rank_1pct": {
+          "mean": 9.994768040963319,
+          "median": 10.0,
+          "std": 0.16841409642531793,
+          "percentiles": {
+            "25": 10.0,
+            "75": 10.0,
+            "90": 10.0
+          },
+          "histogram_counts": [
+            0,
+            42,
+            3,
+            6,
+            4,
+            3,
+            32,
+            22,
+            110,
+            88,
+            187956
+          ],
+          "histogram_edges": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        "eff_rank_5pct": {
+          "mean": 8.244818501481946,
+          "median": 9.0,
+          "std": 2.0220952784053075,
+          "percentiles": {
+            "25": 7.0,
+            "75": 10.0,
+            "90": 10.0
+          }
+        },
+        "participation_ratio": {
+          "mean": 7.465931426019423,
+          "median": 7.826332308758891,
+          "std": 1.6719420119615775,
+          "percentiles": {
+            "25": 6.343409149245878,
+            "75": 8.826060739790282,
+            "90": 9.372567167841083
+          }
+        },
+        "spectral_entropy": {
+          "mean": 3.0645053702923732,
+          "median": 3.136759033467478,
+          "std": 0.23078520693071067
+        },
+        "n_nodes_analyzed": 188266,
+        "median_graph_size": 135.0,
+        "sparsity_ratio": 0.07407407407407407,
+        "sparsity_confirmed": true
+      },
+      "Peptides-struct": {
+        "eff_rank_1pct": {
+          "mean": 9.994768040963319,
+          "median": 10.0,
+          "std": 0.16841409642531793,
+          "percentiles": {
+            "25": 10.0,
+            "75": 10.0,
+            "90": 10.0
+          },
+          "histogram_counts": [
+            0,
+            42,
+            3,
+            6,
+            4,
+            3,
+            32,
+            22,
+            110,
+            88,
+            187956
+          ],
+          "histogram_edges": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        "eff_rank_5pct": {
+          "mean": 8.244818501481946,
+          "median": 9.0,
+          "std": 2.0220952784053075,
+          "percentiles": {
+            "25": 7.0,
+            "75": 10.0,
+            "90": 10.0
+          }
+        },
+        "participation_ratio": {
+          "mean": 7.465931426019423,
+          "median": 7.826332308758891,
+          "std": 1.6719420119615775,
+          "percentiles": {
+            "25": 6.343409149245878,
+            "75": 8.826060739790282,
+            "90": 9.372567167841083
+          }
+        },
+        "spectral_entropy": {
+          "mean": 3.0645053702923732,
+          "median": 3.136759033467478,
+          "std": 0.23078520693071067
+        },
+        "n_nodes_analyzed": 188266,
+        "median_graph_size": 135.0,
+        "sparsity_ratio": 0.07407407407407407,
+        "sparsity_confirmed": true
+      },
+      "Synthetic-aliased-pairs": {
+        "eff_rank_1pct": {
+          "mean": 8.128415300546449,
+          "median": 9.0,
+          "std": 2.239912306909325,
+          "percentiles": {
+            "25": 7.0,
+            "75": 10.0,
+            "90": 10.0
+          },
+          "histogram_counts": [
+            0,
+            1,
+            11,
+            57,
+            46,
+            35,
+            98,
+            103,
+            172,
+            63,
+            512
+          ],
+          "histogram_edges": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        "eff_rank_5pct": {
+          "mean": 6.665755919854281,
+          "median": 7.0,
+          "std": 2.2620517997597815,
+          "percentiles": {
+            "25": 5.0,
+            "75": 8.0,
+            "90": 10.0
+          }
+        },
+        "participation_ratio": {
+          "mean": 6.1513848708103165,
+          "median": 6.397182377419123,
+          "std": 2.4676639834127543,
+          "percentiles": {
+            "25": 4.441893392888588,
+            "75": 8.375179279838378,
+            "90": 9.156957997739598
+          }
+        },
+        "spectral_entropy": {
+          "mean": 2.6531412913369143,
+          "median": 2.855125126405432,
+          "std": 0.6529922074907526
+        },
+        "n_nodes_analyzed": 1098,
+        "median_graph_size": 10.0,
+        "sparsity_ratio": 0.9,
+        "sparsity_confirmed": false
+      }
+    },
+    "analysis_2_sri_distributions": {
+      "ZINC-subset": {
+        "delta_min": {
+          "mean": 0.06112905516666667,
+          "median": 0.0509335,
+          "std": 0.044823595426043444,
+          "min": 3.3e-05,
+          "max": 0.726543
+        },
+        "sri_20": {
+          "mean": 1.2225811033333334,
+          "median": 1.01867,
+          "std": 0.8964719085208691,
+          "pct_below_1": 48.983333333333334,
+          "pct_above_5": 0.5583333333333333
+        },
+        "normalized_sri": {
+          "mean": 0.012921063232518105,
+          "median": 0.01070715706550452
+        },
+        "spectral_range": {
+          "mean": 4.759383338026667,
+          "median": 4.74973216
+        }
+      },
+      "Peptides-func": {
+        "delta_min": {
+          "mean": 0.006944139499999999,
+          "median": 0.000931,
+          "std": 0.02134432635481944,
+          "min": 0.0,
+          "max": 0.290818
+        },
+        "sri_20": {
+          "mean": 0.13888279,
+          "median": 0.01862,
+          "std": 0.4268865270963888,
+          "pct_below_1": 96.95,
+          "pct_above_5": 0.1
+        },
+        "normalized_sri": {
+          "mean": 0.0015015931407182399,
+          "median": 0.00019621706889147032
+        },
+        "spectral_range": {
+          "mean": 4.75185304883,
+          "median": 4.77432734
+        }
+      },
+      "Peptides-struct": {
+        "delta_min": {
+          "mean": 0.006944139499999999,
+          "median": 0.000931,
+          "std": 0.02134432635481944,
+          "min": 0.0,
+          "max": 0.290818
+        },
+        "sri_20": {
+          "mean": 0.13888279,
+          "median": 0.01862,
+          "std": 0.4268865270963888,
+          "pct_below_1": 96.95,
+          "pct_above_5": 0.1
+        },
+        "normalized_sri": {
+          "mean": 0.0015015931407182399,
+          "median": 0.00019621706889147032
+        },
+        "spectral_range": {
+          "mean": 4.75185304883,
+          "median": 4.77432734
+        }
+      },
+      "Synthetic-aliased-pairs": {
+        "delta_min": {
+          "mean": 1.4546631900000002,
+          "median": 0.341211,
+          "std": 2.520215180572892,
+          "min": 0.022232,
+          "max": 15.0
+        },
+        "sri_20": {
+          "mean": 29.0932638,
+          "median": 6.82422,
+          "std": 50.40430361145784,
+          "pct_below_1": 2.0,
+          "pct_above_5": 70.0
+        },
+        "normalized_sri": {
+          "mean": 0.20027056148644298,
+          "median": 0.06698725
+        },
+        "spectral_range": {
+          "mean": 5.685698221800001,
+          "median": 4.90384216
+        }
+      },
+      "ks_tests": {
+        "Peptides-func_vs_Peptides-struct": {
+          "sri_20": {
+            "statistic": 0.0,
+            "p_value": 1.0
+          },
+          "delta_min": {
+            "statistic": 0.0,
+            "p_value": 1.0
+          },
+          "normalized_sri": {
+            "statistic": 0.0,
+            "p_value": 1.0
+          }
+        },
+        "Peptides-func_vs_Synthetic-aliased-pairs": {
+          "sri_20": {
+            "statistic": 0.9505,
+            "p_value": 5.563498006216583e-115
+          },
+          "delta_min": {
+            "statistic": 0.9505,
+            "p_value": 5.563498006216583e-115
+          },
+          "normalized_sri": {
+            "statistic": 0.9405,
+            "p_value": 2.4565274443653274e-109
+          }
+        },
+        "Peptides-func_vs_ZINC-subset": {
+          "sri_20": {
+            "statistic": 0.8260000000000001,
+            "p_value": 0.0
+          },
+          "delta_min": {
+            "statistic": 0.8260000000000001,
+            "p_value": 0.0
+          },
+          "normalized_sri": {
+            "statistic": 0.8246666666666667,
+            "p_value": 0.0
+          }
+        },
+        "Peptides-struct_vs_Synthetic-aliased-pairs": {
+          "sri_20": {
+            "statistic": 0.9505,
+            "p_value": 5.563498006216583e-115
+          },
+          "delta_min": {
+            "statistic": 0.9505,
+            "p_value": 5.563498006216583e-115
+          },
+          "normalized_sri": {
+            "statistic": 0.9405,
+            "p_value": 2.4565274443653274e-109
+          }
+        },
+        "Peptides-struct_vs_ZINC-subset": {
+          "sri_20": {
+            "statistic": 0.8260000000000001,
+            "p_value": 0.0
+          },
+          "delta_min": {
+            "statistic": 0.8260000000000001,
+            "p_value": 0.0
+          },
+          "normalized_sri": {
+            "statistic": 0.8246666666666667,
+            "p_value": 0.0
+          }
+        },
+        "Synthetic-aliased-pairs_vs_ZINC-subset": {
+          "sri_20": {
+            "statistic": 0.8134166666666667,
+            "p_value": 6.522448146293787e-72
+          },
+          "delta_min": {
+            "statistic": 0.8134166666666667,
+            "p_value": 6.522448146293787e-72
+          },
+          "normalized_sri": {
+            "statistic": 0.8223333333333334,
+            "p_value": 3.773674848999301e-74
+          }
+        }
+      }
+    },
+    "analysis_3_node_vs_graph_resolution": {
+      "ZINC-subset": {
+        "threshold_0.01": {
+          "n_graphs_analyzed": 12000,
+          "mean_ratio": 4.063853285655223,
+          "median_ratio": 2.2351835970487004,
+          "pct_node_better": 97.25833333333334,
+          "pct_node_10x_better": 4.758333333333333,
+          "spearman_corr": 0.48471504232509005,
+          "spearman_p": 0.0
+        },
+        "threshold_0.05": {
+          "n_graphs_analyzed": 12000,
+          "mean_ratio": 4.216818862633162,
+          "median_ratio": 2.318239459024799,
+          "pct_node_better": 98.02499999999999,
+          "pct_node_10x_better": 5.116666666666666,
+          "spearman_corr": 0.4847252542634699,
+          "spearman_p": 0.0
+        },
+        "threshold_0.1": {
+          "n_graphs_analyzed": 12000,
+          "mean_ratio": 4.691098772138324,
+          "median_ratio": 2.594537291658967,
+          "pct_node_better": 99.175,
+          "pct_node_10x_better": 6.125,
+          "spearman_corr": 0.4760559510190547,
+          "spearman_p": 0.0
+        }
+      },
+      "Peptides-func": {
+        "threshold_0.01": {
+          "n_graphs_analyzed": 1986,
+          "mean_ratio": 556.4393252975608,
+          "median_ratio": 54.291945348852074,
+          "pct_node_better": 99.8992950654582,
+          "pct_node_10x_better": 81.52064451158107,
+          "spearman_corr": 0.3888170122166611,
+          "spearman_p": 1.1166179957818437e-72
+        },
+        "threshold_0.05": {
+          "n_graphs_analyzed": 1986,
+          "mean_ratio": 558.8542309242223,
+          "median_ratio": 55.24864843336681,
+          "pct_node_better": 99.9496475327291,
+          "pct_node_10x_better": 81.77240684793556,
+          "spearman_corr": 0.3968524819404958,
+          "spearman_p": 6.649966758256394e-76
+        },
+        "threshold_0.1": {
+          "n_graphs_analyzed": 1986,
+          "mean_ratio": 617.913277757016,
+          "median_ratio": 60.495234210553654,
+          "pct_node_better": 99.9496475327291,
+          "pct_node_10x_better": 82.82980866062437,
+          "spearman_corr": 0.3820211288914914,
+          "spearman_p": 5.083462568443223e-70
+        }
+      },
+      "Peptides-struct": {
+        "threshold_0.01": {
+          "n_graphs_analyzed": 1986,
+          "mean_ratio": 556.4393252975608,
+          "median_ratio": 54.291945348852074,
+          "pct_node_better": 99.8992950654582,
+          "pct_node_10x_better": 81.52064451158107,
+          "spearman_corr": 0.3888170122166611,
+          "spearman_p": 1.1166179957818437e-72
+        },
+        "threshold_0.05": {
+          "n_graphs_analyzed": 1986,
+          "mean_ratio": 558.8542309242223,
+          "median_ratio": 55.24864843336681,
+          "pct_node_better": 99.9496475327291,
+          "pct_node_10x_better": 81.77240684793556,
+          "spearman_corr": 0.3968524819404958,
+          "spearman_p": 6.649966758256394e-76
+        },
+        "threshold_0.1": {
+          "n_graphs_analyzed": 1986,
+          "mean_ratio": 617.913277757016,
+          "median_ratio": 60.495234210553654,
+          "pct_node_better": 99.9496475327291,
+          "pct_node_10x_better": 82.82980866062437,
+          "spearman_corr": 0.3820211288914914,
+          "spearman_p": 5.083462568443223e-70
+        }
+      },
+      "Synthetic-aliased-pairs": {
+        "threshold_0.01": {
+          "n_graphs_analyzed": 100,
+          "mean_ratio": 1.318684605774621,
+          "median_ratio": 1.0,
+          "pct_node_better": 47.0,
+          "pct_node_10x_better": 0.0,
+          "spearman_corr": 0.9693083876392685,
+          "spearman_p": 1.598882509814193e-61
+        },
+        "threshold_0.05": {
+          "n_graphs_analyzed": 100,
+          "mean_ratio": 1.5034604673875316,
+          "median_ratio": 1.0,
+          "pct_node_better": 49.0,
+          "pct_node_10x_better": 0.0,
+          "spearman_corr": 0.9476861167002013,
+          "spearman_p": 2.1218942733329375e-50
+        },
+        "threshold_0.1": {
+          "n_graphs_analyzed": 100,
+          "mean_ratio": 1.5961504995210458,
+          "median_ratio": 1.0000002802519177,
+          "pct_node_better": 54.0,
+          "pct_node_10x_better": 0.0,
+          "spearman_corr": 0.9312612616811682,
+          "spearman_p": 9.216626567821268e-45
+        }
+      }
+    },
+    "analysis_4_vandermonde_conditioning": {
+      "ZINC-subset": {
+        "growth_rate": {
+          "mean": 0.6614864980548721,
+          "median": 0.5975722853600309,
+          "std": 0.11804386659742358
+        },
+        "corr_growth_rate_vs_sri": {
+          "spearman_rho": 0.4035120060287809,
+          "p_value": 0.0
+        },
+        "cond_number_stats": {
+          "2": {
+            "mean_log10": 0.28823074810762456,
+            "median_log10": 0.2881264339249931,
+            "max_log10": 0.34015250422542176
+          },
+          "4": {
+            "mean_log10": 1.3794816134431274,
+            "median_log10": 1.3775370817184311,
+            "max_log10": 1.6089570761588041
+          },
+          "8": {
+            "mean_log10": 3.544373362917437,
+            "median_log10": 3.531561366855342,
+            "max_log10": 15.0
+          },
+          "16": {
+            "mean_log10": 8.949043783452696,
+            "median_log10": 8.27085112346336,
+            "max_log10": 15.0
+          },
+          "20": {
+            "mean_log10": 12.273397922380779,
+            "median_log10": 11.143903293552313,
+            "max_log10": 15.0
+          }
+        },
+        "sri_quartile_conds": {
+          "2": [
+            0.28989570160992245,
+            0.28900356508130226,
+            0.28783658201995777,
+            0.2861871437193157
+          ],
+          "4": [
+            1.3853961127139198,
+            1.3823136382613899,
+            1.3778011665527872,
+            1.3724155362444117
+          ],
+          "8": [
+            3.54297003155228,
+            3.5405387423584957,
+            3.536269540544197,
+            3.557715137214775
+          ],
+          "16": [
+            8.367800958583775,
+            8.418156054939692,
+            8.699220600119931,
+            10.310997520167385
+          ],
+          "20": [
+            11.44490517633873,
+            11.697781874366227,
+            12.271851464548803,
+            13.679053174269349
+          ]
+        }
+      },
+      "Peptides-func": {
+        "growth_rate": {
+          "mean": 0.5415049525769243,
+          "median": 0.53474261510648,
+          "std": 0.04105755006493278
+        },
+        "corr_growth_rate_vs_sri": {
+          "spearman_rho": 0.34816127514355344,
+          "p_value": 4.429668390651161e-58
+        },
+        "cond_number_stats": {
+          "2": {
+            "mean_log10": 0.2823751878249762,
+            "median_log10": 0.2826685529452343,
+            "max_log10": 0.3010299956639812
+          },
+          "4": {
+            "mean_log10": 1.3752800859730432,
+            "median_log10": 1.3762122338057916,
+            "max_log10": 1.4390141049121947
+          },
+          "8": {
+            "mean_log10": 3.4225478906036924,
+            "median_log10": 3.42036884978494,
+            "max_log10": 3.550432543097636
+          },
+          "16": {
+            "mean_log10": 7.813144107445157,
+            "median_log10": 7.737587466336777,
+            "max_log10": 15.0
+          },
+          "20": {
+            "mean_log10": 10.043810177343635,
+            "median_log10": 9.927796149105689,
+            "max_log10": 15.0
+          }
+        },
+        "sri_quartile_conds": {
+          "2": [
+            0.28292877316127846,
+            0.28288088287393426,
+            0.28255724120957537,
+            0.28113450133844575
+          ],
+          "4": [
+            1.3780087341599785,
+            1.3768365108929477,
+            1.3752548345053992,
+            1.371023427686623
+          ],
+          "8": [
+            3.4213816764503773,
+            3.4227373854664482,
+            3.4233827914287898,
+            3.42268841825723
+          ],
+          "16": [
+            7.734775441379957,
+            7.738500324738437,
+            7.748105250577851,
+            8.031176203232704
+          ],
+          "20": [
+            9.917487516349546,
+            9.927438280278913,
+            9.941857624211675,
+            10.388428449846538
+          ]
+        }
+      },
+      "Peptides-struct": {
+        "growth_rate": {
+          "mean": 0.5415049525769243,
+          "median": 0.53474261510648,
+          "std": 0.04105755006493278
+        },
+        "corr_growth_rate_vs_sri": {
+          "spearman_rho": 0.34816127514355344,
+          "p_value": 4.429668390651161e-58
+        },
+        "cond_number_stats": {
+          "2": {
+            "mean_log10": 0.2823751878249762,
+            "median_log10": 0.2826685529452343,
+            "max_log10": 0.3010299956639812
+          },
+          "4": {
+            "mean_log10": 1.3752800859730432,
+            "median_log10": 1.3762122338057916,
+            "max_log10": 1.4390141049121947
+          },
+          "8": {
+            "mean_log10": 3.4225478906036924,
+            "median_log10": 3.42036884978494,
+            "max_log10": 3.550432543097636
+          },
+          "16": {
+            "mean_log10": 7.813144107445157,
+            "median_log10": 7.737587466336777,
+            "max_log10": 15.0
+          },
+          "20": {
+            "mean_log10": 10.043810177343635,
+            "median_log10": 9.927796149105689,
+            "max_log10": 15.0
+          }
+        },
+        "sri_quartile_conds": {
+          "2": [
+            0.28292877316127846,
+            0.28288088287393426,
+            0.28255724120957537,
+            0.28113450133844575
+          ],
+          "4": [
+            1.3780087341599785,
+            1.3768365108929477,
+            1.3752548345053992,
+            1.371023427686623
+          ],
+          "8": [
+            3.4213816764503773,
+            3.4227373854664482,
+            3.4233827914287898,
+            3.42268841825723
+          ],
+          "16": [
+            7.734775441379957,
+            7.738500324738437,
+            7.748105250577851,
+            8.031176203232704
+          ],
+          "20": [
+            9.917487516349546,
+            9.927438280278913,
+            9.941857624211675,
+            10.388428449846538
+          ]
+        }
+      },
+      "Synthetic-aliased-pairs": {
+        "growth_rate": {
+          "mean": 0.6906720407047447,
+          "median": 0.7984801376663933,
+          "std": 0.22610138955642214
+        },
+        "corr_growth_rate_vs_sri": {
+          "spearman_rho": -0.431060703537041,
+          "p_value": 7.5654065239991885e-06
+        },
+        "cond_number_stats": {
+          "2": {
+            "mean_log10": 0.4398635835346078,
+            "median_log10": 0.34948500653805414,
+            "max_log10": 1.691574105914151
+          },
+          "4": {
+            "mean_log10": 4.869142933878111,
+            "median_log10": 1.6460050413312919,
+            "max_log10": 15.0
+          },
+          "8": {
+            "mean_log10": 10.71556332092028,
+            "median_log10": 15.0,
+            "max_log10": 15.0
+          },
+          "16": {
+            "mean_log10": 13.688337617416382,
+            "median_log10": 15.0,
+            "max_log10": 15.0
+          },
+          "20": {
+            "mean_log10": 13.779615697802651,
+            "median_log10": 15.0,
+            "max_log10": 15.0
+          }
+        },
+        "sri_quartile_conds": {
+          "2": [
+            0.32438121440048806,
+            0.3521432743334218,
+            0.4114041246307471,
+            0.6615210439990424
+          ],
+          "4": [
+            1.5474401561115123,
+            1.634208575014852,
+            1.829911248366339,
+            13.979046351879223
+          ],
+          "8": [
+            4.8993972761293625,
+            10.609378445285596,
+            12.243205794027249,
+            15.0
+          ],
+          "16": [
+            12.70033245091548,
+            12.96748691390992,
+            14.047428234208462,
+            15.0
+          ],
+          "20": [
+            13.065444772460562,
+            12.96748691390992,
+            14.047428234208462,
+            15.0
+          ]
+        }
+      }
+    },
+    "analysis_4_reconstruction": {
+      "ZINC-subset": {
+        "1e-08": {
+          "mean_error": 0.18016105996374088,
+          "median_error": 4.284943496693653e-07,
+          "max_error": 0.9936735015768322,
+          "n_samples": 1000
+        },
+        "1e-06": {
+          "mean_error": 0.18026781235589456,
+          "median_error": 4.0280104038859275e-05,
+          "max_error": 0.9936735015772984,
+          "n_samples": 1000
+        },
+        "0.0001": {
+          "mean_error": 0.1896160569785063,
+          "median_error": 0.004356470701879245,
+          "max_error": 1.8266546972179172,
+          "n_samples": 1000
+        },
+        "0.01": {
+          "mean_error": 1.0402073807092977,
+          "median_error": 0.2989905825036342,
+          "max_error": 65.93983992379985,
+          "n_samples": 1000
+        },
+        "corr_cond_vs_error": {
+          "spearman_rho": 0.8081891817025617,
+          "p_value": 1.0301205056133387e-231
+        }
+      },
+      "Peptides-func": {
+        "1e-08": {
+          "mean_error": 0.17118984258446623,
+          "median_error": 1.6115188195939485e-06,
+          "max_error": 0.9938184472500918,
+          "n_samples": 991
+        },
+        "1e-06": {
+          "mean_error": 0.2584801975338463,
+          "median_error": 0.0001349563136953425,
+          "max_error": 68.15209422835518,
+          "n_samples": 991
+        },
+        "0.0001": {
+          "mean_error": 2.8669151952670635,
+          "median_error": 0.013207108708823596,
+          "max_error": 1503.3169314248428,
+          "n_samples": 991
+        },
+        "0.01": {
+          "mean_error": 1493.7653111271625,
+          "median_error": 0.9419440117582901,
+          "max_error": 1384389.8252473755,
+          "n_samples": 991
+        },
+        "corr_cond_vs_error": {
+          "spearman_rho": 0.3828820365172808,
+          "p_value": 5.942522615541142e-36
+        }
+      },
+      "Peptides-struct": {
+        "1e-08": {
+          "mean_error": 0.17118984258446623,
+          "median_error": 1.6115188195939485e-06,
+          "max_error": 0.9938184472500918,
+          "n_samples": 991
+        },
+        "1e-06": {
+          "mean_error": 0.2584801975338463,
+          "median_error": 0.0001349563136953425,
+          "max_error": 68.15209422835518,
+          "n_samples": 991
+        },
+        "0.0001": {
+          "mean_error": 2.8669151952670635,
+          "median_error": 0.013207108708823596,
+          "max_error": 1503.3169314248428,
+          "n_samples": 991
+        },
+        "0.01": {
+          "mean_error": 1493.7653111271625,
+          "median_error": 0.9419440117582901,
+          "max_error": 1384389.8252473755,
+          "n_samples": 991
+        },
+        "corr_cond_vs_error": {
+          "spearman_rho": 0.3828820365172808,
+          "p_value": 5.942522615541142e-36
+        }
+      },
+      "Synthetic-aliased-pairs": {
+        "1e-08": {
+          "mean_error": 0.4749127858857014,
+          "median_error": 0.534510864299417,
+          "max_error": 1.0,
+          "n_samples": 499
+        },
+        "1e-06": {
+          "mean_error": 0.4749203789180606,
+          "median_error": 0.5345108643006901,
+          "max_error": 1.0,
+          "n_samples": 499
+        },
+        "0.0001": {
+          "mean_error": 0.47586330544506683,
+          "median_error": 0.5345108667383548,
+          "max_error": 1.0,
+          "n_samples": 499
+        },
+        "0.01": {
+          "mean_error": 0.5702778733665221,
+          "median_error": 0.5772564707908485,
+          "max_error": 8.259632315734805,
+          "n_samples": 499
+        },
+        "corr_cond_vs_error": {
+          "spearman_rho": 0.7724053372519459,
+          "p_value": 4.873091783256141e-100
+        }
+      }
+    },
+    "analysis_5_baseline_eigenvalue_clustering": {
+      "ZINC-subset": {
+        "n_clusters": {
+          "mean": 21.504333333333335,
+          "median": 21.0
+        },
+        "spectral_gap": {
+          "mean": 0.16642261476083334,
+          "median": 0.1454559350000002
+        },
+        "max_gap": {
+          "mean": 0.5489533293408334,
+          "median": 0.5311827650000001
+        },
+        "n_graphs": 12000
+      },
+      "Peptides-func": {
+        "n_clusters": {
+          "mean": 100.3055,
+          "median": 102.0
+        },
+        "spectral_gap": {
+          "mean": 0.028529040204999995,
+          "median": 0.015814949999999772
+        },
+        "max_gap": {
+          "mean": 0.27175490849999995,
+          "median": 0.27145279
+        },
+        "n_graphs": 2000
+      },
+      "Peptides-struct": {
+        "n_clusters": {
+          "mean": 100.3055,
+          "median": 102.0
+        },
+        "spectral_gap": {
+          "mean": 0.028529040204999995,
+          "median": 0.015814949999999772
+        },
+        "max_gap": {
+          "mean": 0.27175490849999995,
+          "median": 0.27145279
+        },
+        "n_graphs": 2000
+      },
+      "Synthetic-aliased-pairs": {
+        "n_clusters": {
+          "mean": 6.96,
+          "median": 7.0
+        },
+        "spectral_gap": {
+          "mean": 1.7038068701999998,
+          "median": 0.6375316150000001
+        },
+        "max_gap": {
+          "mean": 2.3460514285,
+          "median": 1.5503883550000002
+        },
+        "n_graphs": 100
+      }
+    },
+    "summary": {
+      "sparsity_confirmed": {
+        "ZINC-subset": false,
+        "Peptides-func": true,
+        "Peptides-struct": true,
+        "Synthetic-aliased-pairs": false
+      },
+      "datasets_separable_by_sri": true,
+      "node_level_benefits_eigenvector_localization": {
+        "ZINC-subset": 98.02499999999999,
+        "Peptides-func": 99.9496475327291,
+        "Peptides-struct": 99.9496475327291,
+        "Synthetic-aliased-pairs": 49.0
+      },
+      "vandermonde_cond_predicts_error": {
+        "ZINC-subset": 0.8081891817025617,
+        "Peptides-func": 0.3828820365172808,
+        "Peptides-struct": 0.3828820365172808,
+        "Synthetic-aliased-pairs": 0.7724053372519459
+      }
+    },
+    "figures": [
+      "figures/sparsity_effective_rank.png",
+      "figures/sparsity_participation_ratio.png",
+      "figures/sri_distributions.png",
+      "figures/sri_vs_K.png",
+      "figures/node_vs_graph_sri.png",
+      "figures/localization_ratio_distribution.png",
+      "figures/vandermonde_growth.png",
+      "figures/cond_vs_recon_error.png",
+      "figures/cond_heatmap.png"
+    ]
+  },
+  "datasets": [
+    {
+      "dataset": "ZINC-subset",
+      "examples": [
+        {
+          "input": "{\"dataset\": \"ZINC-subset\", \"graph_idx\": 0, \"num_nodes\": 33, \"n_eigenvalues\": 33, \"delta_min\": 0.018226, \"sri_K20\": 0.36452}",
+          "output": "{\"delta_min\": 0.018226, \"sri_K20\": 0.36452, \"vandermonde_cond_K20\": 42079395988.13985}",
+          "predict_spectral_diagnostics": "{\"sparsity_eff_rank_1pct_median\": 10.0, \"sparsity_participation_ratio_median\": 7.036485287553332, \"sri_K20\": 0.36452, \"sri_below_1\": true, \"vandermonde_cond_K20_log10\": 10.624069497283978, \"resolution_diagnosis\": \"aliased\"}",
+          "predict_eigenvalue_clustering_baseline": "{\"n_eigenvalue_clusters\": 33, \"spectral_gap\": 0.05398367000000004, \"max_eigenvalue_gap\": 0.35935211999999994}"
+        },
+        {
+          "input": "{\"dataset\": \"ZINC-subset\", \"graph_idx\": 1, \"num_nodes\": 18, \"n_eigenvalues\": 18, \"delta_min\": 0.166361, \"sri_K20\": 3.32722}",
+          "output": "{\"delta_min\": 0.166361, \"sri_K20\": 3.32722, \"vandermonde_cond_K20\": 11316569498.379951}",
+          "predict_spectral_diagnostics": "{\"sparsity_eff_rank_1pct_median\": 10.0, \"sparsity_participation_ratio_median\": 7.458924450627174, \"sri_K20\": 3.32722, \"sri_below_1\": false, \"vandermonde_cond_K20_log10\": 10.053714794898458, \"resolution_diagnosis\": \"marginal\"}",
+          "predict_eigenvalue_clustering_baseline": "{\"n_eigenvalue_clusters\": 18, \"spectral_gap\": 0.16636124000000008, \"max_eigenvalue_gap\": 0.46905288}"
+        },
+        {
+          "input": "{\"dataset\": \"ZINC-subset\", \"graph_idx\": 2, \"num_nodes\": 26, \"n_eigenvalues\": 26, \"delta_min\": 0.017588, \"sri_K20\": 0.35176}",
+          "output": "{\"delta_min\": 0.017588, \"sri_K20\": 0.35176, \"vandermonde_cond_K20\": 96610062676.63753}",
+          "predict_spectral_diagnostics": "{\"sparsity_eff_rank_1pct_median\": 10.0, \"sparsity_participation_ratio_median\": 7.1609487497475435, \"sri_K20\": 0.35176, \"sri_below_1\": true, \"vandermonde_cond_K20_log10\": 10.985022363862035, \"resolution_diagnosis\": \"aliased\"}",
+          "predict_eigenvalue_clustering_baseline": "{\"n_eigenvalue_clusters\": 25, \"spectral_gap\": 0.17855347000000021, \"max_eigenvalue_gap\": 0.58597494}"
+        }
+      ]
+    },
+    {
+      "dataset": "Peptides-func",
+      "examples": [
+        {
+          "input": "{\"dataset\": \"Peptides-func\", \"graph_idx\": 0, \"num_nodes\": 119, \"n_eigenvalues\": 119, \"delta_min\": 0.00058, \"sri_K20\": 0.0116}",
+          "output": "{\"delta_min\": 0.00058, \"sri_K20\": 0.0116, \"vandermonde_cond_K20\": 9246209564.370996}",
+          "predict_spectral_diagnostics": "{\"sparsity_eff_rank_1pct_median\": 10.0, \"sparsity_participation_ratio_median\": 7.863553843264376, \"sri_K20\": 0.0116, \"sri_below_1\": true, \"vandermonde_cond_K20_log10\": 9.965963732452542, \"resolution_diagnosis\": \"aliased\"}",
+          "predict_eigenvalue_clustering_baseline": "{\"n_eigenvalue_clusters\": 88, \"spectral_gap\": 0.018218120000000226, \"max_eigenvalue_gap\": 0.18947267}"
+        },
+        {
+          "input": "{\"dataset\": \"Peptides-func\", \"graph_idx\": 1, \"num_nodes\": 338, \"n_eigenvalues\": 338, \"delta_min\": 1.9e-05, \"sri_K20\": 0.00038}",
+          "output": "{\"delta_min\": 1.9e-05, \"sri_K20\": 0.00038, \"vandermonde_cond_K20\": 7343078958.874688}",
+          "predict_spectral_diagnostics": "{\"sparsity_eff_rank_1pct_median\": 10.0, \"sparsity_participation_ratio_median\": 7.484353201783563, \"sri_K20\": 0.00038, \"sri_below_1\": true, \"vandermonde_cond_K20_log10\": 9.865878198127358, \"resolution_diagnosis\": \"aliased\"}",
+          "predict_eigenvalue_clustering_baseline": "{\"n_eigenvalue_clusters\": 169, \"spectral_gap\": 0.001761949999999679, \"max_eigenvalue_gap\": 0.19002787}"
+        },
+        {
+          "input": "{\"dataset\": \"Peptides-func\", \"graph_idx\": 2, \"num_nodes\": 209, \"n_eigenvalues\": 209, \"delta_min\": 0.002002, \"sri_K20\": 0.04004}",
+          "output": "{\"delta_min\": 0.002002, \"sri_K20\": 0.04004, \"vandermonde_cond_K20\": 7213282765.007412}",
+          "predict_spectral_diagnostics": "{\"sparsity_eff_rank_1pct_median\": 10.0, \"sparsity_participation_ratio_median\": 8.323733512676275, \"sri_K20\": 0.04004, \"sri_below_1\": true, \"vandermonde_cond_K20_log10\": 9.858132957127731, \"resolution_diagnosis\": \"aliased\"}",
+          "predict_eigenvalue_clustering_baseline": "{\"n_eigenvalue_clusters\": 129, \"spectral_gap\": 0.002735580000000404, \"max_eigenvalue_gap\": 0.25580022}"
+        }
+      ]
+    },
+    {
+      "dataset": "Peptides-struct",
+      "examples": [
+        {
+          "input": "{\"dataset\": \"Peptides-struct\", \"graph_idx\": 0, \"num_nodes\": 119, \"n_eigenvalues\": 119, \"delta_min\": 0.00058, \"sri_K20\": 0.0116}",
+          "output": "{\"delta_min\": 0.00058, \"sri_K20\": 0.0116, \"vandermonde_cond_K20\": 9246209564.370996}",
+          "predict_spectral_diagnostics": "{\"sparsity_eff_rank_1pct_median\": 10.0, \"sparsity_participation_ratio_median\": 7.863553843264376, \"sri_K20\": 0.0116, \"sri_below_1\": true, \"vandermonde_cond_K20_log10\": 9.965963732452542, \"resolution_diagnosis\": \"aliased\"}",
+          "predict_eigenvalue_clustering_baseline": "{\"n_eigenvalue_clusters\": 88, \"spectral_gap\": 0.018218120000000226, \"max_eigenvalue_gap\": 0.18947267}"
+        },
+        {
+          "input": "{\"dataset\": \"Peptides-struct\", \"graph_idx\": 1, \"num_nodes\": 338, \"n_eigenvalues\": 338, \"delta_min\": 1.9e-05, \"sri_K20\": 0.00038}",
+          "output": "{\"delta_min\": 1.9e-05, \"sri_K20\": 0.00038, \"vandermonde_cond_K20\": 7343078958.874688}",
+          "predict_spectral_diagnostics": "{\"sparsity_eff_rank_1pct_median\": 10.0, \"sparsity_participation_ratio_median\": 7.484353201783563, \"sri_K20\": 0.00038, \"sri_below_1\": true, \"vandermonde_cond_K20_log10\": 9.865878198127358, \"resolution_diagnosis\": \"aliased\"}",
+          "predict_eigenvalue_clustering_baseline": "{\"n_eigenvalue_clusters\": 169, \"spectral_gap\": 0.001761949999999679, \"max_eigenvalue_gap\": 0.19002787}"
+        },
+        {
+          "input": "{\"dataset\": \"Peptides-struct\", \"graph_idx\": 2, \"num_nodes\": 209, \"n_eigenvalues\": 209, \"delta_min\": 0.002002, \"sri_K20\": 0.04004}",
+          "output": "{\"delta_min\": 0.002002, \"sri_K20\": 0.04004, \"vandermonde_cond_K20\": 7213282765.007412}",
+          "predict_spectral_diagnostics": "{\"sparsity_eff_rank_1pct_median\": 10.0, \"sparsity_participation_ratio_median\": 8.323733512676275, \"sri_K20\": 0.04004, \"sri_below_1\": true, \"vandermonde_cond_K20_log10\": 9.858132957127731, \"resolution_diagnosis\": \"aliased\"}",
+          "predict_eigenvalue_clustering_baseline": "{\"n_eigenvalue_clusters\": 129, \"spectral_gap\": 0.002735580000000404, \"max_eigenvalue_gap\": 0.25580022}"
+        }
+      ]
+    },
+    {
+      "dataset": "Synthetic-aliased-pairs",
+      "examples": [
+        {
+          "input": "{\"dataset\": \"Synthetic-aliased-pairs\", \"graph_idx\": 0, \"num_nodes\": 5, \"n_eigenvalues\": 5, \"delta_min\": 2.0, \"sri_K20\": 40.0}",
+          "output": "{\"delta_min\": 2.0, \"sri_K20\": 40.0, \"vandermonde_cond_K20\": 1000000000000000.0}",
+          "predict_spectral_diagnostics": "{\"sparsity_eff_rank_1pct_median\": 5.0, \"sparsity_participation_ratio_median\": 1.9415752676090785, \"sri_K20\": 40.0, \"sri_below_1\": false, \"vandermonde_cond_K20_log10\": 15.0, \"resolution_diagnosis\": \"well_resolved\"}",
+          "predict_eigenvalue_clustering_baseline": "{\"n_eigenvalue_clusters\": 3, \"spectral_gap\": 2.0, \"max_eigenvalue_gap\": 2.0}"
+        },
+        {
+          "input": "{\"dataset\": \"Synthetic-aliased-pairs\", \"graph_idx\": 1, \"num_nodes\": 5, \"n_eigenvalues\": 5, \"delta_min\": 2.0, \"sri_K20\": 40.0}",
+          "output": "{\"delta_min\": 2.0, \"sri_K20\": 40.0, \"vandermonde_cond_K20\": 1000000000000000.0}",
+          "predict_spectral_diagnostics": "{\"sparsity_eff_rank_1pct_median\": 3.0, \"sparsity_participation_ratio_median\": 2.6666666666666665, \"sri_K20\": 40.0, \"sri_below_1\": false, \"vandermonde_cond_K20_log10\": 15.0, \"resolution_diagnosis\": \"well_resolved\"}",
+          "predict_eigenvalue_clustering_baseline": "{\"n_eigenvalue_clusters\": 3, \"spectral_gap\": 2.0, \"max_eigenvalue_gap\": 2.0}"
+        },
+        {
+          "input": "{\"dataset\": \"Synthetic-aliased-pairs\", \"graph_idx\": 2, \"num_nodes\": 8, \"n_eigenvalues\": 8, \"delta_min\": 0.26038, \"sri_K20\": 5.2076}",
+          "output": "{\"delta_min\": 0.26038, \"sri_K20\": 5.2076, \"vandermonde_cond_K20\": 12239.101042}",
+          "predict_spectral_diagnostics": "{\"sparsity_eff_rank_1pct_median\": 8.0, \"sparsity_participation_ratio_median\": 5.416812485550416, \"sri_K20\": 5.2076, \"sri_below_1\": false, \"vandermonde_cond_K20_log10\": 4.087749520192194, \"resolution_diagnosis\": \"well_resolved\"}",
+          "predict_eigenvalue_clustering_baseline": "{\"n_eigenvalue_clusters\": 8, \"spectral_gap\": 0.7396197, \"max_eigenvalue_gap\": 0.95452}"
+        }
+      ]
+    }
+  ]
+}

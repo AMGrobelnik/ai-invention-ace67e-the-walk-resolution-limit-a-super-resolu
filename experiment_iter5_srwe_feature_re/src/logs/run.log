@@ -1,0 +1,303 @@
+09:33:23|INFO   |Hardware: 12 CPUs, GPU=True (21.0GB VRAM), RAM=61.0GB total, 61.0GB available
+09:33:23|INFO   |======================================================================
+09:33:23|INFO   |SRWE Feature Representation Optimization & Classification Failure Diagnosis
+09:33:23|INFO   |======================================================================
+09:33:23|INFO   |── Phase 0: Loading Data ──
+09:33:23|INFO   |Loading full_data_out_1.json (89.9 MB)
+09:33:24|INFO   |  Running totals: {'ZINC-subset': 5000}
+09:33:24|INFO   |Loading full_data_out_2.json (22.6 MB)
+09:33:24|INFO   |  Running totals: {'ZINC-subset': 5000}
+09:33:24|INFO   |Loading full_data_out_3.json (92.7 MB)
+09:33:26|INFO   |  Running totals: {'ZINC-subset': 5000, 'Peptides-func': 2000}
+09:33:26|INFO   |Loading full_data_out_4.json (92.9 MB)
+09:33:28|INFO   |  Running totals: {'ZINC-subset': 5000, 'Peptides-func': 2000, 'Peptides-struct': 2000}
+09:33:28|INFO   |Loading full_data_out_5.json (0.4 MB)
+09:33:28|INFO   |  Running totals: {'ZINC-subset': 5000, 'Peptides-func': 2000, 'Peptides-struct': 2000, 'Synthetic-aliased-pairs': 100}
+09:33:28|INFO   |Total graphs loaded: 9100
+09:33:28|INFO   |  ZINC-subset: 5000 graphs
+09:33:28|INFO   |  Peptides-func: 2000 graphs
+09:33:28|INFO   |  Peptides-struct: 2000 graphs
+09:33:28|INFO   |  Synthetic-aliased-pairs: 100 graphs
+09:33:28|INFO   |── Phase 1: Recomputing normalized adjacency eigendecomposition ──
+09:33:36|INFO   |  Spectral recomp done in 8.7s (234 large graphs used fallback)
+09:33:36|INFO   |Consistency check: mean_rel_error=0.000000, max=0.000026, n_checks=250
+09:33:36|INFO   |── Phase 2: Tikhonov Recovery at λ=0.001 ──
+09:33:36|INFO   |  Computing SRWE for ZINC-subset (5000 graphs)...
+09:33:36|INFO   |    500/5000: 20846.4 graphs/s
+09:33:37|INFO   |    1000/5000: 20776.3 graphs/s
+09:33:37|INFO   |    1500/5000: 20650.1 graphs/s
+09:33:37|INFO   |    2000/5000: 20591.5 graphs/s
+09:33:37|INFO   |    2500/5000: 20618.0 graphs/s
+09:33:37|INFO   |    3000/5000: 20695.2 graphs/s
+09:33:37|INFO   |    3500/5000: 20740.8 graphs/s
+09:33:37|INFO   |    4000/5000: 20763.8 graphs/s
+09:33:37|INFO   |    4500/5000: 20744.3 graphs/s
+09:33:37|INFO   |    5000/5000: 20716.6 graphs/s
+09:33:37|INFO   |  Computing SRWE for Peptides-func (2000 graphs)...
+09:33:37|INFO   |    500/2000: 936.6 graphs/s
+09:33:37|INFO   |    1000/2000: 1243.8 graphs/s
+09:33:38|INFO   |    1500/2000: 1393.8 graphs/s
+09:33:38|INFO   |    2000/2000: 1458.0 graphs/s
+09:33:38|INFO   |  Computing SRWE for Peptides-struct (2000 graphs)...
+09:33:38|INFO   |    500/2000: 302.2 graphs/s
+09:33:38|INFO   |    1000/2000: 518.7 graphs/s
+09:33:39|INFO   |    1500/2000: 682.3 graphs/s
+09:33:39|INFO   |    2000/2000: 802.0 graphs/s
+09:33:39|INFO   |  SRWE recovery done in 2.5s, 9000 graphs
+09:33:39|INFO   |── Phase 3: Computing PE features for all representations ──
+09:33:54|INFO   |  PE features computed for 3 datasets
+09:33:54|INFO   |── Phase 4A: Screening all PE types ──
+09:33:54|INFO   |  Peptides-func: train=1400, val=300, test=300
+09:34:18|INFO   |    Peptides-func/none: {'AP': 0.3546710875215469}, time=23.7s
+09:34:43|INFO   |    Peptides-func/rwse: {'AP': 0.41822085925177194}, time=25.1s
+09:34:56|INFO   |    Peptides-func/lappe: {'AP': 0.3717239256765405}, time=13.2s
+09:35:23|INFO   |    Peptides-func/histogram: {'AP': 0.4021932411957206}, time=26.9s
+09:35:34|INFO   |    Peptides-func/raw_weights: {'AP': 0.35969434773444164}, time=11.0s
+09:35:45|INFO   |    Peptides-func/eigenvalue_pairs: {'AP': 0.3371903882864873}, time=10.8s
+09:36:08|INFO   |    Peptides-func/moment_correction: {'AP': 0.42243176738939425}, time=22.7s
+09:36:31|INFO   |    Peptides-func/spectral_summary: {'AP': 0.41166345871493865}, time=23.6s
+09:36:31|INFO   |  Peptides-struct: train=1400, val=300, test=300
+09:36:47|INFO   |    Peptides-struct/none: {'MAE': 44.91616439819336}, time=16.1s
+09:37:02|INFO   |    Peptides-struct/rwse: {'MAE': 36.373756408691406}, time=14.3s
+09:37:29|INFO   |    Peptides-struct/lappe: {'MAE': 21.91494369506836}, time=27.2s
+09:37:56|INFO   |    Peptides-struct/histogram: {'MAE': 29.876737594604492}, time=27.1s
+09:38:23|INFO   |    Peptides-struct/raw_weights: {'MAE': 25.75175666809082}, time=26.7s
+09:38:50|INFO   |    Peptides-struct/eigenvalue_pairs: {'MAE': 20.510568618774414}, time=27.2s
+09:39:16|INFO   |    Peptides-struct/moment_correction: {'MAE': 30.534515380859375}, time=26.2s
+09:39:42|INFO   |    Peptides-struct/spectral_summary: {'MAE': 20.514759063720703}, time=25.5s
+09:39:42|INFO   |  ZINC-subset: train=3500, val=750, test=750
+09:40:32|INFO   |    ZINC-subset/none: {'MAE': 0.6259004473686218}, time=50.3s
+09:41:30|INFO   |    ZINC-subset/rwse: {'MAE': 0.41470596194267273}, time=57.8s
+09:42:26|INFO   |    ZINC-subset/lappe: {'MAE': 0.6677340269088745}, time=56.3s
+09:43:26|INFO   |    ZINC-subset/histogram: {'MAE': 0.5324673652648926}, time=60.5s
+09:43:53|INFO   |    ZINC-subset/raw_weights: {'MAE': 0.6043873429298401}, time=26.3s
+09:44:13|INFO   |    ZINC-subset/eigenvalue_pairs: {'MAE': 0.8283916115760803}, time=20.4s
+09:44:40|INFO   |    ZINC-subset/moment_correction: {'MAE': 0.44439461827278137}, time=27.0s
+09:45:07|INFO   |    ZINC-subset/spectral_summary: {'MAE': 0.5927800536155701}, time=26.4s
+09:45:07|INFO   |Phase 4A screening results:
+09:45:07|INFO   |  Peptides-func:
+09:45:07|INFO   |    none: {'AP': 0.3546710875215469}
+09:45:07|INFO   |    rwse: {'AP': 0.41822085925177194}
+09:45:07|INFO   |    lappe: {'AP': 0.3717239256765405}
+09:45:07|INFO   |    histogram: {'AP': 0.4021932411957206}
+09:45:07|INFO   |    raw_weights: {'AP': 0.35969434773444164}
+09:45:07|INFO   |    eigenvalue_pairs: {'AP': 0.3371903882864873}
+09:45:07|INFO   |    moment_correction: {'AP': 0.42243176738939425}
+09:45:07|INFO   |    spectral_summary: {'AP': 0.41166345871493865}
+09:45:07|INFO   |  Peptides-struct:
+09:45:07|INFO   |    none: {'MAE': 44.91616439819336}
+09:45:07|INFO   |    rwse: {'MAE': 36.373756408691406}
+09:45:07|INFO   |    lappe: {'MAE': 21.91494369506836}
+09:45:07|INFO   |    histogram: {'MAE': 29.876737594604492}
+09:45:07|INFO   |    raw_weights: {'MAE': 25.75175666809082}
+09:45:07|INFO   |    eigenvalue_pairs: {'MAE': 20.510568618774414}
+09:45:07|INFO   |    moment_correction: {'MAE': 30.534515380859375}
+09:45:07|INFO   |    spectral_summary: {'MAE': 20.514759063720703}
+09:45:07|INFO   |  ZINC-subset:
+09:45:07|INFO   |    none: {'MAE': 0.6259004473686218}
+09:45:07|INFO   |    rwse: {'MAE': 0.41470596194267273}
+09:45:07|INFO   |    lappe: {'MAE': 0.6677340269088745}
+09:45:07|INFO   |    histogram: {'MAE': 0.5324673652648926}
+09:45:07|INFO   |    raw_weights: {'MAE': 0.6043873429298401}
+09:45:07|INFO   |    eigenvalue_pairs: {'MAE': 0.8283916115760803}
+09:45:07|INFO   |    moment_correction: {'MAE': 0.44439461827278137}
+09:45:07|INFO   |    spectral_summary: {'MAE': 0.5927800536155701}
+09:45:07|INFO   |── Phase 4B: Lambda sweep for top-3 SRWE representations ──
+09:45:07|INFO   |  Peptides-func top-3: ['moment_correction', 'spectral_summary', 'histogram']
+09:45:07|INFO   |  Peptides-struct top-3: ['eigenvalue_pairs', 'spectral_summary', 'raw_weights']
+09:45:07|INFO   |  ZINC-subset top-3: ['moment_correction', 'histogram', 'spectral_summary']
+09:45:07|WARNING|Phase 4B: reducing to 1 seed, 3 lambdas, 80 epochs
+09:45:13|INFO   |    Peptides-func/moment_correction/λ=0.0001: mean=0.3776 ± 0.0000
+09:45:19|INFO   |    Peptides-func/moment_correction/λ=0.001: mean=0.3356 ± 0.0000
+09:45:24|INFO   |    Peptides-func/moment_correction/λ=0.01: mean=0.3489 ± 0.0000
+09:45:33|INFO   |    Peptides-func/spectral_summary/λ=0.0001: mean=0.3678 ± 0.0000
+09:45:41|INFO   |    Peptides-func/spectral_summary/λ=0.001: mean=0.3704 ± 0.0000
+09:45:50|INFO   |    Peptides-func/spectral_summary/λ=0.01: mean=0.3899 ± 0.0000
+09:45:56|INFO   |    Peptides-func/histogram/λ=0.0001: mean=0.2524 ± 0.0000
+09:46:03|INFO   |    Peptides-func/histogram/λ=0.001: mean=0.3190 ± 0.0000
+09:46:13|INFO   |    Peptides-func/histogram/λ=0.01: mean=0.3591 ± 0.0000
+09:46:13|WARNING|Phase 4B: reducing to 1 seed, 3 lambdas, 80 epochs
+09:46:25|INFO   |    Peptides-struct/eigenvalue_pairs/λ=0.0001: mean=23.2555 ± 0.0000
+09:46:36|INFO   |    Peptides-struct/eigenvalue_pairs/λ=0.001: mean=22.4809 ± 0.0000
+09:46:47|INFO   |    Peptides-struct/eigenvalue_pairs/λ=0.01: mean=22.7684 ± 0.0000
+09:46:57|INFO   |    Peptides-struct/spectral_summary/λ=0.0001: mean=23.0696 ± 0.0000
+09:47:06|INFO   |    Peptides-struct/spectral_summary/λ=0.001: mean=24.8883 ± 0.0000
+09:47:19|INFO   |    Peptides-struct/spectral_summary/λ=0.01: mean=23.6286 ± 0.0000
+09:47:27|INFO   |    Peptides-struct/raw_weights/λ=0.0001: mean=28.3365 ± 0.0000
+09:47:35|INFO   |    Peptides-struct/raw_weights/λ=0.001: mean=31.0516 ± 0.0000
+09:47:44|INFO   |    Peptides-struct/raw_weights/λ=0.01: mean=31.0644 ± 0.0000
+09:47:44|WARNING|Phase 4B: reducing to 1 seed, 3 lambdas, 80 epochs
+09:47:59|INFO   |    ZINC-subset/moment_correction/λ=0.0001: mean=0.4839 ± 0.0000
+09:48:13|INFO   |    ZINC-subset/moment_correction/λ=0.001: mean=0.5124 ± 0.0000
+09:48:28|INFO   |    ZINC-subset/moment_correction/λ=0.01: mean=0.5164 ± 0.0000
+09:48:43|INFO   |    ZINC-subset/histogram/λ=0.0001: mean=0.5856 ± 0.0000
+09:48:58|INFO   |    ZINC-subset/histogram/λ=0.001: mean=0.5784 ± 0.0000
+09:49:12|INFO   |    ZINC-subset/histogram/λ=0.01: mean=0.5956 ± 0.0000
+09:49:28|INFO   |    ZINC-subset/spectral_summary/λ=0.0001: mean=0.6529 ± 0.0000
+09:49:43|INFO   |    ZINC-subset/spectral_summary/λ=0.001: mean=0.6432 ± 0.0000
+09:49:54|INFO   |    ZINC-subset/spectral_summary/λ=0.01: mean=0.6644 ± 0.0000
+09:49:54|INFO   |── Phase 5: Information-Theoretic Diagnostics ──
+09:49:54|INFO   |    Peptides-func/none: MI=0.0025684566193058256, probe=0.0975, eff_dim=0.0
+09:49:55|INFO   |    Peptides-func/rwse: MI=0.011988275531049374, probe=0.12614531038685434, eff_dim=1.020010387136645
+09:49:55|INFO   |    Peptides-func/lappe: MI=0.021895139906147987, probe=0.14885058493921471, eff_dim=1.183412532507949
+09:49:55|INFO   |    Peptides-func/histogram: MI=0.008104751607662363, probe=0.14701733078419243, eff_dim=1.5645798051760957
+09:49:55|INFO   |    Peptides-func/raw_weights: MI=0.021245143521138488, probe=0.1366174991458925, eff_dim=1.216543293099255
+09:49:55|INFO   |    Peptides-func/eigenvalue_pairs: MI=0.014921353523652009, probe=0.14028638645817942, eff_dim=2.3122349826627353
+09:49:55|INFO   |    Peptides-func/moment_correction: MI=0.010936366910042072, probe=0.1360092281358757, eff_dim=1.0182613332685098
+09:49:55|INFO   |    Peptides-func/spectral_summary: MI=0.014738303012064672, probe=0.15100343359117802, eff_dim=1.8323217209880212
+09:49:55|INFO   |    Peptides-struct/none: MI=0.0015416666666661083, probe=-140.66376647949218, eff_dim=0.0
+09:49:55|INFO   |    Peptides-struct/rwse: MI=0.3869582951503621, probe=-94.78883514404296, eff_dim=1.020010387136645
+09:49:55|INFO   |    Peptides-struct/lappe: MI=1.4946506641885957, probe=-124.01090545654297, eff_dim=1.183412532507949
+09:49:55|INFO   |    Peptides-struct/histogram: MI=0.3714701152677877, probe=-89.49178924560547, eff_dim=1.5645798051760957
+09:49:55|INFO   |    Peptides-struct/raw_weights: MI=1.0218996311699802, probe=-135.67518310546876, eff_dim=1.216543293099255
+09:49:56|INFO   |    Peptides-struct/eigenvalue_pairs: MI=0.713534508743888, probe=-105.65580139160156, eff_dim=2.3122349826627353
+09:49:56|INFO   |    Peptides-struct/moment_correction: MI=0.44347446190608186, probe=-96.16856079101562, eff_dim=1.0182613332685098
+09:49:56|INFO   |    Peptides-struct/spectral_summary: MI=0.7004548881556829, probe=-81.3515609741211, eff_dim=1.8323217209880212
+09:49:56|INFO   |    ZINC-subset/none: MI=0.0, probe=-1.5176565647125244, eff_dim=0.0
+09:49:56|INFO   |    ZINC-subset/rwse: MI=0.023098561107285552, probe=-1.4774606466293334, eff_dim=1.6404622455978894
+09:49:56|INFO   |    ZINC-subset/lappe: MI=0.05001818113396541, probe=-1.4428628444671632, eff_dim=2.624970118814441
+09:49:57|INFO   |    ZINC-subset/histogram: MI=0.013343760155168938, probe=-1.4838869094848632, eff_dim=8.577729977093389
+09:49:57|INFO   |    ZINC-subset/raw_weights: MI=0.032209438190497486, probe=-1.4501517295837403, eff_dim=2.686357930671666
+09:49:57|INFO   |    ZINC-subset/eigenvalue_pairs: MI=0.020877038568917095, probe=-1.4328210353851318, eff_dim=6.341440393653729
+09:49:57|INFO   |    ZINC-subset/moment_correction: MI=0.022240077696912674, probe=-1.4657663345336913, eff_dim=1.4283745669571741
+09:49:57|INFO   |    ZINC-subset/spectral_summary: MI=0.026617211410723485, probe=-1.4293569803237915, eff_dim=3.7760450358496036
+09:49:57|INFO   |── Phase 6: Regression vs Classification Diagnosis ──
+09:50:03|INFO   |  Diagnosis: SRWE_LOSES_CLASSIFICATION_INFO: SRWE has lower MI with classification targets than RWSE but higher MI with regression targets. This explains the asymmetry.
+09:50:03|INFO   |  MI diff func: -0.0020
+09:50:03|INFO   |  MI diff struct: 0.3410
+09:50:03|INFO   |── Phase 7: Computing final analysis ──
+09:50:03|INFO   |── Phase 8: Saving Output ──
+09:50:03|INFO   |Saved method_out.json (238.8 MB)
+09:50:03|INFO   |Output exceeds 95 MB, splitting...
+09:50:03|INFO   |  Part 1: ZINC-subset (48.7 MB)
+09:50:04|INFO   |  Part 2: Peptides-func (94.7 MB)
+09:50:04|INFO   |  Part 5: Synthetic-aliased-pairs (0.4 MB)
+09:50:04|INFO   |  Split into 5 parts
+09:50:04|INFO   |======================================================================
+09:50:04|INFO   |DONE! Total time: 1000.9s (16.7 min)
+09:50:04|INFO   |======================================================================
+ train=0.6691, val=0.6688
+2026-02-22 09:44:58.231 | DEBUG    | __main__:train_gnn:995 -   Epoch 100: train=0.5757, val=0.6371
+2026-02-22 09:45:07.019 | DEBUG    | __main__:train_gnn:995 -   Epoch 150: train=0.5043, val=0.6155
+2026-02-22 09:45:07.147 | INFO     | __main__:main:1597 -     ZINC-subset/spectral_summary: {'MAE': 0.5927800536155701}, time=26.4s
+2026-02-22 09:45:07.147 | INFO     | __main__:main:1615 - Phase 4A screening results:
+2026-02-22 09:45:07.147 | INFO     | __main__:main:1617 -   Peptides-func:
+2026-02-22 09:45:07.147 | INFO     | __main__:main:1619 -     none: {'AP': 0.3546710875215469}
+2026-02-22 09:45:07.147 | INFO     | __main__:main:1619 -     rwse: {'AP': 0.41822085925177194}
+2026-02-22 09:45:07.147 | INFO     | __main__:main:1619 -     lappe: {'AP': 0.3717239256765405}
+2026-02-22 09:45:07.147 | INFO     | __main__:main:1619 -     histogram: {'AP': 0.4021932411957206}
+2026-02-22 09:45:07.147 | INFO     | __main__:main:1619 -     raw_weights: {'AP': 0.35969434773444164}
+2026-02-22 09:45:07.147 | INFO     | __main__:main:1619 -     eigenvalue_pairs: {'AP': 0.3371903882864873}
+2026-02-22 09:45:07.148 | INFO     | __main__:main:1619 -     moment_correction: {'AP': 0.42243176738939425}
+2026-02-22 09:45:07.148 | INFO     | __main__:main:1619 -     spectral_summary: {'AP': 0.41166345871493865}
+2026-02-22 09:45:07.148 | INFO     | __main__:main:1617 -   Peptides-struct:
+2026-02-22 09:45:07.148 | INFO     | __main__:main:1619 -     none: {'MAE': 44.91616439819336}
+2026-02-22 09:45:07.148 | INFO     | __main__:main:1619 -     rwse: {'MAE': 36.373756408691406}
+2026-02-22 09:45:07.148 | INFO     | __main__:main:1619 -     lappe: {'MAE': 21.91494369506836}
+2026-02-22 09:45:07.148 | INFO     | __main__:main:1619 -     histogram: {'MAE': 29.876737594604492}
+2026-02-22 09:45:07.148 | INFO     | __main__:main:1619 -     raw_weights: {'MAE': 25.75175666809082}
+2026-02-22 09:45:07.148 | INFO     | __main__:main:1619 -     eigenvalue_pairs: {'MAE': 20.510568618774414}
+2026-02-22 09:45:07.148 | INFO     | __main__:main:1619 -     moment_correction: {'MAE': 30.534515380859375}
+2026-02-22 09:45:07.148 | INFO     | __main__:main:1619 -     spectral_summary: {'MAE': 20.514759063720703}
+2026-02-22 09:45:07.148 | INFO     | __main__:main:1617 -   ZINC-subset:
+2026-02-22 09:45:07.148 | INFO     | __main__:main:1619 -     none: {'MAE': 0.6259004473686218}
+2026-02-22 09:45:07.148 | INFO     | __main__:main:1619 -     rwse: {'MAE': 0.41470596194267273}
+2026-02-22 09:45:07.148 | INFO     | __main__:main:1619 -     lappe: {'MAE': 0.6677340269088745}
+2026-02-22 09:45:07.148 | INFO     | __main__:main:1619 -     histogram: {'MAE': 0.5324673652648926}
+2026-02-22 09:45:07.148 | INFO     | __main__:main:1619 -     raw_weights: {'MAE': 0.6043873429298401}
+2026-02-22 09:45:07.148 | INFO     | __main__:main:1619 -     eigenvalue_pairs: {'MAE': 0.8283916115760803}
+2026-02-22 09:45:07.148 | INFO     | __main__:main:1619 -     moment_correction: {'MAE': 0.44439461827278137}
+2026-02-22 09:45:07.148 | INFO     | __main__:main:1619 -     spectral_summary: {'MAE': 0.5927800536155701}
+2026-02-22 09:45:07.148 | INFO     | __main__:main:1628 - ── Phase 4B: Lambda sweep for top-3 SRWE representations ──
+2026-02-22 09:45:07.148 | INFO     | __main__:main:1649 -   Peptides-func top-3: ['moment_correction', 'spectral_summary', 'histogram']
+2026-02-22 09:45:07.148 | INFO     | __main__:main:1649 -   Peptides-struct top-3: ['eigenvalue_pairs', 'spectral_summary', 'raw_weights']
+2026-02-22 09:45:07.148 | INFO     | __main__:main:1649 -   ZINC-subset top-3: ['moment_correction', 'histogram', 'spectral_summary']
+2026-02-22 09:45:07.149 | WARNING  | __main__:main:1676 - Phase 4B: reducing to 1 seed, 3 lambdas, 80 epochs
+2026-02-22 09:45:13.524 | INFO     | __main__:main:1739 -     Peptides-func/moment_correction/λ=0.0001: mean=0.3776 ± 0.0000
+2026-02-22 09:45:19.185 | INFO     | __main__:main:1739 -     Peptides-func/moment_correction/λ=0.001: mean=0.3356 ± 0.0000
+2026-02-22 09:45:24.205 | INFO     | __main__:main:1739 -     Peptides-func/moment_correction/λ=0.01: mean=0.3489 ± 0.0000
+2026-02-22 09:45:33.247 | DEBUG    | __main__:train_gnn:995 -   Epoch 50: train=0.2876, val=0.3355
+2026-02-22 09:45:33.839 | INFO     | __main__:main:1739 -     Peptides-func/spectral_summary/λ=0.0001: mean=0.3678 ± 0.0000
+2026-02-22 09:45:41.800 | INFO     | __main__:main:1739 -     Peptides-func/spectral_summary/λ=0.001: mean=0.3704 ± 0.0000
+2026-02-22 09:45:50.275 | INFO     | __main__:main:1739 -     Peptides-func/spectral_summary/λ=0.01: mean=0.3899 ± 0.0000
+2026-02-22 09:45:56.730 | INFO     | __main__:main:1739 -     Peptides-func/histogram/λ=0.0001: mean=0.2524 ± 0.0000
+2026-02-22 09:46:03.684 | INFO     | __main__:main:1739 -     Peptides-func/histogram/λ=0.001: mean=0.3190 ± 0.0000
+2026-02-22 09:46:12.774 | DEBUG    | __main__:train_gnn:995 -   Epoch 50: train=0.2851, val=0.3696
+2026-02-22 09:46:13.852 | INFO     | __main__:main:1739 -     Peptides-func/histogram/λ=0.01: mean=0.3591 ± 0.0000
+2026-02-22 09:46:13.853 | WARNING  | __main__:main:1676 - Phase 4B: reducing to 1 seed, 3 lambdas, 80 epochs
+2026-02-22 09:46:21.639 | DEBUG    | __main__:train_gnn:995 -   Epoch 50: train=23.7957, val=28.7144
+2026-02-22 09:46:25.040 | INFO     | __main__:main:1739 -     Peptides-struct/eigenvalue_pairs/λ=0.0001: mean=23.2555 ± 0.0000
+2026-02-22 09:46:32.802 | DEBUG    | __main__:train_gnn:995 -   Epoch 50: train=23.2517, val=25.9048
+2026-02-22 09:46:36.129 | INFO     | __main__:main:1739 -     Peptides-struct/eigenvalue_pairs/λ=0.001: mean=22.4809 ± 0.0000
+2026-02-22 09:46:43.746 | DEBUG    | __main__:train_gnn:995 -   Epoch 50: train=23.6881, val=28.5586
+2026-02-22 09:46:47.095 | INFO     | __main__:main:1739 -     Peptides-struct/eigenvalue_pairs/λ=0.01: mean=22.7684 ± 0.0000
+2026-02-22 09:46:56.194 | DEBUG    | __main__:train_gnn:995 -   Epoch 50: train=21.1089, val=25.7136
+2026-02-22 09:46:57.093 | INFO     | __main__:main:1739 -     Peptides-struct/spectral_summary/λ=0.0001: mean=23.0696 ± 0.0000
+2026-02-22 09:47:06.220 | INFO     | __main__:main:1739 -     Peptides-struct/spectral_summary/λ=0.001: mean=24.8883 ± 0.0000
+2026-02-22 09:47:15.343 | DEBUG    | __main__:train_gnn:995 -   Epoch 50: train=23.2855, val=27.0879
+2026-02-22 09:47:19.061 | INFO     | __main__:main:1739 -     Peptides-struct/spectral_summary/λ=0.01: mean=23.6286 ± 0.0000
+2026-02-22 09:47:26.737 | DEBUG    | __main__:train_gnn:995 -   Epoch 50: train=25.8866, val=30.6731
+2026-02-22 09:47:27.639 | INFO     | __main__:main:1739 -     Peptides-struct/raw_weights/λ=0.0001: mean=28.3365 ± 0.0000
+2026-02-22 09:47:35.318 | DEBUG    | __main__:train_gnn:995 -   Epoch 50: train=25.8532, val=35.4279
+2026-02-22 09:47:35.675 | INFO     | __main__:main:1739 -     Peptides-struct/raw_weights/λ=0.001: mean=31.0516 ± 0.0000
+2026-02-22 09:47:43.379 | DEBUG    | __main__:train_gnn:995 -   Epoch 50: train=26.7531, val=30.1276
+2026-02-22 09:47:44.404 | INFO     | __main__:main:1739 -     Peptides-struct/raw_weights/λ=0.01: mean=31.0644 ± 0.0000
+2026-02-22 09:47:44.404 | WARNING  | __main__:main:1676 - Phase 4B: reducing to 1 seed, 3 lambdas, 80 epochs
+2026-02-22 09:47:53.621 | DEBUG    | __main__:train_gnn:995 -   Epoch 50: train=0.5470, val=0.5545
+2026-02-22 09:47:59.035 | INFO     | __main__:main:1739 -     ZINC-subset/moment_correction/λ=0.0001: mean=0.4839 ± 0.0000
+2026-02-22 09:48:08.432 | DEBUG    | __main__:train_gnn:995 -   Epoch 50: train=0.5485, val=0.6410
+2026-02-22 09:48:13.888 | INFO     | __main__:main:1739 -     ZINC-subset/moment_correction/λ=0.001: mean=0.5124 ± 0.0000
+2026-02-22 09:48:23.042 | DEBUG    | __main__:train_gnn:995 -   Epoch 50: train=0.5552, val=0.6743
+2026-02-22 09:48:28.446 | INFO     | __main__:main:1739 -     ZINC-subset/moment_correction/λ=0.01: mean=0.5164 ± 0.0000
+2026-02-22 09:48:37.859 | DEBUG    | __main__:train_gnn:995 -   Epoch 50: train=0.5646, val=0.6150
+2026-02-22 09:48:43.492 | INFO     | __main__:main:1739 -     ZINC-subset/histogram/λ=0.0001: mean=0.5856 ± 0.0000
+2026-02-22 09:48:52.868 | DEBUG    | __main__:train_gnn:995 -   Epoch 50: train=0.5841, val=0.5874
+2026-02-22 09:48:58.246 | INFO     | __main__:main:1739 -     ZINC-subset/histogram/λ=0.001: mean=0.5784 ± 0.0000
+2026-02-22 09:49:07.555 | DEBUG    | __main__:train_gnn:995 -   Epoch 50: train=0.5873, val=0.6154
+2026-02-22 09:49:12.940 | INFO     | __main__:main:1739 -     ZINC-subset/histogram/λ=0.01: mean=0.5956 ± 0.0000
+2026-02-22 09:49:22.594 | DEBUG    | __main__:train_gnn:995 -   Epoch 50: train=0.6721, val=0.6797
+2026-02-22 09:49:28.013 | INFO     | __main__:main:1739 -     ZINC-subset/spectral_summary/λ=0.0001: mean=0.6529 ± 0.0000
+2026-02-22 09:49:37.706 | DEBUG    | __main__:train_gnn:995 -   Epoch 50: train=0.6574, val=0.7641
+2026-02-22 09:49:43.098 | INFO     | __main__:main:1739 -     ZINC-subset/spectral_summary/λ=0.001: mean=0.6432 ± 0.0000
+2026-02-22 09:49:52.884 | DEBUG    | __main__:train_gnn:995 -   Epoch 50: train=0.6412, val=0.8300
+2026-02-22 09:49:54.889 | INFO     | __main__:main:1739 -     ZINC-subset/spectral_summary/λ=0.01: mean=0.6644 ± 0.0000
+2026-02-22 09:49:54.889 | INFO     | __main__:main:1763 - ── Phase 5: Information-Theoretic Diagnostics ──
+2026-02-22 09:49:54.973 | INFO     | __main__:main:1786 -     Peptides-func/none: MI=0.0025684566193058256, probe=0.0975, eff_dim=0.0
+2026-02-22 09:49:55.057 | INFO     | __main__:main:1786 -     Peptides-func/rwse: MI=0.011988275531049374, probe=0.12614531038685434, eff_dim=1.020010387136645
+2026-02-22 09:49:55.137 | INFO     | __main__:main:1786 -     Peptides-func/lappe: MI=0.021895139906147987, probe=0.14885058493921471, eff_dim=1.183412532507949
+2026-02-22 09:49:55.220 | INFO     | __main__:main:1786 -     Peptides-func/histogram: MI=0.008104751607662363, probe=0.14701733078419243, eff_dim=1.5645798051760957
+2026-02-22 09:49:55.288 | INFO     | __main__:main:1786 -     Peptides-func/raw_weights: MI=0.021245143521138488, probe=0.1366174991458925, eff_dim=1.216543293099255
+2026-02-22 09:49:55.357 | INFO     | __main__:main:1786 -     Peptides-func/eigenvalue_pairs: MI=0.014921353523652009, probe=0.14028638645817942, eff_dim=2.3122349826627353
+2026-02-22 09:49:55.439 | INFO     | __main__:main:1786 -     Peptides-func/moment_correction: MI=0.010936366910042072, probe=0.1360092281358757, eff_dim=1.0182613332685098
+2026-02-22 09:49:55.497 | INFO     | __main__:main:1786 -     Peptides-func/spectral_summary: MI=0.014738303012064672, probe=0.15100343359117802, eff_dim=1.8323217209880212
+2026-02-22 09:49:55.566 | INFO     | __main__:main:1786 -     Peptides-struct/none: MI=0.0015416666666661083, probe=-140.66376647949218, eff_dim=0.0
+2026-02-22 09:49:55.663 | INFO     | __main__:main:1786 -     Peptides-struct/rwse: MI=0.3869582951503621, probe=-94.78883514404296, eff_dim=1.020010387136645
+2026-02-22 09:49:55.758 | INFO     | __main__:main:1786 -     Peptides-struct/lappe: MI=1.4946506641885957, probe=-124.01090545654297, eff_dim=1.183412532507949
+2026-02-22 09:49:55.855 | INFO     | __main__:main:1786 -     Peptides-struct/histogram: MI=0.3714701152677877, probe=-89.49178924560547, eff_dim=1.5645798051760957
+2026-02-22 09:49:55.937 | INFO     | __main__:main:1786 -     Peptides-struct/raw_weights: MI=1.0218996311699802, probe=-135.67518310546876, eff_dim=1.216543293099255
+2026-02-22 09:49:56.020 | INFO     | __main__:main:1786 -     Peptides-struct/eigenvalue_pairs: MI=0.713534508743888, probe=-105.65580139160156, eff_dim=2.3122349826627353
+2026-02-22 09:49:56.120 | INFO     | __main__:main:1786 -     Peptides-struct/moment_correction: MI=0.44347446190608186, probe=-96.16856079101562, eff_dim=1.0182613332685098
+2026-02-22 09:49:56.186 | INFO     | __main__:main:1786 -     Peptides-struct/spectral_summary: MI=0.7004548881556829, probe=-81.3515609741211, eff_dim=1.8323217209880212
+2026-02-22 09:49:56.341 | INFO     | __main__:main:1786 -     ZINC-subset/none: MI=0.0, probe=-1.5176565647125244, eff_dim=0.0
+2026-02-22 09:49:56.598 | INFO     | __main__:main:1786 -     ZINC-subset/rwse: MI=0.023098561107285552, probe=-1.4774606466293334, eff_dim=1.6404622455978894
+2026-02-22 09:49:56.858 | INFO     | __main__:main:1786 -     ZINC-subset/lappe: MI=0.05001818113396541, probe=-1.4428628444671632, eff_dim=2.624970118814441
+2026-02-22 09:49:57.116 | INFO     | __main__:main:1786 -     ZINC-subset/histogram: MI=0.013343760155168938, probe=-1.4838869094848632, eff_dim=8.577729977093389
+2026-02-22 09:49:57.335 | INFO     | __main__:main:1786 -     ZINC-subset/raw_weights: MI=0.032209438190497486, probe=-1.4501517295837403, eff_dim=2.686357930671666
+2026-02-22 09:49:57.554 | INFO     | __main__:main:1786 -     ZINC-subset/eigenvalue_pairs: MI=0.020877038568917095, probe=-1.4328210353851318, eff_dim=6.341440393653729
+2026-02-22 09:49:57.819 | INFO     | __main__:main:1786 -     ZINC-subset/moment_correction: MI=0.022240077696912674, probe=-1.4657663345336913, eff_dim=1.4283745669571741
+2026-02-22 09:49:57.991 | INFO     | __main__:main:1786 -     ZINC-subset/spectral_summary: MI=0.026617211410723485, probe=-1.4293569803237915, eff_dim=3.7760450358496036
+2026-02-22 09:49:57.991 | INFO     | __main__:main:1802 - ── Phase 6: Regression vs Classification Diagnosis ──
+2026-02-22 09:50:03.284 | INFO     | __main__:main:1838 -   Diagnosis: SRWE_LOSES_CLASSIFICATION_INFO: SRWE has lower MI with classification targets than RWSE but higher MI with regression targets. This explains the asymmetry.
+2026-02-22 09:50:03.284 | INFO     | __main__:main:1839 -   MI diff func: -0.0020
+2026-02-22 09:50:03.284 | INFO     | __main__:main:1840 -   MI diff struct: 0.3410
+2026-02-22 09:50:03.284 | INFO     | __main__:main:1847 - ── Phase 7: Computing final analysis ──
+2026-02-22 09:50:03.294 | INFO     | __main__:main:1930 - ── Phase 8: Saving Output ──
+2026-02-22 09:50:03.793 | INFO     | __main__:main:1937 - Saved method_out.json (238.8 MB)
+2026-02-22 09:50:03.793 | INFO     | __main__:main:1942 - Output exceeds 95 MB, splitting...
+2026-02-22 09:50:03.925 | INFO     | __main__:main:1959 -   Part 1: ZINC-subset (48.7 MB)
+2026-02-22 09:50:04.135 | INFO     | __main__:main:1959 -   Part 2: Peptides-func (94.7 MB)
+2026-02-22 09:50:04.486 | INFO     | __main__:main:1959 -   Part 5: Synthetic-aliased-pairs (0.4 MB)
+2026-02-22 09:50:04.487 | INFO     | __main__:main:1973 -   Split into 5 parts
+2026-02-22 09:50:04.487 | INFO     | __main__:main:1976 - ======================================================================
+2026-02-22 09:50:04.487 | INFO     | __main__:main:1977 - DONE! Total time: 1000.9s (16.7 min)
+2026-02-22 09:50:04.487 | INFO     | __main__:main:1978 - ======================================================================

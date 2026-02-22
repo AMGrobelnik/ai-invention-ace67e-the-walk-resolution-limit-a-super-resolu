@@ -1,0 +1,706 @@
+{
+  "metadata": {
+    "experiment": "Depth vs Encoding Aliasing",
+    "description": "Tests whether increasing GNN depth compensates for RWSE spectral aliasing by narrowing RWSE-vs-LapPE gap",
+    "depths": [
+      2,
+      3,
+      4,
+      6,
+      8
+    ],
+    "pe_types": [
+      "rwse",
+      "lappe",
+      "srwe"
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "hidden_dim": 64,
+    "pe_dim": 20,
+    "max_epochs": 100,
+    "patience": 20,
+    "zinc_subsample": 2000,
+    "peptides_subsample": 1500,
+    "total_runs": 90,
+    "skipped_runs": 0,
+    "total_time_sec": 800.9,
+    "depth_encoding_results": {
+      "ZINC-subset_depth2_rwse": {
+        "dataset": "ZINC-subset",
+        "depth": 2,
+        "pe_type": "rwse",
+        "mean_mae": 0.453978,
+        "std_mae": 0.011031,
+        "n_seeds": 3,
+        "raw_maes": [
+          0.440876,
+          0.467862,
+          0.453197
+        ]
+      },
+      "ZINC-subset_depth2_lappe": {
+        "dataset": "ZINC-subset",
+        "depth": 2,
+        "pe_type": "lappe",
+        "mean_mae": 0.689128,
+        "std_mae": 0.011008,
+        "n_seeds": 3,
+        "raw_maes": [
+          0.703047,
+          0.688205,
+          0.676132
+        ]
+      },
+      "ZINC-subset_depth2_srwe": {
+        "dataset": "ZINC-subset",
+        "depth": 2,
+        "pe_type": "srwe",
+        "mean_mae": 0.611745,
+        "std_mae": 0.011189,
+        "n_seeds": 3,
+        "raw_maes": [
+          0.601129,
+          0.627215,
+          0.606892
+        ]
+      },
+      "ZINC-subset_depth3_rwse": {
+        "dataset": "ZINC-subset",
+        "depth": 3,
+        "pe_type": "rwse",
+        "mean_mae": 0.444108,
+        "std_mae": 0.007193,
+        "n_seeds": 3,
+        "raw_maes": [
+          0.434126,
+          0.4474,
+          0.450799
+        ]
+      },
+      "ZINC-subset_depth3_lappe": {
+        "dataset": "ZINC-subset",
+        "depth": 3,
+        "pe_type": "lappe",
+        "mean_mae": 0.694664,
+        "std_mae": 0.040009,
+        "n_seeds": 3,
+        "raw_maes": [
+          0.7427,
+          0.644752,
+          0.696541
+        ]
+      },
+      "ZINC-subset_depth3_srwe": {
+        "dataset": "ZINC-subset",
+        "depth": 3,
+        "pe_type": "srwe",
+        "mean_mae": 0.568973,
+        "std_mae": 0.014667,
+        "n_seeds": 3,
+        "raw_maes": [
+          0.56527,
+          0.588499,
+          0.553149
+        ]
+      },
+      "ZINC-subset_depth4_rwse": {
+        "dataset": "ZINC-subset",
+        "depth": 4,
+        "pe_type": "rwse",
+        "mean_mae": 0.452116,
+        "std_mae": 0.057419,
+        "n_seeds": 3,
+        "raw_maes": [
+          0.385372,
+          0.445432,
+          0.525543
+        ]
+      },
+      "ZINC-subset_depth4_lappe": {
+        "dataset": "ZINC-subset",
+        "depth": 4,
+        "pe_type": "lappe",
+        "mean_mae": 0.655161,
+        "std_mae": 0.028635,
+        "n_seeds": 3,
+        "raw_maes": [
+          0.663851,
+          0.68507,
+          0.616563
+        ]
+      },
+      "ZINC-subset_depth4_srwe": {
+        "dataset": "ZINC-subset",
+        "depth": 4,
+        "pe_type": "srwe",
+        "mean_mae": 0.58197,
+        "std_mae": 0.017795,
+        "n_seeds": 3,
+        "raw_maes": [
+          0.575109,
+          0.564432,
+          0.606369
+        ]
+      },
+      "ZINC-subset_depth6_rwse": {
+        "dataset": "ZINC-subset",
+        "depth": 6,
+        "pe_type": "rwse",
+        "mean_mae": 0.522698,
+        "std_mae": 0.055627,
+        "n_seeds": 3,
+        "raw_maes": [
+          0.465229,
+          0.597958,
+          0.504908
+        ]
+      },
+      "ZINC-subset_depth6_lappe": {
+        "dataset": "ZINC-subset",
+        "depth": 6,
+        "pe_type": "lappe",
+        "mean_mae": 0.706937,
+        "std_mae": 0.042574,
+        "n_seeds": 3,
+        "raw_maes": [
+          0.680447,
+          0.673358,
+          0.767006
+        ]
+      },
+      "ZINC-subset_depth6_srwe": {
+        "dataset": "ZINC-subset",
+        "depth": 6,
+        "pe_type": "srwe",
+        "mean_mae": 0.615725,
+        "std_mae": 0.040394,
+        "n_seeds": 3,
+        "raw_maes": [
+          0.575997,
+          0.600038,
+          0.671139
+        ]
+      },
+      "ZINC-subset_depth8_rwse": {
+        "dataset": "ZINC-subset",
+        "depth": 8,
+        "pe_type": "rwse",
+        "mean_mae": 0.468254,
+        "std_mae": 0.028901,
+        "n_seeds": 3,
+        "raw_maes": [
+          0.441749,
+          0.508451,
+          0.454562
+        ]
+      },
+      "ZINC-subset_depth8_lappe": {
+        "dataset": "ZINC-subset",
+        "depth": 8,
+        "pe_type": "lappe",
+        "mean_mae": 0.681821,
+        "std_mae": 0.023056,
+        "n_seeds": 3,
+        "raw_maes": [
+          0.660595,
+          0.713869,
+          0.670999
+        ]
+      },
+      "ZINC-subset_depth8_srwe": {
+        "dataset": "ZINC-subset",
+        "depth": 8,
+        "pe_type": "srwe",
+        "mean_mae": 0.638256,
+        "std_mae": 0.035497,
+        "n_seeds": 3,
+        "raw_maes": [
+          0.623464,
+          0.604107,
+          0.687197
+        ]
+      },
+      "Peptides-struct_depth2_rwse": {
+        "dataset": "Peptides-struct",
+        "depth": 2,
+        "pe_type": "rwse",
+        "mean_mae": 22.841311,
+        "std_mae": 0.399762,
+        "n_seeds": 3,
+        "raw_maes": [
+          22.868593,
+          23.316706,
+          22.338634
+        ]
+      },
+      "Peptides-struct_depth2_lappe": {
+        "dataset": "Peptides-struct",
+        "depth": 2,
+        "pe_type": "lappe",
+        "mean_mae": 24.372114,
+        "std_mae": 0.320438,
+        "n_seeds": 3,
+        "raw_maes": [
+          24.120912,
+          24.171074,
+          24.824355
+        ]
+      },
+      "Peptides-struct_depth2_srwe": {
+        "dataset": "Peptides-struct",
+        "depth": 2,
+        "pe_type": "srwe",
+        "mean_mae": 24.111664,
+        "std_mae": 0.350356,
+        "n_seeds": 3,
+        "raw_maes": [
+          24.413915,
+          23.620529,
+          24.300549
+        ]
+      },
+      "Peptides-struct_depth3_rwse": {
+        "dataset": "Peptides-struct",
+        "depth": 3,
+        "pe_type": "rwse",
+        "mean_mae": 23.114931,
+        "std_mae": 0.443892,
+        "n_seeds": 3,
+        "raw_maes": [
+          23.393381,
+          22.488459,
+          23.462953
+        ]
+      },
+      "Peptides-struct_depth3_lappe": {
+        "dataset": "Peptides-struct",
+        "depth": 3,
+        "pe_type": "lappe",
+        "mean_mae": 22.057927,
+        "std_mae": 0.257582,
+        "n_seeds": 3,
+        "raw_maes": [
+          22.246456,
+          21.693728,
+          22.233599
+        ]
+      },
+      "Peptides-struct_depth3_srwe": {
+        "dataset": "Peptides-struct",
+        "depth": 3,
+        "pe_type": "srwe",
+        "mean_mae": 23.706701,
+        "std_mae": 0.612044,
+        "n_seeds": 3,
+        "raw_maes": [
+          23.909042,
+          22.876702,
+          24.334357
+        ]
+      },
+      "Peptides-struct_depth4_rwse": {
+        "dataset": "Peptides-struct",
+        "depth": 4,
+        "pe_type": "rwse",
+        "mean_mae": 21.575825,
+        "std_mae": 0.168974,
+        "n_seeds": 3,
+        "raw_maes": [
+          21.808087,
+          21.508373,
+          21.411017
+        ]
+      },
+      "Peptides-struct_depth4_lappe": {
+        "dataset": "Peptides-struct",
+        "depth": 4,
+        "pe_type": "lappe",
+        "mean_mae": 23.143049,
+        "std_mae": 1.030163,
+        "n_seeds": 3,
+        "raw_maes": [
+          22.383785,
+          24.599479,
+          22.445884
+        ]
+      },
+      "Peptides-struct_depth4_srwe": {
+        "dataset": "Peptides-struct",
+        "depth": 4,
+        "pe_type": "srwe",
+        "mean_mae": 23.584297,
+        "std_mae": 0.99467,
+        "n_seeds": 3,
+        "raw_maes": [
+          23.489267,
+          22.416378,
+          24.847246
+        ]
+      },
+      "Peptides-struct_depth6_rwse": {
+        "dataset": "Peptides-struct",
+        "depth": 6,
+        "pe_type": "rwse",
+        "mean_mae": 22.790206,
+        "std_mae": 0.686546,
+        "n_seeds": 3,
+        "raw_maes": [
+          23.751858,
+          22.425289,
+          22.193469
+        ]
+      },
+      "Peptides-struct_depth6_lappe": {
+        "dataset": "Peptides-struct",
+        "depth": 6,
+        "pe_type": "lappe",
+        "mean_mae": 22.309414,
+        "std_mae": 0.667351,
+        "n_seeds": 3,
+        "raw_maes": [
+          22.314689,
+          21.489455,
+          23.124099
+        ]
+      },
+      "Peptides-struct_depth6_srwe": {
+        "dataset": "Peptides-struct",
+        "depth": 6,
+        "pe_type": "srwe",
+        "mean_mae": 22.823768,
+        "std_mae": 0.196524,
+        "n_seeds": 3,
+        "raw_maes": [
+          23.062482,
+          22.581146,
+          22.827677
+        ]
+      },
+      "Peptides-struct_depth8_rwse": {
+        "dataset": "Peptides-struct",
+        "depth": 8,
+        "pe_type": "rwse",
+        "mean_mae": 22.647022,
+        "std_mae": 0.428539,
+        "n_seeds": 3,
+        "raw_maes": [
+          23.202152,
+          22.158885,
+          22.580028
+        ]
+      },
+      "Peptides-struct_depth8_lappe": {
+        "dataset": "Peptides-struct",
+        "depth": 8,
+        "pe_type": "lappe",
+        "mean_mae": 22.703915,
+        "std_mae": 0.561482,
+        "n_seeds": 3,
+        "raw_maes": [
+          22.040006,
+          22.658628,
+          23.413111
+        ]
+      },
+      "Peptides-struct_depth8_srwe": {
+        "dataset": "Peptides-struct",
+        "depth": 8,
+        "pe_type": "srwe",
+        "mean_mae": 23.107915,
+        "std_mae": 0.173455,
+        "n_seeds": 3,
+        "raw_maes": [
+          22.882752,
+          23.136199,
+          23.304795
+        ]
+      }
+    },
+    "gap_analysis": {
+      "ZINC-subset": {
+        "depth_2": -0.23515,
+        "depth_3": -0.250556,
+        "depth_4": -0.203046,
+        "depth_6": -0.184239,
+        "depth_8": -0.213567
+      },
+      "ZINC-subset_gap_reduction_pct": -9.18,
+      "ZINC-subset_gap_narrows": false,
+      "Peptides-struct": {
+        "depth_2": -1.530803,
+        "depth_3": 1.057004,
+        "depth_4": -1.567224,
+        "depth_6": 0.480791,
+        "depth_8": -0.056893
+      },
+      "Peptides-struct_gap_reduction_pct": -96.28,
+      "Peptides-struct_gap_narrows": false
+    },
+    "sri_correlation_by_depth": {
+      "ZINC-subset": {
+        "depth_2": {
+          "spearman_rho": 0.03246,
+          "p_value": 0.476635,
+          "n_samples": 483
+        },
+        "depth_3": {
+          "spearman_rho": 0.058829,
+          "p_value": 0.196822,
+          "n_samples": 483
+        },
+        "depth_4": {
+          "spearman_rho": 0.042869,
+          "p_value": 0.347154,
+          "n_samples": 483
+        },
+        "depth_6": {
+          "spearman_rho": 0.056829,
+          "p_value": 0.212503,
+          "n_samples": 483
+        },
+        "depth_8": {
+          "spearman_rho": 0.092106,
+          "p_value": 0.043043,
+          "n_samples": 483
+        }
+      },
+      "Peptides-struct": {
+        "depth_2": {
+          "spearman_rho": 0.147344,
+          "p_value": 0.000122,
+          "n_samples": 675
+        },
+        "depth_3": {
+          "spearman_rho": 0.147405,
+          "p_value": 0.000121,
+          "n_samples": 675
+        },
+        "depth_4": {
+          "spearman_rho": 0.166147,
+          "p_value": 1.4e-05,
+          "n_samples": 675
+        },
+        "depth_6": {
+          "spearman_rho": 0.099027,
+          "p_value": 0.010043,
+          "n_samples": 675
+        },
+        "depth_8": {
+          "spearman_rho": 0.108813,
+          "p_value": 0.004652,
+          "n_samples": 675
+        }
+      }
+    },
+    "srwe_advantage_by_depth": {
+      "ZINC-subset": {
+        "depth_2": 0.157767,
+        "depth_3": 0.124864,
+        "depth_4": 0.129854,
+        "depth_6": 0.093026,
+        "depth_8": 0.170002
+      },
+      "Peptides-struct": {
+        "depth_2": 1.270353,
+        "depth_3": 0.59177,
+        "depth_4": 2.008472,
+        "depth_6": 0.033563,
+        "depth_8": 0.460894
+      }
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "ZINC-subset",
+      "examples": [
+        {
+          "input": "{\"graph_idx\": 1839, \"num_nodes\": 21, \"delta_min\": 0.041193, \"sri_K20\": 0.82386, \"dataset\": \"ZINC-subset\"}",
+          "output": "0.17193032801151276",
+          "metadata_graph_idx": 1839,
+          "metadata_num_nodes": 21,
+          "metadata_delta_min": 0.041193,
+          "metadata_sri_K20": 0.82386,
+          "predict_depth2_rwse": "-0.149428",
+          "predict_depth2_lappe": "-0.76843",
+          "predict_depth2_srwe": "-0.48334",
+          "predict_depth3_rwse": "-0.234184",
+          "predict_depth3_lappe": "-0.152101",
+          "predict_depth3_srwe": "-0.440231",
+          "predict_depth4_rwse": "-0.185422",
+          "predict_depth4_lappe": "-0.342645",
+          "predict_depth4_srwe": "-0.451636",
+          "predict_depth6_rwse": "-0.351242",
+          "predict_depth6_lappe": "-0.324053",
+          "predict_depth6_srwe": "-0.349343",
+          "predict_depth8_rwse": "-0.070171",
+          "predict_depth8_lappe": "-0.299386",
+          "predict_depth8_srwe": "-0.288745"
+        },
+        {
+          "input": "{\"graph_idx\": 1840, \"num_nodes\": 25, \"delta_min\": 0.044678, \"sri_K20\": 0.89356, \"dataset\": \"ZINC-subset\"}",
+          "output": "1.2421671152114868",
+          "metadata_graph_idx": 1840,
+          "metadata_num_nodes": 25,
+          "metadata_delta_min": 0.044678,
+          "metadata_sri_K20": 0.89356,
+          "predict_depth2_rwse": "1.412714",
+          "predict_depth2_lappe": "1.825968",
+          "predict_depth2_srwe": "1.358346",
+          "predict_depth3_rwse": "1.534259",
+          "predict_depth3_lappe": "1.544964",
+          "predict_depth3_srwe": "1.204898",
+          "predict_depth4_rwse": "1.398093",
+          "predict_depth4_lappe": "1.531616",
+          "predict_depth4_srwe": "1.499298",
+          "predict_depth6_rwse": "1.355767",
+          "predict_depth6_lappe": "1.516353",
+          "predict_depth6_srwe": "1.179747",
+          "predict_depth8_rwse": "1.348338",
+          "predict_depth8_lappe": "1.496706",
+          "predict_depth8_srwe": "1.244336"
+        },
+        {
+          "input": "{\"graph_idx\": 1841, \"num_nodes\": 20, \"delta_min\": 0.067611, \"sri_K20\": 1.35222, \"dataset\": \"ZINC-subset\"}",
+          "output": "1.3424376249313354",
+          "metadata_graph_idx": 1841,
+          "metadata_num_nodes": 20,
+          "metadata_delta_min": 0.067611,
+          "metadata_sri_K20": 1.35222,
+          "predict_depth2_rwse": "0.491719",
+          "predict_depth2_lappe": "0.999909",
+          "predict_depth2_srwe": "0.576762",
+          "predict_depth3_rwse": "0.542696",
+          "predict_depth3_lappe": "0.697869",
+          "predict_depth3_srwe": "0.39321",
+          "predict_depth4_rwse": "0.736562",
+          "predict_depth4_lappe": "0.737606",
+          "predict_depth4_srwe": "0.661659",
+          "predict_depth6_rwse": "0.717729",
+          "predict_depth6_lappe": "0.688292",
+          "predict_depth6_srwe": "0.404224",
+          "predict_depth8_rwse": "0.632107",
+          "predict_depth8_lappe": "0.678417",
+          "predict_depth8_srwe": "0.284569"
+        }
+      ]
+    },
+    {
+      "dataset": "Peptides-struct",
+      "examples": [
+        {
+          "input": "{\"graph_idx\": 1171, \"num_nodes\": 178, \"delta_min\": 0.000394, \"sri_K20\": 0.00788, \"dataset\": \"Peptides-struct\"}",
+          "output": "[105.48181915283203, 90.16293334960938, 51.91157150268555, 120.16105651855469, 104.0772933959961, 57.0565071105957, 2.827177047729492, 1.8180259466171265, 1.5764089822769165, 0.44363799691200256, 2.524286985397339]",
+          "metadata_graph_idx": 1171,
+          "metadata_num_nodes": 178,
+          "metadata_delta_min": 0.000394,
+          "metadata_sri_K20": 0.00788,
+          "predict_depth2_rwse": "[102.434911, 88.13107, 33.886992, 115.671389, 99.710518, 44.751848, 4.396738, 1.843344, 2.188792, 0.584039, 2.672962]",
+          "predict_depth2_lappe": "[91.521065, 78.920647, 35.780237, 100.428294, 87.115273, 41.924961, 2.689849, 0.028873, 0.469343, -1.032323, 1.733204]",
+          "predict_depth2_srwe": "[91.453194, 77.657077, 35.20445, 99.313927, 87.527906, 41.245703, 2.506724, 2.510694, 2.783608, -0.041891, 3.557808]",
+          "predict_depth3_rwse": "[98.611875, 88.369209, 37.30858, 109.210464, 94.039856, 46.037388, 2.168708, 1.555427, 2.103749, 0.050856, 2.452523]",
+          "predict_depth3_lappe": "[123.934405, 103.681763, 48.007156, 126.07074, 108.65053, 55.149287, 2.621796, 0.527047, 1.290917, 1.28885, 0.974998]",
+          "predict_depth3_srwe": "[108.076393, 92.830994, 42.235001, 120.746696, 102.901904, 52.333502, 3.057289, 3.263394, 0.102848, 0.602687, 3.725055]",
+          "predict_depth4_rwse": "[102.438492, 89.100212, 36.01406, 114.746216, 100.328893, 47.224105, 2.919483, 1.552279, 1.440758, 0.256247, 3.04881]",
+          "predict_depth4_lappe": "[108.260498, 96.246981, 39.859191, 118.60262, 95.843335, 50.526001, 6.483958, 2.390725, 4.513369, -0.778462, 2.314893]",
+          "predict_depth4_srwe": "[108.394948, 90.369733, 39.79339, 117.224935, 105.308538, 48.5966, 1.674442, 2.318178, 1.545956, 1.241479, 2.779038]",
+          "predict_depth6_rwse": "[98.680649, 86.462232, 34.870735, 111.581657, 94.801577, 46.065453, 4.361169, 0.429805, 0.558848, -0.386912, 1.972067]",
+          "predict_depth6_lappe": "[110.858164, 93.550499, 46.464242, 118.465057, 102.439018, 52.156546, 3.810754, 2.029971, -0.081823, 1.187475, 3.390923]",
+          "predict_depth6_srwe": "[106.427709, 92.610079, 39.258177, 119.537265, 106.566444, 49.328108, 3.232232, 4.814751, 1.893338, 1.206915, 2.473404]",
+          "predict_depth8_rwse": "[98.713547, 83.356969, 38.380633, 108.703153, 90.994843, 46.349087, 3.081515, 3.256475, 0.507335, 0.184815, 2.834051]",
+          "predict_depth8_lappe": "[100.590627, 81.516101, 43.29196, 108.245847, 95.554576, 46.899409, 3.625079, 1.388111, 2.082877, 1.34404, 4.46074]",
+          "predict_depth8_srwe": "[113.168833, 95.268995, 45.896749, 116.020518, 98.545413, 49.235578, 2.608167, 2.050827, 1.600017, 0.49832, 3.700876]"
+        },
+        {
+          "input": "{\"graph_idx\": 146, \"num_nodes\": 176, \"delta_min\": 0.000324, \"sri_K20\": 0.00648, \"dataset\": \"Peptides-struct\"}",
+          "output": "[93.81442260742188, 82.52513122558594, 53.29598617553711, 103.13214111328125, 85.4029312133789, 59.35581970214844, 2.4368441104888916, 2.218092918395996, 1.4773110151290894, 0.5387430191040039, 2.6922359466552734]",
+          "metadata_graph_idx": 146,
+          "metadata_num_nodes": 176,
+          "metadata_delta_min": 0.000324,
+          "metadata_sri_K20": 0.00648,
+          "predict_depth2_rwse": "[87.147624, 74.079669, 34.048448, 94.91139, 80.345103, 40.624828, 4.14022, 2.044934, 2.356125, 0.722468, 3.028278]",
+          "predict_depth2_lappe": "[89.624631, 77.091779, 34.980757, 97.984482, 84.824542, 40.842064, 2.580796, -0.118833, 0.305504, -0.983294, 1.638944]",
+          "predict_depth2_srwe": "[79.80442, 68.268908, 32.526657, 86.226379, 75.362633, 36.529498, 2.282308, 2.714004, 2.715478, 0.082635, 3.870399]",
+          "predict_depth3_rwse": "[84.321495, 74.751104, 36.041991, 91.668744, 77.242643, 41.050165, 2.198862, 1.809266, 1.779334, -0.035421, 2.59441]",
+          "predict_depth3_lappe": "[119.83462, 100.365321, 46.928333, 121.297119, 104.256076, 53.15456, 2.746459, 0.65316, 1.250859, 1.28348, 1.198527]",
+          "predict_depth3_srwe": "[96.665446, 83.634308, 40.266794, 104.50238, 89.455388, 46.229287, 3.348515, 3.088605, -0.148476, 0.964078, 3.226483]",
+          "predict_depth4_rwse": "[96.013321, 82.887075, 37.616875, 102.647522, 88.234624, 44.319695, 3.096431, 1.550429, 1.402681, 0.212263, 3.175182]",
+          "predict_depth4_lappe": "[105.005297, 93.199242, 39.006763, 114.982956, 92.478231, 48.918236, 6.267078, 2.221638, 4.546684, -0.796002, 2.106039]",
+          "predict_depth4_srwe": "[99.578232, 81.878005, 38.920001, 104.693044, 93.724373, 45.069806, 1.994292, 1.997202, 1.477404, 1.435242, 2.665872]",
+          "predict_depth6_rwse": "[87.112116, 74.85834, 35.366651, 94.222031, 79.657229, 41.237081, 4.160549, 0.846054, 0.7533, -0.186387, 2.267852]",
+          "predict_depth6_lappe": "[106.087369, 89.566104, 45.687102, 113.651182, 97.938917, 50.41318, 3.858043, 1.929112, -0.051622, 1.298529, 3.474931]",
+          "predict_depth6_srwe": "[87.127652, 74.673523, 38.012853, 94.044988, 82.268852, 42.054276, 3.043486, 5.063402, 2.056519, 0.868667, 2.508861]",
+          "predict_depth8_rwse": "[88.554133, 73.746155, 38.847299, 94.175349, 76.746035, 42.379731, 2.959175, 3.209595, 0.73012, 0.575232, 2.683535]",
+          "predict_depth8_lappe": "[100.036659, 80.800997, 42.791475, 106.604485, 94.524241, 46.153704, 3.444612, 1.379689, 2.096858, 1.247321, 4.152836]",
+          "predict_depth8_srwe": "[95.633802, 78.453051, 43.428823, 91.902217, 76.284078, 42.873234, 2.82051, 2.153082, 1.8338, 1.007696, 3.840596]"
+        },
+        {
+          "input": "{\"graph_idx\": 402, \"num_nodes\": 48, \"delta_min\": 0.029156, \"sri_K20\": 0.58312, \"dataset\": \"Peptides-struct\"}",
+          "output": "[10.04942798614502, 7.576041221618652, 5.344786167144775, 13.507596015930176, 10.474783897399902, 7.393305778503418, 1.5130620002746582, 1.0896639823913574, 0.672107994556427, 0.37577301263809204, 1.4051079750061035]",
+          "metadata_graph_idx": 402,
+          "metadata_num_nodes": 48,
+          "metadata_delta_min": 0.029156,
+          "metadata_sri_K20": 0.58312,
+          "predict_depth2_rwse": "[24.2882, 20.818523, 7.418988, 28.146962, 24.053738, 10.63064, 1.409305, 0.837079, 0.859533, 0.326955, 0.931104]",
+          "predict_depth2_lappe": "[20.130207, 17.286024, 7.347706, 21.291507, 18.573455, 9.541131, 0.854676, 0.500851, 0.116529, 0.084116, 0.711616]",
+          "predict_depth2_srwe": "[25.867221, 22.017162, 9.382068, 28.480956, 25.287802, 11.687293, 0.591787, 0.716706, 0.771748, 0.073425, 0.858263]",
+          "predict_depth3_rwse": "[24.785798, 22.333717, 9.130764, 28.360591, 24.079562, 12.083689, 0.879046, 0.635394, 0.640408, 0.031518, 0.827667]",
+          "predict_depth3_lappe": "[10.870627, 8.828716, 4.49668, 12.783117, 10.642198, 5.724834, 1.305599, 0.754729, 0.725128, 0.349393, 1.222346]",
+          "predict_depth3_srwe": "[27.507439, 23.306539, 10.774123, 31.065897, 26.073984, 13.339126, 1.041667, 0.995813, 0.016015, 0.121894, 1.191107]",
+          "predict_depth4_rwse": "[20.947063, 17.837508, 6.593869, 23.476806, 20.533079, 9.141715, 0.987779, 0.797019, 0.567022, 0.208197, 1.144598]",
+          "predict_depth4_lappe": "[11.9196, 9.89613, 4.169596, 12.161736, 10.233316, 5.979734, 1.355739, 0.740235, 0.700035, 0.161315, 0.923306]",
+          "predict_depth4_srwe": "[24.994969, 20.861753, 9.377109, 27.147879, 24.08313, 11.643877, 0.644391, 0.882967, 0.582156, 0.409675, 0.944161]",
+          "predict_depth6_rwse": "[24.193282, 21.345364, 8.418871, 28.094733, 23.668503, 11.434712, 1.134755, 0.111176, 0.237426, -0.037724, 0.690184]",
+          "predict_depth6_lappe": "[10.721879, 8.086027, 3.934207, 11.361067, 9.658546, 5.527989, 1.331819, 1.202084, 0.601711, 0.223671, 1.252062]",
+          "predict_depth6_srwe": "[22.880889, 19.420521, 8.593941, 26.087727, 23.249248, 11.295392, 1.286617, 1.323504, 0.620537, 0.264899, 0.847884]",
+          "predict_depth8_rwse": "[22.616673, 19.257823, 8.469808, 25.215099, 20.931618, 10.490366, 0.919195, 1.049057, 0.143625, 0.190754, 0.840422]",
+          "predict_depth8_lappe": "[10.023692, 8.273213, 4.658408, 10.947794, 8.994775, 5.456271, 1.407767, 0.872292, 0.701773, 0.357966, 1.439581]",
+          "predict_depth8_srwe": "[27.214602, 23.313285, 10.621014, 29.106362, 25.070691, 12.532636, 0.838114, 0.785724, 0.542436, 0.253805, 0.909052]"
+        }
+      ]
+    },
+    {
+      "dataset": "Peptides-func",
+      "examples": [
+        {
+          "input": "{\"smiles\":\"CC(C)C[C@H](NC(=O)[C@H](CCCC[NH3+])NC(=O)[C@@H](N)C(C)C)C(=O)N[C@H](CCCC[NH3+])C(=O)N[C@H](C(=O)N[C@H](Cc1ccc(O)cc1)C(=O)N1CCC[C@H]1C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](CCCC[NH3+])C(=O)N[C@H](C(=O)N[C@@H](CCCC[NH3+])C(=O)N[C@@H](CC(C)C)C(=O)N[C@H](Cc1ccc(O)cc1)C(=O)N1CCC[C@H]1C=O)C(C)C)C(C)C\",\"edge_index\":[[0,1,1,2,1,3,3,4,4,5,5,6,6,7,6,8,8,9,9,10,10,11,11,12,12,13,8,14,14,15,15,16,15,17,17,18,17,19,19,20,19,21,4,22,22,23,22,24,24,25,25,26,26,27,27,28,28,29,29,30,25,31,31,32,31,33,33,34,3",
+          "output": "[0, 0, 0, 0, 1, 0, 0, 0, 0, 1]",
+          "predict_not_evaluated": "Not part of the depth-vs-encoding experiment; included for completeness."
+        },
+        {
+          "input": "{\"smiles\":\"CC[C@H](C)[C@H](NC(=O)CNC(=O)[C@H](Cc1c[nH]cn1)NC(=O)[C@H](C)NC(=O)[C@@H](NC(=O)[C@@H](N)CC(=O)O)C(C)C)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](CC(N)=O)C(=O)N[C@@H](CCC(=O)O)C(=O)N[C@@H](C)C(=O)N[C@@H](Cc1ccc(O)cc1)C(=O)N[C@@H](CCCNC(=N)N)C(=O)N[C@@H](CCCCN)C(=O)N[C@H](C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](CC(=O)O)C(=O)N[C@@H](CCC(N)=O)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](CO)C(=O)N[C@@H](C)C(=O)NCC(=O)N[C@@H](CCCCN)C(=O)N[C@@H](Cc1c[nH]cn1)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](CCC(N)=O)C(=O)N[C@@H](CO)C(=O",
+          "output": "[0, 1, 0, 0, 0, 0, 0, 0, 0, 0]",
+          "predict_not_evaluated": "Not part of the depth-vs-encoding experiment; included for completeness."
+        },
+        {
+          "input": "{\"smiles\":\"CC[C@H](C)[C@H](NC(=O)[C@H](C)NC(=O)[C@H](CCCNC(N)=[NH2+])NC(=O)[C@H](CC(C)C)NC(=O)CNC(=O)[C@@H](NC(=O)[C@H](C)NC(=O)[C@@H](N)Cc1ccccc1)C(C)C)C(=O)N[C@@H](CCCC[NH3+])C(=O)N[C@@H](CCCNC(N)=[NH2+])C(=O)N[C@@H](C)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](CCCC[NH3+])C(=O)N[C@@H](CCCC[NH3+])C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](CCCNC(N)=[NH2+])C(=O)N[C@@H](CCCNC(N)=[NH2+])C(=O)NCC(=O)N[C@H](C(=O)N[C@@H](CCCNC(N)=[NH2+])C(=O)N[C@@H](CCCC[NH3+])C(=O)N[C@H](C(=O)N[C@@H](C)C(=O)N[C@@H](CCCC[NH3+])C(=O)N[C@@",
+          "output": "[0, 0, 1, 0, 0, 0, 0, 0, 0, 0]",
+          "predict_not_evaluated": "Not part of the depth-vs-encoding experiment; included for completeness."
+        }
+      ]
+    },
+    {
+      "dataset": "Synthetic-aliased-pairs",
+      "examples": [
+        {
+          "input": "{\"edge_index\":[[0,1,0,2,0,3,0,4],[1,0,2,0,3,0,4,0]],\"num_nodes\":5,\"node_feat\":[[0],[0],[0],[0],[0]],\"spectral\":{\"eigenvalues\":[-2.0,0.0,0.0,0.0,2.0],\"delta_min\":2.0,\"sri\":{\"K=2\":4.0,\"K=4\":8.0,\"K=8\":16.0,\"K=16\":32.0,\"K=20\":40.0},\"vandermonde_cond\":{\"K=2\":2.0,\"K=4\":1000000000000000.0,\"K=8\":1000000000000000.0,\"K=16\":1000000000000000.0,\"K=20\":1000000000000000.0},\"rwse\":[[0.0,1.0,0.0,1.0,0.0,1.0,0.0,1.0,0.0,1.0,0.0,1.0,0.0,1.0,0.0,1.0,0.0,1.0,0.0,1.0],[0.0,0.25,0.0,0.25,0.0,0.25,0.0,0.25,0.0,0.25,0.0",
+          "output": "0",
+          "predict_not_evaluated": "Not part of the depth-vs-encoding experiment; included for completeness."
+        },
+        {
+          "input": "{\"edge_index\":[[0,1,0,3,1,2,2,3],[1,0,3,0,2,1,3,2]],\"num_nodes\":5,\"node_feat\":[[0],[0],[0],[0],[0]],\"spectral\":{\"eigenvalues\":[-2.0,-0.0,0.0,0.0,2.0],\"delta_min\":2.0,\"sri\":{\"K=2\":4.0,\"K=4\":8.0,\"K=8\":16.0,\"K=16\":32.0,\"K=20\":40.0},\"vandermonde_cond\":{\"K=2\":2.0,\"K=4\":1000000000000000.0,\"K=8\":1000000000000000.0,\"K=16\":1000000000000000.0,\"K=20\":1000000000000000.0},\"rwse\":[[0.0,0.5,0.0,0.5,0.0,0.5,0.0,0.5,0.0,0.5,0.0,0.5,0.0,0.5,0.0,0.5,0.0,0.5,0.0,0.5],[0.0,0.5,0.0,0.5,0.0,0.5,0.0,0.5,0.0,0.5,0.0,0.5",
+          "output": "0",
+          "predict_not_evaluated": "Not part of the depth-vs-encoding experiment; included for completeness."
+        },
+        {
+          "input": "{\"edge_index\":[[0,1,1,2,2,3,2,4,3,5,3,6,6,7],[1,0,2,1,3,2,4,2,5,3,6,3,7,6]],\"num_nodes\":8,\"node_feat\":[[0],[0],[0],[0],[0],[0],[0],[0]],\"spectral\":{\"eigenvalues\":[-2.09529399,-1.35567429,-0.73764031,-0.47726,0.47726,0.73764031,1.35567429,2.09529399],\"delta_min\":0.26038,\"sri\":{\"K=2\":0.52076,\"K=4\":1.04152,\"K=8\":2.08304,\"K=16\":4.16608,\"K=20\":5.2076},\"vandermonde_cond\":{\"K=2\":1.812654,\"K=4\":19.053778,\"K=8\":12239.101042,\"K=16\":12239.101042,\"K=20\":12239.101042},\"rwse\":[[0.0,0.5,0.0,0.333333,0.0,0.2592",
+          "output": "0",
+          "predict_not_evaluated": "Not part of the depth-vs-encoding experiment; included for completeness."
+        }
+      ]
+    }
+  ]
+}

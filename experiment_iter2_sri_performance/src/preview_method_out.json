@@ -1,0 +1,560 @@
+{
+  "metadata": {
+    "method_name": "SRI-Performance Gap Correlation",
+    "description": "Tests whether SRI (Spectral Resolution Index) predicts per-graph performance gap between RWSE and LapPE encodings",
+    "phases": {
+      "phase1_sri_distributions": {
+        "ZINC-subset": {
+          "count": 12000,
+          "mean": 1.2225811033333334,
+          "median": 1.01867,
+          "std": 0.8964719085208691,
+          "p5": 0.212937,
+          "p25": 0.628605,
+          "p75": 1.5986950000000002,
+          "p95": 2.8603899999999993,
+          "frac_below_1": 0.48983333333333334
+        },
+        "Peptides-func": {
+          "count": 2000,
+          "mean": 0.13888279,
+          "median": 0.01862,
+          "std": 0.4268865270963888,
+          "p5": 0.0006,
+          "p25": 0.004875,
+          "p75": 0.07407,
+          "p95": 0.663624,
+          "frac_below_1": 0.9695
+        },
+        "Peptides-struct": {
+          "count": 2000,
+          "mean": 0.13888279,
+          "median": 0.01862,
+          "std": 0.4268865270963888,
+          "p5": 0.0006,
+          "p25": 0.004875,
+          "p75": 0.07407,
+          "p95": 0.663624,
+          "frac_below_1": 0.9695
+        },
+        "Synthetic-aliased-pairs": {
+          "count": 100,
+          "mean": 29.0932638,
+          "median": 6.82422,
+          "std": 50.40430361145784,
+          "p5": 1.6090900000000001,
+          "p25": 4.46872,
+          "p75": 40.0,
+          "p95": 120.99999999999994,
+          "frac_below_1": 0.02
+        }
+      },
+      "phase2_model_free_quality": {
+        "ZINC-subset": {
+          "n_valid": 12000,
+          "n_skipped": 0,
+          "spearman_sri_vs_gap": {
+            "rho": 0.24329844001812254,
+            "p": 3.1788649506356423e-161
+          },
+          "spearman_deltamin_vs_gap": {
+            "rho": 0.24329844001812254,
+            "p": 3.1788649506356423e-161
+          },
+          "spearman_logvander_vs_gap": {
+            "rho": 0.4024709605437825,
+            "p": 0.0
+          },
+          "mean_quality_gap": 0.15357061461355573,
+          "std_quality_gap": 0.05267789589673025
+        },
+        "Peptides-func": {
+          "n_valid": 2000,
+          "n_skipped": 0,
+          "spearman_sri_vs_gap": {
+            "rho": 0.7507752663341262,
+            "p": 0.0
+          },
+          "spearman_deltamin_vs_gap": {
+            "rho": 0.7507752663341262,
+            "p": 0.0
+          },
+          "spearman_logvander_vs_gap": {
+            "rho": 0.5179002627941063,
+            "p": 1.1285016236071246e-137
+          },
+          "mean_quality_gap": -0.19505271441815505,
+          "std_quality_gap": 0.10878913655648967
+        },
+        "Peptides-struct": {
+          "n_valid": 2000,
+          "n_skipped": 0,
+          "spearman_sri_vs_gap": {
+            "rho": 0.7507752663341262,
+            "p": 0.0
+          },
+          "spearman_deltamin_vs_gap": {
+            "rho": 0.7507752663341262,
+            "p": 0.0
+          },
+          "spearman_logvander_vs_gap": {
+            "rho": 0.5179002627941063,
+            "p": 1.1285016236071246e-137
+          },
+          "mean_quality_gap": -0.19505271441815505,
+          "std_quality_gap": 0.10878913655648967
+        },
+        "Synthetic-aliased-pairs": {
+          "n_valid": 100,
+          "n_skipped": 0,
+          "spearman_sri_vs_gap": {
+            "rho": 0.6676193568546526,
+            "p": 3.2987119181833506e-14
+          },
+          "spearman_deltamin_vs_gap": {
+            "rho": 0.6676193568546526,
+            "p": 3.2987119181833506e-14
+          },
+          "spearman_logvander_vs_gap": {
+            "rho": 0.4545035231257727,
+            "p": 2.0331380383578784e-06
+          },
+          "mean_quality_gap": 0.41354671104313906,
+          "std_quality_gap": 0.30996149455851435
+        }
+      },
+      "phase3_mlp_proxy": {
+        "ZINC-subset": {
+          "n_train": 8400,
+          "n_test": 1800,
+          "mean_mae_rwse": 1.6946075774025529,
+          "mean_mae_lape": 1.6560135369695368,
+          "mean_gap": 0.038594040433015696
+        },
+        "Peptides-func": {
+          "n_train": 1400,
+          "n_test": 300,
+          "mean_mae_rwse": 0.21682832702077245,
+          "mean_mae_lape": 0.22422300665840653,
+          "mean_gap": -0.0073946796376340804
+        },
+        "Peptides-struct": {
+          "n_train": 1400,
+          "n_test": 300,
+          "mean_mae_rwse": 35.12301565121192,
+          "mean_mae_lape": 30.915420147504022,
+          "mean_gap": 4.207595503707891
+        }
+      },
+      "phase4_correlation": {
+        "ZINC-subset": {
+          "n_test": 1800,
+          "primary": {
+            "sri_vs_gap": {
+              "rho": 0.10240103614203495,
+              "p": 1.3432584557833304e-05,
+              "bootstrap": {
+                "rho_mean": 0.10239821724175859,
+                "ci_low": 0.057776766466409155,
+                "ci_high": 0.1487501482116485
+              }
+            },
+            "deltamin_vs_gap": {
+              "rho": 0.10240103614203495,
+              "p": 1.3432584557833304e-05,
+              "bootstrap": {
+                "rho_mean": 0.10239821724175859,
+                "ci_low": 0.057776766466409155,
+                "ci_high": 0.1487501482116485
+              }
+            },
+            "logvander_vs_gap": {
+              "rho": 0.20197825622238297,
+              "p": 5.034687184937473e-18,
+              "bootstrap": {
+                "rho_mean": 0.2018764762374949,
+                "ci_low": 0.1565240847438237,
+                "ci_high": 0.24710844996371145
+              }
+            }
+          },
+          "quintiles": {
+            "labels": [
+              "Q1 [0.01, 0.56]",
+              "Q2 [0.56, 0.87]",
+              "Q3 [0.87, 1.23]"
+            ],
+            "mean_gap": [
+              0.030322704105009368,
+              0.033416459480307005,
+              0.029500369934577907
+            ],
+            "kendall_tau": 0.6,
+            "kendall_p": 0.23333333333333334
+          },
+          "size_controlled": [
+            {
+              "size_range": "[6, 21]",
+              "n": 510,
+              "rho": 0.01482526550035228,
+              "p": 0.7383807129876908
+            },
+            {
+              "size_range": "[21, 25]",
+              "n": 591,
+              "rho": -0.06005648173599434,
+              "p": 0.14477769725541922
+            },
+            {
+              "size_range": "[25, 37]",
+              "n": 699,
+              "rho": -0.003849870502341048,
+              "p": 0.9190714609208308
+            }
+          ],
+          "confounder": {
+            "sri_vs_num_nodes": {
+              "rho": -0.5058889185556242,
+              "p": 1.4252521191540769e-117
+            }
+          }
+        },
+        "Peptides-func": {
+          "n_test": 300,
+          "primary": {
+            "sri_vs_gap": {
+              "rho": -0.1385084518869321,
+              "p": 0.01636805973684667,
+              "bootstrap": {
+                "rho_mean": -0.1349354121884621,
+                "ci_low": -0.24009559659020607,
+                "ci_high": -0.01109467356194138
+              }
+            },
+            "deltamin_vs_gap": {
+              "rho": -0.1385084518869321,
+              "p": 0.01636805973684667,
+              "bootstrap": {
+                "rho_mean": -0.1349354121884621,
+                "ci_low": -0.24009559659020607,
+                "ci_high": -0.01109467356194138
+              }
+            },
+            "logvander_vs_gap": {
+              "rho": 0.0567862496097525,
+              "p": 0.3269618241387817,
+              "bootstrap": {
+                "rho_mean": 0.059105471198911304,
+                "ci_low": -0.05477161796302928,
+                "ci_high": 0.1747643622706249
+              }
+            }
+          },
+          "quintiles": {
+            "labels": [
+              "Q1 [0.00, 0.00]",
+              "Q2 [0.00, 0.01]",
+              "Q3 [0.01, 0.03]"
+            ],
+            "mean_gap": [
+              -0.0023704383951750362,
+              0.00373809484439806,
+              -0.01519273358233278
+            ],
+            "kendall_tau": -0.19999999999999998,
+            "kendall_p": 0.8166666666666667
+          },
+          "size_controlled": [
+            {
+              "size_range": "[15, 102]",
+              "n": 99,
+              "rho": 0.0737538651824366,
+              "p": 0.4681387938122593
+            },
+            {
+              "size_range": "[102, 178]",
+              "n": 101,
+              "rho": -0.12262738862985283,
+              "p": 0.22183364659808705
+            },
+            {
+              "size_range": "[178, 416]",
+              "n": 100,
+              "rho": -0.013723701742969045,
+              "p": 0.892202353783942
+            }
+          ],
+          "confounder": {
+            "sri_vs_num_nodes": {
+              "rho": -0.8378074796245081,
+              "p": 2.6061864926758647e-80
+            }
+          }
+        },
+        "Peptides-struct": {
+          "n_test": 300,
+          "primary": {
+            "sri_vs_gap": {
+              "rho": 0.06722064417729784,
+              "p": 0.2457441953603731,
+              "bootstrap": {
+                "rho_mean": 0.0715504430175311,
+                "ci_low": -0.049300880121740664,
+                "ci_high": 0.19984004092021074
+              }
+            },
+            "deltamin_vs_gap": {
+              "rho": 0.06722064417729784,
+              "p": 0.2457441953603731,
+              "bootstrap": {
+                "rho_mean": 0.0715504430175311,
+                "ci_low": -0.049300880121740664,
+                "ci_high": 0.19984004092021074
+              }
+            },
+            "logvander_vs_gap": {
+              "rho": -0.024154072994240394,
+              "p": 0.6769160732503148,
+              "bootstrap": {
+                "rho_mean": -0.0239726483068116,
+                "ci_low": -0.13244411849437437,
+                "ci_high": 0.07845806146081435
+              }
+            }
+          },
+          "quintiles": {
+            "labels": [
+              "Q1 [0.00, 0.00]",
+              "Q2 [0.00, 0.01]",
+              "Q3 [0.01, 0.03]"
+            ],
+            "mean_gap": [
+              9.29403007347821,
+              1.8023332057448787,
+              0.5713754112908208
+            ],
+            "kendall_tau": -0.19999999999999998,
+            "kendall_p": 0.8166666666666667
+          },
+          "size_controlled": [
+            {
+              "size_range": "[15, 102]",
+              "n": 99,
+              "rho": 0.16484848484848483,
+              "p": 0.10298178094032169
+            },
+            {
+              "size_range": "[102, 178]",
+              "n": 101,
+              "rho": 0.08358231556528224,
+              "p": 0.40597833755615215
+            },
+            {
+              "size_range": "[178, 416]",
+              "n": 100,
+              "rho": -0.09489576710245408,
+              "p": 0.347654516689474
+            }
+          ],
+          "confounder": {
+            "sri_vs_num_nodes": {
+              "rho": -0.8378074796245081,
+              "p": 2.6061864926758647e-80
+            }
+          }
+        }
+      },
+      "synthetic_validation": {
+        "pairs": [
+          {
+            "pair_id": "cospectral_1",
+            "category": "exactly_cospectral",
+            "rwse_dist": 1.795828499606797,
+            "lape_dist": 0.6154971773371694,
+            "sri_1": 40.0,
+            "sri_2": 40.0
+          },
+          {
+            "pair_id": "cospectral_2",
+            "category": "exactly_cospectral",
+            "rwse_dist": 0.37783957507290844,
+            "lape_dist": 0.6823513108163081,
+            "sri_1": 5.2076,
+            "sri_2": 10.43692
+          },
+          {
+            "pair_id": "cospectral_3",
+            "category": "exactly_cospectral",
+            "rwse_dist": 0.0,
+            "lape_dist": 0.4898053406839127,
+            "sri_1": 40.0,
+            "sri_2": 40.0
+          }
+        ],
+        "summary": {
+          "control": {
+            "n_pairs": 15,
+            "mean_rwse_dist": 1.3030270946312212,
+            "mean_lape_dist": 1.2630522397659727,
+            "std_rwse_dist": 0.4342846905062169,
+            "std_lape_dist": 0.2427138315091236
+          },
+          "near_cospectral": {
+            "n_pairs": 20,
+            "mean_rwse_dist": 0.31127559222433143,
+            "mean_lape_dist": 0.5562443976705673,
+            "std_rwse_dist": 0.2731359210620478,
+            "std_lape_dist": 0.2693523393360534
+          },
+          "exactly_cospectral": {
+            "n_pairs": 15,
+            "mean_rwse_dist": 0.36362166110567357,
+            "mean_lape_dist": 0.41070735850790047,
+            "std_rwse_dist": 0.5788501461327727,
+            "std_lape_dist": 0.306715090206337
+          }
+        }
+      }
+    },
+    "parameters": {
+      "K": 20,
+      "mlp_hidden": [
+        128,
+        64
+      ],
+      "mlp_seeds": [
+        42,
+        123,
+        456
+      ],
+      "bootstrap_n": 1000,
+      "rwse_dim": 20,
+      "lape_eigvecs": 16
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "ZINC-subset",
+      "examples": [
+        {
+          "input": "{\"num_nodes\": 33, \"edge_index_len\": 72, \"sri_k20\": 0.36452, \"delta_min\": 0.018226, \"eigenvalues_count\": 33}",
+          "output": "3.046437978744507",
+          "predict_our_method": "{\"sri_k20\": 0.36452, \"delta_min\": 0.018226, \"vander_k20\": 42079395988.13985}",
+          "predict_baseline": "{\"delta_min\": 0.018226}",
+          "metadata_fold": 0,
+          "metadata_task_type": "regression",
+          "metadata_row_index": 0,
+          "metadata_num_nodes": 33,
+          "metadata_sri_k20": 0.36452,
+          "metadata_delta_min": 0.018226
+        },
+        {
+          "input": "{\"num_nodes\": 18, \"edge_index_len\": 36, \"sri_k20\": 3.32722, \"delta_min\": 0.166361, \"eigenvalues_count\": 18}",
+          "output": "0.49065685272216797",
+          "predict_our_method": "{\"sri_k20\": 3.32722, \"delta_min\": 0.166361, \"vander_k20\": 11316569498.379951}",
+          "predict_baseline": "{\"delta_min\": 0.166361}",
+          "metadata_fold": 0,
+          "metadata_task_type": "regression",
+          "metadata_row_index": 1,
+          "metadata_num_nodes": 18,
+          "metadata_sri_k20": 3.32722,
+          "metadata_delta_min": 0.166361
+        },
+        {
+          "input": "{\"num_nodes\": 26, \"edge_index_len\": 58, \"sri_k20\": 0.35176, \"delta_min\": 0.017588, \"eigenvalues_count\": 26}",
+          "output": "1.0850775241851807",
+          "predict_our_method": "{\"sri_k20\": 0.35176, \"delta_min\": 0.017588, \"vander_k20\": 96610062676.63753}",
+          "predict_baseline": "{\"delta_min\": 0.017588}",
+          "metadata_fold": 0,
+          "metadata_task_type": "regression",
+          "metadata_row_index": 2,
+          "metadata_num_nodes": 26,
+          "metadata_sri_k20": 0.35176,
+          "metadata_delta_min": 0.017588
+        }
+      ]
+    },
+    {
+      "dataset": "Peptides-func",
+      "examples": [
+        {
+          "input": "{\"num_nodes\": 119, \"edge_index_len\": 244, \"sri_k20\": 0.0116, \"delta_min\": 0.00058, \"eigenvalues_count\": 119}",
+          "output": "[0, 0, 0, 0, 1, 0, 0, 0, 0, 1]",
+          "predict_our_method": "{\"sri_k20\": 0.0116, \"delta_min\": 0.00058, \"vander_k20\": 9246209564.370996}",
+          "predict_baseline": "{\"delta_min\": 0.00058}",
+          "metadata_fold": 0,
+          "metadata_task_type": "classification",
+          "metadata_row_index": 0,
+          "metadata_num_nodes": 119,
+          "metadata_sri_k20": 0.0116,
+          "metadata_delta_min": 0.00058
+        },
+        {
+          "input": "{\"num_nodes\": 338, \"edge_index_len\": 682, \"sri_k20\": 0.00038, \"delta_min\": 1.9e-05, \"eigenvalues_count\": 338}",
+          "output": "[0, 1, 0, 0, 0, 0, 0, 0, 0, 0]",
+          "predict_our_method": "{\"sri_k20\": 0.00038, \"delta_min\": 1.9e-05, \"vander_k20\": 7343078958.874688}",
+          "predict_baseline": "{\"delta_min\": 1.9e-05}",
+          "metadata_fold": 0,
+          "metadata_task_type": "classification",
+          "metadata_row_index": 1,
+          "metadata_num_nodes": 338,
+          "metadata_sri_k20": 0.00038,
+          "metadata_delta_min": 1.9e-05
+        },
+        {
+          "input": "{\"num_nodes\": 209, \"edge_index_len\": 418, \"sri_k20\": 0.04004, \"delta_min\": 0.002002, \"eigenvalues_count\": 209}",
+          "output": "[0, 0, 1, 0, 0, 0, 0, 0, 0, 0]",
+          "predict_our_method": "{\"sri_k20\": 0.04004, \"delta_min\": 0.002002, \"vander_k20\": 7213282765.007412}",
+          "predict_baseline": "{\"delta_min\": 0.002002}",
+          "metadata_fold": 0,
+          "metadata_task_type": "classification",
+          "metadata_row_index": 2,
+          "metadata_num_nodes": 209,
+          "metadata_sri_k20": 0.04004,
+          "metadata_delta_min": 0.002002
+        }
+      ]
+    },
+    {
+      "dataset": "Peptides-struct",
+      "examples": [
+        {
+          "input": "{\"num_nodes\": 119, \"edge_index_len\": 244, \"sri_k20\": 0.0116, \"delta_min\": 0.00058, \"eigenvalues_count\": 119}",
+          "output": "[52.685814, 40.811127, 27.02651, 71.094393, 57.95795, 37.318991, 2.155146, 1.656084, 1.258256, 0.377793, 1.932336]",
+          "predict_our_method": "{\"sri_k20\": 0.0116, \"delta_min\": 0.00058, \"vander_k20\": 9246209564.370996}",
+          "predict_baseline": "{\"delta_min\": 0.00058}",
+          "metadata_fold": 0,
+          "metadata_task_type": "regression",
+          "metadata_row_index": 0,
+          "metadata_num_nodes": 119,
+          "metadata_sri_k20": 0.0116,
+          "metadata_delta_min": 0.00058
+        },
+        {
+          "input": "{\"num_nodes\": 338, \"edge_index_len\": 682, \"sri_k20\": 0.00038, \"delta_min\": 1.9e-05, \"eigenvalues_count\": 338}",
+          "output": "[1292.606391, 1115.281483, 279.06256, 1124.238848, 953.102121, 262.429803, 5.770156, 3.126547, 1.839625, 0.112756, 3.042486]",
+          "predict_our_method": "{\"sri_k20\": 0.00038, \"delta_min\": 1.9e-05, \"vander_k20\": 7343078958.874688}",
+          "predict_baseline": "{\"delta_min\": 1.9e-05}",
+          "metadata_fold": 0,
+          "metadata_task_type": "regression",
+          "metadata_row_index": 1,
+          "metadata_num_nodes": 338,
+          "metadata_sri_k20": 0.00038,
+          "metadata_delta_min": 1.9e-05
+        },
+        {
+          "input": "{\"num_nodes\": 209, \"edge_index_len\": 418, \"sri_k20\": 0.04004, \"delta_min\": 0.002002, \"eigenvalues_count\": 209}",
+          "output": "[301.299338, 289.180057, 42.928412, 346.23546, 328.863569, 60.938556, 3.997785, 1.751966, 1.202204, 0.147835, 2.182571]",
+          "predict_our_method": "{\"sri_k20\": 0.04004, \"delta_min\": 0.002002, \"vander_k20\": 7213282765.007412}",
+          "predict_baseline": "{\"delta_min\": 0.002002}",
+          "metadata_fold": 0,
+          "metadata_task_type": "regression",
+          "metadata_row_index": 2,
+          "metadata_num_nodes": 209,
+          "metadata_sri_k20": 0.04004,
+          "metadata_delta_min": 0.002002
+        }
+      ]
+    }
+  ]
+}

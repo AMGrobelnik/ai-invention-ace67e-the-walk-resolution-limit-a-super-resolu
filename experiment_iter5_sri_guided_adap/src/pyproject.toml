@@ -1,0 +1,18 @@
+[project]
+name = "sri-guided-encoding"
+version = "0.1.0"
+requires-python = ">=3.10,<3.12"
+dependencies = [
+    "torch>=2.7",
+    "torch-geometric>=2.6",
+    "numpy<2",
+    "scipy",
+    "scikit-learn",
+    "loguru",
+    "psutil",
+]
+
+[tool.uv]
+find-links = [
+    "https://data.pyg.org/whl/torch-2.7.0+cu126.html",
+]
